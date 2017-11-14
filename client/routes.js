@@ -10,14 +10,14 @@ import {me} from './store'
 /**
  * COMPONENT
  */
-class Routes extends Component {
+export default class Routes extends Component {
   render () {
     return (
       <Router history={history}>
         <Main>
           <Switch>
             <Route path="/About" component={About} />
-            <Route path="/Projects" component={Projects} />
+            <Route path="/work" component={Projects} />
             <Route component={About} />
 
           </Switch>
@@ -25,25 +25,4 @@ class Routes extends Component {
       </Router>
     )
   }
-}
-
-/**
- * CONTAINER
- */
-const mapState = (state) => {
-  return {
-  }
-}
-
-const mapDispatch = (dispatch) => {
-  return {
-    }
-}
-
-export default connect(mapState, mapDispatch)(Routes)
-
-/**
- * PROP TYPES
- */
-Routes.propTypes = {
 }
