@@ -4754,12 +4754,7 @@ var Projects = function (_Component) {
         ),
         _react2.default.createElement(
           "div",
-          { className: "card" },
-          _react2.default.createElement(
-            "div",
-            { className: "card-image waves-effect waves-block waves-light" },
-            _react2.default.createElement("img", { className: "activator", src: "images/office.jpg" })
-          ),
+          { className: "card small" },
           _react2.default.createElement(
             "div",
             { className: "card-content" },
@@ -4805,12 +4800,7 @@ var Projects = function (_Component) {
         ),
         _react2.default.createElement(
           "div",
-          { className: "card" },
-          _react2.default.createElement(
-            "div",
-            { className: "card-image waves-effect waves-block waves-light" },
-            _react2.default.createElement("img", { className: "activator", src: "images/office.jpg" })
-          ),
+          { className: "card small" },
           _react2.default.createElement(
             "div",
             { className: "card-content" },
