@@ -6,9 +6,9 @@ export default class Projects extends Component {
       return (
        <div>
          <h1>My Projects</h1>
-         <div className="card project">
+         <div className="card">
     <div className="card-image waves-effect waves-block waves-light">
-      <img className="activator" src="images/office.jpg" />
+      {/* <img className="activator" src="images/office.jpg" /> */}
     </div>
     <div className="card-content">
       <span className="card-title activator grey-text text-darken-4">VocabuMemory<i className="material-icons right">more_vert</i></span>
@@ -19,9 +19,9 @@ export default class Projects extends Component {
       <p>A memeory matching game</p>
     </div>
   </div>
-  <div className="card project">
+  <div className="card">
     <div className="card-image waves-effect waves-block waves-light">
-      <img className="activator" src="images/office.jpg" />
+      {/* <img className="activator" src="images/office.jpg" /> */}
     </div>
     <div className="card-content">
       <span className="card-title activator grey-text text-darken-4">Dunder Mifflin Paper Company<i className="material-icons right">more_vert</i></span>
