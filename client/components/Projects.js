@@ -6,7 +6,7 @@ export default class Projects extends Component {
       return (
        <div>
          <h1>My Projects</h1>
-         <div className="card">
+         <div className="card project">
     <div className="card-image waves-effect waves-block waves-light">
       <img className="activator" src="images/office.jpg" />
     </div>
@@ -19,7 +19,7 @@ export default class Projects extends Component {
       <p>A memeory matching game</p>
     </div>
   </div>
-  <div className="card">
+  <div className="card project">
     <div className="card-image waves-effect waves-block waves-light">
       <img className="activator" src="images/office.jpg" />
     </div>
