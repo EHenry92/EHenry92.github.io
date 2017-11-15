@@ -25,7 +25,7 @@ export default class Projects extends Component {
         <div className="col s1" />
         <div className="card med col col s4">
           <div className="card-image waves-effect waves-block waves-light">
-            <img className="activator" src="client/components/images/DunderMifflin.png" />
+            <img className="activator" src="client/components/images/dunderMifflin.png" />
           </div>
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">Dunder Mifflin Paper Company<i className="material-icons right">more_vert</i></span>

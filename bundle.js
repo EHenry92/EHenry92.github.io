@@ -4887,7 +4887,7 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "card-image waves-effect waves-block waves-light" },
-              _react2.default.createElement("img", { className: "activator", src: "client/components/images/DunderMifflin.png" })
+              _react2.default.createElement("img", { className: "activator", src: "client/components/images/dunderMifflin.png" })
             ),
             _react2.default.createElement(
               "div",
