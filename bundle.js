@@ -5004,7 +5004,17 @@ function About() {
         _react2.default.createElement(
           "div",
           { className: "chip" },
-          "Ruby"
+          "MySql"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "chip" },
+          "JQuery"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "chip" },
+          "Express Js"
         ),
         _react2.default.createElement(
           "div",
@@ -5020,6 +5030,11 @@ function About() {
           "div",
           { className: "chip" },
           "C++"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "chip" },
+          "Ruby"
         )
       ),
       _react2.default.createElement(

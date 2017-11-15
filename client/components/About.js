@@ -13,10 +13,14 @@ export default function About () {
           <div className="chip">Redux</div>
           <div className="chip">CSS</div>
           <div className="chip">HTML5</div>
-          <div className="chip">Ruby</div>
+          <div className="chip">MySql</div>
+          <div className="chip">JQuery</div>
+          <div className="chip">Express Js</div>
           <div className="chip">Sequelize</div>
           <div className="chip">PostgreSQL</div>
           <div className="chip">C++</div>
+          <div className="chip">Ruby</div>
+
       </div>
       <div  className = "col s5 push-s1 light-green lighten-4 flow-text">
         <h4>About</h4>
