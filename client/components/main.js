@@ -26,6 +26,23 @@ export default function Main (props) {
   </nav>
       <hr />
       {children}
+      <footer className="page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between">
+      <div className="social">
+      <span className="category">
+          <Link to="https://www.github.com/ehenry92" target="_blank"><img
+          className= "tinyImg"
+          src="client/components/images/social-git.png" /></Link>
+        </span>
+        <span className="category">
+          <Link to="https://www.likedin.com/in/evils-henry" target="_blank"><img className= "tinyImg" src="client/components/images/social-linked.png" /></Link>
+        </span>
+      </div>
+        <div className="category">
+            <h6 className=" white-text">
+              Evlis Henry
+            </h6>
+        </div>
+      </footer>
     </div>
   )
 }

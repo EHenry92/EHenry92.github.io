@@ -5039,7 +5039,7 @@ function About() {
       ),
       _react2.default.createElement(
         "div",
-        { className: "col s5 push-s1 light-green lighten-4 flow-text" },
+        { className: "col s6 push-s1 light-green lighten-4 flow-text" },
         _react2.default.createElement(
           "h4",
           null,
@@ -5048,7 +5048,7 @@ function About() {
         _react2.default.createElement(
           "p",
           null,
-          "My name is Evlis Henry. I am a Javascript web designer and front end developer.I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  "
+          "My name is Evlis Henry. I am a full-stack Javascript developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  "
         ),
         _react2.default.createElement(
           "p",
@@ -5058,7 +5058,7 @@ function About() {
         _react2.default.createElement(
           "p",
           null,
-          "I hope to continue to contribute to education as a developer."
+          "I aspire to continue contributing to education as a developer."
         )
       )
     )
@@ -5228,7 +5228,44 @@ function Main(props) {
       )
     ),
     _react2.default.createElement('hr', null),
-    children
+    children,
+    _react2.default.createElement(
+      'footer',
+      { className: 'page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between' },
+      _react2.default.createElement(
+        'div',
+        { className: 'social' },
+        _react2.default.createElement(
+          'span',
+          { className: 'category' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: 'https://www.github.com/ehenry92', target: '_blank' },
+            _react2.default.createElement('img', {
+              className: 'tinyImg',
+              src: 'client/components/images/social-git.png' })
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: 'category' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: 'https://www.likedin.com/in/evils-henry', target: '_blank' },
+            _react2.default.createElement('img', { className: 'tinyImg', src: 'client/components/images/social-linked.png' })
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'category' },
+        _react2.default.createElement(
+          'h6',
+          { className: ' white-text' },
+          'Evlis Henry'
+        )
+      )
+    )
   );
 }
 
@@ -5301,7 +5338,7 @@ exports = module.exports = __webpack_require__(69)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: #910101 a;\n    background-color-text-decoration: none; }\n  body label {\n    display: block; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: #910101 a;\n    background-color-text-decoration: none; }\n  body label {\n    display: block; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
