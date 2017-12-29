@@ -17,6 +17,8 @@ body {
   .card {
     background-color: black;
     color: white;
+    border-style: double;
+    border-color: white;
     .card-reveal{
         background-color: rgb(58, 57, 57);
     }

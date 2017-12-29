@@ -8,9 +8,18 @@ export default function Main (props) {
   $('.button-collapse').sideNav('show');
   return (
     <div>
-      <nav>
-    <div className="nav-wrapper black">
-      <a href="/about" className="brand-logo">Evlis Henry</a>
+      <nav className= "black">
+          Evlis Henry
+          <div>
+          <ul>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/Work">Work</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/resume">Resume</Link></li>
+          </ul>
+          </div>
+    {/* <div className="nav-wrapper black">
+      <div href="/about" className="brand-logo">Evlis Henry</div>
       <a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
       <ul className="right hide-on-med-and-down">
         <li><Link to="/about">About</Link></li>
@@ -22,7 +31,7 @@ export default function Main (props) {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/Work">Work</Link></li>
       </ul>
-    </div>
+    </div> */}
   </nav>
       <hr className="white" />
 

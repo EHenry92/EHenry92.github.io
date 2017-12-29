@@ -5249,27 +5249,14 @@ function Main(props) {
     null,
     _react2.default.createElement(
       'nav',
-      null,
+      { className: 'black' },
+      'Evlis Henry',
       _react2.default.createElement(
         'div',
-        { className: 'nav-wrapper black' },
-        _react2.default.createElement(
-          'a',
-          { href: '/about', className: 'brand-logo' },
-          'Evlis Henry'
-        ),
-        _react2.default.createElement(
-          'a',
-          { 'data-activates': 'mobile-demo', className: 'button-collapse' },
-          _react2.default.createElement(
-            'i',
-            { className: 'material-icons' },
-            'menu'
-          )
-        ),
+        null,
         _react2.default.createElement(
           'ul',
-          { className: 'right hide-on-med-and-down' },
+          null,
           _react2.default.createElement(
             'li',
             null,
@@ -5304,28 +5291,6 @@ function Main(props) {
               _reactRouterDom.Link,
               { to: '/resume' },
               'Resume'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'ul',
-          { className: 'side-nav', id: 'mobile-demo side-nav' },
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/about' },
-              'About'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/Work' },
-              'Work'
             )
           )
         )
@@ -5405,7 +5370,7 @@ exports = module.exports = __webpack_require__(70)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body .card {\n    background-color: black;\n    color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: double;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
