@@ -21,7 +21,7 @@ export default function Projects (){
                 <h5>IdeaStorm</h5>
                 <p>A virtual brainstorming tool for teams.</p>
                 <i className="material-icons right">more_vert</i></span>
-                <p><a href="http://idea-storm.herokuapp.com/">Visit</a></p>
+                <p><a href="http://idea-storm.herokuapp.com/">visit</a></p>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">IdeaStorm<i className="material-icons right">close</i></span>
@@ -37,7 +37,7 @@ export default function Projects (){
           <div className="col s1" />
               <div className="card med col s3">
               <div className="card-image waves-effect waves-block waves-light">
-                <img className="activator" src="client/components/images/VocabuMemoryhome.png" />
+                <img className="activator" src="client/components/images/VocabuMemory.png" />
                 {/* <div className="carousel carousel-slider black center" data-indicators="true">
                   <div className="carousel-item" >
                     <img src="client/components/images/VocabuMemoryhome.png" />
@@ -81,7 +81,7 @@ export default function Projects (){
                     <li>Emily Jordan</li>
                     <li>April Rueb</li>
                   </ul> */}
-                  <a>Built with: React, Redux, React-Redux, materalize,material-ui, Sequelize</a>
+                  <a>Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize</a>
                 </div>
               </div>
           </div>

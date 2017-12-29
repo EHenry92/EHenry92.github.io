@@ -4847,7 +4847,7 @@ function Projects() {
             _react2.default.createElement(
               'a',
               { href: 'http://idea-storm.herokuapp.com/' },
-              'Visit'
+              'visit'
             )
           )
         ),
@@ -4883,7 +4883,7 @@ function Projects() {
         _react2.default.createElement(
           'div',
           { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/VocabuMemoryhome.png' })
+          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/VocabuMemory.png' })
         ),
         _react2.default.createElement(
           'div',
@@ -4989,7 +4989,7 @@ function Projects() {
           _react2.default.createElement(
             'span',
             { className: 'card-title grey-text text-darken-4' },
-            'Dunder Mifflin Paper Company',
+            'Dunder Mifflin Inc.',
             _react2.default.createElement(
               'i',
               { className: 'material-icons right' },
@@ -4999,12 +4999,12 @@ function Projects() {
           _react2.default.createElement(
             'p',
             null,
-            'An ecomerce site for the fictional Dunder Mifflin Paper Company'
+            'An e-commerce site for the a paper company.'
           ),
           _react2.default.createElement(
             'a',
             null,
-            'Built with: React, Redux, React-Redux, materalize,material-ui, Sequelize'
+            'Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize'
           )
         )
       )
