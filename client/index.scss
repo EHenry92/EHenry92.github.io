@@ -1,6 +1,9 @@
 body {
   font-family: sans-serif;
-  background-color: rgb(145,1,1)
+  // background-color: rgb(145,1,1)
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 
   a {
     text-decoration: none;
@@ -10,6 +13,8 @@ body {
     display: block;
   }
 }
+
+
 
 .clip-circle {
   clip-path: circle( 150px at center);

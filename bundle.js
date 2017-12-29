@@ -5338,7 +5338,7 @@ exports = module.exports = __webpack_require__(69)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: #910101 a;\n    background-color-text-decoration: none; }\n  body label {\n    display: block; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
