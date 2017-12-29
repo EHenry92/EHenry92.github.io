@@ -1,17 +1,15 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import { Projects, About, Contact} from './index'
+
 
 export default function Main (props) {
   const {children} = props
   $('.button-collapse').sideNav('show');
-  // Hide sideNav
-  $('.button-collapse').sideNav('hide');
-  // Destroy sideNav
-  $('.button-collapse').sideNav('destroy');
   return (
     <div>
       <nav>
-    <div className="nav-wrapper light-green darken-1">
+    <div className="nav-wrapper black">
       <a href="/about" className="brand-logo">Evlis Henry</a>
       <a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
       <ul className="right hide-on-med-and-down">
@@ -26,9 +24,10 @@ export default function Main (props) {
       </ul>
     </div>
   </nav>
-      <hr />
+      <hr className="white" />
+
       {children}
-      <footer className="page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between">
+      {/* <footer className="page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between">
       <div className="social">
       <span className="category">
           <Link to="https://www.github.com/ehenry92" target="_blank"><img
@@ -44,7 +43,7 @@ export default function Main (props) {
               Evlis Henry
             </h6>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

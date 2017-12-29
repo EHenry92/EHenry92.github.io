@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 export default function About () {
       return (
@@ -22,14 +22,14 @@ export default function About () {
           <div className="chip">Ruby</div>
 
       </div>
-      <div  className = "col s6 push-s1 light-green lighten-4 flow-text">
-        <h4>About</h4>
+      <div  className = "col s6 push-s1 flow-text">
+        <h4 className="center">About</h4>
         <p>
-        My name is Evlis Henry. I am a full-stack Javascript developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  </p>
+        My name is Evlis Henry. I am a full-stack JavaScript developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  </p>
       <p>
         After a couple years of educating young minds, I realized that my heart belonged to coding.I polished my programming skills by attending Grace Hopper Academy- an all female coding boot camp. There, I became fully immersed into Full-Stack Javascript. </p>
       <p>
-        I aspire to continue contributing to education as a developer.
+        I aspire to continue contributing to education as a software engineer.
         </p>
         </div>
       </div>

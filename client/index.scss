@@ -1,8 +1,10 @@
 body {
   font-family: sans-serif;
   // background-color: rgb(145,1,1)
+  background-color: black;
+  color: white;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   flex-direction: column;
 
   a {

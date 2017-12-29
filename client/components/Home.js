@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class Home extends Component {
-  render () {
+export default function Home (){
       return (
       <div>
         <div className= "row" >
-          <div class="chip">Javascript</div>
-          <div class="chip">React</div>
-          <div class="chip">HTML5</div>
-          <div class="chip">Ruby</div>
+          <div className="chip">Javascript</div>
+          <div className="chip">React</div>
+          <div className="chip">HTML5</div>
+          <div className="chip">Ruby</div>
       </div>
     </div>
       )
   }
-}
 
