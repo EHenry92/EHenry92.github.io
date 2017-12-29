@@ -22,9 +22,6 @@ export default function Projects (){
                   <div className="carousel-item black" >
                     <img src="client/components/images/ideaStormLogo.png" />
                   </div>
-                  <div className="carousel-item black">
-                    <img  src="client/components/images/ideaStormHome.png" />
-                  </div>
 
                 </div>
               </div>
