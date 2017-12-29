@@ -24,8 +24,8 @@ export default function Main (props) {
       <ul className="right hide-on-med-and-down">
         <li><Link to="/about">About</Link></li>
         <li><Link to="/Work">Work</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
+        {/* <li><Link to="/contact">Contact</Link></li> */}
+        {/* <li><Link to="/resume">Resume</Link></li> */}
       </ul>
       <ul className="side-nav" id="mobile-demo side-nav">
         <li><Link to="/about">About</Link></li>
