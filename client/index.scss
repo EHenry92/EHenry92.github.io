@@ -12,6 +12,14 @@ body {
   label {
     display: block;
   }
+  .card {
+    background-color: black;
+    color: white;
+    .card-reveal{
+        background-color: rgb(58, 57, 57);
+    }
+  }
+
 }
 
 .clip-circle {

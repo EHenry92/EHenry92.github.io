@@ -4824,7 +4824,7 @@ function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator grey-text text-darken-4' },
+            { className: 'card-title activator' },
             _react2.default.createElement(
               'h5',
               null,
@@ -4856,7 +4856,7 @@ function Projects() {
           { className: 'card-reveal' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title grey-text text-darken-4' },
+            { className: 'card-title' },
             'IdeaStorm',
             _react2.default.createElement(
               'i',
@@ -4890,7 +4890,7 @@ function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator grey-text text-darken-4' },
+            { className: 'card-title activator' },
             _react2.default.createElement(
               'h5',
               null,
@@ -4922,7 +4922,7 @@ function Projects() {
           { className: 'card-reveal' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title grey-text text-darken-4' },
+            { className: 'card-title' },
             'VocabuMemory',
             _react2.default.createElement(
               'i',
@@ -4956,7 +4956,7 @@ function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator grey-text text-darken-4' },
+            { className: 'card-title activator' },
             _react2.default.createElement(
               'h5',
               null,
@@ -4988,7 +4988,7 @@ function Projects() {
           { className: 'card-reveal' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title grey-text text-darken-4' },
+            { className: 'card-title' },
             'Dunder Mifflin Inc.',
             _react2.default.createElement(
               'i',
@@ -5204,7 +5204,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Main(props) {
   var children = props.children;
 
-
+  $('.button-collapse').sideNav('show');
+  // Hide sideNav
+  $('.button-collapse').sideNav('hide');
+  // Destroy sideNav
+  $('.button-collapse').sideNav('destroy');
   return _react2.default.createElement(
     'div',
     null,
@@ -5221,7 +5225,7 @@ function Main(props) {
         ),
         _react2.default.createElement(
           'a',
-          { href: '#', 'data-activates': 'mobile-demo', className: 'button-collapse' },
+          { 'data-activates': 'mobile-demo', className: 'button-collapse' },
           _react2.default.createElement(
             'i',
             { className: 'material-icons' },
@@ -5403,7 +5407,7 @@ exports = module.exports = __webpack_require__(69)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body .card {\n    background-color: black;\n    color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
