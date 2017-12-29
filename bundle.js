@@ -4817,25 +4817,7 @@ function Projects() {
         _react2.default.createElement(
           'div',
           { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement(
-            'div',
-            { className: 'carousel carousel-slider black center', 'data-indicators': 'true' },
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-item black' },
-              _react2.default.createElement('img', { src: 'client/components/images/ideaStormRoom.png' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-item black' },
-              _react2.default.createElement('img', { src: 'client/components/images/ideaStormLogo.png' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-item black' },
-              _react2.default.createElement('img', { src: 'client/components/images/ideaStormHome.png' })
-            )
-          )
+          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/ideaStormRoom.png' })
         ),
         _react2.default.createElement(
           'div',
@@ -4901,20 +4883,7 @@ function Projects() {
         _react2.default.createElement(
           'div',
           { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement(
-            'div',
-            { className: 'carousel carousel-slider black center', 'data-indicators': 'true' },
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-item' },
-              _react2.default.createElement('img', { src: 'client/components/images/VocabuMemoryhome.png' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'carousel-item' },
-              _react2.default.createElement('img', { src: 'client/components/images/VocabuMemoryGame.png' })
-            )
-          )
+          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/VocabuMemoryhome.png' })
         ),
         _react2.default.createElement(
           'div',
@@ -4976,7 +4945,7 @@ function Projects() {
       _react2.default.createElement('div', { className: 'col s1' }),
       _react2.default.createElement(
         'div',
-        { className: 'card med col s3' },
+        { className: 'card med col col s3' },
         _react2.default.createElement(
           'div',
           { className: 'card-image waves-effect waves-block waves-light' },
