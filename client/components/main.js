@@ -18,10 +18,16 @@ export default function Main (props) {
 
 
       </ul>
-      <ul className="side-nav" id="mobile-demo">
+      <ul className="side-nav" id="mobile-demo side-nav">
         <li><Link to="/about">About</Link></li>
         <li><Link to="/Work">Work</Link></li>
       </ul>
+
+
+
+
+
+
     </div>
   </nav>
       <hr />
