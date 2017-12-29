@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 export default function Projects (){
   $(document).ready(function(){
@@ -37,7 +37,6 @@ export default function Projects (){
           <div className="col s1" />
               <div className="card med col s3">
               <div className="card-image waves-effect waves-block waves-light">
-              {/* <div> */}
                 <img className="activator" src="client/components/images/VocabuMemoryhome.png" />
                 {/* <div className="carousel carousel-slider black center" data-indicators="true">
                   <div className="carousel-item" >
@@ -75,8 +74,8 @@ export default function Projects (){
                   <p><a href="https://dundermifflininc.herokuapp.com/">visit</a></p>
                 </div>
                 <div className="card-reveal">
-                  <span className="card-title grey-text text-darken-4">Dunder Mifflin Paper Company<i className="material-icons right">close</i></span>
-                  <p>An ecomerce site for the fictional Dunder Mifflin Paper Company</p>
+                  <span className="card-title grey-text text-darken-4">Dunder Mifflin Inc.<i className="material-icons right">close</i></span>
+                  <p>An e-commerce site for the a paper company.</p>
                   {/* <ul>Contributors:
                     <li>Layla Hedges</li>
                     <li>Emily Jordan</li>
