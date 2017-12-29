@@ -5059,7 +5059,7 @@ function Projects() {
         _react2.default.createElement(
           'div',
           { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/dm.png' })
+          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/dunderMifflin.png' })
         ),
         _react2.default.createElement(
           'div',
@@ -5223,7 +5223,7 @@ function About() {
         _react2.default.createElement(
           "p",
           null,
-          "My name is Evlis Henry. I am a full-stack Javascript developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  "
+          "My name is Evlis Henry. I am a full-stack JavaScript developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  "
         ),
         _react2.default.createElement(
           "p",
@@ -5233,7 +5233,7 @@ function About() {
         _react2.default.createElement(
           "p",
           null,
-          "I aspire to continue contributing to education as a developer."
+          "I aspire to continue contributing to education as a software engineer."
         )
       )
     )

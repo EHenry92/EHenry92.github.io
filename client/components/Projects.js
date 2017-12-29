@@ -64,7 +64,7 @@ export default function Projects (){
           <div className="col s1" />
               <div className="card med col col s3">
                 <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src="client/components/images/dm.png" />
+                  <img className="activator" src="client/components/images/dunderMifflin.png" />
                 </div>
                 <div className="card-content">
                   <span className="card-title activator grey-text text-darken-4">
