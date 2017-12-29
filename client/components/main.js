@@ -1,5 +1,7 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import { Projects, About, Contact} from './index'
+
 
 export default function Main (props) {
   const {children} = props
@@ -31,8 +33,9 @@ export default function Main (props) {
     </div>
   </nav>
       <hr />
+
       {children}
-      <footer className="page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between">
+      {/* <footer className="page-footer #cfd8dc blue-grey lighten-4 valign-wrapper justify-between">
       <div className="social">
       <span className="category">
           <Link to="https://www.github.com/ehenry92" target="_blank"><img
@@ -48,7 +51,7 @@ export default function Main (props) {
               Evlis Henry
             </h6>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
