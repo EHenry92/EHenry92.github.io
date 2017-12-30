@@ -16,16 +16,19 @@ body {
     text-decoration: none;
   }
   nav li{
-    color: blue;
+    color: orange;
   }
 
   label {
     display: block;
   }
+  .row .col {
+    padding: 0.75rem;
+  }
   .card {
     background-color: black;
     color: white;
-    border-style: double;
+    border-style: solid;
     border-color: white;
     .card-reveal{
         background-color: rgb(58, 57, 57);

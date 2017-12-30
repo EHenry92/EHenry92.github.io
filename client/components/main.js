@@ -4,10 +4,9 @@ import {Link} from 'react-router-dom';
 
 export default function Main (props) {
   const {children} = props
-  $('.button-collapse').sideNav('show');
   return (
     <div>
-      <nav className= "black">
+      <nav>
     <div className="nav-wrapper black">
       <div href="/" id="name" className="brand-logo"><h2>Evlis Henry</h2></div>
       <a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
@@ -26,7 +25,9 @@ export default function Main (props) {
       </ul>
     </div>
   </nav>
-      <hr className="white" />
+        <div className = "orange-text">
+      <hr className="orange-text" />
+      </div>
       {children}
     </div>
   )

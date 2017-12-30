@@ -8,7 +8,7 @@ export default function Projects (){
 
       return (
       <div>
-        <div className="center">Projects</div>
+        <div className="center"><h5>Take a look at my work!</h5></div>
         <hr />
         <div className="row ">
         <div className="col s1" />
@@ -68,7 +68,7 @@ export default function Projects (){
                 </div>
                 <div className="card-content">
                   <span className="card-title activator">
-                    <h5>Dunder Mifflin Paper Company</h5>
+                    <h5>Dunder Mifflin Inc.</h5>
                     <p>An e-commerce website.</p>
                   <i className="material-icons right">more_vert</i></span>
                   <p><a href="https://dundermifflininc.herokuapp.com/">visit</a></p>
