@@ -8,7 +8,7 @@ export default function Projects (){
 
       return (
       <div>
-        <h5>Projects</h5>
+        <div className="center">Projects</div>
         <hr />
         <div className="row ">
         <div className="col s1" />

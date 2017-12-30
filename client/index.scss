@@ -6,9 +6,17 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
-
+  #name {
+    background:black;
+    color:white;
+    font-family: cursive;
+    justify-content: center;
+  }
   a {
     text-decoration: none;
+  }
+  nav li{
+    color: blue;
   }
 
   label {

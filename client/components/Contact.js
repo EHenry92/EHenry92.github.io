@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom'
 const Contact = (props) => {
   return (
     <div>
-       <div className="social">
+      .
+      <hr />
+       <div className="social white">
       <span className="category">
           <Link to="https://www.github.com/ehenry92" target="_blank"><img
           className= "tinyImg"

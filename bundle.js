@@ -4783,9 +4783,11 @@ var Contact = function Contact(props) {
   return _react2.default.createElement(
     'div',
     null,
+    '.',
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
-      { className: 'social' },
+      { className: 'social white' },
       _react2.default.createElement(
         'span',
         { className: 'category' },
@@ -4888,8 +4890,8 @@ function Projects() {
     'div',
     null,
     _react2.default.createElement(
-      'h5',
-      null,
+      'div',
+      { className: 'center' },
       'Projects'
     ),
     _react2.default.createElement('hr', null),
@@ -5236,8 +5238,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(22);
 
-var _index = __webpack_require__(25);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Main(props) {
@@ -5250,13 +5250,78 @@ function Main(props) {
     _react2.default.createElement(
       'nav',
       { className: 'black' },
-      'Evlis Henry',
       _react2.default.createElement(
         'div',
-        null,
+        { className: 'nav-wrapper black' },
+        _react2.default.createElement(
+          'div',
+          { href: '/', id: 'name', className: 'brand-logo' },
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Evlis Henry'
+          )
+        ),
+        _react2.default.createElement(
+          'a',
+          { 'data-activates': 'mobile-demo', className: 'button-collapse' },
+          _react2.default.createElement(
+            'i',
+            { className: 'material-icons' },
+            'menu'
+          )
+        ),
         _react2.default.createElement(
           'ul',
-          null,
+          { className: 'right hide-on-med-and-down' },
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/about' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'About'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'h5',
+              null,
+              '|'
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/Work' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'Projects'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'h5',
+              null,
+              '|'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'ul',
+          { className: 'side-nav', id: 'mobile-demo side-nav' },
           _react2.default.createElement(
             'li',
             null,
@@ -5273,24 +5338,6 @@ function Main(props) {
               _reactRouterDom.Link,
               { to: '/Work' },
               'Work'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/contact' },
-              'Contact'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/resume' },
-              'Resume'
             )
           )
         )
@@ -5370,7 +5417,7 @@ exports = module.exports = __webpack_require__(70)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body a {\n    text-decoration: none; }\n  body label {\n    display: block; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: double;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body #name {\n    background: black;\n    color: white;\n    font-family: cursive;\n    justify-content: center; }\n  body a {\n    text-decoration: none; }\n  body nav li {\n    color: blue; }\n  body label {\n    display: block; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: double;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
