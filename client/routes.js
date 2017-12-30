@@ -11,7 +11,7 @@ import {me} from './store'
 export default class Routes extends Component {
   render () {
     return (
-      <Router history={history}>
+      <Router}>
         <Main>
           <Switch>
             <Route path="/About" component={About} />
