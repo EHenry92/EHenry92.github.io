@@ -41,7 +41,7 @@ export default class Projects extends Component {
                     <i className="material-icons right">more_vert</i></span>
 
                     <div><a href="http://idea-storm.herokuapp.com/">site</a></div>
-                    <div><a href="https://github.com/EHenry92/meeb"> code</a></div>
+                    {/* <div><a href="https://github.com/EHenry92/meeb"> code</a></div> */}
                   </div>
                   <div className="card-reveal">
                     <span className="card-title">IdeaStorm<i className="material-icons right">close</i></span>
@@ -70,7 +70,7 @@ export default class Projects extends Component {
                       <p>A memory matching card game.</p>
                     <i className="material-icons right">more_vert</i></span>
                     <p><a href="http://vocabumemory.herokuapp.com/">site</a></p>
-                    <p><a href="https://github.com/EHenry92/VocabuMemory">code</a></p>
+                    {/* <p><a href="https://github.com/EHenry92/VocabuMemory">code</a></p> */}
 
                   </div>
                   <div className="card-reveal">
@@ -91,7 +91,7 @@ export default class Projects extends Component {
                       <i className="material-icons right">more_vert</i></span>
 
                       <p><a href="https://dundermifflininc.herokuapp.com/">site</a></p>
-                      <p><a href="https://github.com/EHenry92/dunder_mifflin">code</a></p>
+                      {/* <p><a href="https://github.com/EHenry92/dunder_mifflin">code</a></p> */}
 
                     </div>
                     <div className="card-reveal">
