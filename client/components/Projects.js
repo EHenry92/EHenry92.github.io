@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 
 export default class Projects extends Component {
         componentDidMount () {
-          let vmImageIndex = 0, isImageIndex = 0;
+          let vmImageIndex = 0, isImageIndex = 0, dmImageIndex = 0;
           const vmImages = document.getElementsByClassName('carousel-image vm');
           const isImages = document.getElementsByClassName('carousel-image is');
+          const dmImages = document.getElementsByClassName('carousel-image dm');
 
           setInterval(() => {
             vmImages[vmImageIndex].classList.add('hidden');
@@ -16,6 +17,11 @@ export default class Projects extends Component {
             isImageIndex++;
             if (isImageIndex === isImages.length) {isImageIndex = 0;}
           isImages[isImageIndex].classList.remove('hidden');
+
+          dmImages[dmImageIndex].classList.add('hidden');
+            dmImageIndex++;
+            if (dmImageIndex === dmImages.length) {dmImageIndex = 0;}
+          dmImages[dmImageIndex].classList.remove('hidden');
 
           }, 3500);
         }
@@ -59,8 +65,8 @@ export default class Projects extends Component {
                   {/* <div className="card-image waves-effect waves-block waves-light"> */}
                     {/* <img className="activator" src="client/components/images/VocabuMemory.png" /> */}
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image vm activator" src="client/components/images/VocabuMemory.png" />
-                        <img className="carousel-image vm activator hidden" src="client/components/images/vocabuMemoryGame.png" />
+                        <img className="carousel-image dm activator" src="client/components/images/VocabuMemory.png" />
+                        <img className="carousel-image dm activator hidden" src="client/components/images/vocabuMemoryGame.png" />
                       </div>
 
                   {/* </div> */}
@@ -81,9 +87,10 @@ export default class Projects extends Component {
               </div>
               <div className="col s1" />
                   <div className="card med col col s3">
-                    <div className="card-image waves-effect waves-block waves-light">
-                      <img className="activator" src="client/components/images/dunderMifflin.png" />
-                    </div>
+                    <div id="carousel" className="card-image waves-effect waves-block waves-light">
+                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
+                        <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
+                      </div>
                     <div className="card-content">
                       <span className="card-title activator">
                         <h5>Dunder Mifflin Inc.</h5>

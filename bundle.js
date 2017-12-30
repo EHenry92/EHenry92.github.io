@@ -4815,9 +4815,11 @@ var Projects = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var vmImageIndex = 0,
-          isImageIndex = 0;
+          isImageIndex = 0,
+          dmImageIndex = 0;
       var vmImages = document.getElementsByClassName('carousel-image vm');
       var isImages = document.getElementsByClassName('carousel-image is');
+      var dmImages = document.getElementsByClassName('carousel-image dm');
 
       setInterval(function () {
         vmImages[vmImageIndex].classList.add('hidden');
@@ -4833,6 +4835,13 @@ var Projects = function (_Component) {
           isImageIndex = 0;
         }
         isImages[isImageIndex].classList.remove('hidden');
+
+        dmImages[dmImageIndex].classList.add('hidden');
+        dmImageIndex++;
+        if (dmImageIndex === dmImages.length) {
+          dmImageIndex = 0;
+        }
+        dmImages[dmImageIndex].classList.remove('hidden');
       }, 3500);
     }
   }, {
@@ -4929,8 +4938,8 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'div',
               { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-              _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/VocabuMemory.png' }),
-              _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/vocabuMemoryGame.png' })
+              _react2.default.createElement('img', { className: 'carousel-image dm activator', src: 'client/components/images/VocabuMemory.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image dm activator hidden', src: 'client/components/images/vocabuMemoryGame.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -4995,8 +5004,9 @@ var Projects = function (_Component) {
             { className: 'card med col col s3' },
             _react2.default.createElement(
               'div',
-              { className: 'card-image waves-effect waves-block waves-light' },
-              _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/dunderMifflin.png' })
+              { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
+              _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/dunderMifflin.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/dunderMifflincart.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -5323,7 +5333,7 @@ function Main(props) {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/Work' },
+              { to: '/work' },
               _react2.default.createElement(
                 'h5',
                 null,

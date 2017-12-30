@@ -13,7 +13,7 @@ export default function Main (props) {
       <ul className="right hide-on-med-and-down">
         <li><Link to="/about"><h5>About</h5></Link></li>
         <li><h5>|</h5></li>
-        <li><Link to="/Work"><h5>Projects</h5></Link></li>
+        <li><Link to="/work"><h5>Projects</h5></Link></li>
         <li><h5>|</h5></li>
         <li><Link to="/contact"><h5>Contact</h5></Link></li>
         <li><h5>|</h5></li>
