@@ -3,7 +3,6 @@ import React from 'react';
 export default function About () {
       return (
        <div>
-
       <div className= "row" >
       <div className="col s3 push-s1">
         <img src="client/components/images/me.jpg" alt="" className="clip-circle" />
@@ -22,7 +21,7 @@ export default function About () {
           <div className="chip">Ruby</div>
 
       </div>
-      <div  className = "col s6 push-s1 flow-text">
+      <div  id="bio" className = "col s6 push-s1 flow-text">
         <h4 className="center">A brief bio.</h4>
         <p>
         My name is Evlis Henry. I am a full-stack developer. I began my journey into programming as an undergraduate at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.  </p>

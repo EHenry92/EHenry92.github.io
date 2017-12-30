@@ -4787,7 +4787,8 @@ function Home() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Projects;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -4795,229 +4796,301 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Projects() {
-  $(document).ready(function () {
-    $('.carousel').carousel();
-  });
-  $('.carousel.carousel-slider').carousel({ fullWidth: true, duration: 100 });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'div',
-      { className: 'center' },
-      _react2.default.createElement(
-        'h5',
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Projects = function (_Component) {
+  _inherits(Projects, _Component);
+
+  function Projects() {
+    _classCallCheck(this, Projects);
+
+    return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
+  }
+
+  _createClass(Projects, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var vmImageIndex = 0,
+          isImageIndex = 0;
+      var vmImages = document.getElementsByClassName('carousel-image vm');
+      var isImages = document.getElementsByClassName('carousel-image is');
+
+      setInterval(function () {
+        vmImages[vmImageIndex].classList.add('hidden');
+        vmImageIndex++;
+        if (vmImageIndex === vmImages.length) {
+          vmImageIndex = 0;
+        }
+        vmImages[vmImageIndex].classList.remove('hidden');
+
+        isImages[isImageIndex].classList.add('hidden');
+        isImageIndex++;
+        if (isImageIndex === isImages.length) {
+          isImageIndex = 0;
+        }
+        isImages[isImageIndex].classList.remove('hidden');
+      }, 3500);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
         null,
-        'Take a look at my work!'
-      )
-    ),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'row ' },
-      _react2.default.createElement('div', { className: 'col s1' }),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med col s3' },
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'div',
-          { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/ideaStormRoom.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
+          { className: 'center' },
           _react2.default.createElement(
-            'span',
-            { className: 'card-title activator' },
-            _react2.default.createElement(
-              'h5',
-              null,
-              'IdeaStorm'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'A virtual brainstorming tool for teams.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
+            'h5',
             null,
-            _react2.default.createElement(
-              'a',
-              { href: 'http://idea-storm.herokuapp.com/' },
-              'visit'
-            )
+            'View my work!'
           )
         ),
         _react2.default.createElement(
           'div',
-          { className: 'card-reveal' },
+          { className: 'row ' },
+          _react2.default.createElement('div', { className: 'col s1' }),
           _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'IdeaStorm',
+            'div',
+            { className: 'card med col s3' },
             _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
+              'div',
+              { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
+              _react2.default.createElement('img', { className: 'carousel-image is activator', src: 'client/components/images/ideaStormlogo.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormRoom.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormhome.png' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-content' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title activator' },
+                _react2.default.createElement(
+                  'h5',
+                  null,
+                  'IdeaStorm'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'A virtual brainstorming tool for teams.'
+                ),
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'more_vert'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'http://idea-storm.herokuapp.com/' },
+                  'site'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://github.com/EHenry92/meeb' },
+                  ' code'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-reveal' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title' },
+                'IdeaStorm',
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'close'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'A virtual collaboration tool for teams to share, discuss and connect ideas.'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Built with: React, Redux, AWS, D3.js, React-Redux, materalize, Sequelize'
+              )
             )
           ),
+          _react2.default.createElement('div', { className: 'col s1' }),
           _react2.default.createElement(
-            'p',
-            null,
-            'A virtual collaboration tool for teams to share, discuss and connect ideas.'
+            'div',
+            { className: 'card med col s3' },
+            _react2.default.createElement(
+              'div',
+              { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
+              _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/VocabuMemory.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/VocabuMemoryGame.png' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-content' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title activator' },
+                _react2.default.createElement(
+                  'h5',
+                  null,
+                  'VocabuMemory'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'A memory matching card game.'
+                ),
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'more_vert'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'http://vocabumemory.herokuapp.com/' },
+                  'site'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://github.com/EHenry92/VocabuMemory' },
+                  'code'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-reveal' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title' },
+                'VocabuMemory',
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'close'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'A matching card game in which successful matches are found by pairing a word with its definition.'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Built with: React, Redux, React-Redux, Materalize, Sequelize'
+              )
+            )
           ),
+          _react2.default.createElement('div', { className: 'col s1' }),
           _react2.default.createElement(
-            'p',
-            null,
-            'Built with: React, Redux, AWS, D3.js, React-Redux, materalize, Sequelize'
+            'div',
+            { className: 'card med col col s3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'card-image waves-effect waves-block waves-light' },
+              _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/dunderMifflin.png' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-content' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title activator' },
+                _react2.default.createElement(
+                  'h5',
+                  null,
+                  'Dunder Mifflin Inc.'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'An e-commerce website.'
+                ),
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'more_vert'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://dundermifflininc.herokuapp.com/' },
+                  'site'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                _react2.default.createElement(
+                  'a',
+                  { href: 'https://github.com/EHenry92/dunder_mifflin' },
+                  'code'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'card-reveal' },
+              _react2.default.createElement(
+                'span',
+                { className: 'card-title' },
+                'Dunder Mifflin Inc.',
+                _react2.default.createElement(
+                  'i',
+                  { className: 'material-icons right' },
+                  'close'
+                )
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'An e-commerce site for the a paper company.'
+              ),
+              _react2.default.createElement(
+                'a',
+                null,
+                'Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize'
+              )
+            )
           )
         )
-      ),
-      _react2.default.createElement('div', { className: 'col s1' }),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med col s3' },
-        _react2.default.createElement(
-          'div',
-          { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/VocabuMemory.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title activator' },
-            _react2.default.createElement(
-              'h5',
-              null,
-              'VocabuMemory'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'A memory matching card game.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: 'http://vocabumemory.herokuapp.com/' },
-              'visit'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-reveal' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'VocabuMemory',
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'A matching card game in which successful matches are found by pairing a word with its definition.'
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'Built with: React, Redux, React-Redux, Materalize, Sequelize'
-          )
-        )
-      ),
-      _react2.default.createElement('div', { className: 'col s1' }),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med col col s3' },
-        _react2.default.createElement(
-          'div',
-          { className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'activator', src: 'client/components/images/dunderMifflin.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title activator' },
-            _react2.default.createElement(
-              'h5',
-              null,
-              'Dunder Mifflin Inc.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'An e-commerce website.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: 'https://dundermifflininc.herokuapp.com/' },
-              'visit'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-reveal' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'Dunder Mifflin Inc.',
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'An e-commerce site for the a paper company.'
-          ),
-          _react2.default.createElement(
-            'a',
-            null,
-            'Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize'
-          )
-        )
-      )
-    )
-  );
-}
+      );
+    }
+  }]);
+
+  return Projects;
+}(_react.Component);
+
+exports.default = Projects;
 
 /***/ }),
 /* 64 */
@@ -5111,7 +5184,7 @@ function About() {
       ),
       _react2.default.createElement(
         "div",
-        { className: "col s6 push-s1 flow-text" },
+        { id: "bio", className: "col s6 push-s1 flow-text" },
         _react2.default.createElement(
           "h4",
           { className: "center" },
@@ -5293,6 +5366,28 @@ function Main(props) {
               null,
               '|'
             )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/contact' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'Contact'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'li',
+            null,
+            _react2.default.createElement(
+              'h5',
+              null,
+              '|'
+            )
           )
         ),
         _react2.default.createElement(
@@ -5319,11 +5414,8 @@ function Main(props) {
         )
       )
     ),
-    _react2.default.createElement(
-      'div',
-      { className: 'orange-text' },
-      _react2.default.createElement('hr', { className: 'orange-text' })
-    ),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement('hr', { className: 'colorBar' }),
     children
   );
 }
@@ -5397,7 +5489,7 @@ exports = module.exports = __webpack_require__(70)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body #name {\n    background: black;\n    color: white;\n    font-family: cursive;\n    justify-content: center; }\n  body a {\n    text-decoration: none; }\n  body nav li {\n    color: #ff9800; }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: solid;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body #name {\n    background: black;\n    color: white;\n    font-family: cursive;\n    justify-content: center; }\n  body a {\n    text-decoration: none; }\n  body nav li {\n    color: #ff7f50; }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: solid;\n    border-color: #ff7f50; }\n    body .card .card-reveal {\n      background-color: #ff7f50; }\n  body #bio {\n    background-color: #ff7f50;\n    border-radius: 30px;\n    margin-top: 20px; }\n  body .colorBar {\n    color: #ff7f50; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n", ""]);
 
 // exports
 

@@ -15,9 +15,9 @@ export default function Main (props) {
         <li><h5>|</h5></li>
         <li><Link to="/Work"><h5>Projects</h5></Link></li>
         <li><h5>|</h5></li>
-        {/* <li><Link to="/contact"><h5>Contact</h5></Link></li>
+        <li><Link to="/contact"><h5>Contact</h5></Link></li>
         <li><h5>|</h5></li>
-        <li><Link to="/resume"><h5>Resume</h5></Link></li> */}
+        {/* <li><Link to="/resume"><h5>Resume</h5></Link></li> */}
       </ul>
       <ul className="side-nav" id="mobile-demo side-nav">
         <li><Link to="/about">About</Link></li>
@@ -25,9 +25,9 @@ export default function Main (props) {
       </ul>
     </div>
   </nav>
-        <div className = "orange-text">
-      <hr className="orange-text" />
-      </div>
+      <hr />
+      <hr className="colorBar" />
+
       {children}
     </div>
   )
