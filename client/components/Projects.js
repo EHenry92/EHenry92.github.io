@@ -28,9 +28,9 @@ export default class Projects extends Component {
             <div className="col s1" />
                   <div className="card med col s3">
                   <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image is activator" src="client/components/images/ideaStormlogo.png" />
+                        <img className="carousel-image is activator" src="client/components/images/ideastormlogo.png" />
                         <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png"/>
-                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormhome.png"/>
+                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormHome.png"/>
 
                       </div>
 
@@ -60,7 +60,7 @@ export default class Projects extends Component {
                     {/* <img className="activator" src="client/components/images/VocabuMemory.png" /> */}
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
                         <img className="carousel-image vm activator" src="client/components/images/VocabuMemory.png" />
-                        <img className="carousel-image vm activator hidden" src="client/components/images/VocabuMemoryGame.png" />
+                        <img className="carousel-image vm activator hidden" src="client/components/images/vocabuMemoryGame.png" />
                       </div>
 
                   {/* </div> */}
