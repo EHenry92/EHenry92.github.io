@@ -6,14 +6,14 @@ const path = require('path');
 
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname), {redirect: false}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const port = process.env.PORT || 3000; // this can be very useful if you deploy to Heroku!
 app.listen(port, function () {
-  console.log("Knock, knock");
+  console.log('Knock, knock');
   console.log("Who's there?");
   console.log(`Your server, listening on port ${port}`);
 });
@@ -27,3 +27,4 @@ app.use(function (err, req, res, next) {
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || 'Internal server error.');
 });
+

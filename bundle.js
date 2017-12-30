@@ -4861,9 +4861,9 @@ var Projects = function (_Component) {
             _react2.default.createElement(
               'div',
               { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-              _react2.default.createElement('img', { className: 'carousel-image is activator', src: 'client/components/images/ideaStormlogo.png' }),
+              _react2.default.createElement('img', { className: 'carousel-image is activator', src: 'client/components/images/ideastormlogo.png' }),
               _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormRoom.png' }),
-              _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormhome.png' })
+              _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormHome.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -4894,15 +4894,6 @@ var Projects = function (_Component) {
                   'a',
                   { href: 'http://idea-storm.herokuapp.com/' },
                   'site'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://github.com/EHenry92/meeb' },
-                  ' code'
                 )
               )
             ),
@@ -4939,7 +4930,7 @@ var Projects = function (_Component) {
               'div',
               { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
               _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/VocabuMemory.png' }),
-              _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/VocabuMemoryGame.png' })
+              _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/vocabuMemoryGame.png' })
             ),
             _react2.default.createElement(
               'div',
@@ -4970,15 +4961,6 @@ var Projects = function (_Component) {
                   'a',
                   { href: 'http://vocabumemory.herokuapp.com/' },
                   'site'
-                )
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://github.com/EHenry92/VocabuMemory' },
-                  'code'
                 )
               )
             ),
@@ -5045,15 +5027,6 @@ var Projects = function (_Component) {
                   'a',
                   { href: 'https://dundermifflininc.herokuapp.com/' },
                   'site'
-                )
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://github.com/EHenry92/dunder_mifflin' },
-                  'code'
                 )
               )
             ),
