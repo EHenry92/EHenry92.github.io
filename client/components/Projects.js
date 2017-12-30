@@ -1,31 +1,19 @@
 import React, {Component} from 'react';
 
-export default class Projects extends Component {
-        componentDidMount () {
-          let vmImageIndex = 0, isImageIndex = 0, dmImageIndex = 0;
-          const vmImages = document.getElementsByClassName('carousel-image vm');
-          const isImages = document.getElementsByClassName('carousel-image is');
-          const dmImages = document.getElementsByClassName('carousel-image dm');
-
+export default function Projects (){
+        const prefixes = ['vm', 'is', 'dm'];
+        let indexes = [0 , 0 ,0];
+        prefixes.forEach((proj, idx) => {
+          const images = document.getElementsByClassName(`carousel-image ${proj}`);
           setInterval(() => {
-            vmImages[vmImageIndex].classList.add('hidden');
-              vmImageIndex++;
-              if (vmImageIndex === vmImages.length) {vmImageIndex = 0;}
-            vmImages[vmImageIndex].classList.remove('hidden');
-
-            isImages[isImageIndex].classList.add('hidden');
-            isImageIndex++;
-            if (isImageIndex === isImages.length) {isImageIndex = 0;}
-          isImages[isImageIndex].classList.remove('hidden');
-
-          dmImages[dmImageIndex].classList.add('hidden');
-            dmImageIndex++;
-            if (dmImageIndex === dmImages.length) {dmImageIndex = 0;}
-          dmImages[dmImageIndex].classList.remove('hidden');
+            images[indexes[idx]].classList.add('hidden');
+            indexes[idx]++;
+              if (indexes[idx] === images.length) {indexes[idx] = 0;}
+            images[indexes[idx]].classList.remove('hidden');
 
           }, 3500);
-        }
-        render () {
+        })
+
           return (
           <div>
             <br />
@@ -88,7 +76,7 @@ export default class Projects extends Component {
               <div className="col s1" />
                   <div className="card med col col s3">
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
+                      <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
                         <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
                       </div>
                     <div className="card-content">
@@ -117,4 +105,4 @@ export default class Projects extends Component {
 
           )
       }
-}
+
