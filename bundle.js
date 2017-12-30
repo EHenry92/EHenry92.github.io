@@ -5397,7 +5397,7 @@ exports = module.exports = __webpack_require__(70)();
 
 
 // module
-exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body #name {\n    background: black;\n    color: white;\n    font-family: cursive;\n    justify-content: center; }\n  body a {\n    text-decoration: none; }\n  body nav li {\n    color: orange; }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: solid;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: sans-serif;\n  background-color: black;\n  color: white;\n  display: flex;\n  height: 100vh;\n  flex-direction: column; }\n  body #name {\n    background: black;\n    color: white;\n    font-family: cursive;\n    justify-content: center; }\n  body a {\n    text-decoration: none; }\n  body nav li {\n    color: #ff9800; }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .card {\n    background-color: black;\n    color: white;\n    border-style: solid;\n    border-color: white; }\n    body .card .card-reveal {\n      background-color: #3a3939; }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n", ""]);
 
 // exports
 
