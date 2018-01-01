@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default function Projects (){
+const Projects = () => {
         const prefixes = ['vm', 'is', 'dm'];
-        let indexes = [0 , 0 ,0];
+        let indexes = [0, 0, 0];
         prefixes.forEach((proj, idx) => {
           const images = document.getElementsByClassName(`carousel-image ${proj}`);
           setInterval(() => {
@@ -15,16 +15,14 @@ export default function Projects (){
         })
 
           return (
-          <div>
-            <br />
+          <div className="contained">
             <div className="center"><h5>View my work!</h5></div>
             <div className="row ">
-            <div className="col s1" />
                   <div className="card med col s3">
                   <div id="carousel" className="card-image waves-effect waves-block waves-light">
                         <img className="carousel-image is activator" src="client/components/images/ideastormlogo.png" />
-                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png"/>
-                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormHome.png"/>
+                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png" />
+                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormHome.png" />
 
                       </div>
 
@@ -35,7 +33,7 @@ export default function Projects (){
                     <i className="material-icons right">more_vert</i></span>
 
                     <div><a href="http://idea-storm.herokuapp.com/">site</a></div>
-                    {/* <div><a href="https://github.com/EHenry92/meeb"> code</a></div> */}
+                    <div><a href="https://github.com/EHenry92/meeb"> code</a></div>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title">IdeaStorm<i className="material-icons right">close</i></span>
@@ -45,10 +43,9 @@ export default function Projects (){
                         <li>Maria Betances</li>
                         <li>Blanca Sanchez</li>
                       </ul> */}
-                    <p>Built with: React, Redux, AWS, D3.js, React-Redux, materalize, Sequelize</p>
+                    <p>Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js</p>
                   </div>
               </div>
-              <div className="col s1" />
                   <div className="card med col s3">
                   {/* <div className="card-image waves-effect waves-block waves-light"> */}
                     {/* <img className="activator" src="client/components/images/VocabuMemory.png" /> */}
@@ -73,7 +70,6 @@ export default function Projects (){
                     <p>Built with: React, Redux, React-Redux, Materalize, Sequelize</p>
                   </div>
               </div>
-              <div className="col s1" />
                   <div className="card med col col s3">
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
                       <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
@@ -82,7 +78,7 @@ export default function Projects (){
                     <div className="card-content">
                       <span className="card-title activator">
                         <h5>Dunder Mifflin Inc.</h5>
-                        <p>An e-commerce website.</p>
+                        <p>An e-commerce website for a paper company.</p>
                       <i className="material-icons right">more_vert</i></span>
 
                       <p><a href="https://dundermifflininc.herokuapp.com/">site</a></p>
@@ -106,3 +102,4 @@ export default function Projects (){
           )
       }
 
+export default Projects;

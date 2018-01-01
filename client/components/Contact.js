@@ -1,12 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
 
-const Contact = (props) => {
+const Contact = () => {
   return (
-    <div>
-      .
+    <div className = "contained">
       <hr />
        <div className="social white">
+       <span className="category">
+          <a href="mailto:ehenry692@hotmail.com"><img
+          className= "tinyImg"
+          src="client/components/images/social-mail.png" /></a>
+        </span>
       <span className="category">
           <Link to="https://www.github.com/ehenry92" target="_blank"><img
           className= "tinyImg"

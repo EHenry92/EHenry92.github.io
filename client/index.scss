@@ -1,53 +1,70 @@
 body {
-  font-family: sans-serif;
-  // background-color: rgb(145,1,1)
-  background-color: black;
-  // color: rgb(226, 224, 214);
-  color:white;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  #name {
-    background:black;
-    color:white;
-    font-family: cursive;
-    justify-content: center;
-  }
-  a {
-    text-decoration: none;
-  }
-  nav li{
-    color: #ff7f50 ;
-  }
-
-  label {
-    display: block;
-  }
-  .row .col {
-    padding: 0.75rem;
-  }
-  .card {
+    --splash-color: #ff7f50;
+    --off-white-color: rgb(194, 188, 188);
+    font-family: sans-serif;
     background-color: black;
-    color: white;
-    border-style: solid;
-    border-color: #ff7f50 ;
-    .card-reveal{
-        // background-color: rgb(58, 57, 57);
-        background-color: #ff7f50;
+    color:var(--off-white-color);
+
+    #bio {
+      color: var(--splash-color);
+      border-radius: 30px;
+      margin-top: 20px;
     }
-  }
-  #bio {
-    // background-color: #ff7f50;
-    color: #ff7f50;
-    border-radius: 30px;
-    margin-top: 20px;
-  }
-  // .carousel-item {
-  //   height: 30px;
-  // }
-  .colorBar {
-    color: #ff7f50;
-  }
+    .card {
+        background-color: black;
+        color:var(--off-white-color);
+        border-style: solid;
+        border-color: var(--splash-color) ;
+        margin: 40px;
+        .card-reveal{
+            background-color: var(--off-white-color);
+            color: black;
+        }
+    }
+    .collapsible{
+      background-color: var(--off-white-color);
+      color: black;
+      td i {
+        font-size: x-small;
+      }
+      #experience li, #projects li {
+        list-style: circle;
+      }
+    }
+    .collapsible-header{
+      background-color: var(--splash-color) ;
+      color: black;
+    }
+    .colorBar {
+      color: var(--splash-color);
+    }
+    .contained {
+      padding: 2rem;
+    }
+    .degType {
+      width: 30%;
+    }
+    #name {
+      background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);
+      color:var(--off-white-color);
+      font-family: cursive;
+      justify-content: center;
+    }
+    nav li{
+      color: var(--splash-color) ;
+    }
+    label {
+      display: block;
+    }
+    .row .col {
+      padding: 0.75rem;
+    }
+    ul a{
+      color:var(--off-white-color);
+    }
+
+
+
 
 }
 
@@ -76,4 +93,13 @@ body {
 
 #carousel .carousel-image.hidden {
   opacity: 0;
+}
+footer {
+  background-color: black;
+  position: absolute;
+
+  div {
+    background-color: var(--splash-color);
+    height: 30px;
+  }
 }

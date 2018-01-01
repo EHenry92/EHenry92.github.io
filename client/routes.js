@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Router} from 'react-router'
 import {Route, Switch} from 'react-router-dom'
 import history from './history'
-import {Main, Projects, About, Contact} from './components'
+import {Main, Projects, About, Contact, Resume} from './components'
 
 /**
  * COMPONENT
@@ -13,9 +13,10 @@ export default class Routes extends Component {
       <Router history={history}>
         <Main>
           <Switch>
-            <Route path="/about" component={About} />
+            {/* <Route path="/about" component={About} /> */}
             <Route path="/work" component={Projects} />
             <Route path="/contact" component={Contact} />
+            <Route path="/resume" component={Resume} />
             <Route component={About} />
           </Switch>
         </Main>
