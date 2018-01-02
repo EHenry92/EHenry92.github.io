@@ -4922,13 +4922,26 @@ exports.default = Main;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// import createHistory from 'history/createBrowserHistory'
-// import createMemoryHistory from 'history/createMemoryHistory'
+/* WEBPACK VAR INJECTION */(function(process) {
 
-// const history = process.env.NODE_ENV === 'test' ? createMemoryHistory() : createHistory();
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-// export default history;
+var _createBrowserHistory = __webpack_require__(29);
 
+var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
+
+var _createMemoryHistory = __webpack_require__(30);
+
+var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var history = process.env.NODE_ENV === 'test' ? (0, _createMemoryHistory2.default)() : (0, _createBrowserHistory2.default)();
+
+exports.default = history;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 55 */
