@@ -4,11 +4,14 @@ body {
     font-family: sans-serif;
     background-color: black;
     color:var(--off-white-color);
+    // font-size: 30px;
+    // font-size: 3.5vw;
 
     #bio {
       color: var(--splash-color);
       border-radius: 30px;
       margin-top: 20px;
+      background-color: rgba(0, 0, 0, 0.705);
     }
     .card {
         background-color: black;
@@ -48,7 +51,9 @@ body {
       background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);
       color:var(--off-white-color);
       font-family: cursive;
+      font-size: 5vw;
       justify-content: center;
+
     }
     nav li{
       color: var(--splash-color) ;

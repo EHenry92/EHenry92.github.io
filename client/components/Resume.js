@@ -67,13 +67,11 @@ const Resume = () => {
                           <i>09/2017</i>
                         </td>
                         <td>
-                          <p>
                             <ul>
                               <li>A real time collaboration tool for teams to brainstorm, share and map ideas.</li>
                               <li>I developed back end routes and models using Sequelize, Express.js and Socket.io</li>
                               <li>I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.</li>
                             </ul>
-                          </p>
                         </td>
                       </tr>
                       <tr>
@@ -83,11 +81,9 @@ const Resume = () => {
                           <i>09/2017</i>
                         </td>
                         <td>
-                          <p>
                             <ul>
                               <li>A virtual memory game where successful matches are found by pairing a word and its definition.</li>
                             </ul>
-                          </p>
                         </td>
                       </tr>
 
@@ -167,12 +163,10 @@ const Resume = () => {
                         <td>
                           <b>Van Siclen Community Middle School
                           </b>
-                          <p>
                             <ul>
                               <li>Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.</li>
                               <li>Conducted individual and group tutoring in an after-school setting.</li>
                             </ul>
-                          </p>
                         </td>
                       </tr>
                       <tr>
@@ -185,11 +179,9 @@ const Resume = () => {
                         <td>
                           <b>Peace Academy Middle School
                           </b>
-                          <p>
                             <ul>
                               <li>Improved student math state test scores to 80% of students meeting standards </li>
                             </ul>
-                          </p>
                         </td>
                       </tr>
                       <tr>
@@ -202,13 +194,11 @@ const Resume = () => {
                         <td>
                           <b>Lowe's Home Improvement
                           </b>
-                          <p>
                             <ul>
                               <li>Worked with a team to increase department sales and identify customer needs</li>
                               <li>Collaborated on and designed creative idea projects</li>
                               <li>operated and managed heavy machinery</li>
                             </ul>
-                          </p>
                         </td>
                       </tr>
                   </tbody>

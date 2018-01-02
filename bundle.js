@@ -3804,12 +3804,14 @@ var Projects = function Projects() {
   prefixes.forEach(function (proj, idx) {
     var images = document.getElementsByClassName('carousel-image ' + proj);
     setInterval(function () {
-      images[indexes[idx]].classList.add('hidden');
-      indexes[idx]++;
-      if (indexes[idx] === images.length) {
-        indexes[idx] = 0;
+      if (images.length > 0) {
+        images[indexes[idx]].classList.add('hidden');
+        indexes[idx]++;
+        if (indexes[idx] === images.length) {
+          indexes[idx] = 0;
+        }
+        images[indexes[idx]].classList.remove('hidden');
       }
-      images[indexes[idx]].classList.remove('hidden');
     }, 3500);
   });
 
@@ -4240,26 +4242,22 @@ var Resume = function Resume() {
                     'td',
                     null,
                     _react2.default.createElement(
-                      'p',
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        'ul',
+                        'li',
                         null,
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'A real time collaboration tool for teams to brainstorm, share and map ideas.'
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'I developed back end routes and models using Sequelize, Express.js and Socket.io'
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.'
-                        )
+                        'A real time collaboration tool for teams to brainstorm, share and map ideas.'
+                      ),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'I developed back end routes and models using Sequelize, Express.js and Socket.io'
+                      ),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.'
                       )
                     )
                   )
@@ -4286,16 +4284,12 @@ var Resume = function Resume() {
                     'td',
                     null,
                     _react2.default.createElement(
-                      'p',
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        'ul',
+                        'li',
                         null,
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'A virtual memory game where successful matches are found by pairing a word and its definition.'
-                        )
+                        'A virtual memory game where successful matches are found by pairing a word and its definition.'
                       )
                     )
                   )
@@ -4489,21 +4483,17 @@ var Resume = function Resume() {
                       'Van Siclen Community Middle School'
                     ),
                     _react2.default.createElement(
-                      'p',
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        'ul',
+                        'li',
                         null,
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.'
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'Conducted individual and group tutoring in an after-school setting.'
-                        )
+                        'Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.'
+                      ),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'Conducted individual and group tutoring in an after-school setting.'
                       )
                     )
                   )
@@ -4537,16 +4527,12 @@ var Resume = function Resume() {
                       'Peace Academy Middle School'
                     ),
                     _react2.default.createElement(
-                      'p',
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        'ul',
+                        'li',
                         null,
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'Improved student math state test scores to 80% of students meeting standards '
-                        )
+                        'Improved student math state test scores to 80% of students meeting standards '
                       )
                     )
                   )
@@ -4580,26 +4566,22 @@ var Resume = function Resume() {
                       'Lowe\'s Home Improvement'
                     ),
                     _react2.default.createElement(
-                      'p',
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        'ul',
+                        'li',
                         null,
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'Worked with a team to increase department sales and identify customer needs'
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'Collaborated on and designed creative idea projects'
-                        ),
-                        _react2.default.createElement(
-                          'li',
-                          null,
-                          'operated and managed heavy machinery'
-                        )
+                        'Worked with a team to increase department sales and identify customer needs'
+                      ),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'Collaborated on and designed creative idea projects'
+                      ),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'operated and managed heavy machinery'
                       )
                     )
                   )
@@ -4655,7 +4637,7 @@ var About = function About() {
         _react2.default.createElement(
           "p",
           null,
-          "Hi, I'm Evlis Henry. I'm a enthesaustic puzzle solver and life long learner. My background is in Education and Computer Science, and after a couple of years of educating young minds, I've shifted my focus into developing, designing and maintaing tools to help others. I enjoy exploring haunted houses, surviving excape rooms and reading thrillers."
+          "Hi, I'm Evlis Henry. I'm a enthesaustic puzzle solver and life long learner. My background is in Education and Computer Science, and after a couple of years of educating young minds, I've shifted my focus into developing, designing and maintaining tools to help others. When I'm not coding or solving logic puzzles, I enjoy exploring haunted houses, surviving escape rooms and reading thrillers."
         )
       )
     )
@@ -4754,7 +4736,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Main = function Main(props) {
   var children = props.children;
+  // Initialize collapse button
 
+  $('.button-collapse').sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
   return _react2.default.createElement(
     'div',
     null,
@@ -4767,20 +4753,7 @@ var Main = function Main(props) {
         _react2.default.createElement(
           'div',
           { href: '/', id: 'name', className: 'brand-logo' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Evlis Henry'
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { 'data-activates': 'mobile-demo', className: 'button-collapse' },
-          _react2.default.createElement(
-            'i',
-            { className: 'material-icons' },
-            'menu'
-          )
+          'Evlis Henry'
         ),
         _react2.default.createElement(
           'ul',
@@ -4878,28 +4851,62 @@ var Main = function Main(props) {
               '|'
             )
           )
-        ),
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'left show-on-medium-and-down' },
+      _react2.default.createElement(
+        'ul',
+        { id: 'slide-out', className: 'side-nav' },
         _react2.default.createElement(
-          'ul',
-          { className: 'side-nav', id: 'mobile-demo side-nav' },
+          'li',
+          null,
           _react2.default.createElement(
-            'li',
-            null,
+            _reactRouterDom.Link,
+            { to: '/' },
             _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/' },
+              'h5',
+              null,
               'About'
             )
-          ),
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
           _react2.default.createElement(
-            'li',
-            null,
+            _reactRouterDom.Link,
+            { to: '/work' },
             _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/Work' },
-              'Work'
+              'h5',
+              null,
+              'Projects'
             )
           )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/resume' },
+            _react2.default.createElement(
+              'h5',
+              null,
+              'Resume'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'a',
+        { href: '#', 'data-activates': 'slide-out', className: 'button-collapse' },
+        _react2.default.createElement(
+          'i',
+          { className: 'material-icons' },
+          'menu'
         )
       )
     ),
@@ -4915,26 +4922,13 @@ exports.default = Main;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+// import createHistory from 'history/createBrowserHistory'
+// import createMemoryHistory from 'history/createMemoryHistory'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+// const history = process.env.NODE_ENV === 'test' ? createMemoryHistory() : createHistory();
 
-var _createBrowserHistory = __webpack_require__(29);
+// export default history;
 
-var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
-
-var _createMemoryHistory = __webpack_require__(30);
-
-var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var history = process.env.NODE_ENV === 'test' ? (0, _createMemoryHistory2.default)() : (0, _createBrowserHistory2.default)();
-
-exports.default = history;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 55 */
@@ -4973,7 +4967,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  background-color: black;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px; }\n  body .card {\n    background-color: black;\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 40px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem; }\n  body .degType {\n    width: 30%; }\n  body #name {\n    background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);\n    color: var(--off-white-color);\n    font-family: cursive;\n    justify-content: center; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  background-color: black;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705); }\n  body .card {\n    background-color: black;\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 40px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem; }\n  body .degType {\n    width: 30%; }\n  body #name {\n    background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);\n    color: var(--off-white-color);\n    font-family: cursive;\n    font-size: 5vw;\n    justify-content: center; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n.clip-circle {\n  clip-path: circle(150px at center);\n  width: 300px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 

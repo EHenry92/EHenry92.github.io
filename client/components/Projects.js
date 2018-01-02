@@ -6,12 +6,15 @@ const Projects = () => {
         prefixes.forEach((proj, idx) => {
           const images = document.getElementsByClassName(`carousel-image ${proj}`);
           setInterval(() => {
+            if (images.length > 0) {
             images[indexes[idx]].classList.add('hidden');
             indexes[idx]++;
               if (indexes[idx] === images.length) {indexes[idx] = 0;}
             images[indexes[idx]].classList.remove('hidden');
+            }
 
           }, 3500);
+
         })
 
           return (
