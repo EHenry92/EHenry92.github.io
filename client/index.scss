@@ -12,6 +12,7 @@ body {
       border-radius: 30px;
       margin-top: 20px;
       background-color: rgba(0, 0, 0, 0.705);
+      width: 65%;
     }
     .card {
         background-color: black;
@@ -74,8 +75,8 @@ body {
 }
 
 .clip-circle {
-  clip-path: circle( 150px at center);
-  width: 300px;
+  clip-path: circle( 100px at center);
+  width: 200px;
 }
 
 .tinyImg {
