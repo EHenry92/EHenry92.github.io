@@ -4856,7 +4856,7 @@ var Main = function Main(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'left show-on-medium-and-down' },
+      { className: 'hide-on-large-only' },
       _react2.default.createElement(
         'ul',
         { id: 'slide-out', className: 'side-nav' },

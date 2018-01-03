@@ -31,13 +31,13 @@ const Main = (props) => {
       </ul> */}
     </div>
   </nav>
-  <div className="left show-on-medium-and-down">
-  <ul id="slide-out" className="side-nav">
-  <li><Link to="/"><h5>About</h5></Link></li>
-        <li><Link to="/work"><h5>Projects</h5></Link></li>
-        <li><Link to="/resume"><h5>Resume</h5></Link></li>
-  </ul>
-  <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
+  <div className="hide-on-large-only">
+    <ul id="slide-out" className="side-nav">
+    <li><Link to="/"><h5>About</h5></Link></li>
+          <li><Link to="/work"><h5>Projects</h5></Link></li>
+          <li><Link to="/resume"><h5>Resume</h5></Link></li>
+    </ul>
+    <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
   </div>
       <hr />
       <hr className="colorBar" />
