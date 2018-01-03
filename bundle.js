@@ -3817,22 +3817,22 @@ var Projects = function Projects() {
 
   return _react2.default.createElement(
     'div',
-    { className: 'contained' },
+    null,
     _react2.default.createElement(
       'div',
       { className: 'center' },
       _react2.default.createElement(
         'h5',
         null,
-        'View my work!'
+        'Projects'
       )
     ),
     _react2.default.createElement(
       'div',
-      { className: 'row ' },
+      { className: 'contained' },
       _react2.default.createElement(
         'div',
-        { className: 'card med col s3' },
+        { className: 'card med' },
         _react2.default.createElement(
           'div',
           { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
@@ -3908,7 +3908,7 @@ var Projects = function Projects() {
       ),
       _react2.default.createElement(
         'div',
-        { className: 'card med col s3' },
+        { className: 'card med' },
         _react2.default.createElement(
           'div',
           { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
@@ -3945,6 +3945,15 @@ var Projects = function Projects() {
               { href: 'http://vocabumemory.herokuapp.com/' },
               'site'
             )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://github.com/EHenry92/VocabuMemory' },
+              'code'
+            )
           )
         ),
         _react2.default.createElement(
@@ -3974,7 +3983,7 @@ var Projects = function Projects() {
       ),
       _react2.default.createElement(
         'div',
-        { className: 'card med col col s3' },
+        { className: 'card med' },
         _react2.default.createElement(
           'div',
           { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
@@ -4010,6 +4019,15 @@ var Projects = function Projects() {
               'a',
               { href: 'https://dundermifflininc.herokuapp.com/' },
               'site'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            _react2.default.createElement(
+              'a',
+              { href: 'https://github.com/EHenry92/dunder_mifflin' },
+              'code'
             )
           )
         ),
@@ -4736,11 +4754,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Main = function Main(props) {
   var children = props.children;
-  // Initialize collapse button
 
   $('.button-collapse').sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  //$('.collapsible').collapsible();
+
   return _react2.default.createElement(
     'div',
     null,
@@ -5006,7 +5022,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  background-color: black;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body .card {\n    background-color: black;\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 40px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem; }\n  body .degType {\n    width: 30%; }\n  body #name {\n    background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);\n    color: var(--off-white-color);\n    font-family: cursive;\n    font-size: 5vw;\n    justify-content: center; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.clip-circle {\n  clip-path: circle(100px at center);\n  width: 200px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  background-color: black;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body .card {\n    background-color: black;\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 30px;\n    width: 35vw; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body #name {\n    background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);\n    color: var(--off-white-color);\n    font-family: cursive;\n    font-size: 5vw;\n    justify-content: center; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.clip-circle {\n  clip-path: circle(100px at center);\n  width: 200px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 

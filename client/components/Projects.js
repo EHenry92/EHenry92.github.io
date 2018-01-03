@@ -18,10 +18,10 @@ const Projects = () => {
         })
 
           return (
-          <div className="contained">
-            <div className="center"><h5>View my work!</h5></div>
-            <div className="row ">
-                  <div className="card med col s3">
+          <div>
+            <div className="center"><h5>Projects</h5></div>
+            <div className="contained">
+                  <div className="card med">
                   <div id="carousel" className="card-image waves-effect waves-block waves-light">
                         <img className="carousel-image is activator" src="client/components/images/ideastormlogo.png" />
                         <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png" />
@@ -49,7 +49,7 @@ const Projects = () => {
                     <p>Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js</p>
                   </div>
               </div>
-                  <div className="card med col s3">
+                  <div className="card med">
                   {/* <div className="card-image waves-effect waves-block waves-light"> */}
                     {/* <img className="activator" src="client/components/images/VocabuMemory.png" /> */}
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
@@ -64,7 +64,7 @@ const Projects = () => {
                       <p>A memory matching card game.</p>
                     <i className="material-icons right">more_vert</i></span>
                     <p><a href="http://vocabumemory.herokuapp.com/">site</a></p>
-                    {/* <p><a href="https://github.com/EHenry92/VocabuMemory">code</a></p> */}
+                    <p><a href="https://github.com/EHenry92/VocabuMemory">code</a></p>
 
                   </div>
                   <div className="card-reveal">
@@ -73,9 +73,9 @@ const Projects = () => {
                     <p>Built with: React, Redux, React-Redux, Materalize, Sequelize</p>
                   </div>
               </div>
-                  <div className="card med col col s3">
+                  <div className="card med">
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                      <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
+                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
                         <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
                       </div>
                     <div className="card-content">
@@ -85,7 +85,7 @@ const Projects = () => {
                       <i className="material-icons right">more_vert</i></span>
 
                       <p><a href="https://dundermifflininc.herokuapp.com/">site</a></p>
-                      {/* <p><a href="https://github.com/EHenry92/dunder_mifflin">code</a></p> */}
+                      <p><a href="https://github.com/EHenry92/dunder_mifflin">code</a></p>
 
                     </div>
                     <div className="card-reveal">

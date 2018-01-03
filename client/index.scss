@@ -19,7 +19,8 @@ body {
         color:var(--off-white-color);
         border-style: solid;
         border-color: var(--splash-color) ;
-        margin: 40px;
+        margin: 30px;
+        width: 35vw;
         .card-reveal{
             background-color: var(--off-white-color);
             color: black;
@@ -44,6 +45,9 @@ body {
     }
     .contained {
       padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
     }
     .degType {
       width: 30%;

@@ -4,10 +4,8 @@ import {Link} from 'react-router-dom';
 
 const Main = (props) => {
   const {children} = props;
-  // Initialize collapse button
   $('.button-collapse').sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  //$('.collapsible').collapsible();
+
   return (
     <div>
       <nav>
@@ -43,30 +41,6 @@ const Main = (props) => {
       <hr className="colorBar" />
 
       {children}
-      {/* <footer >
-    <hr />
-    <hr className="colorBar" />
-    <h6 className=" white-text">
-          Evlis Henry
-        </h6>
-  <div className="social">
-      <span className="category">
-          <Link to="mailto:ehenry692@hotmail.com"><img
-           className= "tinyImg"
-          src="client/components/images/social-mail.png" /></Link>
-        </span>
-    <span className="category">
-      <Link to="https://www.github.com/ehenry92" target="_blank"><img
-       className= "tinyImg"
-      src="client/components/images/social-git.png" /></Link>
-    </span>
-    <span  className="category">
-      <Link to="https://www.likedin.com/in/evils-henry" target="_blank"><img  className= "tinyImg" src="client/components/images/social-linked.png" /></Link>
-    </span>
-  </div>
-
-
-</footer> */}
     </div>
   )
 }
