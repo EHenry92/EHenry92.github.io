@@ -65,13 +65,15 @@ body {
     .row .col {
       padding: 0.75rem;
     }
+    .side-nav{
+      background-color: black;
+      li>a{
+        color: var(--splash-color);
+      }
+    }
     ul a{
       color:var(--off-white-color);
     }
-
-
-
-
 }
 
 .clip-circle {

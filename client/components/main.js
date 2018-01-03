@@ -25,15 +25,15 @@ const Main = (props) => {
         <li><h5>|</h5></li>
         <li><h5>|</h5></li>
       </ul>
-      {/* <ul className="side-nav" id="mobile-demo side-nav">
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/Work">Work</Link></li>
-      </ul> */}
     </div>
   </nav>
   <div className="hide-on-large-only">
     <ul id="slide-out" className="side-nav">
-    <li><Link to="/"><h5>About</h5></Link></li>
+          <li><div className="user-view">
+            <a><span className="white-text name">Evlis Henry</span></a>
+            <a><span className="white-text email">EHenry692@hotmail.com</span></a>
+          </div></li>
+          <li><Link to="/"><h5>About</h5></Link></li>
           <li><Link to="/work"><h5>Projects</h5></Link></li>
           <li><Link to="/resume"><h5>Resume</h5></Link></li>
     </ul>
