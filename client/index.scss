@@ -2,7 +2,6 @@ body {
     --splash-color: #ff7f50;
     --off-white-color: rgb(194, 188, 188);
     font-family: sans-serif;
-    background-color: black;
     color:var(--off-white-color);
     // font-size: 30px;
     // font-size: 3.5vw;
@@ -14,8 +13,24 @@ body {
       background-color: rgba(0, 0, 0, 0.705);
       width: 65%;
     }
+    #intro {
+      display:flex;
+      flex-direction: row;
+      width: 75%;
+      flex-wrap: wrap;
+      .crypto{
+        width: 20px;
+        margin: 10px;
+        .cryptoReveal {
+          border-style: solid;
+          border-color: black;
+          border-width: 1px;;
+          height:25px;
+        }
+      }
+    }
     .card {
-        background-color: black;
+        // background-color: black;
         color:var(--off-white-color);
         border-style: solid;
         border-color: var(--splash-color) ;
@@ -49,17 +64,18 @@ body {
       flex-wrap: wrap;
       flex-direction: row;
     }
+
     .degType {
       width: 30%;
     }
-    #name {
-      background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);
-      color:var(--off-white-color);
-      font-family: cursive;
-      font-size: 5vw;
-      justify-content: center;
+    // #name {
+    //   background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);
+    //   color:var(--off-white-color);
+    //   font-family: cursive;
+    //   font-size: 5vw;
+    //   justify-content: center;
 
-    }
+    // }
     nav li{
       color: var(--splash-color) ;
     }
@@ -80,10 +96,10 @@ body {
     }
 }
 
-.clip-circle {
-  clip-path: circle( 100px at center);
-  width: 200px;
-}
+// .clip-circle {
+//   clip-path: circle( 100px at center);
+//   width: 200px;
+// }
 
 .tinyImg {
   width: 30px;

@@ -3609,10 +3609,11 @@ var Routes = function (_Component) {
           _react2.default.createElement(
             _reactRouterDom.Switch,
             null,
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _components.About }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/work', component: _components.Projects }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _components.Contact }),
             _react2.default.createElement(_reactRouterDom.Route, { path: '/resume', component: _components.Resume }),
-            _react2.default.createElement(_reactRouterDom.Route, { component: _components.About })
+            _react2.default.createElement(_reactRouterDom.Route, { component: _components.Home })
           )
         )
       );
@@ -3767,9 +3768,8 @@ exports.default = Contact;
 
 
 Object.defineProperty(exports, "__esModule", {
-      value: true
+  value: true
 });
-exports.default = Home;
 
 var _react = __webpack_require__(0);
 
@@ -3777,9 +3777,88 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Home() {
-      return _react2.default.createElement('div', null);
-}
+var Home = function Home() {
+
+  $(document).ready(function () {
+    var list = void 0,
+        textnode = void 0,
+        waitTime = 1500;
+
+    var _loop = function _loop(i) {
+      setTimeout(function () {
+        list = document.getElementsByClassName(revealOrder[i] + 'spot');
+        for (var j = 0; j < list.length; j++) {
+          textnode = document.createTextNode('' + revealOrder[i]);
+          list[j].removeChild(list[j].firstChild);
+          list[j].appendChild(textnode);
+          // list[j].innerHTML= `${revealOrder[i]}`;
+        }
+      }, waitTime * (i + 1));
+    };
+
+    for (var i = 0; i < revealOrder.length; i++) {
+      _loop(i);
+    }
+  });
+  var revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U', 'W', 'X', 'Z'];
+  var holder = {};
+  var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  function shuffleAlpha(alpha) {
+    var array = alpha.slice();
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+  var randAlpha = shuffleAlpha(alphabet);
+  for (var i = 0; i < alphabet.length; i++) {
+    holder[alphabet[i]] = randAlpha[i];
+  }
+
+  var sayings = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'container' },
+    _react2.default.createElement(
+      'div',
+      { id: 'intro' },
+      sayings.map(function (char, idx) {
+        var block = holder[char] ? _react2.default.createElement(
+          'span',
+          { className: 'crypto char', key: char + idx },
+          _react2.default.createElement(
+            'div',
+            { className: char + 'spot cryptoReveal' },
+            '_'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'cryptoLetter' },
+            holder[char]
+          )
+        ) : _react2.default.createElement(
+          'span',
+          { className: 'crypto', key: char + idx },
+          _react2.default.createElement(
+            'div',
+            { className: char + 'spot' },
+            char
+          ),
+          _react2.default.createElement('div', { className: 'cryptoPunct' })
+        );
+        return block;
+      })
+    )
+  );
+};
+
+exports.default = Home;
+
+// light-green darken-1
 
 /***/ }),
 /* 49 */
@@ -4641,11 +4720,6 @@ var About = function About() {
       { className: "row" },
       _react2.default.createElement(
         "div",
-        { className: "col s3 push-s1" },
-        _react2.default.createElement("img", { src: "client/components/images/me.jpg", alt: "", className: "clip-circle" })
-      ),
-      _react2.default.createElement(
-        "div",
         { id: "bio", className: "col s6 push-s1 flow-text" },
         _react2.default.createElement(
           "h4",
@@ -4655,7 +4729,7 @@ var About = function About() {
         _react2.default.createElement(
           "p",
           null,
-          "Hi, I'm Evlis Henry. I'm a enthesaustic puzzle solver and life long learner. My background is in Education and Computer Science, and after a couple of years of educating young minds, I've shifted my focus into developing, designing and maintaining tools to help others. When I'm not coding or solving logic puzzles, I enjoy exploring haunted houses, surviving escape rooms and reading thrillers."
+          "Hi, I'm Evlis Henry. My background is in Education and Computer Science, and after a couple of years of educating young minds, I've shifted my focus into developing, designing and maintaining tools to help others. When I'm not coding or solving logic puzzles, I enjoy exploring haunted houses, surviving escape rooms and reading thrillers."
         )
       )
     )
@@ -4765,12 +4839,7 @@ var Main = function Main(props) {
       null,
       _react2.default.createElement(
         'div',
-        { className: 'nav-wrapper black' },
-        _react2.default.createElement(
-          'div',
-          { href: '/', id: 'name', className: 'brand-logo' },
-          'Evlis Henry'
-        ),
+        { className: 'nav-wrapper white' },
         _react2.default.createElement(
           'ul',
           { className: 'right hide-on-med-and-down' },
@@ -4779,7 +4848,7 @@ var Main = function Main(props) {
             null,
             _react2.default.createElement(
               _reactRouterDom.Link,
-              { to: '/' },
+              { to: '/about' },
               _react2.default.createElement(
                 'h5',
                 null,
@@ -4952,8 +5021,6 @@ var Main = function Main(props) {
         )
       )
     ),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement('hr', { className: 'colorBar' }),
     children
   );
 };
@@ -5022,7 +5089,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  background-color: black;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body .card {\n    background-color: black;\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 30px;\n    width: 35vw; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body #name {\n    background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);\n    color: var(--off-white-color);\n    font-family: cursive;\n    font-size: 5vw;\n    justify-content: center; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.clip-circle {\n  clip-path: circle(100px at center);\n  width: 200px; }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    width: 75%;\n    flex-wrap: wrap; }\n    body #intro .crypto {\n      width: 20px;\n      margin: 10px; }\n      body #intro .crypto .cryptoReveal {\n        border-style: solid;\n        border-color: black;\n        border-width: 1px;\n        height: 25px; }\n  body .card {\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 30px;\n    width: 35vw; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 

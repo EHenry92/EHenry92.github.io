@@ -9,10 +9,10 @@ const Main = (props) => {
   return (
     <div>
       <nav>
-    <div className="nav-wrapper black">
-      <div href="/" id="name" className="brand-logo">Evlis Henry</div>
+    <div className="nav-wrapper white">
+      {/* <div href="/" id="name" className="brand-logo">Evlis Henry</div> */}
       <ul className="right hide-on-med-and-down">
-        <li><Link to="/"><h5>About</h5></Link></li>
+        <li><Link to="/about"><h5>About</h5></Link></li>
         <li><h5>|</h5></li>
         <li><h5>|</h5></li>
         <li><Link to="/work"><h5>Projects</h5></Link></li>
@@ -37,8 +37,8 @@ const Main = (props) => {
     </ul>
     <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
   </div>
-      <hr />
-      <hr className="colorBar" />
+      {/* <hr /> */}
+      {/* <hr className="colorBar" /> */}
 
       {children}
     </div>
