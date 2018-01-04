@@ -3781,16 +3781,20 @@ var Home = function Home() {
 
   $(document).ready(function () {
     var list = void 0,
+        cryptList = void 0,
         textnode = void 0,
-        waitTime = 1500;
+        waitTime = 500;
 
     var _loop = function _loop(i) {
       setTimeout(function () {
-        list = document.getElementsByClassName(revealOrder[i] + 'spot');
+        list = document.getElementsByClassName(revealOrder[i] + "spot");
+        cryptList = document.getElementsByClassName(revealOrder[i] + "letter");
+
         for (var j = 0; j < list.length; j++) {
-          textnode = document.createTextNode('' + revealOrder[i]);
+          textnode = document.createTextNode("" + revealOrder[i]);
           list[j].removeChild(list[j].firstChild);
           list[j].appendChild(textnode);
+          cryptList[j].classList.add("solved");
           // list[j].innerHTML= `${revealOrder[i]}`;
         }
       }, waitTime * (i + 1));
@@ -3800,6 +3804,11 @@ var Home = function Home() {
       _loop(i);
     }
   });
+  // let message ="HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
+  var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(function (word) {
+    return word.split('');
+  });
+  console.log(words);
   var revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U', 'W', 'X', 'Z'];
   var holder = {};
   var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -3818,39 +3827,43 @@ var Home = function Home() {
     holder[alphabet[i]] = randAlpha[i];
   }
 
-  var sayings = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
-
   return _react2.default.createElement(
-    'div',
-    { className: 'container' },
+    "div",
+    { className: "container" },
     _react2.default.createElement(
-      'div',
-      { id: 'intro' },
-      sayings.map(function (char, idx) {
-        var block = holder[char] ? _react2.default.createElement(
-          'span',
-          { className: 'crypto char', key: char + idx },
-          _react2.default.createElement(
-            'div',
-            { className: char + 'spot cryptoReveal' },
-            '_'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'cryptoLetter' },
-            holder[char]
-          )
-        ) : _react2.default.createElement(
-          'span',
-          { className: 'crypto', key: char + idx },
-          _react2.default.createElement(
-            'div',
-            { className: char + 'spot' },
-            char
-          ),
-          _react2.default.createElement('div', { className: 'cryptoPunct' })
+      "div",
+      { id: "intro" },
+      words.map(function (word, wordIdx) {
+        return _react2.default.createElement(
+          "div",
+          { className: "word", key: word + wordIdx },
+          word.map(function (char, idx) {
+            var block = holder[char] ? _react2.default.createElement(
+              "span",
+              { className: "crypto char", key: char + wordIdx + idx },
+              _react2.default.createElement(
+                "div",
+                { className: char + "spot cryptoReveal" },
+                _react2.default.createElement("input", null)
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: char + "letter cryptoLetter" },
+                holder[char]
+              )
+            ) : _react2.default.createElement(
+              "span",
+              { key: char + idx },
+              _react2.default.createElement(
+                "div",
+                { className: char + "spot" },
+                char
+              ),
+              _react2.default.createElement("div", { className: 'cryptoPunct' })
+            );
+            return block;
+          })
         );
-        return block;
       })
     )
   );
@@ -3924,9 +3937,9 @@ var Projects = function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator' },
+            { className: 'project-title activator' },
             _react2.default.createElement(
-              'h5',
+              'div',
               null,
               'IdeaStorm'
             ),
@@ -3999,9 +4012,9 @@ var Projects = function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator' },
+            { className: 'project-title activator' },
             _react2.default.createElement(
-              'h5',
+              'b',
               null,
               'VocabuMemory'
             ),
@@ -4074,9 +4087,9 @@ var Projects = function Projects() {
           { className: 'card-content' },
           _react2.default.createElement(
             'span',
-            { className: 'card-title activator' },
+            { className: 'project-title activator' },
             _react2.default.createElement(
-              'h5',
+              'div',
               null,
               'Dunder Mifflin Inc.'
             ),
@@ -5089,7 +5102,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    width: 75%;\n    flex-wrap: wrap; }\n    body #intro .crypto {\n      width: 20px;\n      margin: 10px; }\n      body #intro .crypto .cryptoReveal {\n        border-style: solid;\n        border-color: black;\n        border-width: 1px;\n        height: 25px; }\n  body .card {\n    color: var(--off-white-color);\n    border-style: solid;\n    border-color: var(--splash-color);\n    margin: 30px;\n    width: 35vw; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    width: 75%;\n    flex-wrap: wrap; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 
