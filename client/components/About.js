@@ -1,6 +1,7 @@
 import React from 'react';
 
 const About = () => {
+  let someting = {};
       return (
        <div className = "contained">
       <div className= "row" >
