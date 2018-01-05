@@ -81,17 +81,15 @@ body {
         }
     }
     .collapsible{
-      background-color: var(--off-white-color);
-      color: black;
+      background-color: black;
+      color: white;
+      width: 80%;
       td i {
         font-size: x-small;
       }
-      #experience li, #projects li {
-        list-style: circle;
-      }
     }
-    .collapsible-header{
-      background-color: var(--splash-color) ;
+    #top, .collapsible-header{
+      background-color: white ;
       color: black;
     }
     .colorBar {
@@ -125,6 +123,7 @@ body {
         position:fixed;
         top:0;
         left:0;
+        background-color: white;
       }
       ul{
         // display: flex;

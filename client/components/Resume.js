@@ -8,10 +8,10 @@ const Resume = () => {
   });
 
   return (
-    <div className="container">
+    <div className="contained">
     <br />
-      <ul className="collapsible" data-collapsible="expandable">
-          <li className="center">
+      <ul className="collapsible" data-collapsible="accordion">
+          <li id="top" className="center">
           <b>
               Evlis Henry
               <br />
@@ -35,7 +35,7 @@ const Resume = () => {
             </b>
           </li>
           <li>
-            <div className="collapsible-header"><i className="material-icons">build</i>Technical Skills</div>
+            <div className="collapsible-header active"><i className="material-icons">build</i>Technical Skills</div>
             <div className="collapsible-body"><span>
             <table>
               <tbody>
@@ -66,11 +66,12 @@ const Resume = () => {
                           <br />
                           <i>09/2017</i>
                         </td>
+                        <td />
                         <td>
                             <ul>
                               <li>A real time collaboration tool for teams to brainstorm, share and map ideas.</li>
-                              <li>I developed back end routes and models using Sequelize, Express.js and Socket.io</li>
-                              <li>I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.</li>
+                              <li>-I developed back end routes and models using Sequelize, Express.js and Socket.io</li>
+                              <li>-I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.</li>
                             </ul>
                         </td>
                       </tr>
@@ -80,6 +81,7 @@ const Resume = () => {
                           <br />
                           <i>09/2017</i>
                         </td>
+                        <td />
                         <td>
                             <ul>
                               <li>A virtual memory game where successful matches are found by pairing a word and its definition.</li>
@@ -164,8 +166,8 @@ const Resume = () => {
                           <b>Van Siclen Community Middle School
                           </b>
                             <ul>
-                              <li>Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.</li>
-                              <li>Conducted individual and group tutoring in an after-school setting.</li>
+                              <li>-Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.</li>
+                              <li>-Conducted individual and group tutoring in an after-school setting.</li>
                             </ul>
                         </td>
                       </tr>
@@ -180,7 +182,7 @@ const Resume = () => {
                           <b>Peace Academy Middle School
                           </b>
                             <ul>
-                              <li>Improved student math state test scores to 80% of students meeting standards </li>
+                              <li>-Improved student math state test scores to 80% of students meeting standards </li>
                             </ul>
                         </td>
                       </tr>
@@ -195,9 +197,9 @@ const Resume = () => {
                           <b>Lowe's Home Improvement
                           </b>
                             <ul>
-                              <li>Worked with a team to increase department sales and identify customer needs</li>
-                              <li>Collaborated on and designed creative idea projects</li>
-                              <li>operated and managed heavy machinery</li>
+                              <li>-Worked with a team to increase department sales and identify customer needs</li>
+                              <li>-Collaborated on and designed creative idea projects</li>
+                              <li>-operated and managed heavy machinery</li>
                             </ul>
                         </td>
                       </tr>

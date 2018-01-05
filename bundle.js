@@ -4182,14 +4182,14 @@ var Resume = function Resume() {
 
   return _react2.default.createElement(
     'div',
-    { className: 'container' },
+    { className: 'contained' },
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'ul',
-      { className: 'collapsible', 'data-collapsible': 'expandable' },
+      { className: 'collapsible', 'data-collapsible': 'accordion' },
       _react2.default.createElement(
         'li',
-        { className: 'center' },
+        { id: 'top', className: 'center' },
         _react2.default.createElement(
           'b',
           null,
@@ -4239,7 +4239,7 @@ var Resume = function Resume() {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'collapsible-header' },
+          { className: 'collapsible-header active' },
           _react2.default.createElement(
             'i',
             { className: 'material-icons' },
@@ -4349,6 +4349,7 @@ var Resume = function Resume() {
                       '09/2017'
                     )
                   ),
+                  _react2.default.createElement('td', null),
                   _react2.default.createElement(
                     'td',
                     null,
@@ -4363,12 +4364,12 @@ var Resume = function Resume() {
                       _react2.default.createElement(
                         'li',
                         null,
-                        'I developed back end routes and models using Sequelize, Express.js and Socket.io'
+                        '-I developed back end routes and models using Sequelize, Express.js and Socket.io'
                       ),
                       _react2.default.createElement(
                         'li',
                         null,
-                        'I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.'
+                        '-I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.'
                       )
                     )
                   )
@@ -4391,6 +4392,7 @@ var Resume = function Resume() {
                       '09/2017'
                     )
                   ),
+                  _react2.default.createElement('td', null),
                   _react2.default.createElement(
                     'td',
                     null,
@@ -4599,12 +4601,12 @@ var Resume = function Resume() {
                       _react2.default.createElement(
                         'li',
                         null,
-                        'Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.'
+                        '-Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.'
                       ),
                       _react2.default.createElement(
                         'li',
                         null,
-                        'Conducted individual and group tutoring in an after-school setting.'
+                        '-Conducted individual and group tutoring in an after-school setting.'
                       )
                     )
                   )
@@ -4643,7 +4645,7 @@ var Resume = function Resume() {
                       _react2.default.createElement(
                         'li',
                         null,
-                        'Improved student math state test scores to 80% of students meeting standards '
+                        '-Improved student math state test scores to 80% of students meeting standards '
                       )
                     )
                   )
@@ -4682,17 +4684,17 @@ var Resume = function Resume() {
                       _react2.default.createElement(
                         'li',
                         null,
-                        'Worked with a team to increase department sales and identify customer needs'
+                        '-Worked with a team to increase department sales and identify customer needs'
                       ),
                       _react2.default.createElement(
                         'li',
                         null,
-                        'Collaborated on and designed creative idea projects'
+                        '-Collaborated on and designed creative idea projects'
                       ),
                       _react2.default.createElement(
                         'li',
                         null,
-                        'operated and managed heavy machinery'
+                        '-operated and managed heavy machinery'
                       )
                     )
                   )
@@ -5018,7 +5020,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 75%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 25px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      height: 15vh;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0; }\n    body #navigator ul {\n      width: 15vw;\n      color: var(--splash-color); }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  left: 30vw; }\n  footer ul {\n    display: flex;\n    flex-direction: row; }\n    footer ul li {\n      margin: 10px; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 75%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 25px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      height: 15vh;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n    body #navigator ul {\n      width: 15vw;\n      color: var(--splash-color); }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  left: 30vw; }\n  footer ul {\n    display: flex;\n    flex-direction: row; }\n    footer ul li {\n      margin: 10px; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 
