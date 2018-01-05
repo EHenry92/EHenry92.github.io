@@ -19,24 +19,23 @@ const Projects = () => {
 
           return (
           <div>
-            <div className="center"><h5>Projects</h5></div>
             <div className="contained">
+            <div className="center"><h5>Projects</h5></div>
                   <div className="card med">
                   <div id="carousel" className="card-image waves-effect waves-block waves-light">
                         <img className="carousel-image is activator" src="client/components/images/ideastormlogo.png" />
                         <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png" />
                         <img className="carousel-image is activator hidden" src="client/components/images/ideaStormHome.png" />
-
                       </div>
 
                   <div className="card-content">
-                    <span className="card-title activator">
-                    <h5>IdeaStorm</h5>
+                    <span className="project-title activator">
+                    <b>IdeaStorm</b>
                     <p>A virtual brainstorming tool for teams.</p>
                     <i className="material-icons right">more_vert</i></span>
 
-                    <div><a href="http://idea-storm.herokuapp.com/">site</a></div>
-                    <div><a href="https://github.com/EHenry92/meeb"> code</a></div>
+                    <p><a href="http://idea-storm.herokuapp.com/">site </a>
+                    <a href="https://github.com/EHenry92/meeb">code</a></p>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title">IdeaStorm<i className="material-icons right">close</i></span>
@@ -46,7 +45,7 @@ const Projects = () => {
                         <li>Maria Betances</li>
                         <li>Blanca Sanchez</li>
                       </ul> */}
-                    <p>Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js</p>
+                    <a>Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js</a>
                   </div>
               </div>
                   <div className="card med">
@@ -59,18 +58,18 @@ const Projects = () => {
 
                   {/* </div> */}
                   <div className="card-content">
-                    <span className="card-title activator">
-                      <h5>VocabuMemory</h5>
+                    <span className="project-title activator">
+                      <b>VocabuMemory</b>
                       <p>A memory matching card game.</p>
                     <i className="material-icons right">more_vert</i></span>
-                    <p><a href="http://vocabumemory.herokuapp.com/">site</a></p>
-                    <p><a href="https://github.com/EHenry92/VocabuMemory">code</a></p>
+                    <p><a href="http://vocabumemory.herokuapp.com/">site </a>
+                    <a href="https://github.com/EHenry92/VocabuMemory">code</a></p>
 
                   </div>
                   <div className="card-reveal">
                     <span className="card-title">VocabuMemory<i className="material-icons right">close</i></span>
                     <p>A matching card game in which successful matches are found by pairing a word with its definition.</p>
-                    <p>Built with: React, Redux, React-Redux, Materalize, Sequelize</p>
+                    <a>Built with: React, Redux, React-Redux, Sequelize</a>
                   </div>
               </div>
                   <div className="card med">
@@ -79,18 +78,19 @@ const Projects = () => {
                         <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
                       </div>
                     <div className="card-content">
-                      <span className="card-title activator">
-                        <h5>Dunder Mifflin Inc.</h5>
-                        <p>An e-commerce website for a paper company.</p>
+                      <span className="project-title activator">
+                        <b>Dunder Mifflin Inc.</b>
+                        <p>An e-commerce website  for a paper company.</p>
                       <i className="material-icons right">more_vert</i></span>
 
-                      <p><a href="https://dundermifflininc.herokuapp.com/">site</a></p>
-                      <p><a href="https://github.com/EHenry92/dunder_mifflin">code</a></p>
+                      <p><a href="https://dundermifflininc.herokuapp.com/">site </a>
+                      <a />
+                      <a href="https://github.com/EHenry92/dunder_mifflin">code</a></p>
 
                     </div>
                     <div className="card-reveal">
                       <span className="card-title">Dunder Mifflin Inc.<i className="material-icons right">close</i></span>
-                      <p>An e-commerce site for the a paper company.</p>
+                      <p>An e-commerce site  for the a paper company.</p>
                       {/* <ul>Contributors:
                         <li>Layla Hedges</li>
                         <li>Emily Jordan</li>
