@@ -62,7 +62,7 @@ const Home = () => {
                   holder[char] ?
                       (<span className="crypto char" key={char + wordIdx + idx}>
                           <div className={`${char}spot cryptoReveal`}>
-                            <input name={`${char}spot`} onChange={enterChar} />
+                            <input name={`${char}spot`} onChange={enterChar} maxLength= {1} />
                           </div>
                           <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
                       </span>)
