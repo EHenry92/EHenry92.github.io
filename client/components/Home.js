@@ -28,7 +28,7 @@ const Home = () => {
       }
     }
 
-    let words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(word => {return word.split('')});
+    let words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(word => {return word.split('')});
     let revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U',  'W', 'X',  'Z'];
     let holder = {};
     let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
