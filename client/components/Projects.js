@@ -74,7 +74,7 @@ const Projects = () => {
               </div>
                   <div className="card med">
                     <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflin.png" />
+                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflinHome.png" />
                         <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
                       </div>
                     <div className="card-content">

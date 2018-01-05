@@ -4086,7 +4086,7 @@ var Projects = function Projects() {
         _react2.default.createElement(
           'div',
           { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/dunderMifflin.png' }),
+          _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/dunderMifflinHome.png' }),
           _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/dunderMifflincart.png' })
         ),
         _react2.default.createElement(
