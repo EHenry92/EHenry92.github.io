@@ -8,39 +8,24 @@ const Main = (props) => {
 
   return (
     <div>
-      <nav>
-    <div className="nav-wrapper white">
-      {/* <div href="/" id="name" className="brand-logo">Evlis Henry</div> */}
-      <ul className="right hide-on-med-and-down">
-        <li><Link to="/about"><h5>About</h5></Link></li>
-        <li><h5>|</h5></li>
-        <li><h5>|</h5></li>
-        <li><Link to="/work"><h5>Projects</h5></Link></li>
-        <li><h5>|</h5></li>
-        {/* <li><Link to="/contact"><h5>Contact</h5></Link></li> */}
-        <li><h5>|</h5></li>
-        <li><Link to="/resume"><h5>Resume</h5></Link></li>
-        <li><h5>|</h5></li>
-        <li><h5>|</h5></li>
-      </ul>
-    </div>
-  </nav>
-  <div className="hide-on-large-only">
-    <ul id="slide-out" className="side-nav">
-          <li><div className="user-view">
-            <a><span className="white-text name">Evlis Henry</span></a>
-            <a><span className="white-text email">EHenry692@hotmail.com</span></a>
-          </div></li>
-          <li><Link to="/"><h5>About</h5></Link></li>
-          <li><Link to="/work"><h5>Projects</h5></Link></li>
-          <li><Link to="/resume"><h5>Resume</h5></Link></li>
-    </ul>
-    <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
-  </div>
-      {/* <hr /> */}
-      {/* <hr className="colorBar" /> */}
-
+      <div id="navigator" >
+        <Link to="/">
+          {/* Evlis Henry */}
+          <img id="name" src="client/components/images/name.png" />
+        </Link>
+      </div>
       {children}
+      <footer>
+      <ul>
+            <li><Link to="/"><h5>Home</h5></Link></li>
+            <li><h5>-</h5></li>
+            <li><Link to="/about"><h5>About</h5></Link></li>
+            <li><h5>-</h5></li>
+            <li><Link to="/work"><h5>Projects</h5></Link></li>
+            <li><h5>-</h5></li>
+            <li><Link to="/resume"><h5>Resume</h5></Link></li>
+          </ul>
+      </footer>
     </div>
   )
 }

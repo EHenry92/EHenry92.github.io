@@ -3779,31 +3779,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Home = function Home() {
 
-  $(document).ready(function () {
+  function startCrypto(evt) {
+    evt.preventDefault();
+    document.getElementById('startUp').disabled = true;
     var list = void 0,
         cryptList = void 0,
         textnode = void 0,
-        waitTime = 500;
+        waitTime = 1000;
 
     var _loop = function _loop(i) {
       setTimeout(function () {
-        list = document.getElementsByClassName(revealOrder[i] + "spot");
-        cryptList = document.getElementsByClassName(revealOrder[i] + "letter");
+        list = document.getElementsByClassName(revealOrder[i] + 'spot');
+        cryptList = document.getElementsByClassName(revealOrder[i] + 'letter');
 
         for (var j = 0; j < list.length; j++) {
-          textnode = document.createTextNode("" + revealOrder[i]);
+          textnode = document.createTextNode('' + revealOrder[i]);
           list[j].removeChild(list[j].firstChild);
           list[j].appendChild(textnode);
-          cryptList[j].classList.add("solved");
+          cryptList[j].classList.add('solved');
           // list[j].innerHTML= `${revealOrder[i]}`;
         }
-      }, waitTime * (i + 1));
+      }, waitTime * i);
     };
 
     for (var i = 0; i < revealOrder.length; i++) {
       _loop(i);
     }
-  });
+  }
   // let message ="HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
   var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(function (word) {
     return word.split('');
@@ -3828,43 +3830,53 @@ var Home = function Home() {
   }
 
   return _react2.default.createElement(
-    "div",
-    { className: "container" },
+    'div',
+    null,
+    _react2.default.createElement('img', { className: 'pic', src: 'client/components/images/mnwmeout.png' }),
     _react2.default.createElement(
-      "div",
-      { id: "intro" },
+      'div',
+      { id: 'intro', className: 'contained' },
       words.map(function (word, wordIdx) {
         return _react2.default.createElement(
-          "div",
-          { className: "word", key: word + wordIdx },
+          'div',
+          { className: 'word', key: word + wordIdx },
           word.map(function (char, idx) {
             var block = holder[char] ? _react2.default.createElement(
-              "span",
-              { className: "crypto char", key: char + wordIdx + idx },
+              'span',
+              { className: 'crypto char', key: char + wordIdx + idx },
               _react2.default.createElement(
-                "div",
-                { className: char + "spot cryptoReveal" },
-                _react2.default.createElement("input", null)
+                'div',
+                { className: char + 'spot cryptoReveal' },
+                _react2.default.createElement('input', null)
               ),
               _react2.default.createElement(
-                "div",
-                { className: char + "letter cryptoLetter" },
+                'div',
+                { className: char + 'letter cryptoLetter' },
                 holder[char]
               )
             ) : _react2.default.createElement(
-              "span",
-              { key: char + idx },
+              'span',
+              { key: char + wordIdx + idx },
               _react2.default.createElement(
-                "div",
-                { className: char + "spot" },
+                'div',
+                { className: char + 'spot' },
                 char
               ),
-              _react2.default.createElement("div", { className: 'cryptoPunct' })
+              _react2.default.createElement('div', { className: 'cryptoPunct' })
             );
             return block;
           })
         );
-      })
+      }),
+      _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'button',
+          { id: 'startUp', className: 'center', onClick: startCrypto },
+          ' Solution '
+        )
+      )
     )
   );
 };
@@ -3912,16 +3924,16 @@ var Projects = function Projects() {
     null,
     _react2.default.createElement(
       'div',
-      { className: 'center' },
-      _react2.default.createElement(
-        'h5',
-        null,
-        'Projects'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
       { className: 'contained' },
+      _react2.default.createElement(
+        'div',
+        { className: 'center' },
+        _react2.default.createElement(
+          'h5',
+          null,
+          'Projects'
+        )
+      ),
       _react2.default.createElement(
         'div',
         { className: 'card med' },
@@ -3939,7 +3951,7 @@ var Projects = function Projects() {
             'span',
             { className: 'project-title activator' },
             _react2.default.createElement(
-              'div',
+              'b',
               null,
               'IdeaStorm'
             ),
@@ -3955,21 +3967,17 @@ var Projects = function Projects() {
             )
           ),
           _react2.default.createElement(
-            'div',
+            'p',
             null,
             _react2.default.createElement(
               'a',
               { href: 'http://idea-storm.herokuapp.com/' },
-              'site'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
+              'site '
+            ),
             _react2.default.createElement(
               'a',
               { href: 'https://github.com/EHenry92/meeb' },
-              ' code'
+              'code'
             )
           )
         ),
@@ -3992,7 +4000,7 @@ var Projects = function Projects() {
             'A virtual collaboration tool for teams to share, discuss and connect ideas.'
           ),
           _react2.default.createElement(
-            'p',
+            'a',
             null,
             'Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js'
           )
@@ -4035,12 +4043,8 @@ var Projects = function Projects() {
             _react2.default.createElement(
               'a',
               { href: 'http://vocabumemory.herokuapp.com/' },
-              'site'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
+              'site '
+            ),
             _react2.default.createElement(
               'a',
               { href: 'https://github.com/EHenry92/VocabuMemory' },
@@ -4067,9 +4071,9 @@ var Projects = function Projects() {
             'A matching card game in which successful matches are found by pairing a word with its definition.'
           ),
           _react2.default.createElement(
-            'p',
+            'a',
             null,
-            'Built with: React, Redux, React-Redux, Materalize, Sequelize'
+            'Built with: React, Redux, React-Redux, Sequelize'
           )
         )
       ),
@@ -4089,14 +4093,14 @@ var Projects = function Projects() {
             'span',
             { className: 'project-title activator' },
             _react2.default.createElement(
-              'div',
+              'b',
               null,
               'Dunder Mifflin Inc.'
             ),
             _react2.default.createElement(
               'p',
               null,
-              'An e-commerce website for a paper company.'
+              'An e-commerce website  for a paper company.'
             ),
             _react2.default.createElement(
               'i',
@@ -4110,12 +4114,9 @@ var Projects = function Projects() {
             _react2.default.createElement(
               'a',
               { href: 'https://dundermifflininc.herokuapp.com/' },
-              'site'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
+              'site '
+            ),
+            _react2.default.createElement('a', null),
             _react2.default.createElement(
               'a',
               { href: 'https://github.com/EHenry92/dunder_mifflin' },
@@ -4139,7 +4140,7 @@ var Projects = function Projects() {
           _react2.default.createElement(
             'p',
             null,
-            'An e-commerce site for the a paper company.'
+            'An e-commerce site  for the a paper company.'
           ),
           _react2.default.createElement(
             'a',
@@ -4730,20 +4731,26 @@ var About = function About() {
     { className: "contained" },
     _react2.default.createElement(
       "div",
-      { className: "row" },
+      { id: "bio", className: "col s6 push-s1 flow-text" },
       _react2.default.createElement(
-        "div",
-        { id: "bio", className: "col s6 push-s1 flow-text" },
-        _react2.default.createElement(
-          "h4",
-          { className: "center" },
-          "About this full-stack developer"
-        ),
-        _react2.default.createElement(
-          "p",
-          null,
-          "Hi, I'm Evlis Henry. My background is in Education and Computer Science, and after a couple of years of educating young minds, I've shifted my focus into developing, designing and maintaining tools to help others. When I'm not coding or solving logic puzzles, I enjoy exploring haunted houses, surviving escape rooms and reading thrillers."
-        )
+        "h4",
+        { className: "center" },
+        "About this full-stack developer"
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "I began my journey into programming as an undergrad at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher."
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "After a couple years of educating young minds, I realized that my heart belonged to coding.I polished my programming skills by attending Grace Hopper Academy- an all female coding boot camp. There, I became fully immersed into full-stack Javascript. "
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "I aspire to continue helping people as a software engineer."
       )
     )
   );
@@ -4848,142 +4855,21 @@ var Main = function Main(props) {
     'div',
     null,
     _react2.default.createElement(
-      'nav',
-      null,
+      'div',
+      { id: 'navigator' },
       _react2.default.createElement(
-        'div',
-        { className: 'nav-wrapper white' },
-        _react2.default.createElement(
-          'ul',
-          { className: 'right hide-on-med-and-down' },
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/about' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'About'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/work' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'Projects'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/resume' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'Resume'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              'h5',
-              null,
-              '|'
-            )
-          )
-        )
+        _reactRouterDom.Link,
+        { to: '/' },
+        _react2.default.createElement('img', { id: 'name', src: 'client/components/images/name.png' })
       )
     ),
+    children,
     _react2.default.createElement(
-      'div',
-      { className: 'hide-on-large-only' },
+      'footer',
+      null,
       _react2.default.createElement(
         'ul',
-        { id: 'slide-out', className: 'side-nav' },
-        _react2.default.createElement(
-          'li',
-          null,
-          _react2.default.createElement(
-            'div',
-            { className: 'user-view' },
-            _react2.default.createElement(
-              'a',
-              null,
-              _react2.default.createElement(
-                'span',
-                { className: 'white-text name' },
-                'Evlis Henry'
-              )
-            ),
-            _react2.default.createElement(
-              'a',
-              null,
-              _react2.default.createElement(
-                'span',
-                { className: 'white-text email' },
-                'EHenry692@hotmail.com'
-              )
-            )
-          )
-        ),
+        null,
         _react2.default.createElement(
           'li',
           null,
@@ -4993,8 +4879,39 @@ var Main = function Main(props) {
             _react2.default.createElement(
               'h5',
               null,
+              'Home'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'h5',
+            null,
+            '-'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/about' },
+            _react2.default.createElement(
+              'h5',
+              null,
               'About'
             )
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            'h5',
+            null,
+            '-'
           )
         ),
         _react2.default.createElement(
@@ -5014,6 +4931,15 @@ var Main = function Main(props) {
           'li',
           null,
           _react2.default.createElement(
+            'h5',
+            null,
+            '-'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
             _reactRouterDom.Link,
             { to: '/resume' },
             _react2.default.createElement(
@@ -5023,18 +4949,8 @@ var Main = function Main(props) {
             )
           )
         )
-      ),
-      _react2.default.createElement(
-        'a',
-        { href: '#', 'data-activates': 'slide-out', className: 'button-collapse' },
-        _react2.default.createElement(
-          'i',
-          { className: 'material-icons' },
-          'menu'
-        )
       )
-    ),
-    children
+    )
   );
 };
 exports.default = Main;
@@ -5102,7 +5018,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: #c2bcbc;\n  font-family: sans-serif;\n  color: var(--off-white-color); }\n  body #bio {\n    color: var(--splash-color);\n    border-radius: 30px;\n    margin-top: 20px;\n    background-color: rgba(0, 0, 0, 0.705);\n    width: 65%; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    width: 75%;\n    flex-wrap: wrap; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: black; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n  body .degType {\n    width: 30%; }\n  body nav li {\n    color: var(--splash-color); }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  background-color: black;\n  position: absolute; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 75%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 25px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: var(--off-white-color);\n    color: black; }\n    body .collapsible td i {\n      font-size: x-small; }\n    body .collapsible #experience li, body .collapsible #projects li {\n      list-style: circle; }\n  body .collapsible-header {\n    background-color: var(--splash-color);\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      height: 15vh;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0; }\n    body #navigator ul {\n      width: 15vw;\n      color: var(--splash-color); }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0;\n  left: 30vw; }\n  footer ul {\n    display: flex;\n    flex-direction: row; }\n    footer ul li {\n      margin: 10px; }\n  footer div {\n    background-color: var(--splash-color);\n    height: 30px; }\n", ""]);
 
 // exports
 

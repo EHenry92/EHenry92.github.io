@@ -1,25 +1,28 @@
 body {
     --splash-color: #ff7f50;
-    --off-white-color: rgb(194, 188, 188);
-    font-family: sans-serif;
+    // --off-white-color: rgb(194, 188, 188);
+    --off-white-color: black;
+    font-family: fantasy;
     color:var(--off-white-color);
-    // font-size: 30px;
+    background-color: white;
     #bio {
-      color: var(--splash-color);
+      color: black;
       border-radius: 30px;
-      margin-top: 20px;
-      background-color: rgba(0, 0, 0, 0.705);
-      width: 65%;
+      border-style: double;
+      width: 85%;
+      text-align: center;
     }
     #intro {
       display:flex;
       flex-direction: row;
-      width: 75%;
       flex-wrap: wrap;
+      justify-content: center;
+      // padding: 6vw;
+      width: 75%;
       .word {
         display: flex;
         flex-direction:row;
-        margin: 20px;
+        margin: 25px;
       }
       .crypto{
         width: 20px;
@@ -27,13 +30,7 @@ body {
         .cryptoLetter {
           transition: opacity 1s;
         }
-        .solved {
-          opacity: 0.25;
-        }
         .cryptoReveal {
-          // border-style: solid;
-          // border-color: black;
-          // border-width: 1px;;
           height:25px;
           input {
             background-color: transparent;
@@ -53,23 +50,34 @@ body {
             transition: all 0.3s;
           }
         }
+        .solved {
+          opacity: 0.25;
+        }
+        #startUp {
+          width:auto;
+          height:10px;
+        }
+
       }
     }
+    .pic {
+      width: 30vw;
+      bottom: 0;
+      right: 0;
+      position:fixed;
+    }
     .card {
-        // background-color: black;
-        // background-color:var(--splash-color);
         margin: 30px;
         width: 20vw;
         position: relative;
-        // margin: .5rem 0 1rem 0;
         border-radius: 2px;
         line-height: 20px;
-        // .card-title {
-        //   word-wrap: break-word;
-        // }
         .card-reveal{
             background-color: var(--off-white-color);
-            color: black;
+            color: white;
+        }
+        .card-content p a {
+          margin: 5px;
         }
     }
     .collapsible{
@@ -90,28 +98,41 @@ body {
       color: var(--splash-color);
     }
     .contained {
+      margin-top: 20vh;
+      margin-left: 6vw;
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
     }
+
 
     .degType {
       width: 30%;
     }
-    // #name {
-    //   background: linear-gradient(-190deg, var(--splash-color), black, black, black, black);
-    //   color:var(--off-white-color);
-    //   font-family: cursive;
-    //   font-size: 5vw;
-    //   justify-content: center;
 
-    // }
-    nav li{
-      color: var(--splash-color) ;
-    }
     label {
       display: block;
+    }
+
+
+    #navigator{
+      position:fixed;
+
+      #name {
+        // font-size: 5vw;
+        height:15vh;
+        color:black;
+        position:fixed;
+        top:0;
+        left:0;
+      }
+      ul{
+        // display: flex;
+        // flex-direction:row;
+        // justify-content: center;
+        width: 15vw;
+      color: var(--splash-color) ;
+      }
     }
     .row .col {
       padding: 0.75rem;
@@ -126,11 +147,6 @@ body {
       color:var(--off-white-color);
     }
 }
-
-// .clip-circle {
-//   clip-path: circle( 100px at center);
-//   width: 200px;
-// }
 
 .tinyImg {
   width: 30px;
@@ -154,8 +170,17 @@ body {
   opacity: 0;
 }
 footer {
-  background-color: black;
-  position: absolute;
+  position: fixed;
+  bottom:0;
+  left:30vw;;
+  ul {
+  display:flex;
+  flex-direction:row;
+    li {
+      margin:10px;
+    }
+
+  }
 
   div {
     background-color: var(--splash-color);

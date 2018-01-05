@@ -2,8 +2,10 @@ import React from 'react';
 
 const Home = () => {
 
-  $(document).ready(function() {
-      let list, cryptList, textnode, waitTime = 500;
+  function startCrypto (evt) {
+    evt.preventDefault();
+    document.getElementById('startUp').disabled = true;
+      let list, cryptList, textnode, waitTime = 1000;
       for (let i = 0; i < revealOrder.length; i++) {
         setTimeout(() => {
           list = document.getElementsByClassName(`${revealOrder[i]}spot`);
@@ -13,15 +15,15 @@ const Home = () => {
           textnode = document.createTextNode(`${revealOrder[i]}`);
           list[j].removeChild(list[j].firstChild);
           list[j].appendChild(textnode);
-          cryptList[j].classList.add("solved");
+          cryptList[j].classList.add('solved');
           // list[j].innerHTML= `${revealOrder[i]}`;
         }
-        }, waitTime * (i + 1))
+        }, waitTime * i )
 
       }
-  });
+  }
   // let message ="HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
-  let words="HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(word => {return word.split('')});
+  let words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(word => {return word.split('')});
   console.log(words);
   let revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U',  'W', 'X',  'Z'];
   let holder = {};
@@ -43,60 +45,44 @@ const Home = () => {
 
 
       return (
-        <div className = "container">
-        <div id="intro">
-        {/* {
-            message.map((char, idx) => {
-              let block =
-              holder[char] ?
-                  (<span className="crypto char" key={char + idx}>
-                      <div className={`${char}spot cryptoReveal`}>
-                        <input />
-                      </div>
-                      <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
-                  </span>)
+        <div>
+        <img className ="pic" src="client/components/images/mnwmeout.png" />
+        <div id="intro" className="contained">
+            {
+              words.map((word, wordIdx) => {
+                return (
+                  <div className="word" key={word + wordIdx}>
+                    {
+                  word.map((char, idx) => {
+                    let block =
+                  holder[char] ?
+                      (<span className="crypto char" key={char + wordIdx + idx}>
+                          <div className={`${char}spot cryptoReveal`}>
+                            <input />
+                          </div>
+                          <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
+                      </span>)
 
-                :
-                  (<span key={char + idx}>
-                    <div className={`${char}spot`}>{char}</div>
-                      <div className={'cryptoPunct'} />
-                  </span>)
+                    :
+                      (<span key={char + wordIdx + idx}>
+                        <div className={`${char}spot`}>{char}</div>
+                          <div className={'cryptoPunct'} />
+                      </span>)
 
-                ;
-                return block;
-
-            })
-        } */}
-        {
-          words.map((word, wordIdx) => {
-            return (
-              <div className="word" key={word + wordIdx}>
-                {
-              word.map((char, idx) => {
-                let block =
-              holder[char] ?
-                  (<span className="crypto char" key={char + wordIdx + idx}>
-                      <div className={`${char}spot cryptoReveal`}>
-                        <input />
-                      </div>
-                      <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
-                  </span>)
-
-                :
-                  (<span key={char + idx}>
-                    <div className={`${char}spot`}>{char}</div>
-                      <div className={'cryptoPunct'} />
-                  </span>)
-
-                ;
-                return block;
+                    ;
+                    return block;
+                  })
+                }
+                  </div>
+                )
               })
             }
-              </div>
-            )
-          })
-        }
+        <div>
+        <button id="startUp" className="center" onClick= {startCrypto}> Solution </button>
+        </div>
+
           </div>
+
           </div>
       )
   }
