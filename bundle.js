@@ -3810,7 +3810,6 @@ var Home = function Home() {
   var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(function (word) {
     return word.split('');
   });
-  console.log(words);
   var revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U', 'W', 'X', 'Z'];
   var holder = {};
   var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -4871,7 +4870,7 @@ var Main = function Main(props) {
       null,
       _react2.default.createElement(
         'ul',
-        { id: 'footerRow', className: 'hide-on-small-only' },
+        { id: 'footerRow', className: 'center hide-on-med-and-down' },
         _react2.default.createElement(
           'li',
           null,
@@ -4954,7 +4953,7 @@ var Main = function Main(props) {
       ),
       _react2.default.createElement(
         'div',
-        { id: 'footerCol', className: 'left hide-on-med-and-up' },
+        { id: 'footerCol', className: 'left hide-on-large-only' },
         _react2.default.createElement(
           'ul',
           { id: 'slide-out', className: 'side-nav' },
@@ -4963,10 +4962,10 @@ var Main = function Main(props) {
             null,
             _react2.default.createElement(
               'a',
-              { href: '#!name' },
+              { href: '/' },
               _react2.default.createElement(
                 'span',
-                { className: 'white-text name' },
+                { className: 'name' },
                 'Evlis Henry'
               )
             )
@@ -5077,7 +5076,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 75%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 25px; }\n    body #intro .crypto {\n      width: 20px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      height: 15vh;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n    body #navigator ul {\n      width: 15vw;\n      color: var(--splash-color); }\n  body .row .col {\n    padding: 0.75rem; }\n  body .side-nav {\n    background-color: black; }\n    body .side-nav li > a {\n      color: var(--splash-color); }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 10px; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    left: 30vw; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n", ""]);
+exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 85%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 2.5vw; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      width: 70vw;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 10px; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    left: 30vw; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n\n#sidenav-overlay {\n  left: 32vw; }\n", ""]);
 
 // exports
 
