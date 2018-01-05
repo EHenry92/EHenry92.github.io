@@ -3779,7 +3779,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Home = function Home() {
 
-  function startCrypto(evt) {
+  function startReveal(evt) {
     evt.preventDefault();
     document.getElementById('startUp').disabled = true;
     var list = void 0,
@@ -3797,7 +3797,6 @@ var Home = function Home() {
           list[j].removeChild(list[j].firstChild);
           list[j].appendChild(textnode);
           cryptList[j].classList.add('solved');
-          // list[j].innerHTML= `${revealOrder[i]}`;
         }
       }, waitTime * i);
     };
@@ -3806,7 +3805,14 @@ var Home = function Home() {
       _loop(i);
     }
   }
-  // let message ="HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split('');
+  function enterChar(evt) {
+    evt.preventDefault();
+    var spots = document.getElementsByClassName(evt.target.name);
+    for (var i = 0; i < spots.length; i++) {
+      spots[i].firstChild.value = evt.target.value.toUpperCase();
+    }
+  }
+
   var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHEUSASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(function (word) {
     return word.split('');
   });
@@ -3846,7 +3852,7 @@ var Home = function Home() {
               _react2.default.createElement(
                 'div',
                 { className: char + 'spot cryptoReveal' },
-                _react2.default.createElement('input', null)
+                _react2.default.createElement('input', { name: char + 'spot', onChange: enterChar })
               ),
               _react2.default.createElement(
                 'div',
@@ -3866,23 +3872,21 @@ var Home = function Home() {
             return block;
           })
         );
-      }),
+      })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'center' },
       _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'button',
-          { id: 'startUp', className: 'center', onClick: startCrypto },
-          ' Solution '
-        )
+        'button',
+        { id: 'startUp', className: 'center', onClick: startReveal },
+        ' Solution '
       )
     )
   );
 };
 
 exports.default = Home;
-
-// light-green darken-1
 
 /***/ }),
 /* 49 */
@@ -5076,7 +5080,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --splash-color: #ff7f50;\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 85%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 2.5vw; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .colorBar {\n    color: var(--splash-color); }\n  body .contained {\n    margin-top: 20vh;\n    margin-left: 6vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      width: 70vw;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 10px; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    left: 30vw; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n\n#sidenav-overlay {\n  left: 32vw; }\n", ""]);
+exports.push([module.i, "body {\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 85%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 2.5vw; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .contained {\n    margin-top: 15vh;\n    margin-left: 2vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      width: 45vw;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n.tinyImg {\n  width: 30px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 10px; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    padding-left: 30vw; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n\n#sidenav-overlay {\n  left: 32vw; }\n", ""]);
 
 // exports
 

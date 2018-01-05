@@ -34,7 +34,6 @@ const Main = (props) => {
           </ul>
           <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
           </div>
-
       </footer>
     </div>
   )

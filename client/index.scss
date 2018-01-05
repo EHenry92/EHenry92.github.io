@@ -1,6 +1,4 @@
 body {
-    --splash-color: #ff7f50;
-    // --off-white-color: rgb(194, 188, 188);
     --off-white-color: black;
     font-family: fantasy;
     color:var(--off-white-color);
@@ -17,7 +15,6 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      // padding: 6vw;
       width: 85%;
       .word {
         display: flex;
@@ -91,32 +88,24 @@ body {
       background-color: white ;
       color: black;
     }
-    .colorBar {
-      color: var(--splash-color);
-    }
     .contained {
-      margin-top: 20vh;
-      margin-left: 6vw;
+      margin-top: 15vh;
+      margin-left: 2vw;
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
     }
-
-
     .degType {
       width: 30%;
     }
-
     label {
       display: block;
     }
-
-
     #navigator{
       position:fixed;
 
       #name {
-        width: 70vw;
+        width: 45vw;
         color:black;
         position:fixed;
         top:0;
@@ -162,7 +151,7 @@ footer {
   #footerRow {
     display:flex;
     flex-direction:row;
-    left:30vw;;
+    padding-left:30vw;;
   }
   #footerCol{
     font-size: 2vw;
@@ -171,8 +160,6 @@ footer {
   .side-nav {
     width: 32vw;
   }
-
-
 }
 #sidenav-overlay{
   left: 32vw;
