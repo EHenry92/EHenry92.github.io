@@ -16,7 +16,7 @@ const Main = (props) => {
       </div>
       {children}
       <footer>
-      <ul>
+          <ul id="footerRow" className="hide-on-small-only">
             <li><Link to="/"><h5>Home</h5></Link></li>
             <li><h5>-</h5></li>
             <li><Link to="/about"><h5>About</h5></Link></li>
@@ -25,6 +25,16 @@ const Main = (props) => {
             <li><h5>-</h5></li>
             <li><Link to="/resume"><h5>Resume</h5></Link></li>
           </ul>
+          <div id="footerCol" className="left hide-on-med-and-up">
+            <ul id="slide-out" className="side-nav">
+            <li><a href="#!name"><span className="white-text name">Evlis Henry</span></a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/work">Projects</a></li>
+            <li><a href="/resume">Resume</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
+          </div>
+
       </footer>
     </div>
   )

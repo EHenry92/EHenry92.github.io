@@ -171,18 +171,20 @@ body {
 footer {
   position: fixed;
   bottom:0;
-  left:30vw;;
-  ul {
-  display:flex;
-  flex-direction:row;
-    li {
-      margin:10px;
-    }
-
+  li {
+    margin:10px;
+  }
+  #footerRow {
+    display:flex;
+    flex-direction:row;
+    left:30vw;;
+  }
+  #footerCol{
+    font-size: 2vw;
+    left: 0;
+  }
+  .side-nav {
+    width: 32vw;
   }
 
-  div {
-    background-color: var(--splash-color);
-    height: 30px;
-  }
 }
