@@ -4965,11 +4965,11 @@ var Main = function Main(props) {
             'li',
             null,
             _react2.default.createElement(
-              'a',
-              { href: '/' },
+              _reactRouterDom.Link,
+              { to: '/' },
               _react2.default.createElement(
-                'span',
-                { className: 'name' },
+                'h5',
+                null,
                 'Evlis Henry'
               )
             )
@@ -4978,27 +4978,39 @@ var Main = function Main(props) {
             'li',
             null,
             _react2.default.createElement(
-              'a',
-              { href: '/about' },
-              'About'
+              _reactRouterDom.Link,
+              { to: '/about' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'About'
+              )
             )
           ),
           _react2.default.createElement(
             'li',
             null,
             _react2.default.createElement(
-              'a',
-              { href: '/work' },
-              'Projects'
+              _reactRouterDom.Link,
+              { to: '/work' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'Projects'
+              )
             )
           ),
           _react2.default.createElement(
             'li',
             null,
             _react2.default.createElement(
-              'a',
-              { href: '/resume' },
-              'Resume'
+              _reactRouterDom.Link,
+              { to: '/resume' },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'Resume'
+              )
             )
           )
         ),

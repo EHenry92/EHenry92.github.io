@@ -27,10 +27,10 @@ const Main = (props) => {
           </ul>
           <div id="footerCol" className="left hide-on-large-only">
             <ul id="slide-out" className="side-nav">
-            <li><a href="/"><span className="name">Evlis Henry</span></a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/work">Projects</a></li>
-            <li><a href="/resume">Resume</a></li>
+            <li><Link to="/"><h5>Evlis Henry</h5></Link></li>
+            <li><Link to="/about"><h5>About</h5></Link></li>
+            <li><Link to="/work"><h5>Projects</h5></Link></li>
+            <li><Link to="/resume"><h5>Resume</h5></Link></li>
           </ul>
           <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
           </div>
