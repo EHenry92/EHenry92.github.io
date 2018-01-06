@@ -5,7 +5,7 @@ const Home = () => {
   function startReveal (evt) {
       evt.preventDefault();
       document.getElementById('startUp').disabled = true;
-        let list, cryptList, textnode, waitTime = 1000;
+        let list, cryptList, textnode, waitTime = 750;
         for (let i = 0; i < revealOrder.length; i++) {
           setTimeout(() => {
             list = document.getElementsByClassName(`${revealOrder[i]}spot`);
