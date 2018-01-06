@@ -167,6 +167,9 @@ footer {
   }
   .side-nav {
     width: 32vw;
+    li>a {
+      padding: 2px;;
+    }
   }
 }
 #sidenav-overlay{

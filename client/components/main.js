@@ -28,6 +28,7 @@ const Main = (props) => {
           <div id="footerCol" className="left hide-on-large-only">
             <ul id="slide-out" className="side-nav">
             <li><Link to="/"><h5>Evlis Henry</h5></Link></li>
+            <li><div className="divider" /></li>
             <li><Link to="/about"><h5>About</h5></Link></li>
             <li><Link to="/work"><h5>Projects</h5></Link></li>
             <li><Link to="/resume"><h5>Resume</h5></Link></li>
