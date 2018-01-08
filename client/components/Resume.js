@@ -31,9 +31,16 @@ const Resume = () => {
                   <span  className="category">
                     <Link to="https://www.likedin.com/in/evils-henry" target="_blank"><img  className= "tinyImg" src="client/components/images/social-linked.png" /></Link>
                   </span>
+                  <span  className="category">
+                      <a href="/public/Evlis_Henry_Resume_Web.pdf">
+                      <img className="tinyImg" src="client/components/images/resume_icon.png" />
+                      </a>
+                  </span>
+
               </div>
             </b>
           </li>
+
           <li>
             <div className="collapsible-header active"><i className="material-icons">build</i>Technical Skills</div>
             <div className="collapsible-body"><span>
