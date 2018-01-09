@@ -5,11 +5,15 @@ const About = () => {
        <div className = "contained">
       <div  id="bio" className = "col s6 push-s1 flow-text">
         <h4 className="center">About this full-stack developer</h4>
-        <p>I'm a educator turned programer fueled by my love for problem solving and my desire for continued growth. I aim to produce work that encourages and empowers people to do what they love.
-        </p>
+        {/* <p>I'm a educator turned programer fueled by my love for problem solving and my desire for continued growth. I aim to produce work that encourages and empowers people to do what they love.
+        </p> */}
         <p>
-
-          </p>
+          I began my journey into programming as an undergrad at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.</p>
+       <p>
+         After a couple years of educating young minds, I realized that my heart belonged to coding.I polished my programming skills by attending Grace Hopper Academy- an all female coding boot camp. There, I became fully immersed into full-stack Javascript. </p>
+       <p>
+         I aspire to continue helping people as a software engineer.
+        </p>
         </div>
        </div>
       )
