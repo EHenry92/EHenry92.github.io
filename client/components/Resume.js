@@ -2,11 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Resume = () => {
-
-  $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
-
   return (
     <div className="contained">
     <br />

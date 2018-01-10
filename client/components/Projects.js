@@ -16,93 +16,79 @@ const Projects = () => {
           }, 3500);
 
         })
+        const creations = [
+          {
+            name: 'IdeaStorm',
+            site: 'http://idea-storm.herokuapp.com/',
+            code: 'https://github.com/EHenry92/meeb',
+            images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png' ],
+            smallDesc: 'A virtual brainstorming tool for teams.',
+            largeDesc: 'A virtual collaboration tool for teams to share, discuss and connect ideas.',
+            tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
+            initials: 'is'
+          },
+          {
+            name: 'VocabuMemory',
+            site: "http://vocabumemory.herokuapp.com/",
+            code: 'https://github.com/EHenry92/VocabuMemory',
+            images: ["client/components/images/VocabuMemory.png", "client/components/images/vocabuMemoryGame.png" ],
+            smallDesc: 'A memory matching card game.',
+            largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition.',
+            tech: 'React, Redux, React-Redux, Sequelize<',
+            initials: 'vm'
+          },
+          {
+            name: 'Dunder Mifflin Inc.',
+            site: '"https://dundermifflininc.herokuapp.com/"',
+            code: '"https://github.com/EHenry92/dunder_mifflin"',
+            images: ["client/components/images/dunderMifflinHome.png","client/components/images/dunderMifflincart.png"],
+            smallDesc: 'An e-commerce website for a paper company.',
+            largeDesc: 'An e-commerce single page, responsive webapplication  for the a paper company.',
+            tech: 'React, Redux, React-Redux, Materalize, Material-UI, Sequelize',
+            initials: 'dm'
+          }
+        ]
 
           return (
-          <div>
-            <div className="contained">
-            <div className="center"><h5>Projects</h5></div>
-                  <div className="card med">
-                  <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image is activator" src="client/components/images/ideastormlogo.png" />
-                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormRoom.png" />
-                        <img className="carousel-image is activator hidden" src="client/components/images/ideaStormHome.png" />
-                      </div>
-
-                  <div className="card-content">
-                    <span className="project-title activator">
-                    <b>IdeaStorm</b>
-                    <p>A virtual brainstorming tool for teams.</p>
-                    <i className="material-icons right">more_vert</i></span>
-
-                    <p><a href="http://idea-storm.herokuapp.com/">site </a>
-                    <a href="https://github.com/EHenry92/meeb">code</a></p>
-                  </div>
-                  <div className="card-reveal">
-                    <span className="card-title">IdeaStorm<i className="material-icons right">close</i></span>
-                    <p>A virtual collaboration tool for teams to share, discuss and connect ideas.</p>
-                    {/* <ul>Contributors:
-                        <li>Erica Chai</li>
-                        <li>Maria Betances</li>
-                        <li>Blanca Sanchez</li>
-                      </ul> */}
-                    <a>Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js</a>
-                  </div>
+        <div>
+       <div className="contained">
+      <div className="center"><h5>Projects</h5></div>
+        {
+          creations.map((item) => {
+            return (
+            <div className="card med" key={item.name}>
+              <div id="carousel" className="card-image waves-effect waves-block waves-light">
+                {
+                  item.images.map((image, idx) => {
+                      return (
+                      idx == 0 ?
+                      <img className={`carousel-image ${item.initials} activator`} src={image} />
+                      :
+                      <img className={`carousel-image ${item.initials} activator hidden`} src={image} />
+                    )
+                  })
+                }
               </div>
-                  <div className="card med">
-                  {/* <div className="card-image waves-effect waves-block waves-light"> */}
-                    {/* <img className="activator" src="client/components/images/VocabuMemory.png" /> */}
-                    <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image dm activator" src="client/components/images/VocabuMemory.png" />
-                        <img className="carousel-image dm activator hidden" src="client/components/images/vocabuMemoryGame.png" />
-                      </div>
-
-                  {/* </div> */}
-                  <div className="card-content">
-                    <span className="project-title activator">
-                      <b>VocabuMemory</b>
-                      <p>A memory matching card game.</p>
-                    <i className="material-icons right">more_vert</i></span>
-                    <p><a href="http://vocabumemory.herokuapp.com/">site </a>
-                    <a href="https://github.com/EHenry92/VocabuMemory">code</a></p>
-
-                  </div>
-                  <div className="card-reveal">
-                    <span className="card-title">VocabuMemory<i className="material-icons right">close</i></span>
-                    <p>A matching card game in which successful matches are found by pairing a word with its definition.</p>
-                    <a>Built with: React, Redux, React-Redux, Sequelize</a>
-                  </div>
+              <div className="card-content">
+                <span className="project-title activator">
+                <b>{item.name}</b>
+                <p>{item.smallDesc}</p>
+                <i className="material-icons right">more_vert</i></span>
+                <p><a href={item.site} >site </a>
+                <a href= {item.code} >code</a></p>
               </div>
-                  <div className="card med">
-                    <div id="carousel" className="card-image waves-effect waves-block waves-light">
-                        <img className="carousel-image vm activator" src="client/components/images/dunderMifflinHome.png" />
-                        <img className="carousel-image vm activator hidden" src="client/components/images/dunderMifflincart.png" />
-                      </div>
-                    <div className="card-content">
-                      <span className="project-title activator">
-                        <b>Dunder Mifflin Inc.</b>
-                        <p>An e-commerce website  for a paper company.</p>
-                      <i className="material-icons right">more_vert</i></span>
-
-                      <p><a href="https://dundermifflininc.herokuapp.com/">site </a>
-                      <a />
-                      <a href="https://github.com/EHenry92/dunder_mifflin">code</a></p>
-
-                    </div>
-                    <div className="card-reveal">
-                      <span className="card-title">Dunder Mifflin Inc.<i className="material-icons right">close</i></span>
-                      <p>An e-commerce site  for the a paper company.</p>
-                      {/* <ul>Contributors:
-                        <li>Layla Hedges</li>
-                        <li>Emily Jordan</li>
-                        <li>April Rueb</li>
-                      </ul> */}
-                      <a>Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize</a>
-                    </div>
-                  </div>
+              <div className="card-reveal">
+                <span className="card-title">{item.name}<i className="material-icons right">close</i></span>
+                <p>{item.largeDesc}</p>
+                <a>Built with: {item.tech}</a>
               </div>
-        </div>
-
+            </div>
           )
+        })
+      }
+      </div>
+      </div>
+      )
       }
 
 export default Projects;

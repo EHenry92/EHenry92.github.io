@@ -3872,15 +3872,21 @@ var Home = function Home() {
             return block;
           })
         );
-      })
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'center' },
+      }),
       _react2.default.createElement(
-        'button',
-        { id: 'startUp', className: 'center', onClick: startReveal },
-        ' Solution '
+        'span',
+        null,
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          null,
+          ' ',
+          _react2.default.createElement(
+            'button',
+            { id: 'startUp', onClick: startReveal },
+            ' Solution '
+          )
+        )
       )
     )
   );
@@ -3921,6 +3927,34 @@ var Projects = function Projects() {
       }
     }, 3500);
   });
+  var creations = [{
+    name: 'IdeaStorm',
+    site: 'http://idea-storm.herokuapp.com/',
+    code: 'https://github.com/EHenry92/meeb',
+    images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png'],
+    smallDesc: 'A virtual brainstorming tool for teams.',
+    largeDesc: 'A virtual collaboration tool for teams to share, discuss and connect ideas.',
+    tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
+    initials: 'is'
+  }, {
+    name: 'VocabuMemory',
+    site: "http://vocabumemory.herokuapp.com/",
+    code: 'https://github.com/EHenry92/VocabuMemory',
+    images: ["client/components/images/VocabuMemory.png", "client/components/images/vocabuMemoryGame.png"],
+    smallDesc: 'A memory matching card game.',
+    largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition.',
+    tech: 'React, Redux, React-Redux, Sequelize<',
+    initials: 'vm'
+  }, {
+    name: 'Dunder Mifflin Inc.',
+    site: '"https://dundermifflininc.herokuapp.com/"',
+    code: '"https://github.com/EHenry92/dunder_mifflin"',
+    images: ["client/components/images/dunderMifflinHome.png", "client/components/images/dunderMifflincart.png"],
+    smallDesc: 'An e-commerce website for a paper company.',
+    largeDesc: 'An e-commerce single page, responsive webapplication  for the a paper company.',
+    tech: 'React, Redux, React-Redux, Materalize, Material-UI, Sequelize',
+    initials: 'dm'
+  }];
 
   return _react2.default.createElement(
     'div',
@@ -3937,221 +3971,81 @@ var Projects = function Projects() {
           'Projects'
         )
       ),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med' },
-        _react2.default.createElement(
+      creations.map(function (item) {
+        return _react2.default.createElement(
           'div',
-          { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'carousel-image is activator', src: 'client/components/images/ideastormlogo.png' }),
-          _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormRoom.png' }),
-          _react2.default.createElement('img', { className: 'carousel-image is activator hidden', src: 'client/components/images/ideaStormHome.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
+          { className: 'card med', key: item.name },
           _react2.default.createElement(
-            'span',
-            { className: 'project-title activator' },
+            'div',
+            { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
+            item.images.map(function (image, idx) {
+              return idx == 0 ? _react2.default.createElement('img', { className: 'carousel-image ' + item.initials + ' activator', src: image }) : _react2.default.createElement('img', { className: 'carousel-image ' + item.initials + ' activator hidden', src: image });
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'card-content' },
             _react2.default.createElement(
-              'b',
-              null,
-              'IdeaStorm'
+              'span',
+              { className: 'project-title activator' },
+              _react2.default.createElement(
+                'b',
+                null,
+                item.name
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                item.smallDesc
+              ),
+              _react2.default.createElement(
+                'i',
+                { className: 'material-icons right' },
+                'more_vert'
+              )
             ),
             _react2.default.createElement(
               'p',
               null,
-              'A virtual brainstorming tool for teams.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
+              _react2.default.createElement(
+                'a',
+                { href: item.site },
+                'site '
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: item.code },
+                'code'
+              )
             )
           ),
           _react2.default.createElement(
-            'p',
-            null,
+            'div',
+            { className: 'card-reveal' },
             _react2.default.createElement(
-              'a',
-              { href: 'http://idea-storm.herokuapp.com/' },
-              'site '
-            ),
-            _react2.default.createElement(
-              'a',
-              { href: 'https://github.com/EHenry92/meeb' },
-              'code'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-reveal' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'IdeaStorm',
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'A virtual collaboration tool for teams to share, discuss and connect ideas.'
-          ),
-          _react2.default.createElement(
-            'a',
-            null,
-            'Built with: React, Redux, AWS, D3.js, React-Redux, Sequelize.js'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med' },
-        _react2.default.createElement(
-          'div',
-          { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'carousel-image dm activator', src: 'client/components/images/VocabuMemory.png' }),
-          _react2.default.createElement('img', { className: 'carousel-image dm activator hidden', src: 'client/components/images/vocabuMemoryGame.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
-          _react2.default.createElement(
-            'span',
-            { className: 'project-title activator' },
-            _react2.default.createElement(
-              'b',
-              null,
-              'VocabuMemory'
+              'span',
+              { className: 'card-title' },
+              item.name,
+              _react2.default.createElement(
+                'i',
+                { className: 'material-icons right' },
+                'close'
+              )
             ),
             _react2.default.createElement(
               'p',
               null,
-              'A memory matching card game.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: 'http://vocabumemory.herokuapp.com/' },
-              'site '
+              item.largeDesc
             ),
             _react2.default.createElement(
               'a',
-              { href: 'https://github.com/EHenry92/VocabuMemory' },
-              'code'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-reveal' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'VocabuMemory',
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'A matching card game in which successful matches are found by pairing a word with its definition.'
-          ),
-          _react2.default.createElement(
-            'a',
-            null,
-            'Built with: React, Redux, React-Redux, Sequelize'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'card med' },
-        _react2.default.createElement(
-          'div',
-          { id: 'carousel', className: 'card-image waves-effect waves-block waves-light' },
-          _react2.default.createElement('img', { className: 'carousel-image vm activator', src: 'client/components/images/dunderMifflinHome.png' }),
-          _react2.default.createElement('img', { className: 'carousel-image vm activator hidden', src: 'client/components/images/dunderMifflincart.png' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
-          _react2.default.createElement(
-            'span',
-            { className: 'project-title activator' },
-            _react2.default.createElement(
-              'b',
               null,
-              'Dunder Mifflin Inc.'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'An e-commerce website  for a paper company.'
-            ),
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'more_vert'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: 'https://dundermifflininc.herokuapp.com/' },
-              'site '
-            ),
-            _react2.default.createElement('a', null),
-            _react2.default.createElement(
-              'a',
-              { href: 'https://github.com/EHenry92/dunder_mifflin' },
-              'code'
+              'Built with: ',
+              item.tech
             )
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-reveal' },
-          _react2.default.createElement(
-            'span',
-            { className: 'card-title' },
-            'Dunder Mifflin Inc.',
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons right' },
-              'close'
-            )
-          ),
-          _react2.default.createElement(
-            'p',
-            null,
-            'An e-commerce site  for the a paper company.'
-          ),
-          _react2.default.createElement(
-            'a',
-            null,
-            'Built with: React, Redux, React-Redux, Materalize, Material-UI, Sequelize'
-          )
-        )
-      )
+        );
+      })
     )
   );
 };
@@ -4178,11 +4072,6 @@ var _reactRouterDom = __webpack_require__(12);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Resume = function Resume() {
-
-  $(document).ready(function () {
-    $('.collapsible').collapsible();
-  });
-
   return _react2.default.createElement(
     'div',
     { className: 'contained' },
@@ -4863,7 +4752,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Main = function Main(props) {
   var children = props.children;
 
-  $('.button-collapse').sideNav();
 
   return _react2.default.createElement(
     'div',
@@ -4963,80 +4851,6 @@ var Main = function Main(props) {
             )
           )
         )
-      ),
-      _react2.default.createElement(
-        'div',
-        { id: 'footerCol', className: 'left hide-on-large-only' },
-        _react2.default.createElement(
-          'ul',
-          { id: 'slide-out', className: 'side-nav' },
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'Evlis Henry'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement('div', { className: 'divider' })
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/about' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'About'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/work' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'Projects'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/resume' },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'Resume'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: '#', 'data-activates': 'slide-out', className: 'button-collapse' },
-          _react2.default.createElement(
-            'i',
-            { className: 'material-icons' },
-            'menu'
-          )
-        )
       )
     )
   );
@@ -5106,7 +4920,7 @@ exports = module.exports = __webpack_require__(57)();
 
 
 // module
-exports.push([module.i, "body {\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center;\n    margin-left: 7%; }\n  body #intro {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: center;\n    width: 85%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 20px; }\n    body #intro .crypto {\n      width: 2.5vw;\n      margin: 2px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n      body #intro .crypto #startUp {\n        width: auto;\n        height: 10px; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%;\n    margin-left: 10%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .contained {\n    margin-top: 15vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body #navigator {\n    position: fixed; }\n    body #navigator #name {\n      width: 45vw;\n      color: black;\n      position: fixed;\n      top: 0;\n      left: 0;\n      background-color: white; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n#proj {\n  margin-left: 10%; }\n\n.tinyImg {\n  width: 30px;\n  margin: 2px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n\n#carousel .carousel-image {\n  position: absolute;\n  display: block;\n  margin: auto;\n  min-width: 100%;\n  height: 100%;\n  opacity: 1;\n  transition: opacity 1.5s; }\n\n#carousel .carousel-image.hidden {\n  opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 10px; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    padding-left: 30vw; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n    footer .side-nav li > a {\n      padding: 2px; }\n\n#sidenav-overlay {\n  left: 32vw; }\n", ""]);
+exports.push([module.i, "body {\n  --off-white-color: black;\n  font-family: fantasy;\n  color: var(--off-white-color);\n  background-color: white; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    border-style: double;\n    width: 85%;\n    text-align: center;\n    margin-left: 7%; }\n  body #intro {\n    justify-content: center;\n    width: 78%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 10px 20px; }\n    body #intro .crypto {\n      width: 2.5vw;\n      margin: 2px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n  body #startUp {\n    color: white;\n    background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body .card {\n    margin: 30px;\n    width: 20vw;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px; }\n    body .card .card-reveal {\n      background-color: var(--off-white-color);\n      color: white; }\n    body .card .card-content p a {\n      margin: 5px; }\n  body .collapsible {\n    background-color: black;\n    color: white;\n    width: 80%;\n    margin-left: 10%; }\n    body .collapsible td i {\n      font-size: x-small; }\n  body #top, body .collapsible-header {\n    background-color: white;\n    color: black; }\n  body .contained {\n    margin-top: 3vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap; }\n  body .degType {\n    width: 30%; }\n  body label {\n    display: block; }\n  body .row .col {\n    padding: 0.75rem; }\n  body ul a {\n    color: var(--off-white-color); }\n\n#proj {\n  margin-left: 10%; }\n\n.tinyImg {\n  width: 30px;\n  margin: 2px; }\n\n#carousel {\n  height: 30vh;\n  display: flex;\n  justify-content: center; }\n  #carousel .carousel-image {\n    position: absolute;\n    display: block;\n    opacity: 1;\n    transition: opacity 1.5s;\n    width: 20vw;\n    height: 10vw; }\n  #carousel .carousel-image.hidden {\n    opacity: 0; }\n\nfooter {\n  position: fixed;\n  bottom: 0; }\n  footer li {\n    margin: 0 10px;\n    height: 50px;\n    font-size: x-large; }\n  footer #footerRow {\n    display: flex;\n    flex-direction: row;\n    padding-left: 30vw;\n    list-style: none; }\n  footer #footerCol {\n    font-size: 2vw;\n    left: 0; }\n  footer .side-nav {\n    width: 32vw; }\n    footer .side-nav li > a {\n      padding: 2px; }\n\n#sidenav-overlay {\n  left: 32vw; }\n", ""]);
 
 // exports
 

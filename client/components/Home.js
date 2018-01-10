@@ -23,7 +23,7 @@ const Home = () => {
     function enterChar(evt) {
       evt.preventDefault();
       let spots = document.getElementsByClassName(evt.target.name);
-      for (let i=0; i<spots.length ; i++) {
+      for (let i = 0; i < spots.length ; i++) {
         spots[i].firstChild.value = evt.target.value.toUpperCase();
       }
     }
@@ -50,39 +50,40 @@ const Home = () => {
 
       return (
         <div>
-        <img className ="pic" src="client/components/images/mnwmeout.png" />
-        <div id="intro" className="contained">
-            {
-              words.map((word, wordIdx) => {
-                return (
-                  <div className="word" key={word + wordIdx}>
-                    {
-                  word.map((char, idx) => {
-                    let block =
-                  holder[char] ?
-                      (<span className="crypto char" key={char + wordIdx + idx}>
-                          <div className={`${char}spot cryptoReveal`}>
-                            <input name={`${char}spot`} onChange={enterChar} maxLength= {1} />
-                          </div>
-                          <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
-                      </span>)
-                    :
-                      (<span key={char + wordIdx + idx}>
-                        <div className={`${char}spot`}>{char}</div>
-                          <div className={'cryptoPunct'} />
-                      </span>)
-                    ;
-                    return block;
-                  })
-                }
-                  </div>
-                )
-              })
-            }
-          </div>
-          <div className="center">
-            <button id="startUp" className="center" onClick= {startReveal}> Solution </button>
-          </div>
+          <img className ="pic" src="client/components/images/mnwmeout.png" />
+          <div id="intro" className="contained">
+              {
+                words.map((word, wordIdx) => {
+                  return (
+                    <div className="word" key={word + wordIdx}>
+                      {
+                    word.map((char, idx) => {
+                      let block =
+                    holder[char] ?
+                        (<span className="crypto char" key={char + wordIdx + idx}>
+                            <div className={`${char}spot cryptoReveal`}>
+                              <input name={`${char}spot`} onChange={enterChar} maxLength= {1} />
+                            </div>
+                            <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
+                        </span>)
+                      :
+                        (<span key={char + wordIdx + idx}>
+                          <div className={`${char}spot`}>{char}</div>
+                            <div className={'cryptoPunct'} />
+                        </span>)
+                      ;
+                      return block;
+                    })
+                  }
+                    </div>
+                  )
+                })
+              }
+              <span>
+              <br />
+                <div> <button id="startUp" onClick= {startReveal}> Solution </button></div>
+            </span>
+            </div>
           </div>
       )
   }
