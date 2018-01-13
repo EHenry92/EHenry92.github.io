@@ -1,20 +1,82 @@
 import React from 'react';
 
 const About = () => {
+      // const favorites = [
+      //   [['Season'], ['Winter', 'Spring', 'Summer', 'Fall']],
+      //   [['Month'], ['October', 'May', 'August', 'February']],
+      //   [['Day'], ['Thursday', 'Friday', 'Tuesday', 'Wednesday']],
+      //   [['Color'], ['turquoise', 'coral', 'eggshell', 'aqua']],
+      // ]
+      // const answers = {
+      //   Season: 'Fall',
+      //   Month: 'October',
+      //   Day: 'Thursday',
+      //   Color: 'turquoise'
+      // }
+      // function showAnswer (evt) {
+      //   evt.preventDefault();
+      //   console.log(evt.target.innerHTML);
+      //   const targ = evt.target;
+      //   const category = `${targ.className}`.split(' ')[0];
+      //   const els = document.getElementsByClassName(category);
+      //   for (let i = 0; i < els.length; i++) {
+      //     els[i].classList.add('disabled')
+      //   }
+      //   console.log( 'correcto',category + answers[category] + targ.innerHTML)
+
+      //   if (answers[category] == targ.innerHTML) {
+      //     evt.target.classList.add('correct');
+      //     evt.target.classList.remove('disabled');
+      //   }
+      //   else {
+      //     evt.target.classList.add('wrong');
+      //     evt.target.classList.remove('disabled');
+      //     const correct = document.getElementById(answers[category]).classList;
+      //     correct.add('correct');
+      //     correct.remove('disabled');
+      //   }
+
+      // }
+
       return (
-       <div className = "contained">
-      <div  id="bio" className = "col s6 push-s1 flow-text">
-        <h4 className="center">About this full-stack developer</h4>
-        {/* <p>I'm a educator turned programer fueled by my love for problem solving and my desire for continued growth. I aim to produce work that encourages and empowers people to do what they love.
-        </p> */}
-        <p>
-          I began my journey into programming as an undergrad at Hunter College. However, after graduating, I decided to follow my passion for education and became a middle school math teacher.</p>
-       <p>
-         After a couple years of educating young minds, I realized that my heart belonged to coding.I polished my programming skills by attending Grace Hopper Academy- an all female coding boot camp. There, I became fully immersed into full-stack Javascript. </p>
-       <p>
-         I aspire to continue helping people as a software engineer.
-        </p>
+       <div id="me">
+                 <img className ="pic filler" src="client/components/images/rock.png" />
+
+      <div className= "filler contained" id="bio">
+      <p className="center title"><b>An educator turned developer fueled by a love for problem solving and the desire for continued growth.</b></p>
+      <p>
+        My name is Evlis Henry. I'm a full stack software engineer who enjoys creating interactive applications and helping others. I believe in creating code and products that solve a problem, encourages and equips people with the tools to do what they love. I taught Math at lower performing middle schools where I observed that the right technology had the power to increase learning, communication and engagement in the classroom.
+      </p>
+      <p>
+        I am certified in web development and hold a Bachelors of Arts in Computer Science from Hunter College. I bring a strong attention to detail which allows me to efficeively trace and troubleshoot code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set.
+      </p>
+      <p>
+        I'm a native New Yorker . When I'm not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.
+      </p>
+
+
+
         </div>
+        {/* <div id="quiz">
+          Find out my favorites?:
+          {
+            favorites.map(fav => {
+              return (
+                <div className="list" key={fav[0]}>
+                  {fav[0]} :
+                  <span className="list" >
+                  {
+                    fav[1].map(item => {
+                      return (<span key={item}><div onClick= {showAnswer} className={`${fav[0]} choices`} id={item} >{item}</div></span>)
+                    })
+                  }
+                  </span>
+                </div>
+              )
+            })
+          }
+
+        </div> */}
        </div>
       )
   }
