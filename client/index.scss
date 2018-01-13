@@ -17,18 +17,35 @@ body {
     #bio, #quiz {
       color: black;
       border-radius: 30px;
-      width: 70%;
+      width: 60%;
       text-align: center;
-      margin: 7%;
+      // margin: 7%;
     }
+    #bio {
+
+      p:not(.title) {
+        text-indent: 5em;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .title {
+        font-size: 25px;
+      }
+      p{
+        margin: 10px 0;
+      }
+    }
+
     #quiz{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
 
       .list {
         display: flex;
         flex-direction: row;
         align-items: center;
         .choices{
-          border-radius: 50%;
           border-style: solid;
           border-color: black;
           text-align: center;
@@ -43,19 +60,20 @@ body {
 
         }
         .wrong{
+          border-radius: 50%;
           border-color: darkred;
         }
         .choices.correct{
+          border-radius: 50%;
           border-color: greenyellow;
           opacity: .7;
           pointer-events:none;
         }
       }
     }
-
     #intro {
       justify-content: center;
-      width: 78%;
+      width: 70%;
       .word {
         display: flex;
         flex-direction:row;
@@ -99,20 +117,20 @@ body {
       }
 
     }
-
     .pic {
       width: 30vw;
       bottom: 0;
       right: 0;
       position:fixed;
+      max-height: 100vh;
     }
     #page-title{
       font-size: x-large;
-    list-style: none;
-    margin-right: 20px;
-
+      list-style: none;
+      margin-right: 20px;
     }
     .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: .5rem 0 1rem 2rem;
       background-color: #fff;
       width: 20rem;
@@ -150,6 +168,10 @@ body {
         padding: 1rem;
         p a {
           margin: 5px;
+          text-decoration: none;
+        }
+        .material-icons{
+          border-bottom-style: none;
         }
       }
       .reveal {
@@ -163,10 +185,6 @@ body {
         height: 100%;
         z-index: 3;
         display: none;
-        margin: .5rem 0 1rem 0;
-
-
-
         button {
           color: white;
           background-color: black;
@@ -177,14 +195,6 @@ body {
         transform: translateY(-100%);
       }
     }
-
-
-
-
-
-
-
-
     #collapsible{
       list-style: none;
       width: 80vw;
@@ -243,9 +253,8 @@ body {
       border-width: thin;
       background-color: white;
     }
-
     .contained {
-      margin-top: 3vw;
+      margin-top: 9vh;
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
@@ -274,8 +283,6 @@ nav {
         }
       }
   }
-
-
   .navNarrow {
     font-size: 14px;
     background-color: white;
@@ -306,7 +313,6 @@ nav {
   }
 }
 
-
 .right {
   float: right;
 }
@@ -317,8 +323,6 @@ nav {
 .left {
   float: left;
 }
-
-
 
 @media (min-width: 700px) {
 	nav {
@@ -335,3 +339,7 @@ nav {
 // #me{
 //   background-image: url('https://s3.amazonaws.com/henryeprofile/20170805_163929.jpg');
 // }
+.filler{
+  background-color: white;
+  opacity: 50%;
+}

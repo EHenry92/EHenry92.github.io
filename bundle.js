@@ -3865,11 +3865,11 @@ var Home = function Home() {
 
     var _loop = function _loop(i) {
       setTimeout(function () {
-        list = document.getElementsByClassName(revealOrder[i] + 'spot');
-        cryptList = document.getElementsByClassName(revealOrder[i] + 'letter');
+        list = document.getElementsByClassName(randAlpha[i] + 'spot');
+        cryptList = document.getElementsByClassName(randAlpha[i] + 'letter');
 
         for (var j = 0; j < list.length; j++) {
-          textnode = document.createTextNode('' + revealOrder[i]);
+          textnode = document.createTextNode('' + randAlpha[i]);
           list[j].removeChild(list[j].firstChild);
           list[j].appendChild(textnode);
           cryptList[j].classList.add('solved');
@@ -3877,7 +3877,7 @@ var Home = function Home() {
       }, waitTime * i);
     };
 
-    for (var i = 0; i < revealOrder.length; i++) {
+    for (var i = 0; i < randAlpha.length; i++) {
       _loop(i);
     }
   }
@@ -3889,10 +3889,9 @@ var Home = function Home() {
     }
   }
 
-  var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND LIFE LONG LEARNER.".split(' ').map(function (word) {
+  var words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS PERSON.".split(' ').map(function (word) {
     return word.split('');
   });
-  var revealOrder = ['E', 'V', 'L', 'I', 'S', 'H', 'N', 'R', 'Y', 'A', 'B', 'C', 'D', 'F', 'G', 'J', 'K', 'M', 'O', 'P', 'Q', 'T', 'U', 'W', 'X', 'Z'];
   var holder = {};
   var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   function shuffleAlpha(alpha) {
@@ -4187,7 +4186,7 @@ var Projects = function Projects() {
     code: 'https://github.com/EHenry92/meeb',
     images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png'],
     smallDesc: 'A virtual brainstorming tool for teams.',
-    largeDesc: 'A virtual collaboration tool for teams to share, discuss and connect ideas.',
+    largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color codding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
     tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
     initials: 'is'
   }, {
@@ -4196,7 +4195,7 @@ var Projects = function Projects() {
     code: 'https://github.com/EHenry92/VocabuMemory',
     images: ['client/components/images/VocabuMemory.png', 'client/components/images/vocabuMemoryGame.png'],
     smallDesc: 'A virtual memory matching card game.',
-    largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition.',
+    largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
     tech: 'React, Redux, React-Redux, Sequelize<',
     initials: 'vm'
   }, {
@@ -4306,10 +4305,16 @@ var Projects = function Projects() {
           _react2.default.createElement(
             'div',
             { className: 'reveal ' + item.initials },
+            _react2.default.createElement('br', null),
             _react2.default.createElement(
               'span',
-              { className: 'card-title' },
-              item.name,
+              null,
+              _react2.default.createElement(
+                'div',
+                { className: 'card-title center' },
+                item.name
+              ),
+              ' ',
               _react2.default.createElement(
                 'button',
                 { className: 'right', name: item.initials, onClick: hideData },
@@ -4624,85 +4629,74 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var About = function About() {
-  var favorites = [[['Season'], ['Winter', 'Spring', 'Summer', 'Fall']], [['Month'], ['October', 'May', 'August', 'February']], [['Day'], ['Thursday', 'Friday', 'Tuesday', 'Wednesday']], [['Color'], ['turquoise', 'coral', 'eggshell', 'aqua']]];
-  var answers = {
-    Season: 'Fall',
-    Month: 'October',
-    Day: 'Thursday',
-    Color: 'turquoise'
-  };
-  function showAnswer(evt) {
-    evt.preventDefault();
-    console.log(evt.target.innerHTML);
-    var targ = evt.target;
-    var category = ('' + targ.className).split(' ')[0];
-    var els = document.getElementsByClassName(category);
-    for (var i = 0; i < els.length; i++) {
-      els[i].classList.add('disabled');
-    }
-    console.log('correcto', category + answers[category] + targ.innerHTML);
+  // const favorites = [
+  //   [['Season'], ['Winter', 'Spring', 'Summer', 'Fall']],
+  //   [['Month'], ['October', 'May', 'August', 'February']],
+  //   [['Day'], ['Thursday', 'Friday', 'Tuesday', 'Wednesday']],
+  //   [['Color'], ['turquoise', 'coral', 'eggshell', 'aqua']],
+  // ]
+  // const answers = {
+  //   Season: 'Fall',
+  //   Month: 'October',
+  //   Day: 'Thursday',
+  //   Color: 'turquoise'
+  // }
+  // function showAnswer (evt) {
+  //   evt.preventDefault();
+  //   console.log(evt.target.innerHTML);
+  //   const targ = evt.target;
+  //   const category = `${targ.className}`.split(' ')[0];
+  //   const els = document.getElementsByClassName(category);
+  //   for (let i = 0; i < els.length; i++) {
+  //     els[i].classList.add('disabled')
+  //   }
+  //   console.log( 'correcto',category + answers[category] + targ.innerHTML)
 
-    if (answers[category] == targ.innerHTML) {
-      evt.target.classList.add('correct');
-      evt.target.classList.remove('disabled');
-    } else {
-      var correct = document.getElementById(answers[category]).classList;
-      correct.add('wrong');
-      correct.remove('disabled');
-    }
-  }
+  //   if (answers[category] == targ.innerHTML) {
+  //     evt.target.classList.add('correct');
+  //     evt.target.classList.remove('disabled');
+  //   }
+  //   else {
+  //     evt.target.classList.add('wrong');
+  //     evt.target.classList.remove('disabled');
+  //     const correct = document.getElementById(answers[category]).classList;
+  //     correct.add('correct');
+  //     correct.remove('disabled');
+  //   }
+
+  // }
 
   return _react2.default.createElement(
-    'div',
-    { id: 'me' },
-    _react2.default.createElement('img', { className: 'pic filler', src: 'client/components/images/rock.png' }),
+    "div",
+    { id: "me" },
+    _react2.default.createElement("img", { className: "pic filler", src: "client/components/images/rock.png" }),
     _react2.default.createElement(
-      'div',
-      { className: 'filler', id: 'bio' },
+      "div",
+      { className: "filler contained", id: "bio" },
       _react2.default.createElement(
-        'h4',
-        { className: 'center' },
-        'An educator turned programer fueled by my love for problem solving and my desire for continued growth.'
+        "p",
+        { className: "center title" },
+        _react2.default.createElement(
+          "b",
+          null,
+          "An educator turned developer fueled by a love for problem solving and the desire for continued growth."
+        )
       ),
       _react2.default.createElement(
-        'p',
+        "p",
         null,
-        'My name is Evlis Henry. I\'m a full stack software engineer. I enjoy creating interative web applications that help and allow people to do what they love. I write clean, easy-to-read and efficient code.'
+        "My name is Evlis Henry. I'm a full stack software engineer who enjoys creating interactive applications and helping others. I believe in creating code and products that solve a problem, encourages and equips people with the tools to do what they love. I taught Math at lower performing middle schools where I observed that the right technology had the power to increase learning, communication and engagement in the classroom."
       ),
-      _react2.default.createElement('p', null),
       _react2.default.createElement(
-        'p',
+        "p",
         null,
-        'I\'m a nativ New Yorker but stil love finding new things to do and places to visit. When I\'m not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and decifeeing puzzles.'
+        "I am certified in web development and hold a Bachelors of Arts in Computer Science from Hunter College. I bring a strong attention to detail which allows me to efficeively trace and troubleshoot code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set."
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "I'm a native New Yorker . When I'm not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles."
       )
-    ),
-    _react2.default.createElement(
-      'div',
-      { id: 'quiz' },
-      'Find out my favorites?:',
-      favorites.map(function (fav) {
-        return _react2.default.createElement(
-          'div',
-          { className: 'list', key: fav[0] },
-          fav[0],
-          ' :',
-          _react2.default.createElement(
-            'span',
-            { className: 'list' },
-            fav[1].map(function (item) {
-              return _react2.default.createElement(
-                'span',
-                { key: item },
-                _react2.default.createElement(
-                  'div',
-                  { onClick: showAnswer, className: fav[0] + ' choices', id: item },
-                  item
-                )
-              );
-            })
-          )
-        );
-      })
     )
   );
 };
@@ -4817,7 +4811,7 @@ exports = module.exports = __webpack_require__(58)();
 
 
 // module
-exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 70%;\n    text-align: center;\n    margin: 7%; }\n  body #quiz .list {\n    display: flex;\n    flex-direction: row;\n    align-items: center; }\n    body #quiz .list .choices {\n      border-radius: 50%;\n      border-style: solid;\n      border-color: black;\n      text-align: center;\n      width: 100px;\n      margin: 0 4px;\n      border-bottom-width: thin; }\n    body #quiz .list .choices.disabled {\n      opacity: .5;\n      pointer-events: none;\n      border-color: white; }\n    body #quiz .list .wrong {\n      border-color: darkred; }\n    body #quiz .list .choices.correct {\n      border-color: greenyellow;\n      opacity: .7;\n      pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 78%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 4vh 1.4vw; }\n    body #intro .crypto {\n      width: 2.5vw;\n      margin: 2px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n    body #intro #startUp {\n      color: white;\n      background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none;\n      margin: .5rem 0 1rem 0; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .tinyImg {\n      width: 30px;\n      margin: 2px; }\n    body #collapsible .title {\n      font-size: 20px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible td.right-col {\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .left-col {\n      width: 20vw;\n      text-align: right;\n      padding-right: 1rem; }\n    body #collapsible td i {\n      font-size: x-small; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 3vw;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n\nnav {\n  position: fixed;\n  bottom: 0; }\n  nav .navWide {\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    font-size: 14px;\n    background-color: white; }\n    nav .navNarrow #side-nav {\n      margin: 2px; }\n    nav .navNarrow #slide-out {\n      list-style: none;\n      height: 95vh;\n      display: none;\n      padding-top: 10vh; }\n    nav .navNarrow i {\n      float: left;\n      cursor: pointer; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 700px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n", ""]);
+exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n  body #bio p:not(.title) {\n    text-indent: 5em;\n    text-align: justify;\n    text-justify: inter-word; }\n  body #bio .title {\n    font-size: 25px; }\n  body #bio p {\n    margin: 10px 0; }\n  body #quiz {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    body #quiz .list {\n      display: flex;\n      flex-direction: row;\n      align-items: center; }\n      body #quiz .list .choices {\n        border-style: solid;\n        border-color: black;\n        text-align: center;\n        width: 100px;\n        margin: 0 4px;\n        border-bottom-width: thin; }\n      body #quiz .list .choices.disabled {\n        opacity: .5;\n        pointer-events: none;\n        border-color: white; }\n      body #quiz .list .wrong {\n        border-radius: 50%;\n        border-color: darkred; }\n      body #quiz .list .choices.correct {\n        border-radius: 50%;\n        border-color: greenyellow;\n        opacity: .7;\n        pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 70%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 4vh 1.4vw; }\n    body #intro .crypto {\n      width: 2.5vw;\n      margin: 2px; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n    body #intro #startUp {\n      color: white;\n      background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    max-height: 100vh; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px;\n        text-decoration: none; }\n      body .card .card-face .material-icons {\n        border-bottom-style: none; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .tinyImg {\n      width: 30px;\n      margin: 2px; }\n    body #collapsible .title {\n      font-size: 20px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible td.right-col {\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .left-col {\n      width: 20vw;\n      text-align: right;\n      padding-right: 1rem; }\n    body #collapsible td i {\n      font-size: x-small; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n\nnav {\n  position: fixed;\n  bottom: 0; }\n  nav .navWide {\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    font-size: 14px;\n    background-color: white; }\n    nav .navNarrow #side-nav {\n      margin: 2px; }\n    nav .navNarrow #slide-out {\n      list-style: none;\n      height: 95vh;\n      display: none;\n      padding-top: 10vh; }\n    nav .navNarrow i {\n      float: left;\n      cursor: pointer; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 700px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n\n.filler {\n  background-color: white;\n  opacity: 50%; }\n", ""]);
 
 // exports
 

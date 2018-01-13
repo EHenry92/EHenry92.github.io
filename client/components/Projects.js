@@ -8,7 +8,7 @@ const Projects = () => {
         code: 'https://github.com/EHenry92/meeb',
         images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png' ],
         smallDesc: 'A virtual brainstorming tool for teams.',
-        largeDesc: 'A virtual collaboration tool for teams to share, discuss and connect ideas.',
+        largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color codding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
         tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
         initials: 'is'
       },
@@ -18,7 +18,7 @@ const Projects = () => {
         code: 'https://github.com/EHenry92/VocabuMemory',
         images: ['client/components/images/VocabuMemory.png', 'client/components/images/vocabuMemoryGame.png' ],
         smallDesc: 'A virtual memory matching card game.',
-        largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition.',
+        largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
         tech: 'React, Redux, React-Redux, Sequelize<',
         initials: 'vm'
       },
@@ -93,7 +93,8 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className={`reveal ${item.initials}`}>
-                  <span className="card-title">{item.name}<button className="right" name={item.initials} onClick={hideData}>X</button></span>
+                    <br />
+                  <span><div className="card-title center">{item.name}</div> <button className="right" name={item.initials} onClick={hideData}>X</button></span>
                   <p>{item.largeDesc}</p>
                   <a>Built with: {item.tech}</a>
                 </div>
