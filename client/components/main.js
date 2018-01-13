@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {NavBar} from './index.js';
 
 
 const Main = (props) => {
@@ -13,27 +14,7 @@ const Main = (props) => {
         </Link>
       </div>
       {children}
-      <footer>
-          <ul id="footerRow" className="center hide-on-med-and-down">
-            <li><Link to="/"><h5>Home</h5></Link></li>
-            <li><h5>-</h5></li>
-            <li><Link to="/about"><h5>About</h5></Link></li>
-            <li><h5>-</h5></li>
-            <li><Link to="/work"><h5>Projects</h5></Link></li>
-            <li><h5>-</h5></li>
-            <li><Link to="/resume"><h5>Resume</h5></Link></li>
-          </ul>
-          {/* <div id="footerCol" className="left hide-on-large-only">
-            <ul id="slide-out" className="side-nav">
-            <li><Link to="/"><h5>Evlis Henry</h5></Link></li>
-            <li><div className="divider" /></li>
-            <li><Link to="/about"><h5>About</h5></Link></li>
-            <li><Link to="/work"><h5>Projects</h5></Link></li>
-            <li><Link to="/resume"><h5>Resume</h5></Link></li>
-          </ul>
-          <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
-          </div> */}
-      </footer>
+        <NavBar />
     </div>
   )
 }

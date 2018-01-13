@@ -50,8 +50,8 @@ const Home = () => {
 
       return (
         <div>
-          <img className ="pic" src="client/components/images/mnwmeout.png" />
-          <div id="intro" className="contained">
+          <img className ="pic filler" src="client/components/images/mnwmeout.png" />
+          <div id="intro" className="contained filler">
               {
                 words.map((word, wordIdx) => {
                   return (
@@ -83,8 +83,8 @@ const Home = () => {
               <br />
                 <div> <button id="startUp" onClick= {startReveal}> Solution </button></div>
             </span>
-            </div>
           </div>
+        </div>
       )
   }
 
