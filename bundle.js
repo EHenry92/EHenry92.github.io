@@ -675,65 +675,6 @@ var createPath = function createPath(location) {
 
 /***/ }),
 /* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(77);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(78);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(34);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(79);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(80);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(81);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(82);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(35);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(21);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(83);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(84);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(85);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(86);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***/ }),
-/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -809,7 +750,7 @@ Object.defineProperty(exports, 'NavBar', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -833,7 +774,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -902,7 +843,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -976,6 +917,65 @@ var createLocation = function createLocation(path, state, key, currentLocation) 
 var locationsAreEqual = function locationsAreEqual(a, b) {
   return a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && a.key === b.key && __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_value_equal__["default"])(a.state, b.state);
 };
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(77);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(78);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(34);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(79);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(80);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(81);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(82);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(35);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(21);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(83);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(84);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(85);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(86);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***/ }),
 /* 14 */
@@ -1449,7 +1449,7 @@ var createTransitionManager = function createTransitionManager() {
 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
-  var warning = __webpack_require__(12);
+  var warning = __webpack_require__(11);
   var ReactPropTypesSecret = __webpack_require__(20);
   var loggedTypeFailures = {};
 }
@@ -3645,13 +3645,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(87);
 
-var _reactRouterDom = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(13);
 
 var _history = __webpack_require__(55);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _components = __webpack_require__(10);
+var _components = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3788,7 +3788,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3980,7 +3980,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4384,7 +4384,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(10);
+var _index = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4446,7 +4446,7 @@ var Resume = function Resume() {
     location: 'Brooklyn, N.Y.',
     list: ['Designed, developed and implemented math lessons to general and special education classrooms of up to 30 students.', 'Conducted individual and group tutoring in an after-school setting.']
   }, {
-    title: 'Mathematics Teacher',
+    title: 'Math Teacher',
     company: 'Peace Academy Middle School',
     date: '09/2017 - 12/2017',
     location: 'Brooklyn, NY',
@@ -4631,7 +4631,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(10);
+var _index = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4728,9 +4728,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(13);
 
-var _index = __webpack_require__(10);
+var _index = __webpack_require__(9);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4819,7 +4819,7 @@ exports = module.exports = __webpack_require__(58)();
 
 
 // module
-exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n  body #bio p:not(.title) {\n    text-indent: 5em;\n    text-align: justify;\n    text-justify: inter-word; }\n  body #bio .title {\n    font-size: 25px; }\n  body #bio p {\n    margin: 10px 0; }\n  body #quiz {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    body #quiz .list {\n      display: flex;\n      flex-direction: row;\n      align-items: center; }\n      body #quiz .list .choices {\n        border-style: solid;\n        border-color: black;\n        text-align: center;\n        width: 100px;\n        margin: 0 4px;\n        border-bottom-width: thin; }\n      body #quiz .list .choices.disabled {\n        opacity: .5;\n        pointer-events: none;\n        border-color: white; }\n      body #quiz .list .wrong {\n        border-radius: 50%;\n        border-color: darkred; }\n      body #quiz .list .choices.correct {\n        border-radius: 50%;\n        border-color: greenyellow;\n        opacity: .7;\n        pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 70%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 2vh 1.5vw; }\n    body #intro .crypto {\n      width: 3vw;\n      margin: .2rem;\n      text-align: center; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          text-align: center;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n    body #intro #startUp {\n      color: white;\n      background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    max-height: 100vh; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px;\n        text-decoration: none; }\n      body .card .card-face .material-icons {\n        background-color: white;\n        border-style: none; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n      body .card .reveal .reveal-data {\n        padding: 20px; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .title {\n      font-size: 20px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible .row {\n      display: flex;\n      flex-direction: row; }\n      body #collapsible .row .right-col {\n        width: 60%;\n        border-bottom-style: solid;\n        border-bottom-color: white;\n        border-bottom-width: thin; }\n      body #collapsible .row .left-col {\n        width: 40%;\n        text-align: right;\n        padding-right: 1rem;\n        line-height: 1; }\n      body #collapsible .row i {\n        font-size: x-small; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body .social {\n    display: inline-block; }\n    body .social .tinyImg {\n      width: 30px;\n      margin: 2px; }\n\nnav {\n  position: fixed;\n  bottom: 0; }\n  nav .navWide {\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    font-size: 14px; }\n    nav .navNarrow #slide-space {\n      display: flex;\n      flex-direction: row;\n      height: 100vh;\n      display: none; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        height: 100%;\n        width: 30vw;\n        background-color: white;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw; }\n    nav .navNarrow i {\n      float: left;\n      cursor: pointer; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 700px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n", ""]);
+exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n  body #bio p:not(.title) {\n    text-indent: 5em;\n    text-align: justify;\n    text-justify: inter-word; }\n  body #bio .title {\n    font-size: 25px; }\n  body #bio p {\n    margin: 10px 0; }\n  body #quiz {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    body #quiz .list {\n      display: flex;\n      flex-direction: row;\n      align-items: center; }\n      body #quiz .list .choices {\n        border-style: solid;\n        border-color: black;\n        text-align: center;\n        width: 100px;\n        margin: 0 4px;\n        border-bottom-width: thin; }\n      body #quiz .list .choices.disabled {\n        opacity: .5;\n        pointer-events: none;\n        border-color: white; }\n      body #quiz .list .wrong {\n        border-radius: 50%;\n        border-color: darkred; }\n      body #quiz .list .choices.correct {\n        border-radius: 50%;\n        border-color: greenyellow;\n        opacity: .7;\n        pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 70%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 2vh 1.5vw; }\n    body #intro .crypto {\n      width: 3vw;\n      margin: .2rem;\n      text-align: center; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          text-align: center;\n          border: none;\n          border-bottom: 1px solid #9e9e9e;\n          border-radius: 0;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n    body #intro #startUp {\n      color: white;\n      background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    max-height: 100vh; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px;\n        text-decoration: none; }\n      body .card .card-face .material-icons {\n        background-color: white;\n        border-style: none; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n      body .card .reveal .reveal-data {\n        padding: 20px; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .title {\n      font-size: 16px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible .row {\n      display: flex;\n      flex-direction: row; }\n      body #collapsible .row .right-col {\n        width: 60%;\n        border-bottom-style: solid;\n        border-bottom-color: white;\n        border-bottom-width: thin; }\n      body #collapsible .row .left-col {\n        width: 40%;\n        text-align: right;\n        padding-right: 1rem;\n        line-height: 1; }\n      body #collapsible .row i {\n        font-size: x-small; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body .social {\n    display: inline-block; }\n    body .social .tinyImg {\n      width: 30px;\n      margin: 2px; }\n\nnav {\n  position: fixed;\n  bottom: 0; }\n  nav .navWide {\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    font-size: 14px; }\n    nav .navNarrow #slide-space {\n      display: flex;\n      flex-direction: row;\n      height: 100vh;\n      display: none; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        height: 100%;\n        width: 30vw;\n        background-color: white;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw; }\n    nav .navNarrow i {\n      float: left;\n      cursor: pointer; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 700px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n", ""]);
 
 // exports
 
@@ -5431,7 +5431,7 @@ exports.default = createHashHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(32);
@@ -5735,7 +5735,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(32);
@@ -6055,7 +6055,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(18);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -6226,7 +6226,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony reexport createHashHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(68);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(8);
@@ -6404,7 +6404,7 @@ module.exports = function() {
 
 var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(6);
-var warning = __webpack_require__(12);
+var warning = __webpack_require__(11);
 var assign = __webpack_require__(74);
 
 var ReactPropTypesSecret = __webpack_require__(20);
@@ -7057,7 +7057,7 @@ if (process.env.NODE_ENV !== "production") {
 
 var React = __webpack_require__(0);
 var invariant = __webpack_require__(6);
-var warning = __webpack_require__(12);
+var warning = __webpack_require__(11);
 var ExecutionEnvironment = __webpack_require__(24);
 var _assign = __webpack_require__(33);
 var emptyFunction$1 = __webpack_require__(5);
@@ -7066,7 +7066,7 @@ var getActiveElement = __webpack_require__(27);
 var shallowEqual = __webpack_require__(28);
 var containsNode = __webpack_require__(25);
 var focusNode = __webpack_require__(26);
-var emptyObject = __webpack_require__(11);
+var emptyObject = __webpack_require__(10);
 var checkPropTypes = __webpack_require__(19);
 var hyphenateStyleName = __webpack_require__(62);
 var camelizeStyleName = __webpack_require__(60);
@@ -22459,7 +22459,7 @@ module.exports = reactDom;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),m=__webpack_require__(24),A=__webpack_require__(33),B=__webpack_require__(5),ca=__webpack_require__(23),da=__webpack_require__(27),ea=__webpack_require__(28),ha=__webpack_require__(25),ia=__webpack_require__(26),C=__webpack_require__(11);
+var aa=__webpack_require__(0),m=__webpack_require__(24),A=__webpack_require__(33),B=__webpack_require__(5),ca=__webpack_require__(23),da=__webpack_require__(27),ea=__webpack_require__(28),ha=__webpack_require__(25),ia=__webpack_require__(26),C=__webpack_require__(10);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:D("227");
 var la={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function qa(a,b){return(a&b)===b}
 var ra={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ra,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){sa.hasOwnProperty(f)?D("48",f):void 0;var g=f.toLowerCase(),k=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:qa(k,b.MUST_USE_PROPERTY),
@@ -23465,8 +23465,8 @@ if (process.env.NODE_ENV !== "production") {
 
 var _assign = __webpack_require__(42);
 var invariant = __webpack_require__(6);
-var emptyObject = __webpack_require__(11);
-var warning = __webpack_require__(12);
+var emptyObject = __webpack_require__(10);
+var warning = __webpack_require__(11);
 var emptyFunction = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(19);
 
@@ -24807,7 +24807,7 @@ module.exports = react;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var m=__webpack_require__(42),n=__webpack_require__(11),p=__webpack_require__(5);
+var m=__webpack_require__(42),n=__webpack_require__(10),p=__webpack_require__(5);
 function q(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var r={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function t(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}t.prototype.isReactComponent={};t.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?q("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};t.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function u(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}function v(){}v.prototype=t.prototype;var w=u.prototype=new v;w.constructor=u;m(w,t.prototype);w.isPureReactComponent=!0;function x(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}var y=x.prototype=new v;y.constructor=x;m(y,t.prototype);y.unstable_isAsyncReactComponent=!0;y.render=function(){return this.props.children};

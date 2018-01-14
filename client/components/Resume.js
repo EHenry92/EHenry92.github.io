@@ -101,7 +101,7 @@ const Resume = () => {
           'Conducted individual and group tutoring in an after-school setting.']
         },
         {
-          title: 'Mathematics Teacher',
+          title: 'Math Teacher',
           company: 'Peace Academy Middle School',
           date: '09/2017 - 12/2017',
           location: 'Brooklyn, NY',
