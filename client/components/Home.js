@@ -5,6 +5,7 @@ const Home = () => {
   function startReveal (evt) {
       evt.preventDefault();
       document.getElementById('startUp').disabled = true;
+
         let list, cryptList, textnode, waitTime = 750;
         for (let i = 0; i < randAlpha.length; i++) {
           setTimeout(() => {
@@ -28,7 +29,7 @@ const Home = () => {
       }
     }
 
-    let words = "HEY, I'M EVLIS HENRY. I'M A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS PERSON.".split(' ').map(word => {return word.split('')});
+    let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
     let holder = {};
     let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     function shuffleAlpha(alpha) {
@@ -45,7 +46,6 @@ const Home = () => {
     for (let i = 0; i < alphabet.length; i++) {
       holder[alphabet[i]] = randAlpha[i];
     }
-
 
       return (
         <div>

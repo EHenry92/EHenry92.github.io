@@ -35,7 +35,6 @@ body {
         margin: 10px 0;
       }
     }
-
     #quiz{
       display:flex;
       flex-direction: column;
@@ -78,11 +77,11 @@ body {
         display: flex;
         flex-direction:row;
         // margin: 10px 20px;
-        margin: 4vh 1.4vw;
+        margin: 4vh 1.5vw;
       }
       .crypto{
         width: 2.5vw;
-        margin: 2px;
+        margin: .2rem;
         .cryptoLetter {
           transition: opacity 1s;
         }
@@ -141,8 +140,6 @@ body {
       transition: -webkit-box-shadow .25s;
       transition: box-shadow .25s;
       transition: box-shadow .25s, -webkit-box-shadow .25s;
-
-
       .card-title {
         font-size: x-large;
       }
@@ -171,7 +168,8 @@ body {
           text-decoration: none;
         }
         .material-icons{
-          border-bottom-style: none;
+          background-color: white;
+          border-style: none;
         }
       }
       .reveal {
@@ -188,6 +186,9 @@ body {
         button {
           color: white;
           background-color: black;
+        }
+        .reveal-data{
+          padding: 20px;
         }
       }
       .show-reveal{
@@ -265,7 +266,6 @@ body {
       color:var(--highlight-color);
     }
 }
-
 nav {
   position: fixed;
   bottom:0;
@@ -279,22 +279,28 @@ nav {
           margin-right: 2vw;
           text-decoration: none;
           color: black;
-
         }
       }
   }
   .navNarrow {
     font-size: 14px;
-    background-color: white;
-    #side-nav{
-      margin: 2px;
-    }
-    #slide-out{
-      list-style: none;
-      height: 95vh;
-      display:none;
-      padding-top: 10vh;
-
+    #slide-space {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      display: none;
+      #slide-out{
+        list-style: none;
+        height: 100%;
+        width: 30vw;
+        background-color: white;
+      }
+      #overlay{
+        background-color: black;
+        opacity: .5;
+        height: 100%;
+        width: 70vw;
+      }
     }
     i {
       float: left;
@@ -339,7 +345,7 @@ nav {
 // #me{
 //   background-image: url('https://s3.amazonaws.com/henryeprofile/20170805_163929.jpg');
 // }
-.filler{
-  background-color: white;
-  opacity: 50%;
-}
+// .filler{
+//   background-color: white;
+//   opacity: 50%;
+// }

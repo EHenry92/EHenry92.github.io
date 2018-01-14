@@ -8,9 +8,10 @@ const Projects = () => {
         code: 'https://github.com/EHenry92/meeb',
         images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png' ],
         smallDesc: 'A virtual brainstorming tool for teams.',
-        largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color codding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
+        largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color coding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
         tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
-        initials: 'is'
+        initials: 'is',
+        date: 'Nov. 17 - Dec. 17'
       },
       {
         name: 'VocabuMemory',
@@ -20,17 +21,19 @@ const Projects = () => {
         smallDesc: 'A virtual memory matching card game.',
         largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
         tech: 'React, Redux, React-Redux, Sequelize<',
-        initials: 'vm'
+        initials: 'vm',
+        date: 'Nov. 17'
       },
       {
         name: 'Dunder Mifflin Inc.',
-        site: '"https://dundermifflininc.herokuapp.com/"',
-        code: '"https://github.com/EHenry92/dunder_mifflin"',
+        site: 'https://dundermifflininc.herokuapp.com/',
+        code: 'https://github.com/EHenry92/dunder_mifflin',
         images: ['client/components/images/dunderMifflinHome.png', 'client/components/images/dunderMifflincart.png'],
-        smallDesc: 'An e-commerce website for a paper company.',
-        largeDesc: 'An e-commerce single page, responsive webapplication  for the a paper company.',
-        tech: 'React, Redux, React-Redux, Materalize, Material-UI, Sequelize',
-        initials: 'dm'
+        smallDesc: 'An ecommerce website for a paper company.',
+        largeDesc: 'An ecommerce single page, responsive web application  for the a paper company.',
+        tech: 'React, Redux, React-Redux, Materialize, Material-UI, Sequelize',
+        initials: 'dm',
+        date: 'Oct. 17'
       }
     ]
     const prefixes = ['vm', 'is', 'dm'];
@@ -63,7 +66,6 @@ const Projects = () => {
         <div>
        <div className="contained">
       <div className="center"><h1>Projects</h1></div>
-
         {
           creations.map((item) => {
             return (
@@ -83,7 +85,6 @@ const Projects = () => {
                     </div>
                     <div className="card-content">
                       <span>
-
                         <div className="card-title">{item.name}</div>
                         <p>{item.smallDesc}</p>
                         <button className="material-icons right" name={item.initials} onClick={showData}>more_vert</button>
@@ -95,8 +96,11 @@ const Projects = () => {
                 <div className={`reveal ${item.initials}`}>
                     <br />
                   <span><div className="card-title center">{item.name}</div> <button className="right" name={item.initials} onClick={hideData}>X</button></span>
+                <div className="reveal-data">
+                  <div>{item.date}</div>
                   <p>{item.largeDesc}</p>
                   <a>Built with: {item.tech}</a>
+                </div>
                 </div>
               </div>
           )
@@ -106,5 +110,16 @@ const Projects = () => {
       </div>
       )
     }
-
 export default Projects;
+
+// {
+//   name: '',
+//   site: '',
+//   code: '',
+//   images: [],
+//   smallDesc: '',
+//   largeDesc: '.',
+//   tech: '',
+//   initials: '',
+//   date: ''
+// }

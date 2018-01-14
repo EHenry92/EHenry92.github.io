@@ -17,7 +17,7 @@ const Resume = () => {
         },
         {
           title: 'Familiar:',
-          company: 'Tessle.io, PostgreSQL, SQL, Redux, Ruby, React-Redux'
+          company: 'Tessel.io, PostgreSQL, SQL, Redux, Ruby, React-Redux'
         },
         {
           title: 'Experience:',
@@ -40,7 +40,7 @@ const Resume = () => {
           date: '9/2017 - 10/2017',
           list: ['A real time collaboration tool for teams to brainstorm, share and map ideas.',
             'I developed back end routes and models using Sequelize, Express.js and Socket.io',
-            'I designed and implemented the features and styles of collaboration board using Materalize, Bootstrap, React and Redux.'],
+            'I designed and implemented the features and styles of collaboration board using Materialize, Bootstrap, React and Redux.'],
         },
         {
           title: 'VocabuMemory',
