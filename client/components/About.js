@@ -1,4 +1,5 @@
 import React from 'react';
+import {Contact} from './index';
 
 const About = () => {
       // const favorites = [
@@ -48,14 +49,12 @@ const About = () => {
         My name is Evlis Henry. I'm a full stack software engineer who enjoys creating interactive applications and helping others. I believe in creating code and products that solve a problem, encourages and equips people with the tools to do what they love. I taught Math at lower performing middle schools where I observed that the right technology had the power to increase learning, communication and engagement in the classroom.
       </p>
       <p>
-        I am certified in web development and hold a Bachelors of Arts in Computer Science from Hunter College. I bring a strong attention to detail which allows me to efficeively trace and troubleshoot code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set.
+        I am certified in web development and hold a Bachelors degree in Computer Science from Hunter College. My strong attention to detail allows me to efficeively trace and debug code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set.
       </p>
       <p>
         When I'm not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.
       </p>
-
-
-
+      <Contact />
         </div>
         {/* <div id="quiz">
           Find out my favorites?:

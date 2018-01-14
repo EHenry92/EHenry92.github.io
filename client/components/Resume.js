@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Contact} from './index';
 
 const Resume = () => {
   const resumeData = [
@@ -23,7 +23,6 @@ const Resume = () => {
           title: 'Experience:',
           company: 'Java, Socket.io, JQuery, C++, Bootstrap, Ruby, MongoDB'
         }
-
       ]
     ],
     [
@@ -68,6 +67,7 @@ const Resume = () => {
           list: ['Completed a 17-week, immersive software engineering program for women.',
             'Designed and implemented applications in both group and individual settings.',
             'Participated in Stackathon.'],
+
         },
         {
           title: 'M.S. In Adolescent Education',
@@ -109,6 +109,14 @@ const Resume = () => {
 
         },
         {
+          title: 'Teaching Fellow',
+          company: 'NYC Teaching Fellows',
+          date: '05/2016 - 12/2017',
+          location: 'New YORK, N.Y.',
+          list: ['Co-taught english lessons to a classrom of English Language Learners',
+            'Conducted individual and group tutoring in an after-school setting.']
+          },
+        {
           title: 'Customer Service Associate',
           company: "Lowe's Home Improvement",
           date: '09/2017 - 12/2017',
@@ -138,26 +146,12 @@ const Resume = () => {
               <br />
               Brooklyn, NY
               <br />
-              <div className="social">
-                  <span className="category">
-                      <Link to="mailto:ehenry692@hotmail.com"><img
-                      className= "tinyImg"
-                      src="client/components/images/social-mail.png" /></Link>
-                  </span>
-                  <span className="category">
-                    <Link to="https://www.github.com/ehenry92" target="_blank"><img
-                    className= "tinyImg"
-                    src="client/components/images/social-git.png" /></Link>
-                  </span>
-                  <span  className="category">
-                    <Link to="https://www.likedin.com/in/evils-henry" target="_blank"><img  className= "tinyImg" src="client/components/images/social-linked.png" /></Link>
-                  </span>
-                  <span  className="category">
-                      <a href="/public/Evlis_Henry_Resume_Web.pdf">
-                      <img className="tinyImg" src="client/components/images/resume_icon.png" />
-                      </a>
-                  </span>
-              </div>
+              <span className="social">
+              <Contact />
+                    <a href="/public/Evlis_Henry_Resume_Web.pdf">
+                    <img className="tinyImg" src="client/components/images/resume_icon.png" />
+                    </a>
+              </span>
             </b>
           </li>
             {
@@ -177,43 +171,45 @@ const Resume = () => {
                           box[1].map(row => {
                             return (
                               <tr key={row.company}>
-                            <td className="left-col">
-                              <b className="title">{row.title}</b>
-                              {
-                                row.date &&
-                                  <div>
-                                    <i>
-                                      {row.date}
-                                      {
-                                        row.location &&
-                                        <div>
-                                          <br />
-                                        {row.location}
-                                        </div>
-                                      }
-                                    </i>
-                                  </div>
-                              }
-                            </td>
-                            <td className="right-col">
-                              <b className="company">{row.company}</b>
-                              {
-                                row.list ?
-                                <ul className="data">
+                              <td className='row'>
+                                <div className="left-col">
+                                  <b className="title">{row.title}</b>
                                   {
-                                    row.list.map(item => {
-                                      return (
-                                        <li key={item}>{item}</li>
-                                      )
-                                    })
+                                    row.date &&
+                                      <div>
+                                        <i>
+                                          {row.date}
+                                          {
+                                            row.location &&
+                                            <div>
+                                              <br />
+                                            {row.location}
+                                            </div>
+                                          }
+                                        </i>
+                                      </div>
                                   }
-                                </ul>
-                                :
-                                <div className="data">
-                                {row.info}
-                                  </div>
-                              }
-                            </td>
+                                </div>
+                                <div className="right-col">
+                                  <b className="company">{row.company}</b>
+                                  {
+                                    row.list ?
+                                    <ul className="data">
+                                      {
+                                        row.list.map(item => {
+                                          return (
+                                            <li key={item}>{item}</li>
+                                          )
+                                        })
+                                      }
+                                    </ul>
+                                    :
+                                    <div className="data">
+                                    {row.info}
+                                      </div>
+                                  }
+                                </div>
+                              </td>
                           </tr>
                             )
                           })

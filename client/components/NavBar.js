@@ -9,8 +9,10 @@ const NavBar = () => {
 
       if (linksEl.style.display === 'flex') {
         linksEl.style.display = 'none';
+        toggle.style.display = 'block';
       } else {
         linksEl.style.display = 'flex';
+        toggle.style.display = 'none';
       }
 	  }
 		return (
