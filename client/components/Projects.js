@@ -38,7 +38,6 @@ const Projects = () => {
     ]
     const prefixes = ['vm', 'is', 'dm'];
     let indexes = [0, 0, 0];
-
     prefixes.forEach((proj, idx) => {
       const images = document.getElementsByClassName(`carousel-image ${proj}`);
       setInterval(() => {
@@ -60,8 +59,6 @@ const Projects = () => {
       let clickedCard = document.getElementsByClassName(`reveal ${evt.target.name}`)[0].classList;
       clickedCard.remove('show-reveal');
     }
-
-
     return (
         <div>
        <div className="contained">

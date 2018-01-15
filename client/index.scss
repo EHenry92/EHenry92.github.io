@@ -4,16 +4,18 @@ body {
     color:var(--highlight-color);
     background-color: white;
     font-size: 20px;
-
+  #navigator {
+    position: fixed;
+    display: flex;
+    top: 0;
     #name {
       height: 9vh;
       color:black;
-      position:fixed;
-      top:0;
-      left:0;
       background-color: white;
-      position: fixed;
+      max-width: 100%;
     }
+  }
+
     #bio, #quiz {
       color: black;
       border-radius: 30px;
@@ -88,9 +90,11 @@ body {
         .cryptoReveal {
           height:25px;
           input {
+            cursor: text;
             background-color: transparent;
             text-align: center;
-            border-style: solid;
+            font-size: 80%;
+            // border-style: solid;
             border-width: thin;
             outline: none;
             height: 100%;
@@ -110,11 +114,11 @@ body {
         }
 
       }
-      #startUp {
-        color: white;
-        background-color: darkgrey;
-      }
-
+    }
+    #startUp {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.678);
+      display: none;
     }
     .pic {
       width: 30vw;
@@ -132,6 +136,7 @@ body {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: .5rem 0 1rem 2rem;
       background-color: #fff;
+      z-index: -1;
       width: 20rem;
       position: relative;
       border-radius: 2px;
@@ -279,9 +284,10 @@ body {
     }
 }
 nav {
-  position: fixed;
-  bottom:0;
+  z-index: 10;
   .navWide {
+    position: fixed;
+    bottom:1vh;
     font-size: 25px;
     display: none;
     margin-left: 25vw;
@@ -295,6 +301,7 @@ nav {
       }
   }
   .navNarrow {
+    top:0;
     font-size: 14px;
     #slide-space {
       display: flex;
@@ -310,6 +317,7 @@ nav {
         padding: 0;
       }
       #overlay{
+        z-index: 50;
         background-color: black;
         opacity: .5;
         height: 100%;
@@ -317,8 +325,9 @@ nav {
       }
     }
     i {
+      font-size: 40px;
       float: left;
-      cursor: pointer;
+      cursor: context-menu;
     }
     #narrowLinks {
       display: none;
@@ -344,7 +353,7 @@ nav {
   float: left;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
 	nav {
 		.navWide {
 			display: block;
@@ -353,7 +362,14 @@ nav {
 			display: none;
 		}
   }
+
     font-size: 12rem;
+}
+@media (max-width: 800px) {
+  #startUp{
+    position: fixed;
+    bottom: 0;
+  }
 }
 // #me{
 //   background-image: url('https://s3.amazonaws.com/henryeprofile/20170805_163929.jpg');

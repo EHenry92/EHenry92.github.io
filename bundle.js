@@ -678,82 +678,6 @@ var createPath = function createPath(location) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _main = __webpack_require__(54);
-
-Object.defineProperty(exports, 'Main', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_main).default;
-  }
-});
-
-var _about = __webpack_require__(53);
-
-Object.defineProperty(exports, 'About', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_about).default;
-  }
-});
-
-var _Projects = __webpack_require__(51);
-
-Object.defineProperty(exports, 'Projects', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Projects).default;
-  }
-});
-
-var _Home = __webpack_require__(49);
-
-Object.defineProperty(exports, 'Home', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Home).default;
-  }
-});
-
-var _Contact = __webpack_require__(48);
-
-Object.defineProperty(exports, 'Contact', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Contact).default;
-  }
-});
-
-var _Resume = __webpack_require__(52);
-
-Object.defineProperty(exports, 'Resume', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Resume).default;
-  }
-});
-
-var _NavBar = __webpack_require__(50);
-
-Object.defineProperty(exports, 'NavBar', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_NavBar).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -774,7 +698,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -843,7 +767,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -919,7 +843,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -978,7 +902,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1097,7 +1021,7 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1172,6 +1096,82 @@ var matchPath = function matchPath(pathname) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _main = __webpack_require__(54);
+
+Object.defineProperty(exports, 'Main', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_main).default;
+  }
+});
+
+var _about = __webpack_require__(53);
+
+Object.defineProperty(exports, 'About', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_about).default;
+  }
+});
+
+var _Projects = __webpack_require__(51);
+
+Object.defineProperty(exports, 'Projects', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Projects).default;
+  }
+});
+
+var _Home = __webpack_require__(49);
+
+Object.defineProperty(exports, 'Home', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Home).default;
+  }
+});
+
+var _Contact = __webpack_require__(48);
+
+Object.defineProperty(exports, 'Contact', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Contact).default;
+  }
+});
+
+var _Resume = __webpack_require__(52);
+
+Object.defineProperty(exports, 'Resume', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Resume).default;
+  }
+});
+
+var _NavBar = __webpack_require__(50);
+
+Object.defineProperty(exports, 'NavBar', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_NavBar).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 16 */
@@ -1449,7 +1449,7 @@ var createTransitionManager = function createTransitionManager() {
 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
-  var warning = __webpack_require__(11);
+  var warning = __webpack_require__(10);
   var ReactPropTypesSecret = __webpack_require__(20);
   var loggedTypeFailures = {};
 }
@@ -1524,7 +1524,7 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(13);
 // Written in this round about way for babel-transform-imports
 
 
@@ -1543,7 +1543,7 @@ module.exports = ReactPropTypesSecret;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(14);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2832,7 +2832,7 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(13);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -3100,7 +3100,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_history_PathUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(13);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -3281,7 +3281,7 @@ StaticRouter.childContextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(14);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -3645,13 +3645,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(87);
 
-var _reactRouterDom = __webpack_require__(13);
+var _reactRouterDom = __webpack_require__(12);
 
 var _history = __webpack_require__(55);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _components = __webpack_require__(9);
+var _components = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3788,7 +3788,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(13);
+var _reactRouterDom = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3849,11 +3849,17 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
+  document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+      setTimeout(function () {
+        document.getElementById('startUp').style.display = 'block';
+      }, 3000);
+    }
+  };
 
   function startReveal(evt) {
     evt.preventDefault();
-    document.getElementById('startUp').disabled = true;
-
+    document.getElementById('startUp').style.display = 'none';
     var list = void 0,
         cryptList = void 0,
         textnode = void 0,
@@ -3945,24 +3951,18 @@ var Home = function Home() {
         );
       }),
       _react2.default.createElement(
-        'span',
+        'div',
         null,
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'div',
-          null,
-          ' ',
-          _react2.default.createElement(
-            'button',
-            { id: 'startUp', onClick: startReveal },
-            ' Solution '
-          )
+          'button',
+          { id: 'startUp', onClick: startReveal },
+          ' Reveal '
         )
       )
     )
   );
-};
-
+}; /*jshint loopfunc:true */
 exports.default = Home;
 
 /***/ }),
@@ -3980,7 +3980,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(13);
+var _reactRouterDom = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4218,7 +4218,6 @@ var Projects = function Projects() {
   }];
   var prefixes = ['vm', 'is', 'dm'];
   var indexes = [0, 0, 0];
-
   prefixes.forEach(function (proj, idx) {
     var images = document.getElementsByClassName('carousel-image ' + proj);
     setInterval(function () {
@@ -4242,7 +4241,6 @@ var Projects = function Projects() {
     var clickedCard = document.getElementsByClassName('reveal ' + evt.target.name)[0].classList;
     clickedCard.remove('show-reveal');
   }
-
   return _react2.default.createElement(
     'div',
     null,
@@ -4384,7 +4382,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(9);
+var _index = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4631,7 +4629,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = __webpack_require__(9);
+var _index = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4728,15 +4726,24 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(13);
-
-var _index = __webpack_require__(9);
+var _reactRouterDom = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main(props) {
   var children = props.children;
 
+  function burgerToggle() {
+    var linksEl = document.getElementById('slide-space');
+    var toggle = document.getElementById('menu');
+    if (linksEl.style.display === 'flex') {
+      linksEl.style.display = 'none';
+      toggle.style.display = 'block';
+    } else {
+      linksEl.style.display = 'flex';
+      toggle.style.display = 'none';
+    }
+  }
 
   return _react2.default.createElement(
     'div',
@@ -4745,13 +4752,178 @@ var Main = function Main(props) {
       'div',
       { id: 'navigator' },
       _react2.default.createElement(
+        'nav',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'navNarrow' },
+          _react2.default.createElement(
+            'div',
+            { id: 'side-nav' },
+            _react2.default.createElement(
+              'div',
+              { id: 'slide-space' },
+              _react2.default.createElement(
+                'ul',
+                { id: 'slide-out' },
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/' },
+                    _react2.default.createElement(
+                      'h2',
+                      null,
+                      'Evlis Henry'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement('div', { className: 'divider' })
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/about' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'About'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/work' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'Projects'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/resume' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'Resume'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement('div', { id: 'overlay' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { id: 'menu', href: '#', onClick: burgerToggle },
+              _react2.default.createElement(
+                'i',
+                { className: 'material-icons' },
+                'menu'
+              )
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
         _reactRouterDom.Link,
         { to: '/' },
         _react2.default.createElement('img', { id: 'name', src: 'client/components/images/name.png' })
       )
     ),
     children,
-    _react2.default.createElement(_index.NavBar, null)
+    _react2.default.createElement(
+      'nav',
+      null,
+      _react2.default.createElement(
+        'div',
+        { className: 'navWide' },
+        _react2.default.createElement(
+          'div',
+          { id: 'footerRow', className: 'center' },
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Home'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/about' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'About'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/work' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Projects'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/resume' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Resume'
+              )
+            )
+          )
+        )
+      )
+    )
   );
 };
 exports.default = Main;
@@ -4819,7 +4991,7 @@ exports = module.exports = __webpack_require__(58)();
 
 
 // module
-exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #name {\n    height: 9vh;\n    color: black;\n    position: fixed;\n    top: 0;\n    left: 0;\n    background-color: white;\n    position: fixed; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n  body #bio p:not(.title) {\n    text-indent: 5em;\n    text-align: justify;\n    text-justify: inter-word; }\n  body #bio .title {\n    font-size: 25px; }\n  body #bio p {\n    margin: 10px 0; }\n  body #quiz {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    body #quiz .list {\n      display: flex;\n      flex-direction: row;\n      align-items: center; }\n      body #quiz .list .choices {\n        border-style: solid;\n        border-color: black;\n        text-align: center;\n        width: 100px;\n        margin: 0 4px;\n        border-bottom-width: thin; }\n      body #quiz .list .choices.disabled {\n        opacity: .5;\n        pointer-events: none;\n        border-color: white; }\n      body #quiz .list .wrong {\n        border-radius: 50%;\n        border-color: darkred; }\n      body #quiz .list .choices.correct {\n        border-radius: 50%;\n        border-color: greenyellow;\n        opacity: .7;\n        pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 70%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 2vh 1.5vw; }\n    body #intro .crypto {\n      width: 3vw;\n      margin: .2rem;\n      text-align: center; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          background-color: transparent;\n          text-align: center;\n          border-style: solid;\n          border-width: thin;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n    body #intro #startUp {\n      color: white;\n      background-color: darkgrey; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    max-height: 100vh; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px;\n        text-decoration: none; }\n      body .card .card-face .material-icons {\n        background-color: white;\n        border-style: none; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n      body .card .reveal .reveal-data {\n        padding: 20px; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .title {\n      font-size: 16px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible .row {\n      display: flex;\n      flex-direction: row; }\n      body #collapsible .row .right-col {\n        width: 60%;\n        border-bottom-style: solid;\n        border-bottom-color: white;\n        border-bottom-width: thin; }\n      body #collapsible .row .left-col {\n        width: 40%;\n        text-align: right;\n        padding-right: 1rem;\n        line-height: 1; }\n      body #collapsible .row i {\n        font-size: x-small; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body .social {\n    display: inline-block; }\n    body .social .tinyImg {\n      width: 30px;\n      margin: 2px; }\n\nnav {\n  position: fixed;\n  bottom: 0; }\n  nav .navWide {\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    font-size: 14px; }\n    nav .navNarrow #slide-space {\n      display: flex;\n      flex-direction: row;\n      height: 100vh;\n      display: none; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        height: 100%;\n        width: 30vw;\n        background-color: white;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw; }\n    nav .navNarrow i {\n      float: left;\n      cursor: pointer; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 700px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n", ""]);
+exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #navigator {\n    position: fixed;\n    display: flex;\n    top: 0; }\n    body #navigator #name {\n      height: 9vh;\n      color: black;\n      background-color: white;\n      max-width: 100%; }\n  body #bio, body #quiz {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n  body #bio p:not(.title) {\n    text-indent: 5em;\n    text-align: justify;\n    text-justify: inter-word; }\n  body #bio .title {\n    font-size: 25px; }\n  body #bio p {\n    margin: 10px 0; }\n  body #quiz {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    body #quiz .list {\n      display: flex;\n      flex-direction: row;\n      align-items: center; }\n      body #quiz .list .choices {\n        border-style: solid;\n        border-color: black;\n        text-align: center;\n        width: 100px;\n        margin: 0 4px;\n        border-bottom-width: thin; }\n      body #quiz .list .choices.disabled {\n        opacity: .5;\n        pointer-events: none;\n        border-color: white; }\n      body #quiz .list .wrong {\n        border-radius: 50%;\n        border-color: darkred; }\n      body #quiz .list .choices.correct {\n        border-radius: 50%;\n        border-color: greenyellow;\n        opacity: .7;\n        pointer-events: none; }\n  body #intro {\n    justify-content: center;\n    width: 70%; }\n    body #intro .word {\n      display: flex;\n      flex-direction: row;\n      margin: 2vh 1.5vw; }\n    body #intro .crypto {\n      width: 3vw;\n      margin: .2rem;\n      text-align: center; }\n      body #intro .crypto .cryptoLetter {\n        transition: opacity 1s; }\n      body #intro .crypto .cryptoReveal {\n        height: 25px; }\n        body #intro .crypto .cryptoReveal input {\n          cursor: text;\n          background-color: transparent;\n          text-align: center;\n          font-size: 80%;\n          border-width: thin;\n          outline: none;\n          height: 100%;\n          width: 100%;\n          margin: 0 0 20px 0;\n          padding: 0;\n          -webkit-box-shadow: none;\n          box-shadow: none;\n          -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n          -webkit-transition: all 0.3s;\n          transition: all 0.3s; }\n      body #intro .crypto .solved {\n        opacity: 0.25; }\n  body #startUp {\n    color: white;\n    background-color: rgba(0, 0, 0, 0.678);\n    display: none; }\n  body .pic {\n    width: 30vw;\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    max-height: 100vh; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .card {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n    margin: .5rem 0 1rem 2rem;\n    background-color: #fff;\n    z-index: -1;\n    width: 20rem;\n    position: relative;\n    border-radius: 2px;\n    line-height: 20px;\n    -webkit-transition: -webkit-box-shadow .25s;\n    transition: -webkit-box-shadow .25s;\n    transition: box-shadow .25s;\n    transition: box-shadow .25s, -webkit-box-shadow .25s; }\n    body .card .card-title {\n      font-size: x-large; }\n    body .card .card-content {\n      padding: 24px; }\n    body .card .carousel {\n      display: flex;\n      justify-content: center;\n      z-index: 0;\n      height: 10rem; }\n      body .card .carousel .carousel-image {\n        display: block;\n        opacity: 1;\n        transition: opacity 1.5s;\n        max-width: 100%; }\n      body .card .carousel .carousel-image.hidden {\n        display: none; }\n    body .card .card-face {\n      padding: 1rem; }\n      body .card .card-face p a {\n        margin: 5px;\n        text-decoration: none; }\n      body .card .card-face .material-icons {\n        background-color: white;\n        border-style: none; }\n    body .card .reveal {\n      position: absolute;\n      background-color: black;\n      color: white;\n      width: 100%;\n      overflow-y: auto;\n      left: 0;\n      top: 100%;\n      height: 100%;\n      z-index: 3;\n      display: none; }\n      body .card .reveal button {\n        color: white;\n        background-color: black; }\n      body .card .reveal .reveal-data {\n        padding: 20px; }\n    body .card .show-reveal {\n      display: block;\n      transform: translateY(-100%); }\n  body #collapsible {\n    list-style: none;\n    width: 80vw;\n    margin-top: 10vh; }\n    body #collapsible .title {\n      font-size: 16px; }\n    body #collapsible .company {\n      font-size: 16px; }\n    body #collapsible .data {\n      font-size: 14px; }\n    body #collapsible .row {\n      display: flex;\n      flex-direction: row; }\n      body #collapsible .row .right-col {\n        width: 60%;\n        border-bottom-style: solid;\n        border-bottom-color: white;\n        border-bottom-width: thin; }\n      body #collapsible .row .left-col {\n        width: 40%;\n        text-align: right;\n        padding-right: 1rem;\n        line-height: 1; }\n      body #collapsible .row i {\n        font-size: x-small; }\n    body #collapsible .heading {\n      font-size: x-large; }\n    body #collapsible .collapsible-header {\n      background-color: white;\n      color: black;\n      padding: .5rem;\n      pointer-events: none; }\n    body #collapsible .collapsible-body {\n      position: relative;\n      transition: all .3s ease-out;\n      display: none; }\n    body #collapsible .active {\n      display: block;\n      transition: all .3s ease-in;\n      background-color: black;\n      color: white; }\n  body #top, body .collapsible-header {\n    border-style: solid;\n    border-color: black;\n    border-width: thin;\n    background-color: white; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body .social {\n    display: inline-block; }\n    body .social .tinyImg {\n      width: 30px;\n      margin: 2px; }\n\nnav {\n  z-index: 10; }\n  nav .navWide {\n    position: fixed;\n    bottom: 1vh;\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    top: 0;\n    font-size: 14px; }\n    nav .navNarrow #slide-space {\n      display: flex;\n      flex-direction: row;\n      height: 100vh;\n      display: none; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        height: 100%;\n        width: 30vw;\n        background-color: white;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        z-index: 50;\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw; }\n    nav .navNarrow i {\n      font-size: 40px;\n      float: left;\n      cursor: context-menu; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 1000px) {\n  nav .navWide {\n    display: block; }\n  nav .navNarrow {\n    display: none; }\n  font-size: 12rem; }\n\n@media (max-width: 800px) {\n  #startUp {\n    position: fixed;\n    bottom: 0; } }\n", ""]);
 
 // exports
 
@@ -5431,7 +5603,7 @@ exports.default = createHashHistory;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(32);
@@ -5735,7 +5907,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(32);
@@ -6055,7 +6227,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(18);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -6226,7 +6398,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony reexport createHashHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(68);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(11);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(8);
@@ -6404,7 +6576,7 @@ module.exports = function() {
 
 var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(6);
-var warning = __webpack_require__(11);
+var warning = __webpack_require__(10);
 var assign = __webpack_require__(74);
 
 var ReactPropTypesSecret = __webpack_require__(20);
@@ -7057,7 +7229,7 @@ if (process.env.NODE_ENV !== "production") {
 
 var React = __webpack_require__(0);
 var invariant = __webpack_require__(6);
-var warning = __webpack_require__(11);
+var warning = __webpack_require__(10);
 var ExecutionEnvironment = __webpack_require__(24);
 var _assign = __webpack_require__(33);
 var emptyFunction$1 = __webpack_require__(5);
@@ -7066,7 +7238,7 @@ var getActiveElement = __webpack_require__(27);
 var shallowEqual = __webpack_require__(28);
 var containsNode = __webpack_require__(25);
 var focusNode = __webpack_require__(26);
-var emptyObject = __webpack_require__(10);
+var emptyObject = __webpack_require__(9);
 var checkPropTypes = __webpack_require__(19);
 var hyphenateStyleName = __webpack_require__(62);
 var camelizeStyleName = __webpack_require__(60);
@@ -22459,7 +22631,7 @@ module.exports = reactDom;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),m=__webpack_require__(24),A=__webpack_require__(33),B=__webpack_require__(5),ca=__webpack_require__(23),da=__webpack_require__(27),ea=__webpack_require__(28),ha=__webpack_require__(25),ia=__webpack_require__(26),C=__webpack_require__(10);
+var aa=__webpack_require__(0),m=__webpack_require__(24),A=__webpack_require__(33),B=__webpack_require__(5),ca=__webpack_require__(23),da=__webpack_require__(27),ea=__webpack_require__(28),ha=__webpack_require__(25),ia=__webpack_require__(26),C=__webpack_require__(9);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:D("227");
 var la={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function qa(a,b){return(a&b)===b}
 var ra={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ra,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){sa.hasOwnProperty(f)?D("48",f):void 0;var g=f.toLowerCase(),k=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:qa(k,b.MUST_USE_PROPERTY),
@@ -22951,7 +23123,7 @@ NavLink.defaultProps = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(14);
 // Written in this round about way for babel-transform-imports
 
 
@@ -22982,13 +23154,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(22);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(13);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(39);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(40);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(14);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(41);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
@@ -23465,8 +23637,8 @@ if (process.env.NODE_ENV !== "production") {
 
 var _assign = __webpack_require__(42);
 var invariant = __webpack_require__(6);
-var emptyObject = __webpack_require__(10);
-var warning = __webpack_require__(11);
+var emptyObject = __webpack_require__(9);
+var warning = __webpack_require__(10);
 var emptyFunction = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(19);
 
@@ -24807,7 +24979,7 @@ module.exports = react;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var m=__webpack_require__(42),n=__webpack_require__(10),p=__webpack_require__(5);
+var m=__webpack_require__(42),n=__webpack_require__(9),p=__webpack_require__(5);
 function q(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var r={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function t(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}t.prototype.isReactComponent={};t.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?q("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};t.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function u(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}function v(){}v.prototype=t.prototype;var w=u.prototype=new v;w.constructor=u;m(w,t.prototype);w.isPureReactComponent=!0;function x(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||r}var y=x.prototype=new v;y.constructor=x;m(y,t.prototype);y.unstable_isAsyncReactComponent=!0;y.render=function(){return this.props.children};

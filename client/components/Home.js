@@ -1,11 +1,18 @@
+/*jshint loopfunc:true */
 import React from 'react';
 
 const Home = () => {
+  document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      setTimeout(() => {
+        document.getElementById('startUp').style.display = 'block';
+      }, 3000)
+    }
+  };
 
   function startReveal (evt) {
       evt.preventDefault();
-      document.getElementById('startUp').disabled = true;
-
+      document.getElementById('startUp').style.display = 'none';
         let list, cryptList, textnode, waitTime = 750;
         for (let i = 0; i < randAlpha.length; i++) {
           setTimeout(() => {
@@ -51,6 +58,7 @@ const Home = () => {
         <div>
           <img className ="pic filler" src="client/components/images/mnwmeout.png" />
           <div id="intro" className="contained filler">
+
               {
                 words.map((word, wordIdx) => {
                   return (
@@ -78,11 +86,13 @@ const Home = () => {
                   )
                 })
               }
-              <span>
-              <br />
-                <div> <button id="startUp" onClick= {startReveal}> Solution </button></div>
-            </span>
+              <div>
+                <br />
+              <button id="startUp" onClick= {startReveal}> Reveal </button>
+              </div>
+
           </div>
+
         </div>
       )
   }
