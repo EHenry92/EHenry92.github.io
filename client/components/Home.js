@@ -2,13 +2,13 @@
 import React from 'react';
 
 const Home = () => {
-  document.onreadystatechange = () => {
-    if (document.readyState === 'complete') {
-      setTimeout(() => {
-        document.getElementById('startUp').style.display = 'block';
-      }, 3000)
-    }
-  };
+  // document.onreadystatechange = () => {
+  //   if (document.readyState === 'complete') {
+  //     setTimeout(() => {
+  //       document.getElementById('startUp').style.display = 'block';
+  //     }, 3000)
+  //   }
+  // };
 
   function startReveal (evt) {
       evt.preventDefault();
