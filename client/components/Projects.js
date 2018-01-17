@@ -6,7 +6,10 @@ const Projects = () => {
         name: 'IdeaStorm',
         site: 'http://idea-storm.herokuapp.com/',
         code: 'https://github.com/EHenry92/meeb',
-        images: ['client/components/images/ideastormlogo.png', 'client/components/images/ideaStormRoom.png', 'client/components/images/ideaStormHome.png' ],
+        images: ['client/components/images/ideastormlogo.png',
+        'client/components/images/ideaStormRoom.png'
+        // ,'client/components/images/ideaStormHome.png'
+      ],
         smallDesc: 'A virtual brainstorming tool for teams.',
         largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color coding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
         tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
@@ -42,12 +45,12 @@ const Projects = () => {
       const images = document.getElementsByClassName(`carousel-image ${proj}`);
       setInterval(() => {
         if (images.length > 0) {
-        images[indexes[idx]].classList.add('hidden');
-        indexes[idx]++;
-          if (indexes[idx] === images.length) {indexes[idx] = 0;}
-        images[indexes[idx]].classList.remove('hidden');
+          images[indexes[idx]].classList.add('hidden');
+          indexes[idx]++;
+            if (indexes[idx] === images.length) {indexes[idx] = 0;}
+          images[indexes[idx]].classList.remove('hidden');
         }
-      }, 3500);
+      }, 3000);
     })
     function showData (evt) {
       evt.preventDefault();
