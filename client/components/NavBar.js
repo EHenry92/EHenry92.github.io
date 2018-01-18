@@ -6,7 +6,6 @@ const NavBar = () => {
   function burgerToggle () {
       let linksEl = document.getElementById('slide-space');
       let toggle = document.getElementById('menu');
-
       if (linksEl.style.display === 'flex') {
         linksEl.style.display = 'none';
         toggle.style.display = 'block';

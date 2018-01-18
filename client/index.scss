@@ -8,6 +8,7 @@ body {
     position: fixed;
     display: flex;
     top: 0;
+    z-index: 2;
     #name {
       height: 9vh;
       color:black;
