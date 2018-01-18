@@ -50,7 +50,7 @@ const Projects = () => {
             if (indexes[idx] === images.length) {indexes[idx] = 0;}
           images[indexes[idx]].classList.remove('hidden');
         }
-      }, 3000);
+      }, 3500);
     })
     function showData (evt) {
       evt.preventDefault();

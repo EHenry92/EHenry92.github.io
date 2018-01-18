@@ -1108,12 +1108,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _main = __webpack_require__(54);
+var _Main = __webpack_require__(92);
 
 Object.defineProperty(exports, 'Main', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_main).default;
+    return _interopRequireDefault(_Main).default;
   }
 });
 
@@ -1159,15 +1159,6 @@ Object.defineProperty(exports, 'Resume', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_Resume).default;
-  }
-});
-
-var _NavBar = __webpack_require__(50);
-
-Object.defineProperty(exports, 'NavBar', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_NavBar).default;
   }
 });
 
@@ -3966,207 +3957,7 @@ var Home = function Home() {
 exports.default = Home;
 
 /***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(12);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var NavBar = function NavBar() {
-  function burgerToggle() {
-    var linksEl = document.getElementById('slide-space');
-    var toggle = document.getElementById('menu');
-    if (linksEl.style.display === 'flex') {
-      linksEl.style.display = 'none';
-      toggle.style.display = 'block';
-    } else {
-      linksEl.style.display = 'flex';
-      toggle.style.display = 'none';
-    }
-  }
-  return _react2.default.createElement(
-    'footer',
-    null,
-    _react2.default.createElement(
-      'nav',
-      null,
-      _react2.default.createElement(
-        'div',
-        { className: 'navWide' },
-        _react2.default.createElement(
-          'div',
-          { id: 'footerRow', className: 'center' },
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Home'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/about' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'About'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/work' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Projects'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/resume' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Resume'
-              )
-            )
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'navNarrow' },
-        _react2.default.createElement(
-          'div',
-          { id: 'side-nav' },
-          _react2.default.createElement(
-            'div',
-            { id: 'slide-space' },
-            _react2.default.createElement(
-              'ul',
-              { id: 'slide-out' },
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { onClick: burgerToggle, to: '/' },
-                  _react2.default.createElement(
-                    'h2',
-                    null,
-                    'Evlis Henry'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement('div', { className: 'divider' })
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { onClick: burgerToggle, to: '/about' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    'About'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { onClick: burgerToggle, to: '/work' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    'Projects'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { onClick: burgerToggle, to: '/resume' },
-                  _react2.default.createElement(
-                    'h3',
-                    null,
-                    'Resume'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement('div', { id: 'overlay' })
-          ),
-          _react2.default.createElement(
-            'a',
-            { id: 'menu', href: '#', onClick: burgerToggle },
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons' },
-              'menu'
-            )
-          )
-        )
-      )
-    )
-  );
-};
-
-exports.default = NavBar;
-
-/***/ }),
+/* 50 */,
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4230,7 +4021,7 @@ var Projects = function Projects() {
         }
         images[indexes[idx]].classList.remove('hidden');
       }
-    }, 3000);
+    }, 3500);
   });
   function showData(evt) {
     evt.preventDefault();
@@ -4713,223 +4504,7 @@ exports.default = About;
 // light-green darken-1
 
 /***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(12);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Main = function Main(props) {
-  var children = props.children;
-
-  function burgerToggle() {
-    var linksEl = document.getElementById('slide-space');
-    var toggle = document.getElementById('menu');
-    if (linksEl.style.display === 'flex') {
-      linksEl.style.display = 'none';
-      toggle.style.display = 'block';
-    } else {
-      linksEl.style.display = 'flex';
-      toggle.style.display = 'none';
-    }
-  }
-
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'div',
-      { id: 'navigator' },
-      _react2.default.createElement(
-        'nav',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'navNarrow' },
-          _react2.default.createElement(
-            'div',
-            { id: 'side-nav' },
-            _react2.default.createElement(
-              'div',
-              { id: 'slide-space' },
-              _react2.default.createElement(
-                'ul',
-                { id: 'slide-out' },
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { onClick: burgerToggle, to: '/' },
-                    _react2.default.createElement(
-                      'h2',
-                      null,
-                      'Evlis Henry'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement('div', { className: 'divider' })
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { onClick: burgerToggle, to: '/about' },
-                    _react2.default.createElement(
-                      'h3',
-                      null,
-                      'About'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { onClick: burgerToggle, to: '/work' },
-                    _react2.default.createElement(
-                      'h3',
-                      null,
-                      'Projects'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { onClick: burgerToggle, to: '/resume' },
-                    _react2.default.createElement(
-                      'h3',
-                      null,
-                      'Resume'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement('div', { id: 'overlay' })
-            ),
-            _react2.default.createElement(
-              'a',
-              { id: 'menu', href: '#', onClick: burgerToggle },
-              _react2.default.createElement(
-                'i',
-                { className: 'material-icons' },
-                'menu'
-              )
-            )
-          )
-        )
-      ),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/' },
-        _react2.default.createElement('img', { id: 'name', src: 'client/components/images/name.png' })
-      )
-    ),
-    children,
-    _react2.default.createElement(
-      'nav',
-      null,
-      _react2.default.createElement(
-        'div',
-        { className: 'navWide' },
-        _react2.default.createElement(
-          'div',
-          { id: 'footerRow', className: 'center' },
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Home'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/about' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'About'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/work' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Projects'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            '-'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/resume' },
-              _react2.default.createElement(
-                'div',
-                null,
-                'Resume'
-              )
-            )
-          )
-        )
-      )
-    )
-  );
-};
-exports.default = Main;
-
-/***/ }),
+/* 54 */,
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25247,6 +24822,223 @@ function updateLink(linkElement, obj) {
 		URL.revokeObjectURL(oldSrc);
 }
 
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Main = function Main(props) {
+  var children = props.children;
+
+  function burgerToggle() {
+    var linksEl = document.getElementById('slide-space');
+    var toggle = document.getElementById('menu');
+    if (linksEl.style.display === 'flex') {
+      linksEl.style.display = 'none';
+      toggle.style.display = 'block';
+    } else {
+      linksEl.style.display = 'flex';
+      toggle.style.display = 'none';
+    }
+  }
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { id: 'navigator' },
+      _react2.default.createElement(
+        'nav',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'navNarrow' },
+          _react2.default.createElement(
+            'div',
+            { id: 'side-nav' },
+            _react2.default.createElement(
+              'div',
+              { id: 'slide-space' },
+              _react2.default.createElement(
+                'ul',
+                { id: 'slide-out' },
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/' },
+                    _react2.default.createElement(
+                      'h2',
+                      null,
+                      'Evlis Henry'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement('div', { className: 'divider' })
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/about' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'About'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/work' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'Projects'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    _reactRouterDom.Link,
+                    { onClick: burgerToggle, to: '/resume' },
+                    _react2.default.createElement(
+                      'h3',
+                      null,
+                      'Resume'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement('div', { id: 'overlay' })
+            ),
+            _react2.default.createElement(
+              'a',
+              { id: 'menu', href: '#', onClick: burgerToggle },
+              _react2.default.createElement(
+                'i',
+                { className: 'material-icons' },
+                'menu'
+              )
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/' },
+        _react2.default.createElement('img', { id: 'name', src: 'client/components/images/name.png' })
+      )
+    ),
+    children,
+    _react2.default.createElement(
+      'nav',
+      null,
+      _react2.default.createElement(
+        'div',
+        { className: 'navWide' },
+        _react2.default.createElement(
+          'div',
+          { id: 'footerRow', className: 'center' },
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Home'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/about' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'About'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/work' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Projects'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            '-'
+          ),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              _reactRouterDom.Link,
+              { to: '/resume' },
+              _react2.default.createElement(
+                'div',
+                null,
+                'Resume'
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+};
+exports.default = Main;
 
 /***/ })
 /******/ ]);
