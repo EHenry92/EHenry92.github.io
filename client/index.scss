@@ -4,28 +4,23 @@ body {
     color:var(--highlight-color);
     background-color: white;
     font-size: 20px;
-  #navigator {
-    position: fixed;
-    display: flex;
-    top: 0;
-    z-index: 2;
-    #name {
-      height: 9vh;
-      color:black;
-      background-color: white;
-      max-width: 100%;
+    #navigator {
+      position: fixed;
+      display: flex;
+      top: 0;
+      z-index: 2;
+      #name {
+        height: 9vh;
+        color:black;
+        background-color: white;
+        max-width: 100%;
+      }
     }
-  }
-
-    #bio, #quiz {
+    #bio {
       color: black;
       border-radius: 30px;
       width: 60%;
       text-align: center;
-      // margin: 7%;
-    }
-    #bio {
-
       p:not(.title) {
         text-indent: 5em;
         text-align: justify;
@@ -87,11 +82,13 @@ body {
       background-color: rgba(0, 0, 0, 0.678);
     }
     .pic {
-      width: 30vw;
       bottom: 0;
       right: 0;
       position:fixed;
-      max-height: 100vh;
+      display: block;
+      max-width:30vw;
+      max-height:100vh;
+      height: auto;
     }
     #page-title{
       font-size: x-large;
@@ -325,7 +322,11 @@ nav {
 			display: none;
 		}
   }
-
+  .pic{
+    width: 30vw;
+    max-height: 100vh;
+    height: auto;
+  }
     font-size: 12rem;
 }
 @media (max-width: 800px) {
@@ -334,10 +335,4 @@ nav {
     bottom: 0;
   }
 }
-// #me{
-//   background-image: url('https://s3.amazonaws.com/henryeprofile/20170805_163929.jpg');
-// }
-// .filler{
-//   background-color: white;
-//   opacity: 50%;
-// }
+
