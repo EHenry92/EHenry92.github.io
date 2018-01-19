@@ -23,7 +23,7 @@ const Projects = () => {
         images: ['client/components/images/VocabuMemory.png', 'client/components/images/vocabuMemoryGame.png' ],
         smallDesc: 'A virtual memory matching card game.',
         largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
-        tech: 'React, Redux, React-Redux, Sequelize',
+        tech: 'React, Redux, React-Redux, Sequelize, CSS, Express.Js',
         initials: 'vm',
         date: 'Nov. 17'
       },
