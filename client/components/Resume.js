@@ -1,5 +1,7 @@
 import React from 'react';
 import {Contact} from './index';
+import {Link} from 'react-router-dom';
+
 
 const Resume = () => {
   const resumeData = [
@@ -148,7 +150,7 @@ const Resume = () => {
               <br />
               <span className="social">
               <Contact />
-                    <a href="/public/Evlis_Henry_Resume_Web.pdf">
+                    <a href="https://s3.amazonaws.com/henryeprofile/Evlis_Henry_Resume.pdf ">
                     <img className="tinyImg" src="client/components/images/resume_icon.png" />
                     </a>
               </span>
