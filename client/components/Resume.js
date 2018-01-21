@@ -37,7 +37,7 @@ const Resume = () => {
       [
         {
           title: 'IdeaStorm',
-          company:'Full-stack Developer',
+          company: 'Full-stack Developer',
           date: '9/2017 - 10/2017',
           list: ['A real time collaboration tool for teams to brainstorm, share and map ideas.',
             'I developed back end routes and models using Sequelize, Express.js and Socket.io',
@@ -173,7 +173,7 @@ const Resume = () => {
                           box[1].map(row => {
                             return (
                               <tr key={row.company}>
-                              <td className='row'>
+                              <td className="row">
                                 <div className="left-col">
                                   <b className="title">{row.title}</b>
                                   {

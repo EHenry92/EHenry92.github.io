@@ -14,7 +14,8 @@ const Projects = () => {
         largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color coding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
         tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
         initials: 'is',
-        date: 'Nov. 17 - Dec. 17'
+        date: 'Nov. 17 - Dec. 17',
+        contribution: ['Designed database models and backend routes', 'Designed form to create new collaboration room', 'Implemented real-time idea creation and sharing', 'Implementing voting functionality and result display', 'Implemented real-time attendance functionality', 'Wrote frontend and backend tests']
       },
       {
         name: 'VocabuMemory',
@@ -22,10 +23,11 @@ const Projects = () => {
         code: 'https://github.com/EHenry92/VocabuMemory',
         images: ['client/components/images/VocabuMemory.png', 'client/components/images/vocabuMemoryGame.png' ],
         smallDesc: 'A virtual memory matching card game.',
-        largeDesc: 'A matching card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
+        largeDesc: 'A responsive web application to strengthen vocabulary skills and exercise your memory. VocabuMemory is a memory card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
         tech: 'React, Redux, React-Redux, Sequelize, CSS, Express.Js',
         initials: 'vm',
-        date: 'Nov. 17'
+        date: 'Nov. 17',
+        contribution: ['Sole developer', 'Independently engineered frontend and backend components']
       },
       {
         name: 'Dunder Mifflin Inc.',
@@ -36,7 +38,8 @@ const Projects = () => {
         largeDesc: 'An ecommerce single page, responsive web application  for the a paper company.',
         tech: 'React, Redux, React-Redux, Materialize, Material-UI, Sequelize',
         initials: 'dm',
-        date: 'Oct. 17'
+        date: 'Oct. 17',
+        contribution: ['Crafted database models and backend routes for shopping cart', 'Designed user experience for shopping cart view and checkout page view', 'Implemented client and server side functionality for shopping cart and checkout pages','Wrote backend test']
       }
     ]
     const prefixes = ['vm', 'is', 'dm'];
@@ -99,7 +102,20 @@ const Projects = () => {
                 <div className="reveal-data">
                   <div>{item.date}</div>
                   <p>{item.largeDesc}</p>
-                  <a>Built with: {item.tech}</a>
+                  {
+                    item.contribution &&
+                    <div>
+                      <b>My Contribution:</b>
+                      <ul>
+                        {
+                          item.contribution.map(task => {
+                            return <li key={task}>{task}</li>
+                          })
+                        }
+                      </ul>
+                    </div>
+                  }
+                  <a>Tech: {item.tech}</a>
                 </div>
                 </div>
               </div>
