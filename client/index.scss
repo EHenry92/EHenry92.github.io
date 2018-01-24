@@ -71,6 +71,9 @@ body {
             transition: all 0.3s;
           }
         }
+        .cryptoReveal.highlight-char-input {
+          background-color: lightblue;
+        }
         .solved {
           opacity: 0.25;
         }

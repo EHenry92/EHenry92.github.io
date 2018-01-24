@@ -35,6 +35,31 @@ const Home = () => {
         spots[i].firstChild.value = evt.target.value.toUpperCase();
       }
     }
+    function highlight(evt) {
+      evt.preventDefault();
+      // const oldSpots = document.getElementsByClassName('highlight');
+      // console.log("oldSpots", oldSpots)
+      // for (let j = 0; j < oldSpots.length ; j= j + 1) {
+      //   console.log("here", oldSpots[j])
+      //   oldSpots[j].classList.remove('highlight');
+      // }
+      const spots = document.getElementsByClassName(evt.target.name);
+      for (let i = 0; i < spots.length ; i++) {
+        spots[i].classList.add('highlight-char-input');
+      }
+    }
+    function lowlight(evt) {
+      evt.preventDefault();
+      let oldSpots = document.getElementsByClassName('highlight-char-input');
+      for (let j = oldSpots.length; j > 0 ; j -= 1) {
+        console.log(oldSpots.length, j)
+        oldSpots[0].classList.remove('highlight-char-input');
+      }
+      // const spots = document.getElementsByClassName(evt.target.name);
+      // for (let i = 0; i < spots.length ; i++) {
+      //   spots[i].classList.add('highlight');
+      // }
+    }
 
     let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
     let holder = {};
@@ -69,7 +94,7 @@ const Home = () => {
                     holder[char] ?
                         (<span className="crypto char" key={char + wordIdx + idx}>
                             <div className={`${char}spot cryptoReveal`}>
-                              <input name={`${char}spot`} onChange={enterChar} maxLength= {1} />
+                              <input name={`${char}spot`} onChange={enterChar} onMouseEnter={highlight}maxLength= {1} onMouseLeave={lowlight}/>
                             </div>
                             <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
                         </span>)
