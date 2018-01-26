@@ -1,0 +1,68 @@
+nav {
+  z-index: 10;
+  .navWide {
+    position: fixed;
+    bottom:1vh;
+    font-size: 25px;
+    display: none;
+    margin-left: 25vw;
+    margin-bottom: 0;
+      #footerRow{
+        div {
+          margin-right: 2vw;
+          text-decoration: none;
+          color: black;
+        }
+      }
+  }
+  .navNarrow {
+    top:0;
+    font-size: 14px;
+    #slide-space {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      display: none;
+      #slide-out{
+        list-style: none;
+        height: 100%;
+        width: 30vw;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+      #overlay{
+        background-color: black;
+        opacity: .5;
+        height: 100%;
+        width: 70vw;
+      }
+    }
+    i {
+      font-size: 40px;
+      float: left;
+      cursor: context-menu;
+    }
+    #narrowLinks {
+      display: none;
+      li {
+        text-decoration: none;
+        display: block;
+        float: left;
+        clear: left;
+        padding: 0.5em 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+	nav {
+		.navWide {
+			display: block;
+		}
+		.navNarrow {
+			display: none;
+		}
+  }
+}

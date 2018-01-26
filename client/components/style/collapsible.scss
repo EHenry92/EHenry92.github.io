@@ -1,0 +1,70 @@
+#collapsible{
+  list-style: none;
+  width: 80vw;
+  margin-top:10vh;
+
+  .title {
+    font-size: 16px;
+  }
+  .company {
+    font-size: 16px;
+  }
+  .data {
+    font-size: 14px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    .right-col{
+      width:60%;
+      border-bottom-style: solid;
+      border-bottom-color: white;
+      border-bottom-width: thin;
+    }
+    .left-col {
+      width: 40%;
+      text-align: right;
+      padding-right: 1rem;
+      line-height: 1;
+
+    }
+    i {
+      font-size: x-small;
+    }
+
+  }
+
+  .heading {
+    font-size: x-large;
+  }
+  .collapsible-header{
+    background-color: white ;
+    color: black;
+    padding: .5rem;
+    pointer-events: none;
+  }
+  .collapsible-body {
+        position: relative;
+        transition: all .3s ease-out;
+        display: none;
+  }
+  .active {
+    display: block;
+    transition: all .3s ease-in;
+    background-color: black;
+    color: white;
+  }
+}
+#top, .collapsible-header{
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  background-color: white;
+}
+.social {
+  display: inline-block;
+  .tinyImg {
+    width: 30px;
+    margin: 2px;
+  }
+}

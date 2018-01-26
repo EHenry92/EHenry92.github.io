@@ -1,0 +1,50 @@
+#intro {
+  justify-content: center;
+  width: 70%;
+  .word {
+    display: flex;
+    flex-direction:row;
+    margin: 2vh 1.5vw;
+  }
+  .crypto{
+    width: 3vw;
+    margin: .2rem;
+    text-align: center;
+    .cryptoLetter {
+      transition: opacity 1s;
+    }
+    .cryptoReveal {
+      height:25px;
+      input {
+        cursor: text;
+        background-color: transparent;
+        text-align: center;
+        font-size: 80%;
+        // border-style: solid;
+        border-width: thin;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+    }
+    .cryptoReveal.highlight-char-input {
+      background-color: yellow;
+    }
+    .solved {
+      opacity: 0.25;
+    }
+
+  }
+}
+#startUp {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.678);
+}
