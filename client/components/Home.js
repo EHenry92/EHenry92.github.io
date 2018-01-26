@@ -7,7 +7,10 @@ const Home = () => {
       document.getElementById('startUp').style.display = 'none';
         let waitTime = 750;
         for (let i = 0; i < randAlpha.length; i++) {
-          setTimeout(revealLetter(randAlpha[i]), waitTime * i )
+          setTimeout(() =>{
+            revealLetter(randAlpha[i])
+          }
+            , waitTime * i )
       }
     }
     function revealLetter (letter) {

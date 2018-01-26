@@ -3844,8 +3844,15 @@ var Home = function Home() {
     evt.preventDefault();
     document.getElementById('startUp').style.display = 'none';
     var waitTime = 750;
+
+    var _loop = function _loop(i) {
+      setTimeout(function () {
+        revealLetter(randAlpha[i]);
+      }, waitTime * i);
+    };
+
     for (var i = 0; i < randAlpha.length; i++) {
-      setTimeout(revealLetter(randAlpha[i]), waitTime * i);
+      _loop(i);
     }
   }
   function revealLetter(letter) {
