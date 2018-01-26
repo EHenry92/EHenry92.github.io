@@ -2,15 +2,26 @@
 import React from 'react';
 
 const Home = () => {
+  let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
+    let holder = {};
+    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    function shuffleAlpha(alpha) {
+      let array = alpha.slice();
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+        return array;
+    }
+    let randAlpha = shuffleAlpha(alphabet);
   function startReveal (evt) {
       evt.preventDefault();
       document.getElementById('startUp').style.display = 'none';
         let waitTime = 750;
         for (let i = 0; i < randAlpha.length; i++) {
-          setTimeout(() =>{
-            revealLetter(randAlpha[i])
-          }
-            , waitTime * i )
+          setTimeout(() =>{revealLetter(randAlpha[i])}, waitTime * i )
       }
     }
     function revealLetter (letter) {
@@ -51,25 +62,9 @@ const Home = () => {
         oldSpots[0].classList.remove('highlight-char-input');
       }
     }
-
-    let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
-    let holder = {};
-    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    function shuffleAlpha(alpha) {
-      let array = alpha.slice();
-      for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-        return array;
-    }
-    let randAlpha = shuffleAlpha(alphabet);
     for (let i = 0; i < alphabet.length; i++) {
       holder[alphabet[i]] = randAlpha[i];
     }
-
       return (
         <div>
           <img className ="pic filler" src="client/components/images/mnwmeout.png" />

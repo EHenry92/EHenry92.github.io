@@ -4,6 +4,7 @@ body {
     color:var(--highlight-color);
     background-color: white;
     font-size: 20px;
+    // background-image: url('');
     #navigator {
       position: fixed;
       display: flex;
@@ -81,12 +82,7 @@ body {
   }
     font-size: 12rem;
 }
-@media (max-width: 800px) {
-  #startUp{
-    position: fixed;
-    bottom: 0;
-  }
-}
+
 
 
 @import 'components/style/nav.scss';

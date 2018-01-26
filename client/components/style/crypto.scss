@@ -48,3 +48,10 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.678);
 }
+
+@media (max-width: 800px) {
+  #startUp{
+    position: fixed;
+    bottom: 0;
+  }
+}
