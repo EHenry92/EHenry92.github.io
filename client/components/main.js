@@ -7,28 +7,30 @@ const Main = (props) => {
   function burgerToggle () {
     let linksEl = document.getElementById('slide-space');
     let toggle = document.getElementById('menu');
-    if (linksEl.style.display === 'flex') {
+    if (linksEl.style.display == 'flex') {
       linksEl.style.display = 'none';
-      toggle.style.display = 'block';
     } else {
       linksEl.style.display = 'flex';
-      toggle.style.display = 'none';
     }
   }
 
   return (
     <div>
       <div id="navigator" >
-        <nav onMouseEnter={burgerToggle} onMouseLeave={burgerToggle} onClick={burgerToggle}>
+        <nav onClick={burgerToggle}>
           <div className="navNarrow">
               <div id="side-nav">
+              <a href="#">
+                        <img id="menu" src="client/components/images/menu.png" />
+
+              </a>
               <div id="slide-space">
                     <div id="slide-out"className="tic">
                       <div className ="row top">
                         <div className="piece left">
                           <img src="client/components/images/x.png" />
                         </div>
-                          <Link onClick={burgerToggle} to="/" className="piece center">
+                          <Link to="/" className="piece center">
                          	  Evlis Henry
                     			<div className="after"></div>
                         </Link>
@@ -37,14 +39,14 @@ const Main = (props) => {
                         </div>
                      </div>
                     	<div className ="row middle">
-                        <Link onClick={burgerToggle} to="/about" className="piece left">
+                        <Link to="/about" className="piece left">
                          	  <div>About</div>
                     			<div className="after"></div>
                         </Link>
                           <div className="piece center">
                           <img src="client/components/images/x.png" />
                         </div>
-                        <Link onClick={burgerToggle} to="/work" className="piece right">
+                        <Link to="/work" className="piece right">
                          	  <div>Projects</div>
                     			<div className="after"></div>
                         </Link>
@@ -53,7 +55,7 @@ const Main = (props) => {
                         <div className="piece left">
                     			<img src="client/components/images/x.png" />
                         </div>
-                          <Link onClick={burgerToggle} to="/resume" className="piece center">
+                          <Link to="/resume" className="piece center">
                          	  <div>Resume</div>
                     			<div className="after"></div>
                         </Link>
@@ -67,10 +69,7 @@ const Main = (props) => {
                     </div>
                   <div id="overlay" />
               </div>
-              <a href="#">
-                        <img id="menu" src="client/components/images/menu.png" />
-
-              </a>
+              
               </div>
             </div>
         </nav>
