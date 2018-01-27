@@ -19,26 +19,63 @@ const Main = (props) => {
   return (
     <div>
       <div id="navigator" >
-        <nav>
+        <nav onMouseEnter={burgerToggle} onMouseLeave={burgerToggle} onClick={burgerToggle}>
           <div className="navNarrow">
               <div id="side-nav">
               <div id="slide-space">
-                <ul id="slide-out">
-                    <li><Link onClick={burgerToggle} to="/"><h2>Evlis Henry</h2></Link></li>
-                    <li><div className="divider" /></li>
-                    <li><Link onClick={burgerToggle} to="/about"><h3>About</h3></Link></li>
-                    <li><Link onClick={burgerToggle} to="/work"><h3>Projects</h3></Link></li>
-                    <li><Link onClick={burgerToggle} to="/resume"><h3>Resume</h3></Link></li>
-                  </ul>
+                    <div id="slide-out"className="tic">
+                      <div className ="row top">
+                        <div className="piece left">
+                          <img src="client/components/images/x.png" />
+                        </div>
+                          <Link onClick={burgerToggle} to="/" className="piece center">
+                         	  Evlis Henry
+                    			<div className="after"></div>
+                        </Link>
+                        <div className="piece right">
+                          <img src="client/components/images/o.png" />
+                        </div>
+                     </div>
+                    	<div className ="row middle">
+                        <Link onClick={burgerToggle} to="/about" className="piece left">
+                         	  <div>About</div>
+                    			<div className="after"></div>
+                        </Link>
+                          <div className="piece center">
+                          <img src="client/components/images/x.png" />
+                        </div>
+                        <Link onClick={burgerToggle} to="/work" className="piece right">
+                         	  <div>Projects</div>
+                    			<div className="after"></div>
+                        </Link>
+                     </div>
+                    	<div className ="row bottom">
+                        <div className="piece left">
+                    			<img src="client/components/images/x.png" />
+                        </div>
+                          <Link onClick={burgerToggle} to="/resume" className="piece center">
+                         	  <div>Resume</div>
+                    			<div className="after"></div>
+                        </Link>
+                        <div className="piece right">
+                          <img src="client/components/images/o.png" />
+                        </div>
+                     </div>
+                    
+                    
+                      
+                    </div>
                   <div id="overlay" />
               </div>
-              <a id="menu" href="#" onClick={burgerToggle}><i className="material-icons">menu</i>
+              <a href="#">
+                        <img id="menu" src="client/components/images/menu.png" />
+
               </a>
               </div>
             </div>
         </nav>
-        <Link to="/">
-          <img id="name" src="client/components/images/name.png" />
+        <Link id="name" to="/">
+          Evlis Henry
         </Link>
       </div>
       {children}

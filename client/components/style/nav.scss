@@ -21,13 +21,9 @@ nav {
     #slide-space {
       display: flex;
       flex-direction: row;
-      height: 100vh;
       display: none;
       #slide-out{
         list-style: none;
-        height: 100%;
-        width: 30vw;
-        background-color: white;
         margin: 0;
         padding: 0;
       }
@@ -36,6 +32,7 @@ nav {
         opacity: .5;
         height: 100%;
         width: 70vw;
+        display: none;
       }
     }
     i {
@@ -55,14 +52,19 @@ nav {
     }
   }
 }
-
-@media (min-width: 1000px) {
-	nav {
-		.navWide {
-			display: block;
-		}
-		.navNarrow {
-			display: none;
-		}
-  }
+#menu{
+  width: 10vh;
+  transform: rotate(10deg);
+  height: 15vh;
+ 
 }
+// @media (min-width: 1000px) {
+// 	nav {
+// 		.navWide {
+// 			display: block;
+// 		}
+// 		.navNarrow {
+// 			display: none;
+// 		}
+//   }
+// }
