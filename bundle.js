@@ -2634,36 +2634,40 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var About = function About() {
   return _react2.default.createElement(
     'div',
-    { id: 'me' },
-    _react2.default.createElement('img', { className: 'pic filler', src: 'client/components/images/rock.png' }),
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'filler contained', id: 'bio' },
+      { id: 'me' },
+      _react2.default.createElement('img', { className: 'pic left filler', src: 'client/components/images/rock.png' }),
       _react2.default.createElement(
-        'p',
-        { className: 'center title' },
+        'div',
+        { className: 'filler contained', id: 'bio' },
         _react2.default.createElement(
-          'b',
+          'p',
+          { className: 'center title' },
+          _react2.default.createElement(
+            'b',
+            null,
+            'An educator turned developer fueled by a love for problem solving and the desire for continued growth.'
+          )
+        ),
+        _react2.default.createElement(
+          'p',
           null,
-          'An educator turned developer fueled by a love for problem solving and the desire for continued growth.'
-        )
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'My name is Evlis Henry. I\'m a full stack software engineer who enjoys creating interactive applications and helping others. I believe in creating code and products that solve a problem, encourages and equips people with the tools to do what they love. I taught Math at lower performing middle schools where I observed that the right technology had the power to increase learning, communication and engagement in the classroom.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'I am certified in web development and hold a Bachelors degree in Computer Science from Hunter College. My strong attention to detail allows me to efficeively trace and debug code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'When I\'m not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.'
-      ),
-      _react2.default.createElement(_index.Contact, null)
+          'My name is Evlis Henry. I\'m a full stack software engineer who enjoys creating interactive applications and helping others. I believe in creating code and products that solve a problem, encourages and equips people with the tools to do what they love. I taught Math at lower performing middle schools where I observed that the right technology had the power to increase learning, communication and engagement in the classroom.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'I am certified in web development and hold a Bachelors degree in Computer Science from Hunter College. My strong attention to detail allows me to efficeively trace and debug code in addition to write code that is clean and easy to understand. I use each new project as an opportunity to grow and expand my skill set.'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'When I\'m not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.'
+        ),
+        _react2.default.createElement(_index.Contact, null)
+      )
     )
   );
 };
@@ -2687,43 +2691,41 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(32);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Contact = function Contact() {
   return _react2.default.createElement(
-    'div',
-    { className: 'social' },
+    "div",
+    { className: "social" },
     _react2.default.createElement(
-      'span',
-      { className: 'category' },
+      "span",
+      { className: "category" },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: 'mailto:ehenry692@hotmail.com' },
-        _react2.default.createElement('img', {
-          className: 'tinyImg',
-          src: 'client/components/images/social-mail.png' })
+        "a",
+        { href: "mailto:ehenry692@hotmail.com" },
+        _react2.default.createElement("img", {
+          className: "tinyImg",
+          src: "client/components/images/social-mail.png" })
       )
     ),
     _react2.default.createElement(
-      'span',
-      { className: 'category' },
+      "span",
+      { className: "category" },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: 'https://www.github.com/ehenry92', target: '_blank' },
-        _react2.default.createElement('img', {
-          className: 'tinyImg',
-          src: 'client/components/images/social-git.png' })
+        "a",
+        { href: "https://www.github.com/ehenry92", target: "_blank" },
+        _react2.default.createElement("img", {
+          className: "tinyImg",
+          src: "client/components/images/social-git.png" })
       )
     ),
     _react2.default.createElement(
-      'span',
-      { className: 'category' },
+      "span",
+      { className: "category" },
       _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: 'https://www.likedin.com/in/evils-henry', target: '_blank' },
-        _react2.default.createElement('img', { className: 'tinyImg', src: 'client/components/images/social-linked.png' })
+        "a",
+        { href: "https://www.likedin.com/in/evils-henry", target: "_blank" },
+        _react2.default.createElement("img", { className: "tinyImg", src: "client/components/images/social-linked.png" })
       )
     )
   );
@@ -2824,53 +2826,74 @@ var Home = function Home() {
   }
   return _react2.default.createElement(
     'div',
-    null,
-    _react2.default.createElement('img', { className: 'pic filler', src: 'client/components/images/mnwmeout.png' }),
+    { className: 'flex-it' },
     _react2.default.createElement(
       'div',
-      { id: 'intro', className: 'contained filler' },
-      words.map(function (word, wordIdx) {
-        return _react2.default.createElement(
+      { className: ' intro-box filler' },
+      _react2.default.createElement(
+        'div',
+        { id: 'message' },
+        words.map(function (word, wordIdx) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'word', key: word + wordIdx },
+            word.map(function (char, idx) {
+              var block = holder[char] ? _react2.default.createElement(
+                'span',
+                { className: 'crypto char', key: char + wordIdx + idx },
+                _react2.default.createElement(
+                  'div',
+                  { className: char + 'spot cryptoReveal' },
+                  _react2.default.createElement('input', { name: char + 'spot', onChange: enterChar, onMouseEnter: highlight, maxLength: 1, onMouseLeave: lowlight })
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: char + 'letter cryptoLetter' },
+                  holder[char]
+                )
+              ) : _react2.default.createElement(
+                'span',
+                { key: char + wordIdx + idx },
+                _react2.default.createElement(
+                  'div',
+                  { className: char + 'spot' },
+                  char
+                ),
+                _react2.default.createElement('div', { className: 'cryptoPunct' })
+              );
+              return block;
+            })
+          );
+        }),
+        _react2.default.createElement(
           'div',
-          { className: 'word', key: word + wordIdx },
-          word.map(function (char, idx) {
-            var block = holder[char] ? _react2.default.createElement(
-              'span',
-              { className: 'crypto char', key: char + wordIdx + idx },
-              _react2.default.createElement(
-                'div',
-                { className: char + 'spot cryptoReveal' },
-                _react2.default.createElement('input', { name: char + 'spot', onChange: enterChar, onMouseEnter: highlight, maxLength: 1, onMouseLeave: lowlight })
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: char + 'letter cryptoLetter' },
-                holder[char]
-              )
-            ) : _react2.default.createElement(
-              'span',
-              { key: char + wordIdx + idx },
-              _react2.default.createElement(
-                'div',
-                { className: char + 'spot' },
-                char
-              ),
-              _react2.default.createElement('div', { className: 'cryptoPunct' })
-            );
-            return block;
-          })
-        );
-      }),
+          null,
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'button',
+            { id: 'startUp', onClick: startReveal },
+            ' Reveal '
+          )
+        )
+      ),
       _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'button',
-          { id: 'startUp', onClick: startReveal },
-          ' Reveal '
+          'a',
+          { href: '#about-section', className: 'center' },
+          _react2.default.createElement(
+            'div',
+            null,
+            'More About Me'
+          )
         )
       )
+    ),
+    _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement('img', { className: 'pic right filler', src: 'client/components/images/mnwmeout.png' })
     )
   );
 }; /*jshint loopfunc:true */
@@ -3214,128 +3237,132 @@ var Resume = function Resume() {
 
   return _react2.default.createElement(
     'div',
-    { className: 'center swirled' },
+    null,
     _react2.default.createElement(
-      'ul',
-      { id: 'collapsible' },
+      'div',
+      { className: 'center swirled' },
       _react2.default.createElement(
-        'li',
-        { id: 'top', className: 'center' },
+        'ul',
+        { id: 'collapsible' },
         _react2.default.createElement(
-          'b',
-          null,
-          'Evlis Henry',
-          _react2.default.createElement('br', null),
-          'Brooklyn, NY',
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'span',
-            { className: 'social' },
-            _react2.default.createElement(_index.Contact, null),
-            _react2.default.createElement(
-              'a',
-              { href: 'https://s3.amazonaws.com/henryeprofile/Evlis_Henry_Resume.pdf ' },
-              _react2.default.createElement('img', { className: 'tinyImg', src: 'client/components/images/resume_icon.png' })
-            )
-          )
-        )
-      ),
-      resumeData.map(function (box) {
-        //box[0] == heading
-        //box[1]  == info to display
-        return _react2.default.createElement(
           'li',
-          { key: box[0][0].heading, onClick: showData, id: box[0][0].heading },
+          { id: 'top', className: 'center' },
           _react2.default.createElement(
-            'div',
-            { className: 'collapsible-header' },
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons' },
-              box[0][0].symbol
-            ),
+            'b',
+            null,
+            'Evlis Henry',
+            _react2.default.createElement('br', null),
+            'Brooklyn, NY',
+            _react2.default.createElement('br', null),
             _react2.default.createElement(
               'span',
-              { className: 'heading' },
-              box[0][0].heading
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { id: box[0][0].heading + 'body', className: 'collapsible-body' },
-            _react2.default.createElement(
-              'span',
-              null,
+              { className: 'social' },
+              _react2.default.createElement(_index.Contact, null),
               _react2.default.createElement(
-                'table',
-                null,
-                _react2.default.createElement(
-                  'tbody',
-                  null,
-                  box[1].map(function (row) {
-                    return _react2.default.createElement(
-                      'tr',
-                      { key: row.company },
-                      _react2.default.createElement(
-                        'td',
-                        { className: 'row' },
-                        _react2.default.createElement(
-                          'div',
-                          { className: 'left-col' },
-                          _react2.default.createElement(
-                            'b',
-                            { className: 'title' },
-                            row.title
-                          ),
-                          row.date && _react2.default.createElement(
-                            'div',
-                            null,
-                            _react2.default.createElement(
-                              'i',
-                              null,
-                              row.date,
-                              row.location && _react2.default.createElement(
-                                'div',
-                                null,
-                                _react2.default.createElement('br', null),
-                                row.location
-                              )
-                            )
-                          )
-                        ),
-                        _react2.default.createElement(
-                          'div',
-                          { className: 'right-col' },
-                          _react2.default.createElement(
-                            'b',
-                            { className: 'company' },
-                            row.company
-                          ),
-                          row.list ? _react2.default.createElement(
-                            'ul',
-                            { className: 'data' },
-                            row.list.map(function (item) {
-                              return _react2.default.createElement(
-                                'li',
-                                { key: item },
-                                item
-                              );
-                            })
-                          ) : _react2.default.createElement(
-                            'div',
-                            { className: 'data' },
-                            row.info
-                          )
-                        )
-                      )
-                    );
-                  })
-                )
+                'a',
+                { href: 'https://s3.amazonaws.com/henryeprofile/Evlis_Henry_Resume.pdf ' },
+                _react2.default.createElement('img', { className: 'tinyImg', src: 'client/components/images/resume_icon.png' })
               )
             )
           )
-        );
-      })
+        ),
+        resumeData.map(function (box) {
+          //box[0] == heading
+          //box[1]  == info to display
+          return _react2.default.createElement(
+            'li',
+            { key: box[0][0].heading, onClick: showData, id: box[0][0].heading },
+            _react2.default.createElement(
+              'div',
+              { className: 'collapsible-header' },
+              _react2.default.createElement(
+                'i',
+                { className: 'material-icons' },
+                box[0][0].symbol
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'heading' },
+                box[0][0].heading
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { id: box[0][0].heading + 'body', className: 'collapsible-body' },
+              _react2.default.createElement(
+                'span',
+                null,
+                _react2.default.createElement(
+                  'table',
+                  null,
+                  _react2.default.createElement(
+                    'tbody',
+                    null,
+                    box[1].map(function (row) {
+                      return _react2.default.createElement(
+                        'tr',
+                        { key: row.company },
+                        _react2.default.createElement(
+                          'td',
+                          { className: 'row' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'left-col' },
+                            _react2.default.createElement(
+                              'b',
+                              { className: 'title' },
+                              row.title
+                            ),
+                            row.date && _react2.default.createElement(
+                              'div',
+                              null,
+                              _react2.default.createElement(
+                                'i',
+                                null,
+                                row.date,
+                                row.location && _react2.default.createElement(
+                                  'div',
+                                  null,
+                                  _react2.default.createElement('br', null),
+                                  row.location
+                                )
+                              )
+                            )
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'right-col' },
+                            _react2.default.createElement(
+                              'b',
+                              { className: 'company' },
+                              row.company
+                            ),
+                            row.list ? _react2.default.createElement(
+                              'ul',
+                              { className: 'data' },
+                              row.list.map(function (item) {
+                                return _react2.default.createElement(
+                                  'li',
+                                  { key: item },
+                                  item
+                                );
+                              })
+                            ) : _react2.default.createElement(
+                              'div',
+                              { className: 'data' },
+                              row.info
+                            )
+                          )
+                        )
+                      );
+                    })
+                  )
+                )
+              )
+            )
+          );
+        })
+      )
     )
   );
 };
@@ -3365,13 +3392,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(32);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main(props) {
-  var children = props.children;
-
   function burgerToggle() {
     var linksEl = document.getElementById('slide-space');
     var toggle = document.getElementById('menu');
@@ -3382,7 +3405,114 @@ var Main = function Main(props) {
     }
   }
 
-  return _react2.default.createElement('div', null);
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { id: 'navigator' },
+      _react2.default.createElement(
+        'nav',
+        { onClick: burgerToggle },
+        _react2.default.createElement(
+          'div',
+          { className: 'navNarrow' },
+          _react2.default.createElement(
+            'div',
+            { id: 'side-nav' },
+            _react2.default.createElement('img', { id: 'menu', src: 'client/components/images/menu.png' }),
+            _react2.default.createElement(
+              'div',
+              { id: 'slide-space' },
+              _react2.default.createElement(
+                'div',
+                { id: 'slide-out', className: 'tic' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row top' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'piece left-col' },
+                    _react2.default.createElement('img', { src: 'client/components/images/x.png' })
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#brief-intro', className: 'piece center' },
+                    'Evlis Henry',
+                    _react2.default.createElement('div', { className: 'after' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'piece right-col' },
+                    _react2.default.createElement('img', { src: 'client/components/images/o.png' })
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row middle' },
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#about-section', className: 'piece left-col' },
+                    _react2.default.createElement(
+                      'div',
+                      null,
+                      'About'
+                    ),
+                    _react2.default.createElement('div', { className: 'after' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'piece center' },
+                    _react2.default.createElement('img', { src: 'client/components/images/x.png' })
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#project-section', className: 'piece right-col' },
+                    _react2.default.createElement(
+                      'div',
+                      null,
+                      'Projects'
+                    ),
+                    _react2.default.createElement('div', { className: 'after' })
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row bottom' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'piece left-col' },
+                    _react2.default.createElement('img', { src: 'client/components/images/x.png' })
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '#resume-section', className: 'piece center' },
+                    _react2.default.createElement(
+                      'div',
+                      null,
+                      'Resume'
+                    ),
+                    _react2.default.createElement('div', { className: 'after' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'piece right-col' },
+                    _react2.default.createElement('img', { src: 'client/components/images/o.png' })
+                  )
+                )
+              ),
+              _react2.default.createElement('div', { id: 'overlay' })
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'a',
+        { id: 'name', href: '/' },
+        'Evlis Henry'
+      )
+    )
+  );
 };
 exports.default = Main;
 
@@ -3407,9 +3537,11 @@ var _components = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_components.Home, null), document.getElementById('brief-intro'));
+_reactDom2.default.render(_react2.default.createElement(_components.Main, null), document.getElementById('nav-section'));
 // import Routes from './routes'
 
+
+_reactDom2.default.render(_react2.default.createElement(_components.Home, null), document.getElementById('brief-intro'));
 
 _reactDom2.default.render(_react2.default.createElement(_components.About, null), document.getElementById('about-section'));
 
@@ -3423,26 +3555,27 @@ var ticking = false;
 var header = document.getElementsByTagName("header")[0]; // We're interested in the first element
 var sections = Array.from(document.querySelectorAll("section"));
 
-var menu = document.getElementById("menu");
-menu.addEventListener("click", function () {
-  var linksEl = document.getElementById('slide-space');
-  if (linksEl.style.display == 'flex') {
-    linksEl.style.display = 'none';
-  } else {
-    linksEl.style.display = 'flex';
-  }
-});
+// const menu = document.getElementById("menu");
+// menu.addEventListener("click", () => {
+//     let linksEl = document.getElementById('slide-space');
+//     if (linksEl.style.display == 'flex') {
+//       linksEl.style.display = 'none';
+//     } else {
+//       linksEl.style.display = 'flex';
+//     }
+// })
 
 // Activation Margins
-var HEADER_MARGIN = header.style.height;
+var HEADER_MARGIN = 0;
 var SECTION_MARGIN = 300;
 
 var scrollActions = function scrollActions() {
-  // 1. Sets whether the header is visible or not
-  if (window.scrollY > HEADER_MARGIN) {
-    header.classList.add("active");
-  } else {}
-  // header.classList.remove("active");
+  //   // 1. Sets whether the header is visible or not
+  //   if (window.scrollY > HEADER_MARGIN) {
+  //     header.classList.add("active");
+  //   } else {
+  //     header.classList.remove("active");
+  //   }
 
 
   // 3. Loops through All sections, get their getBoundingClientRect() and sets them as "active" if they're visible
@@ -3473,109 +3606,6 @@ window.addEventListener("scroll", function () {
 
 scrollActions();
 
-// //Introduction Page
-// let introduction = document.getElementById("intro");
-
-
-//     let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
-//     let holder = {};
-//     let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-//     function shuffleAlpha(alpha) {
-//       let array = alpha.slice();
-//       for (var i = array.length - 1; i > 0; i--) {
-//         var j = Math.floor(Math.random() * (i + 1));
-//         var temp = array[i];
-//         array[i] = array[j];
-//         array[j] = temp;
-//       }
-//         return array;
-//     }
-//     let randAlpha = shuffleAlpha(alphabet);
-//     function startReveal (evt) {
-//       evt.preventDefault();
-//       document.getElementById('startUp').style.display = 'none';
-//         let waitTime = 750;
-//         for (let i = 0; i < randAlpha.length; i++) {
-//           setTimeout(() =>{revealLetter(randAlpha[i])}, waitTime * i )
-//       }
-//     }
-//     function revealLetter (letter) {
-//       let list, cryptList, textnode;
-//       list = document.getElementsByClassName(`${letter}spot`);
-//             cryptList = document.getElementsByClassName(`${letter}letter`);
-
-//             for (let j = 0; j < list.length; j++) {
-//               textnode = document.createTextNode(`${letter}`);
-//               list[j].removeChild(list[j].firstChild);
-//               list[j].appendChild(textnode);
-//               cryptList[j].classList.add('solved');
-//             }
-//     }
-//     function enterChar(evt) {
-//       evt.preventDefault();
-//       let input = evt.target.value ? evt.target.value[0].toUpperCase() : ' ';
-//       let spots = document.getElementsByClassName(evt.target.name);
-
-//       for (let i = 0; i < spots.length ; i++) {
-//         if (input == evt.target.name[0]) {
-//           revealLetter(input)
-//         }
-//         spots[i].firstChild.value = input;
-//       }
-//     }
-//     function highlight(evt) {
-//       evt.preventDefault();
-//       const spots = document.getElementsByClassName(evt.target.name);
-//       for (let i = 0; i < spots.length ; i++) {
-//         spots[i].classList.add('highlight-char-input');
-//       }
-//     }
-//     function lowlight(evt) {
-//       evt.preventDefault();
-//       let oldSpots = document.getElementsByClassName('highlight-char-input');
-//       for (let j = oldSpots.length; j > 0 ; j -= 1) {
-//         oldSpots[0].classList.remove('highlight-char-input');
-//       }
-//     }
-//     for (let i = 0; i < alphabet.length; i++) {
-//       holder[alphabet[i]] = randAlpha[i];
-//     }
-
-
-//     words.forEach((word, wordIdx) => {
-//       let eWord = document.createElement("div");
-//       eWord.classList.add('word');
-//         word.forEach((char, idx) => {
-//           let eSpan = document.createElement("span");
-//           let eDiv = document.createElement("div");
-//           let eDivTwo = document.createElement("div");
-//           eSpan.appendChild(eDiv);
-//           eSpan.appendChild(eDivTwo);
-
-//           if(holder[char]){
-//             eSpan.classList.add("crypto char");
-//             eDiv.classList.add(`${char}spot cryptoReveal`);
-//             let eInp = document.createElement("input");
-//             eInp.addEventListener("change", enterChar);
-//             eInp.addEventListener("mouseEnter",highlight);
-//             eInp.addEventListener("mouseLeave", lowlight);
-//             eDiv.appendChild(eInp);
-//             eDivTwo.classList.add(`${char}letter cryptoLetter`);
-//             var node = document.createTextNode(`${holder[char]}`);
-//             eDivTwo.appendChild(node);
-//           }
-//           else {
-//             eDiv.classList.add(`${char}spot`);
-//             var node = document.createTextNode(`${char}`);
-//             eDiv.appendChild(node);
-//             eDivTwo.classList.add('cryptoPunct');
-//           }
-//           eWord.appendChild(eSpan);
-//         })
-//       introduction.appendChild(eWord);
-//     })
-//     document.getElementById("startUp").addEventListener("click", startReveal);
-
 /***/ }),
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3585,7 +3615,7 @@ exports = module.exports = __webpack_require__(47)();
 
 
 // module
-exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: fantasy;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #bio {\n    color: black;\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n    body #bio p:not(.title) {\n      text-indent: 5em;\n      text-align: justify;\n      text-justify: inter-word; }\n    body #bio .title {\n      font-size: 25px; }\n    body #bio p {\n      margin: 10px 0; }\n  body .pic {\n    bottom: 0;\n    right: 0;\n    position: fixed;\n    display: block;\n    max-width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .contained {\n    margin-top: 9vh;\n    padding: 2rem;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body #app {\n    margin-top: 20vh; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n@media (min-width: 1000px) {\n  .pic {\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  font-size: 12rem; }\n\nnav {\n  z-index: 10; }\n  nav #side-nav {\n    background-color: white; }\n  nav .navWide {\n    position: fixed;\n    bottom: 1vh;\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    top: 0;\n    font-size: 14px; }\n    nav .navNarrow #slide-space {\n      display: none;\n      flex-direction: row;\n      width: 100vw;\n      height: 100vh;\n      align-items: center;\n      justify-content: center; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw;\n        display: none; }\n    nav .navNarrow i {\n      font-size: 40px;\n      float: left;\n      cursor: context-menu; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n#menu {\n  width: 10vh;\n  transform: rotate(10deg);\n  height: 15vh; }\n\n#navigator {\n  position: fixed;\n  display: flex;\n  top: 0;\n  z-index: 2;\n  width: 100vw; }\n  #navigator #name {\n    height: 9vh;\n    color: black;\n    background-color: white;\n    max-width: 100%;\n    font-family: 'Kaushan Script', cursive;\n    font-size: 10vmin; }\n\n#intro {\n  justify-content: center;\n  width: 70%; }\n  #intro .word {\n    display: flex;\n    flex-direction: row;\n    margin: 2vh 1.5vw; }\n  #intro .crypto {\n    width: 3vw;\n    margin: .2rem;\n    text-align: center; }\n    #intro .crypto .cryptoLetter {\n      transition: opacity 1s; }\n    #intro .crypto .cryptoReveal {\n      height: 25px; }\n      #intro .crypto .cryptoReveal input {\n        cursor: text;\n        background-color: transparent;\n        text-align: center;\n        font-size: 80%;\n        border-width: thin;\n        outline: none;\n        height: 100%;\n        width: 100%;\n        margin: 0 0 20px 0;\n        padding: 0;\n        -webkit-box-shadow: none;\n        box-shadow: none;\n        -webkit-box-sizing: content-box;\n        box-sizing: content-box;\n        -webkit-transition: all 0.3s;\n        transition: all 0.3s; }\n    #intro .crypto .cryptoReveal.highlight-char-input {\n      background-color: yellow; }\n    #intro .crypto .solved {\n      opacity: 0.25; }\n\n#startUp {\n  color: white;\n  background-color: rgba(0, 0, 0, 0.678); }\n\n@media (max-width: 800px) {\n  #startUp {\n    position: fixed;\n    bottom: 0; } }\n\n#collapsible {\n  list-style: none;\n  width: 80vw;\n  margin-top: 10vh; }\n  #collapsible .title {\n    font-size: 16px; }\n  #collapsible .company {\n    font-size: 16px; }\n  #collapsible .data {\n    font-size: 14px; }\n  #collapsible .row {\n    display: flex;\n    flex-direction: row; }\n    #collapsible .row .right-col {\n      width: 60%;\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    #collapsible .row .left-col {\n      width: 40%;\n      text-align: right;\n      padding-right: 1rem;\n      line-height: 1; }\n    #collapsible .row i {\n      font-size: x-small; }\n  #collapsible .heading {\n    font-size: x-large; }\n  #collapsible .collapsible-header {\n    background-color: white;\n    color: black;\n    padding: .5rem;\n    pointer-events: none; }\n  #collapsible .collapsible-body {\n    position: relative;\n    transition: all .3s ease-out;\n    display: none; }\n  #collapsible .active {\n    display: block;\n    transition: all .3s ease-in;\n    background-color: black;\n    color: white; }\n\n#top, .collapsible-header {\n  border-style: solid;\n  border-color: black;\n  border-width: thin;\n  background-color: white; }\n\n.social {\n  display: inline-block; }\n  .social .tinyImg {\n    width: 30px;\n    margin: 2px; }\n\n.card {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin: .5rem 0 1rem 2rem;\n  background-color: #fff;\n  width: 20rem;\n  position: relative;\n  border-radius: 2px;\n  line-height: 20px;\n  -webkit-transition: -webkit-box-shadow .25s;\n  transition: -webkit-box-shadow .25s;\n  transition: box-shadow .25s;\n  transition: box-shadow .25s, -webkit-box-shadow .25s; }\n  .card .card-title {\n    font-size: x-large; }\n  .card .card-content {\n    padding: 24px; }\n  .card .carousel {\n    display: flex;\n    justify-content: center;\n    height: 10rem; }\n    .card .carousel .carousel-image {\n      display: block;\n      opacity: 1;\n      transition: opacity 1.5s;\n      max-width: 100%; }\n    .card .carousel .carousel-image.hidden {\n      display: none; }\n  .card .card-face {\n    padding: 1rem; }\n    .card .card-face p a {\n      margin: 5px;\n      text-decoration: none;\n      color: blue; }\n    .card .card-face .material-icons {\n      background-color: white;\n      border-style: none; }\n  .card .reveal {\n    position: absolute;\n    background-color: black;\n    color: white;\n    width: 100%;\n    overflow-y: auto;\n    left: 0;\n    top: 100%;\n    height: 100%;\n    z-index: 1;\n    display: none; }\n    .card .reveal button {\n      color: white;\n      background-color: black; }\n    .card .reveal .reveal-data {\n      padding: 20px;\n      line-height: 1.25; }\n  .card .show-reveal {\n    display: block;\n    transform: translateY(-100%); }\n\n.tic {\n  width: 30vh;\n  position: fixed;\n  background-color: white; }\n\n.row {\n  display: flex; }\n\n.piece {\n  width: 10vh;\n  height: 10vh;\n  border-color: black;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  overflow: hidden;\n  align-items: center;\n  font-size: 90%; }\n\n.after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: none;\n  color: #FFF;\n  pointer-events: none;\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.piece:hover .after {\n  display: block;\n  color: black;\n  background-image: url(\"/client/components/images/o.png\"); }\n\n.top, .middle {\n  border-bottom-style: solid; }\n\n.left {\n  border-right-style: solid; }\n\n.right {\n  border-left-style: solid; }\n\nsection {\n  box-sizing: border-box;\n  position: relative;\n  width: 100vw;\n  overflow: hidden; }\n\nsection h2 {\n  text-align: center;\n  position: relative;\n  margin: 60px 0; }\n\nsection h2:after {\n  content: \"\";\n  position: absolute;\n  bottom: -20px;\n  width: 60px;\n  height: 1px;\n  background-color: #f39c12;\n  left: 50%;\n  margin-left: -30px; }\n", ""]);
+exports.push([module.i, "body {\n  --highlight-color: black;\n  font-family: 'Indie Flower', cursive;\n  color: var(--highlight-color);\n  background-color: white;\n  font-size: 20px; }\n  body #bio {\n    border-radius: 30px;\n    width: 60%;\n    text-align: center; }\n    body #bio p:not(.title) {\n      text-indent: 5em;\n      text-align: justify;\n      text-justify: inter-word; }\n    body #bio .title {\n      font-size: 25px; }\n    body #bio p {\n      margin: 10px 0; }\n  body .pic {\n    bottom: 0;\n    right: 0;\n    display: block;\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .contained {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n  body #app {\n    margin-top: 15vmin; }\n  body .intro-box {\n    width: 70%; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n.flex-it {\n  display: flex; }\n\n@media (min-width: 1000px) {\n  .pic {\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  font-size: 12rem; }\n\nnav {\n  z-index: 10; }\n  nav .navWide {\n    position: fixed;\n    bottom: 1vh;\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    top: 0;\n    font-size: 20px; }\n    nav .navNarrow #slide-space {\n      display: none;\n      width: 100vw;\n      position: fixed;\n      height: 100vh;\n      align-items: center;\n      justify-content: center; }\n      nav .navNarrow #slide-space #slide-out {\n        list-style: none;\n        margin: 0;\n        padding: 0; }\n      nav .navNarrow #slide-space #overlay {\n        background-color: black;\n        opacity: .5;\n        height: 100%;\n        width: 70vw;\n        display: none; }\n    nav .navNarrow i {\n      font-size: 40px;\n      float: left;\n      cursor: context-menu; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n#menu {\n  width: 10vmin;\n  transform: rotate(10deg);\n  height: 10vmin; }\n\n#navigator {\n  position: fixed;\n  display: flex;\n  top: 0;\n  z-index: 2;\n  width: 100vw; }\n  #navigator #name {\n    color: black;\n    max-width: 100%;\n    font-family: 'Kaushan Script', cursive;\n    font-size: 10vmin; }\n\n#message {\n  justify-content: center;\n  width: 100%;\n  line-height: 1;\n  display: flex;\n  flex-wrap: wrap; }\n  #message .word {\n    display: flex;\n    flex-direction: row;\n    margin: 2vh 1.5vw; }\n  #message .crypto {\n    width: 3vw;\n    margin: .2rem;\n    text-align: center; }\n    #message .crypto .cryptoLetter {\n      transition: opacity 1s; }\n    #message .crypto .cryptoReveal {\n      height: 25px; }\n      #message .crypto .cryptoReveal input {\n        cursor: text;\n        background-color: transparent;\n        text-align: center;\n        font-size: 80%;\n        border-width: thin;\n        outline: none;\n        height: 100%;\n        width: 100%;\n        margin: 0 0 20px 0;\n        padding: 0;\n        -webkit-box-shadow: none;\n        box-shadow: none;\n        -webkit-box-sizing: content-box;\n        box-sizing: content-box;\n        -webkit-transition: all 0.3s;\n        transition: all 0.3s; }\n    #message .crypto .cryptoReveal.highlight-char-input {\n      background-color: yellow; }\n    #message .crypto .solved {\n      opacity: 0.25; }\n\n#startUp {\n  color: white;\n  background-color: rgba(0, 0, 0, 0.678); }\n\n#collapsible {\n  list-style: none;\n  width: 80vw;\n  border-color: white;\n  border-style: double;\n  border-width: thick;\n  padding: 0; }\n  #collapsible .title {\n    font-size: 16px; }\n  #collapsible .company {\n    font-size: 16px; }\n  #collapsible .data {\n    font-size: 14px; }\n  #collapsible .row {\n    display: flex;\n    flex-direction: row; }\n    #collapsible .row .right-col {\n      width: 60%;\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    #collapsible .row .left-col {\n      width: 40%;\n      text-align: right;\n      padding-right: 1rem;\n      line-height: 1; }\n    #collapsible .row i {\n      font-size: x-small; }\n  #collapsible .heading {\n    font-size: x-large; }\n  #collapsible .collapsible-header {\n    background-color: white;\n    color: black;\n    padding: .5rem;\n    pointer-events: none; }\n  #collapsible .collapsible-body {\n    position: relative;\n    transition: all .3s ease-out;\n    display: none; }\n  #collapsible .active {\n    display: block;\n    transition: all .3s ease-in;\n    background-color: black;\n    color: white; }\n\n#top, .collapsible-header {\n  border-style: solid;\n  border-color: black;\n  border-width: thin;\n  background-color: white; }\n\n.social {\n  display: inline-block; }\n  .social .tinyImg {\n    width: 30px;\n    margin: 2px; }\n\n.card {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin: .5rem 0 1rem 2rem;\n  background-color: #fff;\n  width: 20rem;\n  position: relative;\n  border-radius: 2px;\n  line-height: 20px;\n  -webkit-transition: -webkit-box-shadow .25s;\n  transition: -webkit-box-shadow .25s;\n  transition: box-shadow .25s;\n  transition: box-shadow .25s, -webkit-box-shadow .25s; }\n  .card .card-title {\n    font-size: x-large; }\n  .card .card-content {\n    padding: 24px; }\n  .card .carousel {\n    display: flex;\n    justify-content: center;\n    height: 10rem; }\n    .card .carousel .carousel-image {\n      display: block;\n      opacity: 1;\n      transition: opacity 1.5s;\n      max-width: 100%; }\n    .card .carousel .carousel-image.hidden {\n      display: none; }\n  .card .card-face {\n    padding: 1rem; }\n    .card .card-face p a {\n      margin: 5px;\n      text-decoration: none;\n      color: blue; }\n    .card .card-face .material-icons {\n      background-color: white;\n      border-style: none; }\n  .card .reveal {\n    position: absolute;\n    background-color: black;\n    color: white;\n    width: 100%;\n    overflow-y: auto;\n    left: 0;\n    top: 100%;\n    height: 100%;\n    z-index: 1;\n    display: none; }\n    .card .reveal button {\n      color: white;\n      background-color: black; }\n    .card .reveal .reveal-data {\n      padding: 20px;\n      line-height: 1.25; }\n  .card .show-reveal {\n    display: block;\n    transform: translateY(-100%); }\n\n.tic {\n  width: 30vh;\n  position: fixed;\n  background-color: white; }\n\n.row {\n  display: flex; }\n\n.piece {\n  width: 10vh;\n  height: 10vh;\n  border-color: black;\n  border-width: thick;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  overflow: hidden;\n  align-items: center;\n  font-size: 90%; }\n  .piece img {\n    height: 10vh; }\n\n.after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: none;\n  color: #FFF;\n  pointer-events: none;\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.piece:hover .after {\n  display: block;\n  color: black;\n  background-image: url(\"/client/components/images/o.png\"); }\n\n.top, .middle {\n  border-bottom-style: solid; }\n\n.left-col {\n  border-right-style: solid; }\n\n.right-col {\n  border-left-style: solid; }\n\nheader {\n  display: flex;\n  margin: 0 4em;\n  padding: 10px;\n  width: calc(100vw - 8em);\n  color: #fff;\n  background-color: rgba(37, 37, 37, 0.8);\n  border-radius: 0 0 1em 1em;\n  z-index: 2;\n  opacity: 0;\n  transform: translateY(-4em);\n  transition: opacity 0.25s, transform 0.5s; }\n\nheader.active {\n  transform: translateY(0);\n  opacity: 1; }\n\nheader .logo {\n  flex-grow: 1;\n  padding-top: 0.25em; }\n\nheader .logo img {\n  width: 8em; }\n\nheader nav {\n  display: flex; }\n\nsection {\n  box-sizing: border-box;\n  position: relative;\n  width: 100vw;\n  overflow: hidden;\n  min-height: 100vh; }\n\nsection:not(#brief-intro) {\n  padding-top: 12vh; }\n\nsection h2 {\n  text-align: center;\n  position: relative;\n  margin: 60px 0; }\n\nsection h2:after {\n  content: \"\";\n  position: absolute;\n  bottom: -20px;\n  width: 60px;\n  height: 1px;\n  background-color: #f39c12;\n  left: 50%;\n  margin-left: -30px; }\n\nsection.in {\n  color: black;\n  background-color: white; }\n\nsection.out {\n  color: white;\n  background-color: black; }\n", ""]);
 
 // exports
 

@@ -1,8 +1,5 @@
 nav {
   z-index: 10;
-  #side-nav{
-    background-color: white;
-  }
   .navWide {
     position: fixed;
     bottom:1vh;
@@ -20,14 +17,14 @@ nav {
   }
   .navNarrow {
     top:0;
-    font-size: 14px;
+    font-size: 20px;
     #slide-space {
       display: none;
-      flex-direction: row;
       width: 100vw;
-        height: 100vh;
-        align-items: center;
-        justify-content:center;
+      position:fixed;
+      height: 100vh;
+      align-items: center;
+      justify-content:center;
       #slide-out{
         list-style: none;
         margin: 0;
@@ -59,9 +56,9 @@ nav {
   }
 }
 #menu{
-  width: 10vh;
+  width: 10vmin;
   transform: rotate(10deg);
-  height: 15vh;
+  height: 10vmin;
  
 }
 // @media (min-width: 1000px) {
@@ -82,9 +79,7 @@ nav {
       z-index: 2;
       width: 100vw;
       #name {
-        height: 9vh;
         color: black;
-        background-color: white;
         max-width: 100%;
         font-family: 'Kaushan Script', cursive;
         font-size: 10vmin;

@@ -140,6 +140,7 @@ const Resume = () => {
   }
 
   return (
+    <div>
     <div className="center swirled">
       <ul id="collapsible">
           <li id="top" className="center">
@@ -224,6 +225,7 @@ const Resume = () => {
               })
             }
         </ul>
+    </div>
     </div>
   )
 };

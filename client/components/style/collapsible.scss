@@ -1,7 +1,10 @@
 #collapsible{
-  list-style: none;
-  width: 80vw;
-  margin-top:10vh;
+      list-style: none;
+    width: 80vw;
+    border-color: white;
+    border-style: double;
+    border-width: thick;
+    padding: 0;
 
   .title {
     font-size: 16px;

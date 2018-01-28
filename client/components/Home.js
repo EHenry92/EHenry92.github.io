@@ -16,7 +16,7 @@ const Home = () => {
         return array;
     }
     let randAlpha = shuffleAlpha(alphabet);
-  function startReveal (evt) {
+    function startReveal (evt) {
       evt.preventDefault();
       document.getElementById('startUp').style.display = 'none';
         let waitTime = 750;
@@ -66,10 +66,9 @@ const Home = () => {
       holder[alphabet[i]] = randAlpha[i];
     }
       return (
-        <div>
-          <img className ="pic filler" src="client/components/images/mnwmeout.png" />
-          <div id="intro" className="contained filler">
-
+        <div className="flex-it">
+          <div className=" intro-box filler">
+            <div id="message" >
               {
                 words.map((word, wordIdx) => {
                   return (
@@ -101,11 +100,18 @@ const Home = () => {
                 <br />
               <button id="startUp" onClick= {startReveal}> Reveal </button>
               </div>
-
+            </div>
+            <div>
+            <a href="#about-section" className="center"> 
+              <div>More About Me</div>
+            </a>
+            </div>
           </div>
-
+          <div>
+        <img className ="pic right filler" src="client/components/images/mnwmeout.png" />
         </div>
-      )
-  }
+        </div>
+      );
+  };
 
 export default Home;

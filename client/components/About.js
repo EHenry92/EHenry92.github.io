@@ -3,8 +3,10 @@ import {Contact} from './index';
 
 const About = () => {
       return (
+        <div>
+      
        <div id="me">
-                 <img className ="pic filler" src="client/components/images/rock.png" />
+      <img className ="pic left filler" src="client/components/images/rock.png" />
 
       <div className= "filler contained" id="bio">
       <p className="center title"><b>An educator turned developer fueled by a love for problem solving and the desire for continued growth.</b></p>
@@ -21,8 +23,9 @@ const About = () => {
         </div>
 
        </div>
-      )
-  }
+       </div>
+      );
+  };
 
 export default About;
 

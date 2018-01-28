@@ -1,6 +1,10 @@
-#intro {
+#message {
   justify-content: center;
-  width: 70%;
+  width: 100%;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+
   .word {
     display: flex;
     flex-direction:row;
@@ -48,10 +52,9 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.678);
 }
-
-@media (max-width: 800px) {
-  #startUp{
-    position: fixed;
-    bottom: 0;
-  }
-}
+// @media (max-width: 800px) {
+//   #startUp{
+//     position: fixed;
+//     bottom: 0;
+//   }
+// }
