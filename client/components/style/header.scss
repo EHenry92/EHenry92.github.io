@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  position: fixed;
+  margin: 0 4em;
+  padding: 10px;
+  width: calc(100vw - 8em);
+  color: #fff;
+  background-color: rgba(37, 37, 37, 0.8);
+  border-radius: 0 0 1em 1em;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-4em);
+  transition: opacity 0.25s, transform 0.5s;
+}
+
+header.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header .logo {
+  flex-grow: 1;
+  padding-top: 0.25em;
+}
+header .logo img {
+  width: 8em;
+}
+header nav {
+  display: flex;
+}

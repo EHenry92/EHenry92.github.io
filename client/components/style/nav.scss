@@ -74,3 +74,19 @@ nav {
 // 		}
 //   }
 // }
+
+#navigator {
+      position: fixed;
+      display: flex;
+      top: 0;
+      z-index: 2;
+      width: 100vw;
+      #name {
+        height: 9vh;
+        color: black;
+        background-color: white;
+        max-width: 100%;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 10vmin;
+      }
+    }
