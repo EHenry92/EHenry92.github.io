@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Home = () => {
-  let words = "HEY, I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
+  let words = "I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.".split(' ').map(word => {return word.split('')});
     let holder = {};
     let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     function shuffleAlpha(alpha) {
@@ -66,8 +66,16 @@ const Home = () => {
       holder[alphabet[i]] = randAlpha[i];
     }
       return (
+        <div>
         <div className="flex-it">
+         <div id="pic-box">
+          <div>.</div>
+        </div>
           <div className=" intro-box filler">
+              <div id="main-name">
+          <div>Evlis</div>
+          <div>Henry</div>
+          </div>
             <div id="message" >
               {
                 words.map((word, wordIdx) => {
@@ -97,7 +105,6 @@ const Home = () => {
                 })
               }
               <div>
-                <br />
               <button id="startUp" onClick= {startReveal}> Reveal </button>
               </div>
             </div>
@@ -107,8 +114,7 @@ const Home = () => {
             </a>
             </div>
           </div>
-          <div>
-        <img className ="pic right filler" src="client/components/images/mnwmeout.png" />
+         
         </div>
         </div>
       );

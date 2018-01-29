@@ -13,11 +13,11 @@ const Main = (props) => {
   }
 
   return (
-    <div>
-      <div id="navigator" >
+      <div >
         <nav onClick={burgerToggle}>
-          <div className="navNarrow">
-              <div id="side-nav">
+              <a id="name" href="/">
+                Evlis Henry
+              </a>
               <img id="menu" src="client/components/images/menu.png" />
               <div id="slide-space">
                     <div id="slide-out"className="tic">
@@ -35,14 +35,14 @@ const Main = (props) => {
                      </div>
                     	<div className ="row middle">
                         <a href="#about-section" className="piece left-col">
-                         	  <div>About</div>
+                         	<div>About</div>
                     			<div className="after"></div>
                         </a>
-                          <div className="piece center">
+                        <div className="piece center">
                           <img src="client/components/images/x.png" />
                         </div>
                         <a href="#project-section" className="piece right-col">
-                         	  <div>Projects</div>
+                         	<div>Projects</div>
                     			<div className="after"></div>
                         </a>
                      </div>
@@ -59,18 +59,10 @@ const Main = (props) => {
                         </div>
                      </div>
                     </div>
-                  <div id="overlay" />
               </div>
-              
-              </div>
-            </div>
         </nav>
-        <a id="name" href="/">
-          Evlis Henry
-        </a>
       </div>
 
-    </div>
   )
 }
 export default Main;

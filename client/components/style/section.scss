@@ -1,14 +1,11 @@
 section {
     box-sizing: border-box;
     position: relative;
-    width: 100vw;
+    width: 98vw;
     overflow: hidden;
-    min-height: 100vh;
-//   display:flex;
-    
-  div{
-    // align-self:flex-end;
-  }
+}
+section:not(.sub-section) {
+  min-height: 100vh;
 }
 section:not(#brief-intro) {
     padding-top:12vh;
@@ -29,11 +26,13 @@ section h2:after {
   margin-left: -30px;
 }
 
-   section.in{
-   color:black;
-   background-color:white;
- }
   section.out{
-   color: white;
-   background-color: black;
- }
+  // background-color:black;
+  color:#23cec5;
+  background-image:url('/client/components/images/black.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  }
+  section.in{
+
+  }

@@ -1,14 +1,13 @@
 #message {
-  justify-content: center;
-  width: 100%;
-  line-height: 1;
-  display: flex;
-  flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
 
   .word {
     display: flex;
     flex-direction:row;
-    margin: 2vh 1.5vw;
+    margin: 0 1.5vw;
   }
   .crypto{
     width: 3vw;
@@ -18,19 +17,15 @@
       transition: opacity 1s;
     }
     .cryptoReveal {
-      height:25px;
       input {
         cursor: text;
         background-color: transparent;
         text-align: center;
         font-size: 80%;
-        // border-style: solid;
-        border-width: thin;
+            border-color: black;
+        border-width: thick;
         outline: none;
-        height: 100%;
         width: 100%;
-        margin: 0 0 20px 0;
-        padding: 0;
         -webkit-box-shadow: none;
         box-shadow: none;
         -webkit-box-sizing: content-box;

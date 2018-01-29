@@ -19,9 +19,8 @@ const About = () => {
       <p>
         When I'm not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.
       </p>
-      <Contact />
         </div>
-
+        <Contact />
        </div>
        </div>
       );

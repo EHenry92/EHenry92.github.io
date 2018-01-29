@@ -2,7 +2,7 @@ import './index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import Routes from './routes'
-import {Projects, About, Resume, Home, Main} from './components'
+import {Projects, About, Resume, Home, Main, Skills, Contact} from './components'
 
 ReactDOM.render(
     <Main />,
@@ -12,6 +12,10 @@ ReactDOM.render(
 ReactDOM.render(
     <Home />,
   document.getElementById('brief-intro')
+);
+ReactDOM.render(
+    <Skills />,
+  document.getElementById('skill-section')
 );
 
 ReactDOM.render(
@@ -65,12 +69,18 @@ const scrollActions = () => {
   for (let i = 0; i < sections.length; i++) {
     const section = sections[i];
     const rect = rects[i];
-
     if (rect.top < window.innerHeight - SECTION_MARGIN && rect.bottom > 0) {
       section.classList.add("active");
+          if(i !== 0) {
+      document.getElementById("name").style.display="block";
+    }
+    else {
+            document.getElementById("name").style.display="nont";
+    }
     } else {
       section.classList.remove("active");
     }
+
   }
 
   ticking = false;
