@@ -6,11 +6,46 @@
 }
 
 #pic-box{
-    img {
         height: 40vh;
-        width: 80vw;
-        margin-left: 10vw;
+        width: 81.5vw;
+        display: flex;
+        flex-direction: row;
+        margin-left: 7vw;
+        padding: 0;
+        overflow: hidden;
+    img {
+        width: 20vw;
+        margin: 0 .5vw;
+        transition: transform 3s;
     }
+    #p1{
+        transform: translateX(-30vw);
+    }
+    #p2{
+        transform: translateY(40vh);
+    }
+    #p4{
+        transform: translateX(30vw);
+    }
+    #p3{
+        transform: translateY(-40vh);
+    }
+}
+#pic-box.show {
+
+    #p1{
+        transform: translateX(0);
+    }
+    #p2{
+        transform: translateY(0);
+    }
+    #p4{
+        transform: translateX(0);
+    }
+    #p3{
+        transform: translateY(0);
+    }
+    
 }
 
 svg {

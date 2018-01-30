@@ -42,11 +42,14 @@ body {
       color:var(--highlight-color);
     }
     
-    
-
+}
+.material-icons:hover{
+  transform: translateY(15px);
 }
 
-
+.center-text{
+  text-align: center;
+}
 .right {
   float: right;
 }

@@ -19,7 +19,7 @@ const Home = () => {
     function startReveal (evt) {
       evt.preventDefault();
       document.getElementById('startUp').style.display = 'none';
-        let waitTime = 750;
+        let waitTime = 500;
         for (let i = 0; i < randAlpha.length; i++) {
           setTimeout(() =>{revealLetter(randAlpha[i])}, waitTime * i )
       }
@@ -69,7 +69,11 @@ const Home = () => {
         <div>
         <div>
          <div id="pic-box">
-         <img src="/client/components/images/splitme.png" />
+         <img id="p1" src="/client/components/images/split1.png" />
+         <img id="p2" src="/client/components/images/split2.png" />
+         <img id="p3" src="/client/components/images/split3.png" />
+         <img id="p4" src="/client/components/images/split4.png" />
+
 
         </div>
           <div id="intro-box">
@@ -105,17 +109,19 @@ const Home = () => {
                     )
                   })
                 }
-                <div>
-                <button id="startUp" onClick= {startReveal}> Reveal Message </button>
-                </div>
+                
               </div>
             </div>
-
+            <br />
+              <div className="center">
+                <button id="startUp" onClick= {startReveal}> Show Message </button>
+                </div>
+            <br />
             <div>
-            <a href="#about-section" className="center"> 
-              <div>
-                  <div>More About Me</div>
-                  <img style={{width: '70px'}} src="/client/components/images/expand-arrow.png" />
+            <a href="#about-section"> 
+              <div  className="center-text">
+                  <div>Learn more about me</div>
+                  <i className="material-icons">keyboard_arrow_down</i>
               </div>
             </a>
             </div>
