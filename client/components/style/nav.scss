@@ -42,8 +42,10 @@ nav {
       display: none;
       width: 100vw;
       height: 100vh;
-          background: white;
-    position: absolute;
+      position: absolute;
+      height: 110vh;
+      background-color: white;
+      top: -1vh;
       align-items: center;
       justify-content:center;
       #slide-out{
@@ -51,14 +53,8 @@ nav {
         margin: 0;
         padding: 0;
       }
-      #overlay{
-        background-color: black;
-        opacity: .5;
-        height: 100%;
-        width: 70vw;
-        display: none;
-      }
-    }
+
+}
 #menu{
   width: 10vmin;
   transform: rotate(10deg);
@@ -79,7 +75,7 @@ nav {
 // }
 
 #name {
-        color: black;
+        color:  #182999;
         max-width: 100%;
         font-family: 'Kaushan Script', cursive;
         font-size: 10vmin;

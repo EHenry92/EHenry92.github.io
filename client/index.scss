@@ -1,9 +1,8 @@
 body {
-    --highlight-color: black;
-    font-family: 'Indie Flower', cursive;
-    color:var(--highlight-color);
-    background-color: #23cec5;
+    --highlight-color: #182999;
+    color: black;
     font-size: 20px;
+
     #bio {
       border-radius: 30px;
       width: 60%;
@@ -43,9 +42,7 @@ body {
       color:var(--highlight-color);
     }
     
-    .intro-box{
-      width: 70%;
-    }
+    
 
 }
 
@@ -67,6 +64,9 @@ body {
     width: 45vw;
     margin: 2.5vw;
 }
+.indent{
+  margin-left: 5vw;
+}
 
 @media (min-width: 1000px) {
   .pic{
@@ -75,6 +75,10 @@ body {
     height: auto;
   }
     font-size: 12rem;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 

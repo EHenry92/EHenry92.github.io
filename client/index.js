@@ -71,14 +71,15 @@ const scrollActions = () => {
     const rect = rects[i];
     if (rect.top < window.innerHeight - SECTION_MARGIN && rect.bottom > 0) {
       section.classList.add("active");
-          if(i !== 0) {
-      document.getElementById("name").style.display="block";
-    }
-    else {
-            document.getElementById("name").style.display="nont";
-    }
+        
+        if(i==0){
+                document.getElementById("name").style.display="none";
+        }
     } else {
       section.classList.remove("active");
+      if(i == 0) {
+          document.getElementById("name").style.display="inline-block";
+        }
     }
 
   }

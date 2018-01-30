@@ -22,7 +22,7 @@
         background-color: transparent;
         text-align: center;
         font-size: 80%;
-            border-color: black;
+        border-color: black;
         border-width: thick;
         outline: none;
         width: 100%;
@@ -32,6 +32,10 @@
         box-sizing: content-box;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
+            border-color: black;
+    border-width: thick;
+    border-style: none;
+    border-bottom-style: double;
       }
     }
     .cryptoReveal.highlight-char-input {
@@ -47,9 +51,10 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.678);
 }
-// @media (max-width: 800px) {
-//   #startUp{
-//     position: fixed;
-//     bottom: 0;
-//   }
-// }
+@media (max-width: 800px) {
+  #startUp{
+    position: fixed;
+    bottom: .5rem;
+    right: 0;
+  }
+}

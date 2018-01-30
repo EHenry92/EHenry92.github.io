@@ -67,54 +67,58 @@ const Home = () => {
     }
       return (
         <div>
-        <div className="flex-it">
+        <div>
          <div id="pic-box">
-          <div>.</div>
+         <img src="/client/components/images/splitme.png" />
+
         </div>
-          <div className=" intro-box filler">
+          <div id="intro-box">
               <div id="main-name">
-          <div>Evlis</div>
-          <div>Henry</div>
-          </div>
-            <div id="message" >
-              {
-                words.map((word, wordIdx) => {
-                  return (
-                    <div className="word" key={word + wordIdx}>
-                      {
-                    word.map((char, idx) => {
-                      let block =
-                    holder[char] ?
-                        (<span className="crypto char" key={char + wordIdx + idx}>
-                            <div className={`${char}spot cryptoReveal`}>
-                              <input name={`${char}spot`} onChange={enterChar} onMouseEnter={highlight} maxLength= {1} onMouseLeave={lowlight}/>
-                            </div>
-                            <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
-                        </span>)
-                      :
-                        (<span key={char + wordIdx + idx}>
-                          <div className={`${char}spot`}>{char}</div>
-                            <div className={'cryptoPunct'} />
-                        </span>)
-                      ;
-                      return block;
-                    })
-                  }
-                    </div>
-                  )
-                })
-              }
-              <div>
-              <button id="startUp" onClick= {startReveal}> Reveal </button>
+                <div>Evlis Henry</div>
+              </div>
+
+              <div id="message" >
+                {
+                  words.map((word, wordIdx) => {
+                    return (
+                      <div className="word" key={word + wordIdx}>
+                        {
+                      word.map((char, idx) => {
+                        let block =
+                      holder[char] ?
+                          (<span className="crypto char" key={char + wordIdx + idx}>
+                              <div className={`${char}spot cryptoReveal`}>
+                                <input name={`${char}spot`} onChange={enterChar} onMouseEnter={highlight} maxLength= {1} onMouseLeave={lowlight}/>
+                              </div>
+                              <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
+                          </span>)
+                        :
+                          (<span key={char + wordIdx + idx}>
+                            <div className={`${char}spot`}>{char}</div>
+                              <div className={'cryptoPunct'} />
+                          </span>)
+                        ;
+                        return block;
+                      })
+                    }
+                      </div>
+                    )
+                  })
+                }
+                <div>
+                <button id="startUp" onClick= {startReveal}> Reveal Message </button>
+                </div>
               </div>
             </div>
+
             <div>
             <a href="#about-section" className="center"> 
-              <div>More About Me</div>
+              <div>
+                  <div>More About Me</div>
+                  <img style={{width: '70px'}} src="/client/components/images/expand-arrow.png" />
+              </div>
             </a>
             </div>
-          </div>
-         
         </div>
         </div>
       );

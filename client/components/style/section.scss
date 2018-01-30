@@ -26,13 +26,14 @@ section h2:after {
   margin-left: -30px;
 }
 
-  section.out{
+  // section.in{
   // background-color:black;
-  color:#23cec5;
-  background-image:url('/client/components/images/black.jpg');
-  background-repeat: no-repeat;
-  background-size:cover;
-  }
-  section.in{
-
+  // color:#23cec5;
+  // }
+  section.out{
+  background-image: url("/client/components/images/black.jpg");
+  color:white;
+              background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: cover;
   }
