@@ -2588,7 +2588,7 @@ var About = function About() {
     _react2.default.createElement(
       'div',
       { id: 'me' },
-      _react2.default.createElement('img', { className: 'pic left filler', src: 'client/components/images/rock.png' }),
+      _react2.default.createElement('img', { className: 'pic left filler', src: 'client/components/images/p1.jpg' }),
       _react2.default.createElement(
         'div',
         { className: 'filler contained', id: 'bio' },
