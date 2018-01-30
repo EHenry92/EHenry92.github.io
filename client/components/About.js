@@ -6,7 +6,7 @@ const About = () => {
         <div>
       
        <div id="me">
-      <img className ="pic left filler" src="client/components/images/p1.jpg" />
+      <img className ="pic left filler" src="client/components/images/bigrock.jpg" />
 
       <div className= "filler contained" id="bio">
       <p className="center title"><b>An educator turned developer fueled by a love for problem solving and the desire for continued growth.</b></p>

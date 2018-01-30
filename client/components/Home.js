@@ -78,7 +78,7 @@ const Home = () => {
         </div>
           <div id="intro-box">
               <div id="main-name">
-                <div>Evlis Henry</div>
+                <div>Evlis Henry<span className="spotlight">  Software Engineer</span></div>
               </div>
 
               <div id="message" >

@@ -2,6 +2,11 @@
     font-size: 10vh;
     font-family: 'Abril Fatface', cursive;
     text-align: center;
+    line-height: .5;
+    .spotlight{
+        color: var(--highlight-color);
+        font-size: 5vmin;
+    }
    
 }
 
