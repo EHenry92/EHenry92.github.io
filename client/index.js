@@ -75,11 +75,14 @@ const scrollActions = () => {
         if(i==0){
                 document.getElementById("name").style.display="none";
                 document.getElementById("pic-box").classList.add("show");
+
         }
     } else {
       section.classList.remove("active");
       if(i == 0) {
           document.getElementById("name").style.display="inline-block";
+          document.getElementById("startUp").style.display = "none";
+          
         }
     }
 

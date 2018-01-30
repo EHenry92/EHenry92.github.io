@@ -120,7 +120,7 @@ const Home = () => {
             <div>
             <a href="#about-section"> 
               <div  className="center-text">
-                  <div>Learn more about me</div>
+                  <div>More about me</div>
                   <i className="material-icons">keyboard_arrow_down</i>
               </div>
             </a>

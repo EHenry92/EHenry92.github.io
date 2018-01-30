@@ -2,23 +2,13 @@ body {
     --highlight-color: #182999;
     color: black;
     font-size: 20px;
-
-    #bio {
-      border-radius: 30px;
-      width: 60%;
-      text-align: center;
-      line-height: 1;
-      p:not(.title) {
-        text-indent: 5em;
-        text-align: justify;
-      }
       .title {
         font-size: 25px;
       }
       p{
         margin: 10px 0;
       }
-    }
+    
     .pic {
       bottom: 0;
       right: 0;
@@ -36,12 +26,10 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
     }
     ul a{
       color:var(--highlight-color);
     }
-    
 }
 .material-icons:hover{
   transform: translateY(15px);
@@ -95,3 +83,4 @@ a:-webkit-any-link {
 @import 'components/style/section.scss';
 @import 'components/style/home.scss';
 @import 'components/style/skills.scss';
+@import 'components/style/about.scss';

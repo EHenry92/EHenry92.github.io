@@ -1,0 +1,30 @@
+   
+#me{
+    margin-top: 5vh;
+    .heading {
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+    #bio {
+      width: 65vw;
+      text-align: center;
+      line-height: 1;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 10vw;
+      p:not(.heading) {
+        text-indent: 5em;
+        text-align: justify;
+      }
+    }
+     #pic {
+        background-image: url("/client/components/images/sidepuzzle.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-width: 30vw;
+        max-height: 100vh;
+        background-position-y:bottom;
+     }
+    
+}
