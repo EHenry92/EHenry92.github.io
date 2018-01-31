@@ -45,6 +45,8 @@ nav {
       position: absolute;
       height: 110vh;
       background-color: white;
+        background: radial-gradient(white, black);
+
       top: -1vh;
       align-items: center;
       justify-content:center;
@@ -63,16 +65,6 @@ nav {
   margin-right: 5vw;
     margin-top: 2vw;
 }
-// @media (min-width: 1000px) {
-// 	nav {
-// 		.navWide {
-// 			display: block;
-// 		}
-// 		.navNarrow {
-// 			display: none;
-// 		}
-//   }
-// }
 
 #name {
         color:  #182999;

@@ -42,8 +42,8 @@ const Projects = () => {
         contribution: ['Crafted database models and backend routes for shopping cart', 'Designed user experience for shopping cart view and checkout page view', 'Implemented client and server side functionality for shopping cart and checkout pages','Wrote backend test']
       }
     ]
-    const prefixes = ['vm', 'is', 'dm'];
-    let indexes = [0, 0, 0];
+    const prefixes = ['vm', 'is', 'dm', 'ot'];
+    let indexes = [0, 0, 0, 0];
     prefixes.forEach((proj, idx) => {
       const images = document.getElementsByClassName(`carousel-image ${proj}`);
       setInterval(() => {
@@ -123,10 +123,14 @@ const Projects = () => {
         })
       }
       </div>
+
       </div>
       )
     }
 export default Projects;
+
+
+
 
 // {
 //   name: '',

@@ -74,9 +74,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(86);
+  module.exports = __webpack_require__(87);
 } else {
-  module.exports = __webpack_require__(85);
+  module.exports = __webpack_require__(86);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -365,11 +365,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(63)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(64)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(62)();
+  module.exports = __webpack_require__(63)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -1399,7 +1399,7 @@ Router.childContextTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -1607,7 +1607,7 @@ module.exports = ExecutionEnvironment;
  * 
  */
 
-var isTextNode = __webpack_require__(52);
+var isTextNode = __webpack_require__(53);
 
 /*eslint-disable no-bitwise */
 
@@ -2529,9 +2529,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(66);
+  module.exports = __webpack_require__(67);
 } else {
-  module.exports = __webpack_require__(65);
+  module.exports = __webpack_require__(66);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -2546,7 +2546,7 @@ if (process.env.NODE_ENV === 'production') {
 var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(87)(content, {});
+var update = __webpack_require__(88)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -2938,8 +2938,8 @@ var Projects = function Projects() {
     date: 'Oct. 17',
     contribution: ['Crafted database models and backend routes for shopping cart', 'Designed user experience for shopping cart view and checkout page view', 'Implemented client and server side functionality for shopping cart and checkout pages', 'Wrote backend test']
   }];
-  var prefixes = ['vm', 'is', 'dm'];
-  var indexes = [0, 0, 0];
+  var prefixes = ['vm', 'is', 'dm', 'ot'];
+  var indexes = [0, 0, 0, 0];
   prefixes.forEach(function (proj, idx) {
     var images = document.getElementsByClassName('carousel-image ' + proj);
     setInterval(function () {
@@ -3126,7 +3126,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _index = __webpack_require__(12);
 
-var _reactRouterDom = __webpack_require__(75);
+var _reactRouterDom = __webpack_require__(76);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3651,18 +3651,74 @@ scrollActions();
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(88)();
+exports = module.exports = __webpack_require__(47)();
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  --highlight-color: #182999;\n  color: black;\n  font-size: 20px; }\n  body .title {\n    font-size: 25px; }\n  body p {\n    margin: 10px 0; }\n  body .pic {\n    bottom: 0;\n    right: 0;\n    display: block;\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .contained {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n\n.material-icons:hover {\n  transform: translateY(15px); }\n\n.center-text {\n  text-align: center; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n.flex-it {\n  display: flex; }\n\n.half {\n  width: 45vw;\n  margin: 2.5vw; }\n\n.indent {\n  margin-left: 5vw; }\n\n@media (min-width: 1000px) {\n  .pic {\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  font-size: 12rem; }\n\na:-webkit-any-link {\n  cursor: pointer;\n  text-decoration: none; }\n\nnav {\n  z-index: 10;\n  position: fixed;\n  width: 100vw; }\n  nav .navWide {\n    bottom: 1vh;\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    top: 0;\n    font-size: 20px; }\n    nav .navNarrow i {\n      font-size: 40px;\n      float: left;\n      cursor: context-menu; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n#slide-space {\n  display: none;\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  height: 110vh;\n  background-color: white;\n  top: -1vh;\n  align-items: center;\n  justify-content: center; }\n  #slide-space #slide-out {\n    list-style: none;\n    margin: 0;\n    padding: 0; }\n\n#menu {\n  width: 10vmin;\n  transform: rotate(10deg);\n  height: 10vmin;\n  float: right;\n  margin-right: 5vw;\n  margin-top: 2vw; }\n\n#name {\n  color: #182999;\n  max-width: 100%;\n  font-family: 'Kaushan Script', cursive;\n  font-size: 10vmin;\n  display: none; }\n\n#message {\n  justify-content: center;\n  line-height: 1;\n  display: flex;\n  flex-wrap: wrap; }\n  #message .word {\n    display: flex;\n    flex-direction: row;\n    margin: 0 1.5vw; }\n  #message .crypto {\n    width: 3vw;\n    margin: .2rem;\n    text-align: center; }\n    #message .crypto .cryptoLetter {\n      transition: opacity 1s; }\n    #message .crypto .cryptoReveal input {\n      cursor: text;\n      background-color: transparent;\n      text-align: center;\n      font-size: 80%;\n      border-color: black;\n      border-width: thick;\n      outline: none;\n      width: 100%;\n      -webkit-box-shadow: none;\n      box-shadow: none;\n      -webkit-box-sizing: content-box;\n      box-sizing: content-box;\n      -webkit-transition: all 0.3s;\n      transition: all 0.3s;\n      border-color: black;\n      border-width: thick;\n      border-style: none;\n      border-bottom-style: double; }\n    #message .crypto .cryptoReveal.highlight-char-input {\n      background-color: yellow; }\n    #message .crypto .solved {\n      opacity: 0.25; }\n\n#startUp {\n  color: white;\n  background-color: rgba(0, 0, 0, 0.678); }\n\n@media (max-width: 800px) {\n  #startUp {\n    position: fixed;\n    bottom: .5rem;\n    right: 0; } }\n\n#collapsible {\n  list-style: none;\n  width: 80vw;\n  border-color: white;\n  border-style: double;\n  border-width: thick;\n  padding: 0; }\n  #collapsible .title {\n    font-size: 16px; }\n  #collapsible .company {\n    font-size: 16px; }\n  #collapsible .data {\n    font-size: 14px; }\n  #collapsible .row {\n    display: flex;\n    flex-direction: row; }\n    #collapsible .row .right-col {\n      width: 60%;\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    #collapsible .row .left-col {\n      width: 40%;\n      text-align: right;\n      padding-right: 1rem;\n      line-height: 1; }\n    #collapsible .row i {\n      font-size: x-small; }\n  #collapsible .heading {\n    font-size: x-large; }\n  #collapsible .collapsible-header {\n    background-color: white;\n    color: black;\n    padding: .5rem;\n    pointer-events: none; }\n  #collapsible .collapsible-body {\n    position: relative;\n    transition: all .3s ease-out;\n    display: none; }\n  #collapsible .active {\n    display: block;\n    transition: all .3s ease-in;\n    background-color: black;\n    color: white; }\n\n#top, .collapsible-header {\n  border-style: solid;\n  border-color: black;\n  border-width: thin;\n  background-color: white; }\n\n.social {\n  display: inline-block;\n  text-align: center;\n  border-radius: 3px; }\n  .social .tinyImg {\n    width: 30px;\n    margin: 2px; }\n\n.card {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin: .5rem 0 1rem 2rem;\n  background-color: #fff;\n  width: 20rem;\n  position: relative;\n  border-radius: 2px;\n  line-height: 20px;\n  -webkit-transition: -webkit-box-shadow .25s;\n  transition: -webkit-box-shadow .25s;\n  transition: box-shadow .25s;\n  transition: box-shadow .25s, -webkit-box-shadow .25s; }\n  .card .card-title {\n    font-size: x-large; }\n  .card .card-content {\n    padding: 24px; }\n  .card .carousel {\n    display: flex;\n    justify-content: center;\n    height: 10rem; }\n    .card .carousel .carousel-image {\n      display: block;\n      opacity: 1;\n      transition: opacity 1.5s;\n      max-width: 100%; }\n    .card .carousel .carousel-image.hidden {\n      display: none; }\n  .card .card-face {\n    padding: 1rem; }\n    .card .card-face p a {\n      margin: 5px;\n      text-decoration: none;\n      color: blue; }\n    .card .card-face .material-icons {\n      background-color: white;\n      border-style: none; }\n  .card .reveal {\n    position: absolute;\n    background-color: black;\n    color: white;\n    width: 100%;\n    overflow-y: auto;\n    left: 0;\n    top: 100%;\n    height: 100%;\n    z-index: 1;\n    display: none; }\n    .card .reveal button {\n      color: white;\n      background-color: black; }\n    .card .reveal .reveal-data {\n      padding: 20px;\n      line-height: 1.25; }\n  .card .show-reveal {\n    display: block;\n    transform: translateY(-100%); }\n\n.tic {\n  width: 30vh;\n  position: fixed; }\n\n.row {\n  display: flex; }\n\n.piece {\n  width: 10vh;\n  height: 10vh;\n  border-color: black;\n  border-width: thick;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  overflow: hidden;\n  align-items: center;\n  font-size: 90%; }\n  .piece img {\n    height: 10vh; }\n\n.after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: none;\n  color: #FFF;\n  pointer-events: none;\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.piece:hover .after {\n  display: block;\n  color: black;\n  background-image: url(\"/client/components/images/o.png\"); }\n\n.top, .middle {\n  border-bottom-style: solid; }\n\n.left-col {\n  border-right-style: solid; }\n\n.right-col {\n  border-left-style: solid; }\n\nheader {\n  display: flex;\n  margin: 0 4em;\n  padding: 10px;\n  width: calc(100vw - 8em);\n  color: #fff;\n  background-color: rgba(37, 37, 37, 0.8);\n  border-radius: 0 0 1em 1em;\n  z-index: 2;\n  opacity: 0;\n  transform: translateY(-4em);\n  transition: opacity 0.25s, transform 0.5s; }\n\nheader.active {\n  transform: translateY(0);\n  opacity: 1; }\n\nheader .logo {\n  flex-grow: 1;\n  padding-top: 0.25em; }\n\nheader .logo img {\n  width: 8em; }\n\nheader nav {\n  display: flex; }\n\nsection {\n  box-sizing: border-box;\n  position: relative;\n  width: 98vw;\n  overflow: hidden; }\n\nsection:not(.sub-section) {\n  min-height: 100vh; }\n\nsection:not(#brief-intro) {\n  padding-top: 12vh; }\n\nsection h2 {\n  text-align: center;\n  position: relative;\n  margin: 60px 0; }\n\nsection h2:after {\n  content: \"\";\n  position: absolute;\n  bottom: -20px;\n  width: 60px;\n  height: 1px;\n  background-color: #f39c12;\n  left: 50%;\n  margin-left: -30px; }\n\n#main-name {\n  font-size: 10vh;\n  font-family: 'Abril Fatface', cursive;\n  text-align: center;\n  line-height: .5;\n  margin-bottom: 3vh; }\n  #main-name .spotlight {\n    color: var(--highlight-color);\n    font-size: 5vmin; }\n\n#pic-box {\n  height: 40vh;\n  width: 81.5vw;\n  display: flex;\n  flex-direction: row;\n  margin-left: 7vw;\n  padding: 0;\n  overflow: hidden; }\n  #pic-box img {\n    width: 20vw;\n    margin: 0 .5vw;\n    transition: transform 3s; }\n  #pic-box #p1 {\n    transform: translateX(-30vw); }\n  #pic-box #p2 {\n    transform: translateY(40vh); }\n  #pic-box #p4 {\n    transform: translateX(30vw); }\n  #pic-box #p3 {\n    transform: translateY(-40vh); }\n\n#pic-box.show #p1 {\n  transform: translateX(0); }\n\n#pic-box.show #p2 {\n  transform: translateY(0); }\n\n#pic-box.show #p4 {\n  transform: translateX(0); }\n\n#pic-box.show #p3 {\n  transform: translateY(0); }\n\nsvg {\n  fill: none;\n  stroke: #000;\n  stroke-width: 2; }\n\n.min-image {\n  height: 5vh; }\n\n#me {\n  margin-top: 5vh; }\n  #me .heading {\n    background-size: contain;\n    background-repeat: no-repeat; }\n  #me #bio {\n    width: 65vw;\n    text-align: center;\n    line-height: 1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    margin-right: 10vw; }\n    #me #bio p:not(.heading) {\n      text-indent: 5em;\n      text-align: justify; }\n  #me #pic {\n    background-image: url(\"/client/components/images/sidepuzzle.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    min-width: 30vw;\n    max-height: 100vh;\n    background-position-y: bottom; }\n", ""]);
+exports.push([module.i, "body {\n  --highlight-color: #182999;\n  color: black;\n  font-size: 20px; }\n  body .title {\n    font-size: 25px; }\n  body p {\n    margin: 10px 0; }\n  body .pic {\n    bottom: 0;\n    right: 0;\n    display: block;\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  body #page-title {\n    font-size: x-large;\n    list-style: none;\n    margin-right: 20px; }\n  body .contained {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center; }\n  body ul a {\n    color: var(--highlight-color); }\n\n.material-icons:hover {\n  transform: translateY(15px); }\n\n.center-text {\n  text-align: center; }\n\n.right {\n  float: right; }\n\n.center {\n  display: flex;\n  justify-content: center; }\n\n.left {\n  float: left; }\n\n.flex-it {\n  display: flex; }\n\n.half {\n  width: 45vw;\n  margin: 2.5vw; }\n\n.indent {\n  margin-left: 5vw; }\n\n@media (min-width: 1000px) {\n  .pic {\n    width: 30vw;\n    max-height: 100vh;\n    height: auto; }\n  font-size: 12rem; }\n\na:-webkit-any-link {\n  cursor: pointer;\n  text-decoration: none; }\n\nnav {\n  z-index: 10;\n  position: fixed;\n  width: 100vw; }\n  nav .navWide {\n    bottom: 1vh;\n    font-size: 25px;\n    display: none;\n    margin-left: 25vw;\n    margin-bottom: 0; }\n    nav .navWide #footerRow div {\n      margin-right: 2vw;\n      text-decoration: none;\n      color: black; }\n  nav .navNarrow {\n    top: 0;\n    font-size: 20px; }\n    nav .navNarrow i {\n      font-size: 40px;\n      float: left;\n      cursor: context-menu; }\n    nav .navNarrow #narrowLinks {\n      display: none; }\n      nav .navNarrow #narrowLinks li {\n        text-decoration: none;\n        display: block;\n        float: left;\n        clear: left;\n        padding: 0.5em 0; }\n\n#slide-space {\n  display: none;\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  height: 110vh;\n  background-color: white;\n  background: radial-gradient(white, black);\n  top: -1vh;\n  align-items: center;\n  justify-content: center; }\n  #slide-space #slide-out {\n    list-style: none;\n    margin: 0;\n    padding: 0; }\n\n#menu {\n  width: 10vmin;\n  transform: rotate(10deg);\n  height: 10vmin;\n  float: right;\n  margin-right: 5vw;\n  margin-top: 2vw; }\n\n#name {\n  color: #182999;\n  max-width: 100%;\n  font-family: 'Kaushan Script', cursive;\n  font-size: 10vmin;\n  display: none; }\n\n#message {\n  justify-content: center;\n  line-height: 1;\n  display: flex;\n  flex-wrap: wrap; }\n  #message .word {\n    display: flex;\n    flex-direction: row;\n    margin: 0 1.5vw; }\n  #message .crypto {\n    width: 3vw;\n    margin: .2rem;\n    text-align: center; }\n    #message .crypto .cryptoLetter {\n      transition: opacity 1s; }\n    #message .crypto .cryptoReveal input {\n      cursor: text;\n      background-color: transparent;\n      text-align: center;\n      font-size: 80%;\n      border-color: black;\n      border-width: thick;\n      outline: none;\n      width: 100%;\n      -webkit-box-shadow: none;\n      box-shadow: none;\n      -webkit-box-sizing: content-box;\n      box-sizing: content-box;\n      -webkit-transition: all 0.3s;\n      transition: all 0.3s;\n      border-color: black;\n      border-width: thick;\n      border-style: none;\n      border-bottom-style: double; }\n    #message .crypto .cryptoReveal.highlight-char-input {\n      background-color: yellow; }\n    #message .crypto .solved {\n      opacity: 0.25; }\n\n#startUp {\n  color: white;\n  background-color: rgba(0, 0, 0, 0.678); }\n\n@media (max-width: 800px) {\n  #startUp {\n    position: fixed;\n    bottom: .5rem;\n    right: 0; } }\n\n#collapsible {\n  list-style: none;\n  width: 80vw;\n  border-color: white;\n  border-style: double;\n  border-width: thick;\n  padding: 0; }\n  #collapsible .title {\n    font-size: 16px; }\n  #collapsible .company {\n    font-size: 16px; }\n  #collapsible .data {\n    font-size: 14px; }\n  #collapsible .row {\n    display: flex;\n    flex-direction: row; }\n    #collapsible .row .right-col {\n      width: 60%;\n      border-bottom-style: solid;\n      border-bottom-color: white;\n      border-bottom-width: thin; }\n    #collapsible .row .left-col {\n      width: 40%;\n      text-align: right;\n      padding-right: 1rem;\n      line-height: 1; }\n    #collapsible .row i {\n      font-size: x-small; }\n  #collapsible .heading {\n    font-size: x-large; }\n  #collapsible .collapsible-header {\n    background-color: white;\n    color: black;\n    padding: .5rem;\n    pointer-events: none; }\n  #collapsible .collapsible-body {\n    position: relative;\n    transition: all .3s ease-out;\n    display: none; }\n  #collapsible .active {\n    display: block;\n    transition: all .3s ease-in;\n    background-color: black;\n    color: white; }\n\n#top, .collapsible-header {\n  border-style: solid;\n  border-color: black;\n  border-width: thin;\n  background-color: white; }\n\n.social {\n  display: inline-block;\n  text-align: center;\n  border-radius: 3px; }\n  .social .tinyImg {\n    width: 30px;\n    margin: 2px; }\n\n.card {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin: .5rem 0 1rem 2rem;\n  background-color: #fff;\n  width: 20rem;\n  position: relative;\n  border-radius: 2px;\n  line-height: 20px;\n  -webkit-transition: -webkit-box-shadow .25s;\n  transition: -webkit-box-shadow .25s;\n  transition: box-shadow .25s;\n  transition: box-shadow .25s, -webkit-box-shadow .25s; }\n  .card .card-title {\n    font-size: x-large; }\n  .card .card-content {\n    padding: 24px; }\n  .card .card-face {\n    padding: 1rem; }\n    .card .card-face p a {\n      margin: 5px;\n      text-decoration: none;\n      color: blue; }\n    .card .card-face .material-icons {\n      background-color: white;\n      border-style: none; }\n  .card .reveal {\n    position: absolute;\n    background-color: black;\n    color: white;\n    width: 100%;\n    overflow-y: auto;\n    left: 0;\n    top: 100%;\n    height: 100%;\n    z-index: 1;\n    display: none; }\n    .card .reveal button {\n      color: white;\n      background-color: black; }\n    .card .reveal .reveal-data {\n      padding: 20px;\n      line-height: 1.25; }\n  .card .show-reveal {\n    display: block;\n    transform: translateY(-100%); }\n\n.carousel {\n  display: flex;\n  justify-content: center;\n  height: 10rem; }\n  .carousel .carousel-image {\n    display: block;\n    opacity: 1;\n    transition: opacity 1.5s;\n    max-width: 100%; }\n  .carousel .carousel-image.hidden {\n    display: none; }\n\n.tic {\n  width: 30vh;\n  position: fixed;\n  transform: skewX(20deg); }\n\n.row {\n  display: flex; }\n\n.piece {\n  width: 10vh;\n  height: 10vh;\n  border-color: black;\n  border-width: thick;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  position: relative;\n  display: flex;\n  justify-content: center;\n  overflow: hidden;\n  align-items: center;\n  font-size: 90%; }\n  .piece img {\n    height: 10vh; }\n\n.after {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: none;\n  color: #FFF;\n  pointer-events: none;\n  background-size: contain;\n  background-repeat: no-repeat; }\n\n.piece:hover .after {\n  display: block;\n  color: black;\n  background-image: url(\"/client/components/images/o.png\"); }\n\n.top, .middle {\n  border-bottom-style: solid; }\n\n.left-col {\n  border-right-style: solid; }\n\n.right-col {\n  border-left-style: solid; }\n\nheader {\n  display: flex;\n  margin: 0 4em;\n  padding: 10px;\n  width: calc(100vw - 8em);\n  color: #fff;\n  background-color: rgba(37, 37, 37, 0.8);\n  border-radius: 0 0 1em 1em;\n  z-index: 2;\n  opacity: 0;\n  transform: translateY(-4em);\n  transition: opacity 0.25s, transform 0.5s; }\n\nheader.active {\n  transform: translateY(0);\n  opacity: 1; }\n\nheader .logo {\n  flex-grow: 1;\n  padding-top: 0.25em; }\n\nheader .logo img {\n  width: 8em; }\n\nheader nav {\n  display: flex; }\n\nsection {\n  box-sizing: border-box;\n  position: relative;\n  width: 98vw;\n  overflow: hidden; }\n\nsection:not(.sub-section) {\n  min-height: 100vh; }\n\nsection:not(#brief-intro) {\n  padding-top: 12vh; }\n\nsection h2 {\n  text-align: center;\n  position: relative;\n  margin: 60px 0; }\n\nsection h2:after {\n  content: \"\";\n  position: absolute;\n  bottom: -20px;\n  width: 60px;\n  height: 1px;\n  background-color: #f39c12;\n  left: 50%;\n  margin-left: -30px; }\n\n#main-name {\n  font-size: 10vh;\n  font-family: 'Abril Fatface', cursive;\n  text-align: center;\n  line-height: .5;\n  margin-bottom: 3vh; }\n  #main-name .spotlight {\n    color: var(--highlight-color);\n    font-size: 5vmin; }\n\n#pic-box {\n  height: 40vh;\n  width: 81.5vw;\n  display: flex;\n  flex-direction: row;\n  margin-left: 7vw;\n  padding: 0;\n  overflow: hidden; }\n  #pic-box img {\n    width: 20vw;\n    margin: 0 .5vw;\n    transition: transform 3s; }\n  #pic-box #p1 {\n    transform: translateX(-30vw); }\n  #pic-box #p2 {\n    transform: translateY(40vh); }\n  #pic-box #p4 {\n    transform: translateX(30vw); }\n  #pic-box #p3 {\n    transform: translateY(-40vh); }\n\n#pic-box.show #p1 {\n  transform: translateX(0); }\n\n#pic-box.show #p2 {\n  transform: translateY(0); }\n\n#pic-box.show #p4 {\n  transform: translateX(0); }\n\n#pic-box.show #p3 {\n  transform: translateY(0); }\n\nsvg {\n  fill: none;\n  stroke: #000;\n  stroke-width: 2; }\n\n.min-image {\n  height: 5vh; }\n\n#me {\n  margin-top: 5vh; }\n  #me .heading {\n    background-size: contain;\n    background-repeat: no-repeat; }\n  #me #bio {\n    width: 65vw;\n    text-align: center;\n    line-height: 1;\n    background-size: contain;\n    background-repeat: no-repeat;\n    margin-right: 10vw; }\n    #me #bio p:not(.heading) {\n      text-indent: 5em;\n      text-align: justify; }\n  #me #pic {\n    background-image: url(\"/client/components/images/sidepuzzle.png\");\n    background-size: contain;\n    background-repeat: no-repeat;\n    min-width: 30vw;\n    max-height: 100vh;\n    background-position-y: bottom; }\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 47 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function() {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		var result = [];
+		for(var i = 0; i < this.length; i++) {
+			var item = this[i];
+			if(item[2]) {
+				result.push("@media " + item[2] + "{" + item[1] + "}");
+			} else {
+				result.push(item[1]);
+			}
+		}
+		return result.join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+
+/***/ }),
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3697,7 +3753,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3712,7 +3768,7 @@ module.exports = camelize;
 
 
 
-var camelize = __webpack_require__(47);
+var camelize = __webpack_require__(48);
 
 var msPattern = /^-ms-/;
 
@@ -3740,7 +3796,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3776,7 +3832,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3791,7 +3847,7 @@ module.exports = hyphenate;
 
 
 
-var hyphenate = __webpack_require__(49);
+var hyphenate = __webpack_require__(50);
 
 var msPattern = /^ms-/;
 
@@ -3818,7 +3874,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3846,7 +3902,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3861,7 +3917,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(51);
+var isNode = __webpack_require__(52);
 
 /**
  * @param {*} object The object to check.
@@ -3874,7 +3930,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4187,7 +4243,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4517,7 +4573,7 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4693,7 +4749,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4997,7 +5053,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5318,7 +5374,7 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5486,15 +5542,15 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(57);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(58);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(59);
 /* unused harmony reexport createMemoryHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(11);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
@@ -5513,7 +5569,7 @@ var createMemoryHistory = function createMemoryHistory() {
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5585,7 +5641,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -5594,7 +5650,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5659,7 +5715,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5675,7 +5731,7 @@ module.exports = function() {
 var emptyFunction = __webpack_require__(5);
 var invariant = __webpack_require__(6);
 var warning = __webpack_require__(10);
-var assign = __webpack_require__(64);
+var assign = __webpack_require__(65);
 
 var ReactPropTypesSecret = __webpack_require__(17);
 var checkPropTypes = __webpack_require__(16);
@@ -6209,7 +6265,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6306,7 +6362,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6340,8 +6396,8 @@ var containsNode = __webpack_require__(23);
 var focusNode = __webpack_require__(24);
 var emptyObject = __webpack_require__(9);
 var checkPropTypes = __webpack_require__(16);
-var hyphenateStyleName = __webpack_require__(50);
-var camelizeStyleName = __webpack_require__(48);
+var hyphenateStyleName = __webpack_require__(51);
+var camelizeStyleName = __webpack_require__(49);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -21708,7 +21764,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21944,7 +22000,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21954,7 +22010,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22011,7 +22067,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22021,7 +22077,7 @@ BrowserRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22077,18 +22133,18 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(79);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22169,80 +22225,80 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(80);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(81);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(82);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(83);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(68);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(69);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(30);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(70);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(71);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(72);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(73);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(31);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(18);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(74);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(75);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(77);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(78);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
 
 
@@ -22272,7 +22328,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22283,18 +22339,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(84);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22304,7 +22360,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22361,7 +22417,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22452,7 +22508,7 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22464,7 +22520,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(60);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22560,7 +22616,7 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22743,7 +22799,7 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22837,7 +22893,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22845,7 +22901,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(32);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -22882,10 +22938,10 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(61)
+var isarray = __webpack_require__(62)
 
 /**
  * Expose `pathToRegexp`.
@@ -23314,7 +23370,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24679,7 +24735,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24707,7 +24763,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports) {
 
 /*
@@ -24956,62 +25012,6 @@ function updateLink(linkElement, obj) {
 	if(oldSrc)
 		URL.revokeObjectURL(oldSrc);
 }
-
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function() {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		var result = [];
-		for(var i = 0; i < this.length; i++) {
-			var item = this[i];
-			if(item[2]) {
-				result.push("@media " + item[2] + "{" + item[1] + "}");
-			} else {
-				result.push(item[1]);
-			}
-		}
-		return result.join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
 
 
 /***/ })

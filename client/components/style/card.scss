@@ -16,20 +16,7 @@
   .card-content {
     padding: 24px;
   }
-  .carousel {
-    display: flex;
-    justify-content: center;
-    height: 10rem;
-    .carousel-image {
-      display:block;
-      opacity: 1;
-      transition: opacity 1.5s;
-      max-width: 100%;
-    }
-    .carousel-image.hidden {
-      display:none;
-    }
-  }
+
   .card-face {
     padding: 1rem;
     p a {
@@ -68,3 +55,17 @@
   }
 }
 
+  .carousel {
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    .carousel-image {
+      display:block;
+      opacity: 1;
+      transition: opacity 1.5s;
+      max-width: 100%;
+    }
+    .carousel-image.hidden {
+      display:none;
+    }
+  }
