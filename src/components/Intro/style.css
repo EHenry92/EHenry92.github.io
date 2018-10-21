@@ -1,0 +1,64 @@
+@import './messageStyle.css';
+
+#main-name {
+  font-size: 10vh;
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  line-height: .5;
+  margin-bottom: 3vh;
+}
+
+.spotlight{
+  color: var(--highlight-color);
+  font-size: 5vmin;
+}
+
+#pic-box{
+      height: 40vh;
+      width: 81.5%;
+      display: flex;
+      flex-direction: row;
+      margin-left: 7%;
+      padding: 0;
+      overflow: hidden;
+}
+
+img {
+  width: 20%;
+  margin: 0 auto;
+  transition: transform 3s;
+}
+#p1{
+  transform: translateX(-30vw);
+}
+#p2{
+  transform: translateY(40vh);
+}
+#p4{
+  transform: translateX(30vw);
+}
+#p3{
+  transform: translateY(-40vh);
+}
+
+
+  #pic-box.show >  #p1{
+      transform: translateX(0);
+  }
+  #pic-box.show >   #p2{
+      transform: translateY(0);
+  }
+  #pic-box.show >   #p4{
+      transform: translateX(0);
+  }
+  #pic-box.show >   #p3{
+      transform: translateY(0);
+  }
+
+
+
+svg {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+}

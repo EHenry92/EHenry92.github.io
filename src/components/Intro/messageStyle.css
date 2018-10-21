@@ -1,0 +1,67 @@
+@import '../../index.css';
+
+#message {
+  justify-content: center;
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.word {
+  display: flex;
+  flex-direction:row;
+  margin: 0 1.5vw;
+}
+.crypto{
+  width: 3vw;
+  margin: 0.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cryptoLetter {
+  transition: opacity 1s;
+}
+
+  .cryptoReveal >  input {
+    cursor: text;
+    background-color: transparent;
+    text-align: center;
+    font-size: 80%;
+    outline: none;
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-bottom: thin solid black;
+    border-bottom-width: thin;
+    border-width: 0 0 thin 0;
+
+}
+.cryptoReveal.highlight-char-input {
+  background-color: yellow;
+}
+.solved {
+  opacity: 0.1;
+}
+
+#startUp, #startUp-mobile {
+color: white;
+background-color: var(--teal-color);
+}
+
+#startUp-mobile{
+display: none;
+}
+
+@media (max-width: 800px) {
+#startUp{
+  display: none;
+}
+
+#startUp-mobile{
+  display: block;
+}
+}
