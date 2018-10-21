@@ -1,0 +1,89 @@
+@import 'tic.css';
+
+nav {
+  z-index: 10;
+  position: fixed;
+  width:100%;
+  pointer-events: none;
+}
+
+nav > .navWide {
+  bottom:1vh;
+  font-size: 25px;
+  display: none;
+  margin-left: 25%;
+  margin-bottom: 0;
+}
+
+
+#footerRow >  div {
+    margin-right: 2%;
+    text-decoration: none;
+    color: black;
+}
+nav > .navNarrow {
+  top:0;
+  font-size: 20px;
+}
+
+.navNarros > i {
+  font-size: 40px;
+  float: left;
+  cursor: context-menu;
+}
+#narrowLinks {
+  display: none;
+}
+
+#narrowLinks > li {
+  text-decoration: none;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 0.5em 0;
+}
+
+#slide-space {
+      pointer-events: all;
+      display: none;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      height: 110vh;
+      background-color: white;
+        background: radial-gradient(white, black);
+
+      top: -1vh;
+      align-items: center;
+      justify-content:center;
+
+}
+
+#slide-out{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu{
+  pointer-events: all;
+  width: 10vmin;
+  transform: rotate(10deg);
+  height: 10vmin;
+  float: right;
+  margin-right: 5%;
+    margin-top: 2%;
+    transition: transform .5s;
+}
+#menu:hover{
+  transform: rotate(0deg);
+}
+
+#name {
+        color:  #182999;
+        max-width: 100%;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 10vmin;
+        display: none;
+        pointer-events: all;
+      }
