@@ -1,0 +1,10 @@
+.social {
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.tinyImg {
+  width: 30px;
+  margin: 2px;
+}
