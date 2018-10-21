@@ -30,7 +30,7 @@
   color: blue;
 }
 .material-icons{
-  background-color: white;
+  background-color: transparent;
   border-style: none;
 }
 
@@ -74,6 +74,17 @@ button {
   transition: opacity 1.5s;
   width: 100%;
 }
+
+.mobile-image{
+  object-fit: contain;
+  -webkit-transition: size 2s; /* Safari */
+  transition: all 5s ease-in-out;
+  width: 30% !important;
+  }
+  .mobile-image:hover {
+  transform: scale(1.5)
+  }
+
 .carousel-image.hidden {
   display:none;
 }

@@ -14,11 +14,15 @@ const aboutMe = {
 const About = () => {
       return (
        <div id="me">
-          <div className="flex-it">
+          <div className="img-container">
+          <img className= "about-pic" src="src/images/bigRock.jpg" />
+
+          </div>
+
+            <div id="bio-container">
             <div id="bio">
-              <img className= "about-pic" src="src/images/sidepuzzled.png" />
-              <div>
-              <p className="center"><b>
+
+              <p className="center-text"><b>
                 {aboutMe.mainText}
                 </b></p>
               {
@@ -28,10 +32,9 @@ const About = () => {
               }
 
                 <Contact />
-              </div>
-              <img className= "about-pic"  src="src/images/leftpuzzled.png" />
             </div>
-          </div>
+            </div>
+
        </div>
       );
   };

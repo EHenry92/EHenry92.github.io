@@ -112,10 +112,7 @@ const Resume = () => {
             Brooklyn, NY
             <br />
             <span className="social">
-            <Contact />
-                  <a href="https://s3.amazonaws.com/henryeprofile/Evlis_Henry_Resume.pdf ">
-                  <img className="tinyImg" src="src/images/resume_icon.png" />
-                  </a>
+            <Contact includeResume={true}/>
             </span>
           </b>
         </div>)

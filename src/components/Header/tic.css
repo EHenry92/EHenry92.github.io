@@ -1,7 +1,7 @@
 .tic{
 	width: 30vh;
 	position:fixed;
-	transform: skewX(20deg);
+	transform: skewX(5deg);
 }
 .row {
 	display:flex;
@@ -37,10 +37,10 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
-.piece:hover .after{
+.piece:hover > .after{
 	display: block;
 	color: black;
-	background-image: url("/client/components/images/o.png");
+	background-image: url("/src/images/o.png");
 
 }
 .top, .middle{

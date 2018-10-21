@@ -40,7 +40,7 @@ const Main = () => {
                 <div className="piece center">
                   <img src="src/images/x.png" />
                 </div>
-                <a href="#project" className="piece right-col">
+                <a href="#project-section" className="piece right-col">
                   <div>Projects</div>
                   <div className="after" />
                 </a>
