@@ -1,0 +1,26 @@
+#me{
+  margin-top: 3vh;
+}
+
+
+
+#bio {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#bio > p:not(b){
+  text-indent: 2em;
+  text-align: justify;
+  font-size: 2vmax;
+  line-height: 1;
+
+}
+.about-pic {
+  max-height: 80vh;
+  width: auto;
+  max-width: 30%;
+}

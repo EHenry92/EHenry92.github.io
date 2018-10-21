@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Main from './components/Main';
 import Header from './components/Header';
 import Intro from './components/Intro';
+import Bio from './components/Bio';
 
 const introSection = document.getElementById("brief-intro");
 const headerSection = document.getElementById("header-section");
@@ -21,7 +22,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <Main />,
+  <Bio />,
   aboutSection
 );
 
