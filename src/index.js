@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 import Bio from './components/Bio';
 import Project from './components/Projects';
+import Resume from './components/Resume';
 
 const introSection = document.getElementById("brief-intro");
 const headerSection = document.getElementById("header-section");
@@ -33,7 +34,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <Main />,
+  <Resume />,
   resumeSection
 );
 
