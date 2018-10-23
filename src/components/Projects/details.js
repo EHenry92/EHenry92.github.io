@@ -9,7 +9,7 @@ export const creations = [[
     ],
     smallDesc: 'A mobile app to organize and control time blocked schedules',
     largeDesc: "A React-Native app that helps users organize and stay on top of a time blocked schedule. Notifications inform the user when it is time to switch tasks, also allowing a user to extend a task's time. A user is able to store, edit and reorder multiple schedules.",
-    tech: 'React Native, React, Firebase, Javascript',
+    tech: 'React Native, Firebase, Javascript',
     initials: 'ts',
     date: 'Feb. 18 - Present',
     contribution: ['Sole developer'],
@@ -25,7 +25,7 @@ export const creations = [[
     ],
     smallDesc: 'A virtual brainstorming tool for teams.',
     largeDesc: 'A real-time collaboration tool for teams to share, discuss and connect ideas. Ideas can be organized using color coding, branching, positioning and columns. Team members can add, delete and vote on ideas.',
-    tech: 'React, Redux, AWS, D3.js, React-Redux, Sequelize.js',
+    tech: 'React, Redux, WebSockets, AWS, Sequelize.js',
     initials: 'is',
     date: 'Nov. 17 - Dec. 17',
     contribution: ['Designed database models and backend routes', 'Designed form to create new collaboration room', 'Implemented real-time idea creation and sharing', 'Implementing voting functionality and result display', 'Implemented real-time attendance functionality', 'Wrote frontend and backend tests']
@@ -37,7 +37,7 @@ export const creations = [[
     images: ['src/images/VocabuMemory.png', 'src/images/vocabuMemoryGame.png' ],
     smallDesc: 'A virtual memory matching card game.',
     largeDesc: 'A responsive web application to strengthen vocabulary skills and exercise your memory. VocabuMemory is a memory card game in which successful matches are found by pairing a word with its definition. Games can be played according to the difficulty of the words or content categories.',
-    tech: 'React, Redux, React-Redux, Sequelize, CSS, Express.Js',
+    tech: 'React, Redux, PostgreSQL, CSS, Express.Js',
     initials: 'vm',
     date: 'Nov. 17',
     contribution: ['Sole developer', 'Independently engineered frontend and backend components']
@@ -57,7 +57,7 @@ export const creations = [[
     images: ['src/images/dunderMifflinHome.png', 'src/images/dunderMifflincart.png'],
     smallDesc: 'An ecommerce website for a paper company.',
     largeDesc: 'An ecommerce single page, responsive web application  for the a paper company.',
-    tech: 'React, Redux, React-Redux, Materialize, Material-UI, Sequelize',
+    tech: 'React, Redux, Materialize, Material-UI, Sequelize',
     initials: 'dm',
     date: 'Oct. 17',
     contribution: ['Crafted database models and backend routes for shopping cart', 'Designed user experience for shopping cart view and checkout page view', 'Implemented client and server side functionality for shopping cart and checkout pages', 'Wrote backend test']
