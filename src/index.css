@@ -88,24 +88,9 @@ a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
 }
-
-/* // #app{
-//   max-width: 50rem;
-//   margin: 0 auto;
-// } */
-
-/* @import 'components/style/nav.scss';
-@import 'components/style/crypto.scss';
-@import 'components/style/collapsible.scss';
-@import 'components/style/card.scss';
-@import 'components/style/tic.scss';
-@import 'components/style/header.scss';
-@import 'components/style/section.scss';
-@import 'components/Home/styles.scss';
-@import 'components/style/skills.scss';
-@import 'components/style/about.scss';
-@import 'components/style/slideIn.scss'; */
-
+.material-icons {
+  cursor: pointer;
+}
 
 section {
   box-sizing: border-box;
@@ -137,16 +122,4 @@ background-color: #f39c12;
 left: 50%;
 margin-left: -30px;
 }
-
-/* // section.in{
-// background-color:black;
-// color:#23cec5;
-// }
-// section.out{
-// background-image: url("/client/components/images/black.jpg");
-// color:white;
-//             background-repeat: no-repeat;
-//   background-position-y: bottom;
-//   background-size: cover;
-// } */
 

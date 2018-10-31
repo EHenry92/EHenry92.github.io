@@ -65,9 +65,9 @@ export const creations = [[
 ], [
   {
     name: 'Text Animation',
-    smallDesc: 'A text animation using Adobe Flash.',
+    smallDesc: '',
     video: 'https://www.youtube.com/embed/H2PtXYG5kdg',
-    tech: 'Adobe Flash CS3',
+    tech: 'Adobe Flash',
     initials: 'ta',
     date: 'Oct. 2010'
   },
@@ -75,8 +75,8 @@ export const creations = [[
     name: 'Perspective',
     images: ['src/images/project/image1.jpg', 'src/images/project/image2.jpg', 'src/images/project/image3.jpg', 'src/images/project/image3_5.jpg', 'src/images/project/image4.jpg'],
     smallDesc: '',
-    largeDesc: 'Using Photoshop I added texture, depth and color to hand drawn images.',
-    tech: 'Adobe Photoshop CS3',
+    largeDesc: '',
+    tech: 'Adobe Photoshop',
     initials: 'ks',
     date: 'May 2010',
   },
@@ -85,16 +85,16 @@ export const creations = [[
     video: 'https://www.youtube.com/embed/9ueSUaybqhk',
     smallDesc: 'An image animation using Adobe Flash.',
     // largeDesc: "Using Adobe Flash's images and shapes, I created  an animated video",
-    tech: 'Adobe Flash CS3, Adobe Photoshop CS3',
+    tech: 'Adobe Flash, Adobe Photoshop',
     initials: 'sa',
     date: 'Oct. 2009'
   },
   {
     name: 'Vectored Picture',
     images: ['src/images/vecp.png'],
-    smallDesc: 'A photo made with vectored shapes.',
-    largeDesc: 'Using Adobe Illistrator, I used vectored shapes, blending and coloring to recreate a photo of myself.',
-    tech: 'Adobe Illistrator CS3',
+    smallDesc: '',
+    largeDesc: '',
+    tech: 'Adobe Illistrator',
     initials: 'vp',
     date: 'March. 2008'
   }

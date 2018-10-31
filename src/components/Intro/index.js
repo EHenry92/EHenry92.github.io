@@ -1,42 +1,21 @@
 import React, {Component} from 'react';
 import './style.css';
+import shuffleAlpha from './randomizeAlpha';
+import WithFetch from '../HOC/withFetch';
 
-const introMessage = "I'M EVLIS HENRY, A DEVELOPER, ENTHUSIASTIC PUZZLE SOLVER AND NATURALLY CURIOUS INDIVIDUAL.";
+const file_location = './src/components/Intro/message.txt';
+const alphaPairs = shuffleAlpha();
+const parseFunction = message => message.map(word => word.split(''))
 
 class Home extends Component {
-  state={
-    words: introMessage.split(' ').map(word => word.split('')),
-    holder: {}
-  }
-  componentDidMount() {
-    this.shuffleAlpha();
-  }
-
-  shuffleAlpha = () => {
-    const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    let randAlpha = alphabet.slice();
-    let holder = {};
-    for (var i = randAlpha.length - 1; i > 0; i--) {
-      var rand = Math.floor(Math.random() * (i + 1));
-      var temp = randAlpha[i];
-      randAlpha[i] = randAlpha[rand];
-      randAlpha[rand] = temp;
-    }
-    for (let k = 0; k < alphabet.length; k++) {
-      holder[alphabet[k]] = randAlpha[k];
-    }
-    this.setState({randAlpha, holder});
-  }
-
-  startReveal = evt => {
-    evt.preventDefault();
-    const {randAlpha} = this.state;
+  startReveal = () => {
     document.getElementById('startUp').style.display = 'none';
-      let waitTime = 500;
-      for (let i = 0; i < this.state.randAlpha.length; i++) {
-        setTimeout(() => {this.revealLetter(randAlpha[i])}, waitTime * i )
-    }
+    let waitTime = 600;
+    Array.from(alphaPairs.values()).forEach((value, idx) => {
+      setTimeout(() => {this.revealLetter(value)}, waitTime * idx)
+    });
   }
+
   revealLetter = letter => {
     let list, cryptList, textnode;
     list = document.getElementsByClassName(`${letter}spot`);
@@ -49,6 +28,7 @@ class Home extends Component {
       cryptList[j].classList.add('solved');
     }
   }
+
   enterChar = evt => {
     evt.preventDefault();
     let input = evt.target.value ? evt.target.value[0].toUpperCase() : '';
@@ -61,6 +41,7 @@ class Home extends Component {
       spots[i].firstChild.value = input;
     }
   }
+
   highlight = (evt) => {
     evt.preventDefault();
     const spots = document.getElementsByClassName(evt.target.name);
@@ -68,14 +49,16 @@ class Home extends Component {
       spots[i].classList.add('highlight-char-input');
     }
   }
+
   lowlight = () => {
     let oldSpots = document.getElementsByClassName('highlight-char-input');
     for (let j = oldSpots.length; j > 0 ; j -= 1) {
       oldSpots[0].classList.remove('highlight-char-input');
     }
   }
+
   render = () => {
-    let {words, holder} = this.state;
+    const words = this.props.data;
     return (
       <div>
         <div>
@@ -94,14 +77,14 @@ class Home extends Component {
               </div>
 
             <div id="message" >
-              {
+              { words &&
                 words.map((word, wordIdx) => {
                   return (
                     <div className="word" key={word + wordIdx}>
                       {
                     word.map((char, idx) => {
                       let block =
-                    holder[char] ?
+                    alphaPairs.get(char) ?
                         (<span className="crypto char" key={char + wordIdx + idx}>
                             <div className={`${char}spot cryptoReveal`}>
                               <input
@@ -112,7 +95,7 @@ class Home extends Component {
                                   onMouseLeave={this.lowlight}
                                   />
                             </div>
-                            <div className={`${char}letter cryptoLetter`}>{holder[char]}</div>
+                            <div className={`${char}letter cryptoLetter`}>{alphaPairs.get(char)}</div>
                         </span>)
                       :
                         (<span key={char + wordIdx + idx}>
@@ -147,4 +130,4 @@ class Home extends Component {
     )};
   }
 
-export default Home;
+export default WithFetch(Home, file_location, parseFunction);

@@ -1,0 +1,42 @@
+﻿Evlis Henry
+Software Engineer
+Brooklyn, New York
+917-497-9546
+Evlis.Henry@gmail.com | linkedin.com/in/Evlis-Henry
+
+SKILLS
+Proficient: JavaScript, NodeJs,  ExpressJs,  React, Sequelize,  Git,  PostgreSQL
+Familiar: SQL,  CSS,  Redux,  HTML,  Socket.io,  jQuery,  React Native,  Typescript
+Some Experience: MongoDB,  C++,  Firebase,  Python
+
+WORK EXPERIENCE
+Accenture
+Front End Development Analyst| Sept, 2018 – Present
+Developed responsive web application to take clients through the RQB insurance process.
+* Integrated React and Typescript to build responsive web components
+* Participated in scrum SDLC
+* Worked closely with cross functional teams
+
+Accenture - Intrepid Pursuits
+Web Developer Apprentice| June, 2018 – Aug, 2018
+Developed tool for studios to track chargeability by projects and departments
+* Co-designed and developed database to store user data
+* Implemented UI design and functionality of various features
+* Created graph to display weekly chargeability levels by department
+
+Department of Education
+Mathematics Teacher | Aug, 2015 – Aug, 2017
+Provided academic instruction to general and special education classrooms of up to 30 students.
+* Improved students state
+
+EDUCATION
+FullStack Academy - Grace Hopper Program
+Sept, 2017 – Dec, 2017
+A coding immersive software engineering program for women with a focus on full stack JavaScript.
+
+St. John's University
+Master of Science – Adolescent Education| June, 2015– May, 2017
+
+Hunter College CUNY
+Bachelor of Arts - Computer Science | Aug, 2010 – May, 2014
+Courses: Analysis & Design, Computer Architecture, Computer Forensics, Database Management, Operating Systems, Relational Database & SQL Programming, Statistics.

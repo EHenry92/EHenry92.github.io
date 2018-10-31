@@ -1,132 +1,86 @@
 import React from 'react';
-import Contact from '../Common/Contact';
 import SlideDisplay from '../Common/SlideInOut';
-const resumeData = [
-  {
-    heading: 'Technical Skills',
-    symbol: 'build',
-    headingId: 'technical-skills'
-    ,
-    data: [
-      {
-        title: 'Proficient:',
-        company: 'JavaScript, Node.js, Express.js, HTML5, React, Sequelize, Git, CSS'
-      },
-      {
-        title: 'Familiar:',
-        company: 'PostgreSQL, SQL, Redux, Python, React Native, WebSocket'
-      },
-      {
-        title: 'Experience:',
-        company: 'JQuery, C++, Bootstrap, Ruby, MongoDB, Tessel.io, '
-      }
-    ]
-  }
-  ,{
-    heading: 'Projects',
-    symbol: 'apps',
-    headingId: 'projects',
-    data: [
-          {
-            title: 'TightSchedule',
-            company: 'Sole Developer',
-            date: '',
-            info: "A mobile app that helps users organize and stay on top of a time blocked schedule. Mobile notifications inform the user when it is time to switch tasks and the user has the ability to extend a task's time."
-          },
-          {
-            title: 'IdeaStorm',
-            company: 'Full-stack Developer',
-            date: '09/2017 - 10/2017',
-            info:'Working on a team of 4, I created a real time collaboration tool for teams to brainstorm, share and map ideas.',
-          },
-          {
-            title: 'VocabuMemory',
-            company: 'Sole Developer',
-            date: '09/2017',
-            location: '',
-            info: 'I participated in a week long hackathon during which I developed a virtual memory game where successful matches are found by pairing a word and its definition.',
-          }
-        ]
-}
-,{
-  heading: 'Education',
-  headingId: 'Education',
-  symbol: 'school',
-  data: [
-      {
-        title: 'Web Development',
-        company: 'Grace Hopper at FullStack Academy',
-        date: '09/2017 - 12/2017',
-        location: 'New York, N.Y.',
-        info: 'A hightly selective codding immersive program geared towards increasing the presence of women in the C.S. field.'
+import Contact from '../Common/Contact';
+import WithFetch from '../HOC/withFetch';
 
-      },
-      {
-        title: 'M.S. In Education',
-        company: "St.John's University",
-        date: '06/2015 - 05/2017',
-        location: 'Queens, N.Y.'
-      },
-      {
-        title: 'B.A. in Computer Science',
-        company: 'CUNY Hunter College',
-        date: '08/2010 - 05/2014 ',
-        location: 'New York, NY',
-        info: 'Courses: \n Analysis & Design, Computer Architecture,Computer Forensics, Database Management, Operating Systems,Relational Database & SQL Programming,Statistics ',
-      }
-    ]
-}
-,{
-  heading: 'Experience',
-  symbol: 'work',
-  data: [
-    {
-    title: 'Teacher',
-    company: 'NYC Department Of Education',
-    date: '09/2015 - 12/2017',
-    location: 'Brooklyn, N.Y.',
-    info: ''
+
+const headlines = new Set(['Heading', 'SKILLS', 'EDUCATION', 'WORK EXPERIENCE'])
+const file_location = './src/Evlis_Henry.txt'
+const parseFunction = (lines) => {
+  let formated = {};
+  let currentHeadline = "";
+  let item;
+
+  for (const line of [...lines, " "]) {
+    if (headlines.has(line.trim())) {
+      currentHeadline = line.trim();
+      formated[`${currentHeadline}`] = [];
+      item = {};
+      continue;
     }
-  ]
-}
-]
 
-
-const Resume = () => {
-  // function myFunction(id) {
-  //   var x = document.getElementById(id);
-  //    var others = document.getElementsByClassName('tab-content');
-  //    for (let i = 0; i < others.length; i++) {
-  //        others[i].style.display = 'none';
-  //    }
-  //    x.style.display = 'block';
-  // }
-  return (
-    <SlideDisplay
-      data={resumeData}
-      defaultPageDisplay={
-        () => (<div className="center">
-        <b>
-            Evlis Henry
-            <br />
-            Brooklyn, NY
-            <br />
-            <span className="social">
-            <Contact includeResume={true}/>
-            </span>
-          </b>
-        </div>)
+    if (!currentHeadline) {
+      continue;
+    } else if (currentHeadline === "SKILLS") {
+      if (line.trim()) {
+        const colonIdx = line.indexOf(":");
+        const heading = line.slice(0, colonIdx + 1);
+        const desc = line.slice(colonIdx + 1);
+        formated["SKILLS"].push({ heading, desc });
       }
-      />
-  )
-};
+    } else if (
+      currentHeadline === "EDUCATION" ||
+      currentHeadline === "WORK EXPERIENCE"
+    ) {
+      if (!line.trim()) {
+        formated[`${currentHeadline}`].push(item);
+        item = {};
+      } else if (!item.heading) {
+        item.heading = line;
+      } else if (!item.subHeading) {
+        const sepIdx = line.indexOf("|");
+        const subHeading = line.slice(0, sepIdx - 1);
+        const date = line.slice(sepIdx + 1);
+        item.subHeading = subHeading;
+        item.date = date;
+      } else if (!item.desc) {
+        item.desc = line;
+      } else {
+        if (!item.details) {
+          item.details = [];
+        }
+        item.details.push(line);
+      }
+    }
+  }
+  return formated;
+}
 
-export default Resume;
-// {
-//   title: '',
-//   company: '',
-//   date: '',
-//   location: '',
-//   list: [],
-//   info: ''
-// }
+const Resume = (props) => {
+    return (
+      <>
+        {props.data ? (
+          <SlideDisplay
+            data={props.data}
+            defaultPageDisplay={() => (
+              <div className="center">
+                <b>
+                  Evlis Henry
+                  <br />
+                  Brooklyn, NY
+                  <br />
+                  <span className="social">
+                    <Contact includeResume={true} />
+                  </span>
+                </b>
+              </div>
+            )}
+          />
+        ) : (
+          <div>Resume Here</div>
+        )}
+      </>
+    );
+}
+
+export default WithFetch(Resume, file_location, parseFunction);
