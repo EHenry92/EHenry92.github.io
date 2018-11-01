@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 
-p{
+p {
   margin: 10px 0;
 }
 
@@ -16,78 +16,44 @@ p{
   margin: 0 auto;
 }
 
-.pic {
-bottom: 0;
-right: 0;
-display: block;
-width:30%;
-max-height:100vh;
-height: auto;
-}
-#page-title{
-font-size: x-large;
-list-style: none;
-margin-right: 20px;
-}
-.contained {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-ul a{
-color:var(--highlight-color);
+ul a {
+  color: var(--highlight-color);
 }
 
-.center-text{
-text-align: center;
+.center-text {
+  text-align: center;
 }
-.right {
-float: right;
-}
+
 .center {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
+.right {
+  float: right;
+}
+
 .left {
-float: left;
+  float: left;
 }
+
 .flex-it {
-display: flex;
-flex-direction: row;
-width: 100%;
-}
-.small-text{
-font-size: x-small;
-}
-.half{
-  width: 45%;
-  margin: 2.5%;
-}
-.indent{
-margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-#resume-section{
-font-size: x-small;
-overflow-wrap: break-word;
-margin-top: 40px;
+#resume-section {
+  font-size: x-small;
+  overflow-wrap: break-word;
+  margin-top: 40px;
 }
 
-@media (min-width: 500px) {
-.pic{
-  width: 30%;
-  max-height: 100vh;
-  height: auto;
-}
-#resume-section{
-  font-size: medium;
-}
-  font-size: 12rem;
-}
 a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
 }
+
 .material-icons {
   cursor: pointer;
 }
@@ -98,28 +64,13 @@ section {
   width: 98%;
   overflow: hidden;
   min-height: 80vh;
-  font-family: 'Source Sans Pro', sans-serif;
-
+  font-family: "Source Sans Pro", sans-serif;
 }
+
 section:not(.sub-section) {
-min-height: 100vh;
-}
-section:not(#brief-intro):not(#about-section) {
-  padding-top:100px;
-}
-section h2 {
-text-align: center;
-position: relative;
-margin: 60px 0;
-}
-section h2:after {
-content: "";
-position: absolute;
-bottom: -20px;
-width: 60px;
-height: 1px;
-background-color: #f39c12;
-left: 50%;
-margin-left: -30px;
+  min-height: 100vh;
 }
 
+section:not(#brief-intro):not(#about-section) {
+  padding-top: 100px;
+}

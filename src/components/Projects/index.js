@@ -39,7 +39,7 @@ const Projects = (props) =>  {
     <div>
       <div>
         <div className="center-text">
-          <h2 style={{ margin: 0 }}> {"Recent Projects"} </h2>
+          <h2 className="proj-section-title"> {"Recent Projects"} </h2>
           <h4>{"Sept. 2017 - present"}</h4>
         </div>
         <div className="project-row">
@@ -51,7 +51,7 @@ const Projects = (props) =>  {
 
       <div>
         <div className="center-text">
-          <h2 style={{ margin: 0 }}> {"Other Work"} </h2>
+          <h2 className="proj-section-title"> {"Other Work"} </h2>
           <h4>{"Aug. 2008 - June 2011"}</h4>
         </div>
         <div className="project-row">
@@ -63,4 +63,4 @@ const Projects = (props) =>  {
     </div>
   );
 }
-export default WithFetch(Projects, file_location, parseFunction);
+export default WithFetch(file_location, parseFunction)(Projects);

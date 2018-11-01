@@ -5,7 +5,7 @@ import WithFetch from '../HOC/withFetch';
 
 const file_location = './src/components/Intro/message.txt';
 const alphaPairs = shuffleAlpha();
-const parseFunction = message => message.map(word => word.split(''))
+const parseFunction = message => message.map(word => word.toUpperCase().split(''))
 
 class Home extends Component {
   startReveal = () => {
@@ -130,4 +130,4 @@ class Home extends Component {
     )};
   }
 
-export default WithFetch(Home, file_location, parseFunction);
+export default WithFetch(file_location, parseFunction)(Home);

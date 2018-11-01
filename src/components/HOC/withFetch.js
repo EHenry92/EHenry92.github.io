@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WithFetch = (WrappedComponent, fileLocation, parseFunction) => {
+const WithFetch = (fileLocation, parseFunction) => (WrappedComponent) => {
   return class extends React.Component {
     state = {
       data: null

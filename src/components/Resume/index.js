@@ -4,8 +4,8 @@ import Contact from '../Common/Contact';
 import WithFetch from '../HOC/withFetch';
 
 
-const headlines = new Set(['Heading', 'SKILLS', 'EDUCATION', 'WORK EXPERIENCE'])
-const file_location = './src/Evlis_Henry.txt'
+const headlines = new Set(['Heading', 'SKILLS', 'EDUCATION', 'WORK EXPERIENCE']);
+const file_location = './src/Evlis_Henry.txt';
 const parseFunction = (lines) => {
   let formated = {};
   let currentHeadline = "";
@@ -54,33 +54,21 @@ const parseFunction = (lines) => {
     }
   }
   return formated;
-}
+};
 
 const Resume = (props) => {
-    return (
-      <>
-        {props.data ? (
-          <SlideDisplay
-            data={props.data}
-            defaultPageDisplay={() => (
-              <div className="center">
-                <b>
-                  Evlis Henry
-                  <br />
-                  Brooklyn, NY
-                  <br />
-                  <span className="social">
-                    <Contact includeResume={true} />
-                  </span>
-                </b>
-              </div>
-            )}
-          />
-        ) : (
+  return (
+    <>
+      {props.data ? (
+        <SlideDisplay
+          data={props.data}
+        />
+      ) : (
           <div>Resume Here</div>
         )}
-      </>
-    );
+        <Contact includeResume={true} />
+    </>
+  );
 }
 
-export default WithFetch(Resume, file_location, parseFunction);
+export default WithFetch(file_location, parseFunction)(Resume);

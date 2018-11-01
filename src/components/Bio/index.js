@@ -33,4 +33,4 @@ const About = ({ data }) => {
   );
 };
 
-export default WithFetch(About, file_location);
+export default WithFetch(file_location)(About);
