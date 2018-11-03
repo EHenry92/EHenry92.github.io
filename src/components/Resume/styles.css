@@ -1,0 +1,56 @@
+.resume-wrapper {
+  font-size: x-small;
+  overflow-wrap: break-word;
+  margin-top: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.res-bar-title{
+  font-size: var(--header-text);
+  text-align: center;
+  width: 33.33%;
+  margin-left: 33.33%;
+}
+
+.res-links {
+  margin: auto 0 auto auto;
+}
+
+.minor-col {
+  border-right: 3px solid black;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.minor-col-title {
+  font-size: var(--sub-body-text);
+}
+
+.minor-col-sub-title {
+  font-size: var(--detail-text);
+}
+
+
+.major-col {
+  max-width: 70%;
+}
+
+.major-col-title {
+  font-size: var(--body-text);
+}
+
+.major-col-sub-title {
+  font-size: var(--sub-body-text);
+  font-weight: 300;
+
+}
+
+.major-col-detail {
+  font-size: var(--sub-body-text);
+  margin: 0;
+}
+
+.data {
+  margin: 0;
+}

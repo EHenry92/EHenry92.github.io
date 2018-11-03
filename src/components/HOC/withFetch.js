@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
 
-const WithFetch = (fileLocation, parseFunction) => (WrappedComponent) => {
-  return class extends React.Component {
+const WithFetch = (fileKey, parseFunction) => (WrappedComponent) => {
+  return class extends Component {
     state = {
       data: null
     }
 
     componentDidMount() {
-      jQuery.get(fileLocation, fetchedData => {
+      axios.get(`/api/filestore/${fileKey}`)
+      .then(res => res.data)
+      .then(fetchedData => {
         const data = fetchedData.split('\n');
         const parsedData = parseFunction ? parseFunction(data) : data;
         this.setState({data: parsedData})
+      })
+      .catch(err => {
+        console.log("error", err)
       })
     };
 

@@ -40,7 +40,7 @@
 .piece:hover > .after{
 	display: block;
 	color: black;
-	background-image: url("/src/images/o.png");
+	background-image: url("/images/o.png");
 
 }
 .top, .middle{

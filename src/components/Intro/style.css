@@ -1,26 +1,30 @@
-@import './messageStyle.css';
+@import "./messageStyle.css";
 
 #main-name {
-  font-size: 10vh;
-  font-family: 'Abril Fatface', cursive;
+  font-size: var(--title-text);
+  font-family: "Abril Fatface", cursive;
   text-align: center;
-  line-height: .5;
+  line-height: 0.5;
   margin-bottom: 3vh;
 }
 
-.spotlight{
+.main-title {
+  font-size: var(--sub-title-text);
   color: var(--highlight-color);
-  font-size: 5vmin;
 }
 
-#pic-box{
-      height: 35vh;
-      width: 81.5%;
-      display: flex;
-      flex-direction: row;
-      margin-left: 7%;
-      padding: 0;
-      overflow: hidden;
+.next-section {
+  font-size: var(--body-text);
+}
+
+#pic-box {
+  height: 35vh;
+  width: 81.5%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 7%;
+  padding: 0;
+  overflow: hidden;
 }
 
 #pic-box > img {
@@ -28,34 +32,31 @@
   margin: 0 auto;
   transition: transform 3s;
 }
-#p1{
+#p1 {
   transform: translateX(-30vw);
 }
-#p2{
+#p2 {
   transform: translateY(40vh);
 }
-#p4{
+#p4 {
   transform: translateX(30vw);
 }
-#p3{
+#p3 {
   transform: translateY(-40vh);
 }
 
-
-  #pic-box.show >  #p1{
-      transform: translateX(0);
-  }
-  #pic-box.show >   #p2{
-      transform: translateY(0);
-  }
-  #pic-box.show >   #p4{
-      transform: translateX(0);
-  }
-  #pic-box.show >   #p3{
-      transform: translateY(0);
-  }
-
-
+#pic-box.show > #p1 {
+  transform: translateX(0);
+}
+#pic-box.show > #p2 {
+  transform: translateY(0);
+}
+#pic-box.show > #p4 {
+  transform: translateX(0);
+}
+#pic-box.show > #p3 {
+  transform: translateY(0);
+}
 
 svg {
   fill: none;

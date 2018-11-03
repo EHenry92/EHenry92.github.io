@@ -1,5 +1,7 @@
 secrets.js
 .bash_profile
+.env
+secrets.js
 # node.js
 #
 node_modules/

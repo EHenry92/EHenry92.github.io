@@ -5,20 +5,20 @@
 #bio {
   text-align: left;
   padding: 100px 20px 0;
+}
 
+.bio-sub-header {
+  font-size: var(--sub-header-text);
+}
+
+.bio-body {
+  font-size: var(--body-text);
 }
 
 #bio-container {
 }
 
-#bio > p:not(b){
 
-
-}
-
-.img-container {
-
-}
 .about-pic {
   max-height: 100vh;
 }

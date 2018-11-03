@@ -20,13 +20,14 @@ const Card = ({ data, isToggleOn, handleToggle }) => {
       <div className={isToggleOn ? 'card-info' : 'card-info details'}>
         { isToggleOn ? (
             <div className="flex-it main-card-info">
-              <div className="cardImg">{displayMedia(data)}
-              <div>{data.tech}</div>
+            <div>
+              <div className="cardImg">{displayMedia(data)} </div>
+              <p className="card-tech">{data.tech}</p>
 
               </div>
               <div className="card-details">
-                {data.largeDesc}
-                <div className="card-date">{data.date} </div>
+                <p>{data.smallDesc}</p>
+                <p className="card-date">{data.date} </p>
               </div>
 
             </div>
@@ -42,22 +43,7 @@ const Card = ({ data, isToggleOn, handleToggle }) => {
 
 export default WithToggle(Card);
 
-const displayMedia = proj => {
-  // if (proj.mobile) {
-  //   return (
-  //     <div className="carousel">
-  //       {proj.images.map(image => {
-  //         return (
-  //           <img
-  //             key={image}
-  //             className={`carousel-image ${proj.initials} mobile-image`}
-  //             src={image}
-  //           />
-  //         );
-  //       })}
-  //     </div>
-  //   );
-  // } else
+const displayMedia = (proj, isToggleOn )=> {
   if (proj.images) {
     return <Carousel images={proj.images} />;
   } else {

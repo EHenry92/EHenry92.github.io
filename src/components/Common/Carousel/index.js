@@ -6,10 +6,12 @@ class Carousel extends React.Component {
       itemLength: 0,
     }
 
+    intervalId = null;
+
     componentWillMount (){
       const imageL = this.props.images.length;
       this.setState({currentDataIdx: 0, itemLength: imageL});
-      setInterval(() => {
+      this.intervalId = setInterval(() => {
         if (imageL > 1) {
           const {itemLength} = this.state;
           let { currentDataIdx} = this.state;
@@ -18,6 +20,10 @@ class Carousel extends React.Component {
           this.setState({currentDataIdx})
         }
       }, 3500);
+    }
+
+    componentWillUnmount () {
+      clearInterval(this.intervalId);
     }
 
     render = () => {

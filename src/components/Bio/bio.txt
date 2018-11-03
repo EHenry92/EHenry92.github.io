@@ -1,4 +1,0 @@
-An educator turned developer.
-My name is Evlis Henry. I'm a software engineer fueled by a love for problem solving and the desire for continued growth. I enjoy working on projects that solve problems, projects that encourage and projects that equip people with the tools to do what they love. My strong attention to detail allows me to efficiently trace and debug code in addition to write code that is clean and easy to understand.
-I am a C.S. grad with a bachelors degree from Hunter College. After college, I pursued my initial passion of education and taught middle school math. Teaching, made me acutely aware of the power of technology and the need for greater access and tools to reach students at their various levels.
-When I'm not coding, I recharge and rejuvenate by watching sci-fi movies, reading thrillers and deciphering puzzles.

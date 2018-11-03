@@ -3,9 +3,8 @@ import Card from "./Card";
 import "./styles.css";
 import WithFetch from "../HOC/withFetch";
 
-
-const file_location = './src/components/Projects/projectData.txt';
-const parseFunction = (lines) => {
+const file_location = "projectData.txt";
+const parseFunction = lines => {
   const recent = [];
   const archive = [];
   let isRecent = true;
@@ -13,54 +12,66 @@ const parseFunction = (lines) => {
   let target = {};
   for (const line of lines) {
     if (!line.trim()) {
-      if (isRecent) { recent.push(target);}
-      else { archive.push(target);}
+      if (isRecent) {
+        recent.push(target);
+      } else {
+        archive.push(target);
+      }
       target = {};
       continue;
-    } else if (line.trim() === 'ARCHIVE') {
+    } else if (line.trim() === "ARCHIVE") {
       isRecent = false;
       continue;
     }
 
-    const colon = line.indexOf(':');
+    const colon = line.indexOf(":");
     const prop = line.slice(0, colon).trim();
     let val = line.slice(colon + 1).trim();
-    if (prop === 'images') {
-      val = val.split(',');
+    if (prop === "images") {
+      val = val.split(",");
     }
     target[`${prop}`] = val;
   }
-  return ({archive, recent})
-}
+  return { archive, recent };
+};
 
-const Projects = (props) =>  {
-  const { data} = props;
+const Projects = props => {
+  const { data } = props;
   return (
     <div>
-      <div>
-        <div className="center-text">
-          <h2 className="proj-section-title"> {"Recent Projects"} </h2>
-          <h4>{"Sept. 2017 - present"}</h4>
-        </div>
-        <div className="project-row">
-          { data && data.recent && data.recent.map(item => (
-            <Card key={item.name} data={item} />
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <div className="center-text">
-          <h2 className="proj-section-title"> {"Other Work"} </h2>
-          <h4>{"Aug. 2008 - June 2011"}</h4>
-        </div>
-        <div className="project-row">
-          { data && data.archive && data.archive.map(item => (
-            <Card key={item.name} data={item} />
-          ))}
-        </div>
-      </div>
+      {data && (
+        <>
+          <ProjectGroup
+            title={"Recent Projects"}
+            subTitle={"Sept. 2017 - present"}
+            data={data.recent}
+          />
+          <ProjectGroup
+            title={"Other Work"}
+            subTitle={"Aug. 2008 - June 2011"}
+            data={data.archive}
+          />
+        </>
+      )}
     </div>
   );
-}
+};
 export default WithFetch(file_location, parseFunction)(Projects);
+
+
+class ProjectGroup extends React.PureComponent{
+  render () {
+ const { title, subTitle, data } = this.props;
+  return (
+    <div>
+      <div className="center-text proj-section-info">
+        <h2 className="proj-section-title"> {title} </h2>
+        {/* <h4 className="project-section-sub-title">{subTitle}</h4> */}
+      </div>
+      <div className="project-row">
+        {data && data.map(item => <Card key={item.name} data={item} />)}
+      </div>
+    </div>
+  )
+  }
+}

@@ -1,5 +1,9 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+  output: {
+    path: __dirname + '/docs',
+    filename: './bundle.js'
+  },
   module: {
     rules: [
       {
@@ -14,7 +18,6 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          // 'sass-loader'
         ]
       },
       {
