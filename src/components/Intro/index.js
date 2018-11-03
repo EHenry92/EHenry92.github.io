@@ -73,10 +73,10 @@ class Home extends Component {
       <div>
         <div>
           <div id="pic-box">
-            <img id="p1" src="/images/split1.png" />
-            <img id="p2" src="/images/split2.png" />
-            <img id="p3" src="/images/split3.png" />
-            <img id="p4" src="/images/split4.png" />
+            <img id="p1" src="/docs/images/split1.png" />
+            <img id="p2" src="/docs/images/split2.png" />
+            <img id="p3" src="/docs/images/split3.png" />
+            <img id="p4" src="/docs/images/split4.png" />
           </div>
           <div id="intro-box">
             <div id="main-name">

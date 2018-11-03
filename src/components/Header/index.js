@@ -24,19 +24,19 @@ const Main = () => {
         <a id="name" href="/">
           {texts.name}
         </a>
-        <img id="menu" src="images/menu.png" />
+        <img id="menu" src="docs/images/menu.png" />
         <div id="slide-space">
           <div id="slide-out" className="tic">
             <div className="row top">
               <div className="piece left-col">
-                <img src="images/x.png" />
+                <img src="docs/images/x.png" />
               </div>
               <a href="#brief-intro" className="piece center">
                 {texts.name}
                 <div className="after" />
               </a>
               <div className="piece right-col">
-                <img src="images/o.png" />
+                <img src="docs/images/o.png" />
               </div>
             </div>
             <div className="row middle">
@@ -45,7 +45,7 @@ const Main = () => {
                 <div className="after" />
               </a>
               <div className="piece center">
-                <img src="images/x.png" />
+                <img src="docs/images/x.png" />
               </div>
               <a href="#project-section" className="piece right-col">
                 {texts.projects}
@@ -54,14 +54,14 @@ const Main = () => {
             </div>
             <div className="row bottom">
               <div className="piece left-col">
-                <img src="images/x.png" />
+                <img src="docs/images/x.png" />
               </div>
               <a href="#resume-section" className="piece center">
                 {texts.resume}
                 <div className="after" />
               </a>
               <div className="piece right-col">
-                <img src="images/o.png" />
+                <img src="docs/images/o.png" />
               </div>
             </div>
           </div>

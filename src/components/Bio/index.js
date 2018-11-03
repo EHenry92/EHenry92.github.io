@@ -8,7 +8,7 @@ const About = ({ data }) => {
   return (
     <div id="me">
       <div className="img-container">
-        <img className="about-pic" src="images/bigRock.jpg" />
+        <img className="about-pic" src="docs/images/bigRock.jpg" />
       </div>
 
       <div id="bio-container">
