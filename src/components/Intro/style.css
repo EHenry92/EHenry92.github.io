@@ -1,5 +1,9 @@
 @import "./messageStyle.css";
 
+button {
+  outline: none;
+}
+
 #main-name {
   font-size: var(--title-text);
   font-family: "Abril Fatface", cursive;

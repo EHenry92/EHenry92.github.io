@@ -1,7 +1,8 @@
 module.exports = {
   output: {
     path: __dirname + '/docs',
-    filename: './bundle.js'
+    filename: './bundle.js',
+    publicPath: '/docs'
   },
   module: {
     rules: [

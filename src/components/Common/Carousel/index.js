@@ -28,8 +28,9 @@ class Carousel extends React.Component {
 
     render = () => {
       const prePend = this.props.prePend ? this.props.prePend : '';
+      const imageTitle = this.props.images[this.state.currentDataIdx];
       return (
-        <img className='carousel-image' src={`${prePend}${this.props.images[this.state.currentDataIdx]}`} />
+        <img className='carousel-image' src={`${prePend}${imageTitle}`}/>
       )
     }
   };
