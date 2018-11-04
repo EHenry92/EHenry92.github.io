@@ -45,7 +45,7 @@ export default WithToggle(Card);
 
 const displayMedia = (proj, isToggleOn )=> {
   if (proj.images) {
-    return <Carousel images={proj.images} />;
+    return <Carousel images={proj.images}  prePend ={'https://s3.amazonaws.com/henryeprofile/'}/>;
   } else {
     return (
       <iframe
