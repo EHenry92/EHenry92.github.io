@@ -20,6 +20,17 @@
   border-spacing: 20px;
 }
 
+.showHide{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+
+  backface-visibility: hidden;
+
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+}
+
 .showHide:not(.visible) {
   transition: transform 2s ease;
   transform: translate(-100%);

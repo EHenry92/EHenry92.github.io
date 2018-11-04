@@ -20,9 +20,14 @@
 .card-expand-icon {
   float: right;
 }
-.card-date, .card-tech {
+.card-date{
   font-size: var(--detail-text);
 }
+
+.card-tech {
+ font-size: var(--sub-body-text);
+}
+
 .cardImg {
   height: 160px;
 }

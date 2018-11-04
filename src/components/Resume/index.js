@@ -1,16 +1,21 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import SlideDisplay from "../Common/SlideInOut";
 import Contact from "../Common/Contact";
 import WithFetch from "../HOC/withFetch";
 import "./styles.css";
 
-const headlines = new Set([
-  "Heading",
-  "SKILLS",
-  "EDUCATION",
-  "EXPERIENCE"
-]);
+const headlines = new Set(["SKILLS", "EDUCATION", "EXPERIENCE"]);
 const file_location = "Evlis_Henry.txt";
+
+const reduce = (parsedLines) => Object.values(
+  parsedLines.reduce((acc, el) => {
+    if (!acc[el.heading]) {
+      acc[el.heading] = { value: [] };
+    }
+    acc[el.heading].value.push(el);
+    return acc;
+  }, {}));
+
 const parseFunction = lines => {
   let formatted = {};
   let currentHeadline = "";
@@ -60,57 +65,78 @@ const parseFunction = lines => {
       }
     }
   }
+
+  formatted["EXPERIENCE"] = reduce(formatted["EXPERIENCE"]);
+  formatted["SKILLS"] = reduce(formatted["SKILLS"]);
+  formatted["EDUCATION"] = reduce(formatted["EDUCATION"]);
+
   return formatted;
 };
 
-const Resume = props => {
-  return (
-    <div className="resume-wrapper">
-      {props.data && (
-        <SlideDisplay
-          data={props.data}
-          DisplayData={DisplayData}
-          mainBar={() => (
-            <div className="flex-it res-top-bar">
-              <div className="res-bar-title">{"Resume"}</div>
-              <div className="res-links">
-                <Contact includeResume={true} />
+class Resume extends PureComponent {
+  render() {
+    const { data } = this.props;
+    return (
+      <div className="resume-wrapper">
+        {data && (
+          <SlideDisplay
+            data={data}
+            DisplayData={DisplayData}
+            mainBar={() => (
+              <div className="flex-it res-top-bar">
+                <div className="res-bar-title">{"Resume"}</div>
+                <div className="res-links">
+                  <Contact includeResume={true} />
+                </div>
               </div>
-            </div>
-          )}
-        />
-      )}
-    </div>
-  );
-};
+            )}
+          />
+        )}
+      </div>
+    );
+  }
+}
 
 export default WithFetch(file_location, parseFunction)(Resume);
 
-const DisplayData = ({ dataPoint, className, id }) => {
-  return (
-    <table className={className} id={id}>
-      <tbody>
-        {dataPoint.map(row => (
-          <tr key={row.heading}>
-            <td className="minor-col">
-              <b className="minor-col-title">{row.heading}</b>
-              {row.date && (
-                <div className="minor-col-sub-title">
-                  <i>{row.date}</i>
-                </div>
-              )}
-            </td>
-            <td className="major-col">
-              <b className="major-col-title">{row.subHeading}</b>
-              <div className="major-col-sub-title">{row.desc}</div>
-              <ul className="major-col-detail">
-                {row.details &&
-                  row.details.map(item => <li key={item}>{item}</li>)}
-              </ul>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};
+class DisplayData extends PureComponent {
+  render() {
+    const { dataPoint, className, id } = this.props;
+    return (
+      <table className={className} id={id}>
+        <tbody>
+          {dataPoint.map(rows => {
+            const { heading } = rows.value[0];
+            return (
+              <tr key={heading}>
+                <td className="minor-col">
+                  <b className="minor-col-title">{heading}</b>
+                  {rows.value.map( item => {
+                    item.date && item.date
+                    return (item.date &&
+                      <div key={item.date} className="minor-col-sub-title">
+                        <i>{item.date}</i>
+                      </div>
+                    )}
+                  )}
+                </td>
+                <td className="major-col">
+                  {rows.value.map(value => (
+                    <div key={value.subHeading ? value.subHeading : value.desc}>
+                      <b className="major-col-title">{value.subHeading}</b>
+                      <div className="major-col-sub-title">{value.desc}</div>
+                      <ul className="major-col-detail">
+                        {value.details &&
+                          value.details.map(item => <li key={item}>{item}</li>)}
+                      </ul>
+                    </div>
+                  ))}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    );
+  }
+}
