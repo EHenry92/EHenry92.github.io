@@ -12,18 +12,20 @@ const parseFunction = message =>
 const texts = {
   name: "Evlis Henry",
   jobTitle: "Software Engineer",
-  buttonText: "Reveal Message",
+  buttonText: "View Message",
   moreInfo: "Learn More"
 };
 
 class Home extends Component {
   state = {
     activeChar: "",
-    inputs: {}
+    inputs: {},
+    isRevealed: false,
   };
 
   startReveal = () => {
     let waitTime = 600;
+    this.setState({isRevealed: true})
     Array.from(alphaPairs.values()).forEach((value, idx) => {
       setTimeout(() => {
         this.revealLetter(value);
@@ -63,6 +65,19 @@ class Home extends Component {
     this.setState({ activeChar: "" });
   };
 
+  revealButton = (isMobile) => {
+    return (
+      <div className="center">
+        <button id={isMobile ? "startUp-mobile" : "startUp"}
+          onClick={this.startReveal}
+          disabled={this.state.isRevealed}
+        >
+          {texts.buttonText}
+        </button>
+      </div>
+    );
+  };
+
   render = () => {
     const words = this.props.data;
     return (
@@ -79,7 +94,7 @@ class Home extends Component {
               {texts.name}
               <span className="main-title">{texts.jobTitle}</span>
             </div>
-            <RevealButton onClick={this.startReveal} isMobile={true} />
+            {this.revealButton(true)}
             <div id="message">
               {words &&
                 words.map((word, wordIdx) => {
@@ -111,11 +126,11 @@ class Home extends Component {
             </div>
           </div>
           <br />
-          <RevealButton onClick={this.startReveal} isMobile={false} />
+          {this.revealButton(false)}
           <br />
           <div className="next-section center-text">
             <a href="#about-section">
-              <p>{texts.moreInfo}</p>
+              {texts.moreInfo}
               <i className="material-icons">keyboard_arrow_down</i>
             </a>
           </div>
@@ -126,13 +141,3 @@ class Home extends Component {
 }
 
 export default WithFetch(file_location, parseFunction)(Home);
-
-const RevealButton = ({ onClick, isMobile }) => {
-  return (
-    <div className="center">
-      <button id={isMobile ? "startUp-mobile" : "startUp"} onClick={onClick}>
-        {texts.buttonText}
-      </button>
-    </div>
-  );
-};

@@ -66,12 +66,6 @@
   width: 50%;
 }
 
-button {
-  color: white;
-  background-color: black;
-}
-
-
 .carousel {
   display: flex;
   justify-content: center;

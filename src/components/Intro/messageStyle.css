@@ -5,7 +5,7 @@
   line-height: 1;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .word {
   display: flex;
@@ -51,9 +51,15 @@
 
 #startUp,
 #startUp-mobile {
-  color: white;
-  background-color: var(--teal-color);
-  font-size: var(--body-text)
+  color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
+  font-weight: 200;
+  font-size: var(--body-text);
+}
+
+#startUp:disabled,
+#startUp-mobile:disabled {
+  display: none;
 }
 
 #startUp-mobile {

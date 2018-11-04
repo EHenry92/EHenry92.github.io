@@ -1,7 +1,7 @@
 @import "./messageStyle.css";
 
-button {
-  outline: none;
+a {
+  color: black;
 }
 
 #main-name {
@@ -19,6 +19,7 @@ button {
 
 .next-section {
   font-size: var(--body-text);
+  text-decoration: none;
 }
 
 #pic-box {

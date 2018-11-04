@@ -18,6 +18,11 @@ p {
   margin: 0;
 }
 
+button {
+  outline: none;
+  cursor: pointer;
+}
+
 ul a {
   color: var(--highlight-color);
 }
@@ -70,4 +75,5 @@ section:not(#brief-intro):not(#about-section) {
 
 .material-icons {
   cursor: pointer;
+  vertical-align: middle;
 }
