@@ -1,19 +1,23 @@
 import React from "react";
 
-const Char = ({ state, mask, hiddenValue, onChange, highlight, lowlight, isActive }) => {
-  let maskCn = `${mask}letter cryptoLetter`;
-  let hiddenCn = `${mask}spot cryptoReveal`;
+const Char = ({
+  state,
+  mask,
+  hiddenValue,
+  onChange,
+  highlight,
+  lowlight,
+  isActive
+}) => {
   const isSolved = state === hiddenValue;
-  if (isSolved) { maskCn += " solved";}
-  if (isActive) { hiddenCn +=  " highlight-char-input";}
-
+  let maskCn = `${mask}letter cryptoLetter ${isSolved && 'solved'}`;
+  let hiddenCn = `${mask}spot cryptoReveal ${isActive && 'highlight-char-input'}`;
   return (
     <span className="crypto char">
       <div className={hiddenCn}>
-        {isSolved ? (
-          state
-        ) : (
-          <input
+        {isSolved
+        ? state
+        : <input
             name={mask}
             onChange={onChange}
             onMouseEnter={highlight}
@@ -22,7 +26,7 @@ const Char = ({ state, mask, hiddenValue, onChange, highlight, lowlight, isActiv
             disabled={isSolved}
             value={state}
           />
-        )}
+        }
       </div>
       <p className={maskCn}>{mask}</p>
     </span>

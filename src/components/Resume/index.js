@@ -8,7 +8,7 @@ const headlines = new Set([
   "Heading",
   "SKILLS",
   "EDUCATION",
-  "WORK EXPERIENCE"
+  "EXPERIENCE"
 ]);
 const file_location = "Evlis_Henry.txt";
 const parseFunction = lines => {
@@ -35,7 +35,7 @@ const parseFunction = lines => {
       }
     } else if (
       currentHeadline === "EDUCATION" ||
-      currentHeadline === "WORK EXPERIENCE"
+      currentHeadline === "EXPERIENCE"
     ) {
       if (!line.trim()) {
         if (Object.keys(item).length > 0) {

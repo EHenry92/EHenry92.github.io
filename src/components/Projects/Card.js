@@ -1,5 +1,5 @@
 import React from "react";
-import WithToggle from "../HOC/Toggle";
+import WithToggle from "../HOC/withToggle";
 import Carousel from "../Common/Carousel";
 
 const Card = ({ data, isToggleOn, handleToggle }) => {

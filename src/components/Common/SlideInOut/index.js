@@ -1,53 +1,64 @@
-import React from "react";
-import SlideInOut from "./Slide";
+import React, { Component } from "react";
 import "./styles.css";
 
-const SlideDisplay = ({ mainBar, data, DisplayData }) => {
-  return (
-      <div className="">
+const icons = {
+  SKILLS: "build",
+  EDUCATION: "school",
+  EXPERIENCE: "work"
+};
+
+class SlideDisplay extends Component {
+  state = {
+    activeTab: ""
+  };
+
+  componentDidMount() {
+    const tabs = Object.keys(this.props.data);
+    this.setState({ activeTab: tabs[0] });
+  }
+
+  showHide = tab => {
+    this.setState({activeTab:tab})
+  };
+
+  render() {
+    const { mainBar, data, DisplayData } = this.props;
+    const { activeTab } = this.state;
+    const tabs = Object.keys(data);
+    return (
+      <div>
         {mainBar && mainBar()}
-          <div id="section-list" className="flex-it sub-group-list">
-            {displaySubGroup(data)}
-          </div>
+        <div id="section-list" className="flex-it sub-group-list">
+          {
+            tabs.map(dataGroup => (
+              <div
+                className="slideIn-subGroup-title"
+                key={dataGroup}
+                name={dataGroup}
+                onClick={() => this.showHide(dataGroup)}
+              >
+                <i className="material-icons">{icons[dataGroup]}</i>
+                <p>
+                  <b>{dataGroup}</b>
+                </p>
+              </div>
+            ))
+          }
+        </div>
         <div className="displaySpace">
-          {Object.keys(data).map((box, idx) => {
-            let className = "slideIn-content showHide";
-            className = idx === 0 ? `${className} visible` : className;
+          {tabs.map( key => {
             return (
               <DisplayData
-                key={`content-slideIn-${box}`}
-                id={`content-slideIn-${box}`}
-                dataPoint={data[box]}
-                className={className}
+                key={key}
+                dataPoint={data[key]}
+                className={`slideIn-content showHide ${activeTab === key && 'visible'}`}
               />
             );
           })}
         </div>
       </div>
-  );
-};
+    );
+  }
+}
 
 export default SlideDisplay;
-
-const icons = {
-  SKILLS: "build",
-  EDUCATION: "school",
-  "WORK EXPERIENCE": "work"
-};
-const displaySubGroup = data => {
-  return Object.keys(data).map(dataGroup => (
-    <SlideInOut
-      key={dataGroup}
-      targetId={`content-slideIn-${dataGroup}`}
-      targetGroup={["slideIn-content"]}
-      className="slideIn-subGroup-title"
-    >
-      <br />
-      <i className="material-icons">{icons[dataGroup]}</i>
-      <br />
-      <p>
-        <b>{dataGroup}</b>
-      </p>
-    </SlideInOut>
-  ));
-};
