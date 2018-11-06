@@ -32,7 +32,7 @@ class SlideDisplay extends Component {
           {
             tabs.map(dataGroup => (
               <div
-                className="slideIn-subGroup-title"
+                className={`slideIn-subGroup-title ${activeTab === dataGroup && 'active'}`}
                 key={dataGroup}
                 name={dataGroup}
                 onClick={() => this.showHide(dataGroup)}

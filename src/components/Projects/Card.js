@@ -43,7 +43,7 @@ const Card = ({ data, isToggleOn, handleToggle }) => {
 
 export default WithToggle(Card);
 
-const displayMedia = (proj, isToggleOn )=> {
+const displayMedia = (proj )=> {
   if (proj.images) {
     return <Carousel images={proj.images}  prePend ={'https://s3.amazonaws.com/henryeprofile/'}/>;
   } else {

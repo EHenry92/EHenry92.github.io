@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/Main';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Bio from './components/Bio';

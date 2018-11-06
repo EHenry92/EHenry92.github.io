@@ -35,6 +35,9 @@
 .major-col {
   max-width: 70%;
 }
+.major-col > * {
+  margin-bottom: 10px;
+}
 
 .major-col-title {
   font-size: var(--body-text);

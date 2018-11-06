@@ -46,13 +46,24 @@
 }
 
 .slideIn-subGroup-title {
+  cursor: pointer;
   height: 25%;
   text-align: center;
   flex-grow: 1;
   font-size: var(--sub-header);
-  border-bottom: 2px solid var(--highlight-color);
-  margin: 10px;
+  margin: 10px 0;
   padding: 0 0 10px;
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+.slideIn-subGroup-title > * {
+  pointer-events: none;
+}
+
+.slideIn-subGroup-title.active {
+  border: 2px solid var(--highlight-color);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
 }
 
 .rotate-text {
