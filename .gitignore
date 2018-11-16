@@ -2,6 +2,9 @@ secrets.js
 .bash_profile
 .env
 secrets.js
+
+untracked/
+
 # node.js
 #
 node_modules/
