@@ -32,9 +32,15 @@ const Card = ({ data, isToggleOn, handleToggle }) => {
 
             </div>
         ) : (
-            <>
-              <div>{data.largeDesc}</div>
-            </>
+            <div>
+            {
+              data.spotlight
+              ? data.spotlight
+              :data.largeDesc
+
+
+            }
+            </div>
           )}
       </div>
     </div>

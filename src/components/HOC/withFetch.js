@@ -20,6 +20,16 @@ const WithFetch = (fileKey, parseFunction) => (WrappedComponent) => {
     }
 
     componentDidMount() {
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        fetch(`/untracked/${fileKey}`)
+        .then(response => response.text())
+        .then(retdata => {
+            const data = retdata.toString('utf8').split('\n');
+            const parsedData = parseFunction ? parseFunction(data) : data;
+            this.setState({data: parsedData});
+        })
+    } else {
+
       const params = { Bucket: S3_BUCKET, Key: fileKey };
       s3.getObject(params, (err, info) => {
         if (err) {
@@ -32,6 +42,7 @@ const WithFetch = (fileKey, parseFunction) => (WrappedComponent) => {
           this.setState({data: parsedData});
         }
       });
+      }
     };
 
     render = () => {
