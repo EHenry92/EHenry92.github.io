@@ -55,6 +55,7 @@
   border: 1px solid var(--highlight-color);
   font-weight: 200;
   font-size: var(--body-text);
+  background-color: transparent;
 }
 
 #startUp:disabled,

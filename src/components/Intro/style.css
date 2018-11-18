@@ -27,9 +27,10 @@ a {
   width: 81.5%;
   display: flex;
   flex-direction: row;
-  margin-left: 7%;
   padding: 0;
+  margin: auto;
   overflow: hidden;
+  max-width: 930px;
 }
 
 #pic-box > img {
