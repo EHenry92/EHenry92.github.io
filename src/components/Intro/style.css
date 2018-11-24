@@ -14,7 +14,7 @@ a {
 
 .main-title {
   font-size: var(--sub-title-text);
-  color: var(--highlight-color);
+  color: var(--primary-color);
 }
 
 .next-section {

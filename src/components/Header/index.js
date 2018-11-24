@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import WithToggle from "../HOC/withToggle";
 
 const texts = {
   name: "Evlis Henry",
@@ -8,25 +9,16 @@ const texts = {
   resume: "Resume"
 };
 
-const Main = () => {
-  function burgerToggle() {
-    let linksEl = document.getElementById("slide-space");
-    if (linksEl.style.display === "flex") {
-      linksEl.style.display = "none";
-    } else {
-      linksEl.style.display = "flex";
-    }
-  }
-
+const Header = ({isToggleOn, handleToggle}) => {
   return (
     <div id="header">
-      <nav onClick={burgerToggle}>
+      <nav onClick={handleToggle}>
         <a id="name" href="/">
           {texts.name}
         </a>
         <img id="menu" src="docs/images/menu.png" />
-        <div id="slide-space">
-          <div id="slide-out" className="tic">
+        <div id="slide-space" className={isToggleOn ? "nav-hide" : "nav-show"}>
+          <div id="nav-links" className="tic">
             <div className="row top">
               <div className="piece left-col">
                 <img src="docs/images/x.png" />
@@ -70,4 +62,4 @@ const Main = () => {
     </div>
   );
 };
-export default Main;
+export default WithToggle()(Header);

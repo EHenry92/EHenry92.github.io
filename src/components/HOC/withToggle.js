@@ -1,12 +1,13 @@
 import React from 'react';
 
-const WithToggle = (WrappedComponent) => {
+const WithToggle = (sidEffect) => (WrappedComponent) => {
   return class extends React.Component {
     state = {
       isOn : true,
     }
 
     handleToggle = () => {
+      sidEffect && sidEffect();
       this.setState({isOn : !this.state.isOn})
     }
 

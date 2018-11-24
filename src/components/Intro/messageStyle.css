@@ -51,8 +51,8 @@
 
 #startUp,
 #startUp-mobile {
-  color: var(--highlight-color);
-  border: 1px solid var(--highlight-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   font-weight: 200;
   font-size: var(--body-text);
   background-color: transparent;
