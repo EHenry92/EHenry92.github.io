@@ -3,7 +3,7 @@ import "./style.css";
 
 const links = {
   mail: "mailto:Evlis.Henry@gmail.com",
-  github: "https://www.github.com/ehenry92",
+  github: "https://www.github.com/HSilve",
   linkedIn: "https://www.linkedin.com/in/evlis-henry",
   medium: "https://medium.com/@Silve",
   resume: "https://s3.amazonaws.com/henryeprofile/Evlis_Henry_Resume.pdf",
